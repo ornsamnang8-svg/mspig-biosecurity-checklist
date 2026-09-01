@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
-<meta name="theme-color" content="#0d6b45">
+<meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="ជីវៈសុវត្ថិភាព">
 <meta name="format-detection" content="telephone=no">
 <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEmklEQVR42u3dPW5cZRiG4TmfTm831FClCRIL8CJYABUS8iJYQBYRRaJiAVmEF4CUNFShTuNZQagGjSzyM+Pz837Pd90NDVHMmWuevBPFYToU6fs/f/t0ULf988ubqcLXMQGsJOATxErCPUGsJNwTyEqCPYGsJNgNZu3Z0mYmkJW01g1mJa11g1lJqCeQlXSCNJiVtNYNZiWhbjArCXXzuJRUW/odIu250g1mJaFuMCsJtRtaY9zQ1lk9rnSDWUmonRzKPjmss3peaQut3IW2zup9pS20opo9gsv76+Zhs5/rp+OdB35Bk3OjJmSwL+v0zQAWujjkp18D2Bd8KFRNzJW/npKgnRvqvZNhC93hGlppJ4eAts6+vg5Bu5+VdEdbaEUV/fvQH+5eXP1jj+8eov/7fnj4G+h0xCN1/pyScDeYlfTcZi+Izp9h72tdBvTj+4/X/bh7f7Zhadi3ry///HD78ruxQV8LGOYNXpv7u4tRP3099wI+94Z4q25+/PVwfPdH6a+v9Jvi7LXeEvfcK2LrXG+lK+Bua0LuHXPVFdzq61rjOa/pYpWF7ums0P4nydKL3WDua6Wr3857m5mW+MNJW0Le83be80PinpCXuqW/+vMssNZzT5irrOOWsNMW+WuWnot6hhmyJNQzyEr6wNhgVtIHxgazklA3mJWE2rdgKaq29DtE2nOlG8xKQt2+9C/BrJ5QP77/6IbWIDe0dVaPK91gVhLqBrCSgDfrrKSV9qEwpK3+zHL1Zsucg/n0z5G+gfipWwttraMCOhTv7euHIWEDHb7Eo6EGehD4o8AGeqA7eQTUQA/2oS99rYEeCPOp5N/WA1pAyzoDLZiBloC2zoOuM9AwA62+Gu1/3QF0+Dq7oeXUAFpODaDl1AAaZusMNMxAS0DLOgMtmIGWgLbOQAtmoLVNMAO9+mJW/LmAHhjzFtCcGkBvCqz6esIM9MVruRZqpwbQu/3SvzQ+pwbQu9+xS6GGGegyH8qcCUDHYF4CtXUGuuQHsr3+CluYgS59CwvoUiu35QdK6wx0CdQwAx271DAD3TVqdzbQMaidGkA7P2AGerSbWkB3t4rWGegYTDADDZWArojaGwnoGGAwAw2agK6I2psG6BjUMAMdgxpmoN3UAroiam8MoGNQwwy080NAV0TtTQB0BOrH+zuYge4L9efAgrx9s0fgrrbQEtAS0BLQAloCWgJaAloCWkBLQEtAS0BLQAvowvk7mD1vCy0LLQHtl0HnBtBQe75AS/8P+vjq7WRFlPBcj6/eTs3DV9LznJNeBH+VgGFoXhQlPbf/7ueb33/+lPZCWexx3vynz4KzF01J+W07ZYLu+bfvNHbndi20nBxSF6CdHer53LDQyj85rLR6XWcLrTE+FFpp9bjOX1xoqNUbZieHxjg5rLR6XOdvWmio1Qvmbz45oFYPmN3QGuuGttLqaZ0vXmioVRnzVScH1KqK+XA4+57Ca0r8PkT1CXmRD4XWWpUwPxs01KqE+dknhxNEVSAvttDWWpXMrAbQWmuP8Vt9UcHWlr+Kb3oiwA3x2u1288INcRRowAFeo38Bjj5umVEYv4cAAAAASUVORK5CYII=">
@@ -17,30 +17,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Battambang:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --g-deep:#064e34; --g-mid:#0f7a4f; --g-bright:#1fa564; --g-soft:#8fe0b4;
-  --y-deep:#b8860b; --y-mid:#f0b429; --y-soft:#ffe08a;
-  --w-glass:rgba(255,255,255,.20);
-  --w-glass-hi:rgba(255,255,255,.32);
-  --w-line:rgba(255,255,255,.35);
-  --ink:#ffffff; --ink-dim:rgba(255,255,255,.72); --ink-dark:#07331f;
+  /* ---- បៃតង ៣០% ---- */
+  --g-deep:#0a5c3c; --g-mid:#0f7a4f; --g-bright:#1fa564; --g-soft:#8fe0b4; --g-pale:#e9f7ef;
+  /* ---- លឿង ២០% ---- */
+  --y-deep:#a9780a; --y-mid:#f0b429; --y-soft:#ffe08a; --y-pale:#fff7e2;
+  /* ---- ស ៦០% (គ្រឹះ) ---- */
+  --surf:rgba(255,255,255,.74); --surf-2:rgba(255,255,255,.56); --surf-3:rgba(255,255,255,.92);
+  --line:rgba(15,122,79,.18); --line-2:rgba(255,255,255,.92);
+  --ink:#0e2f21; --ink-dim:rgba(14,47,33,.62); --ink-faint:rgba(14,47,33,.40);
   --r-lg:22px; --r-md:16px; --r-sm:11px;
-  --shadow:0 8px 28px rgba(3,45,28,.28);
-  --safe-b:env(safe-area-inset-bottom,0px);
-  --safe-t:env(safe-area-inset-top,0px);
+  --shadow:0 8px 26px rgba(12,74,50,.10), 0 1px 3px rgba(12,74,50,.07);
+  --safe-b:env(safe-area-inset-bottom,0px); --safe-t:env(safe-area-inset-top,0px);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html{overscroll-behavior-y:none}
-input,textarea,select,button{font-size:16px}  /* ការពារ iPhone ពង្រីកអេក្រង់ស្វ័យប្រវត្តិ */
+input,textarea,select,button{font-size:16px}
 body{
   font-family:'Kantumruy Pro','Khmer OS Battambang','Noto Sans Khmer',system-ui,sans-serif;
   color:var(--ink); font-size:15px; line-height:1.75;
   min-height:100vh; min-height:100dvh; overflow-x:hidden;
   background:
-    radial-gradient(1000px 620px at 88% -8%, rgba(240,180,41,.42), transparent 62%),
-    radial-gradient(760px 520px at -12% 12%, rgba(143,224,180,.30), transparent 60%),
-    radial-gradient(900px 700px at 50% 108%, rgba(255,224,138,.22), transparent 65%),
-    linear-gradient(168deg,#064e34 0%,#0b6242 34%,#12854f 68%,#1fa564 100%);
+    radial-gradient(760px 520px at 88% -6%, rgba(255,224,138,.55), transparent 62%),
+    radial-gradient(700px 500px at -8% 8%, rgba(143,224,180,.50), transparent 62%),
+    radial-gradient(900px 640px at 50% 108%, rgba(31,165,100,.16), transparent 66%),
+    linear-gradient(172deg,#ffffff 0%,#f8fcfa 45%,#eff8f3 100%);
   background-attachment:fixed;
 }
 .wrap{max-width:560px;margin:0 auto;padding:0 14px calc(104px + var(--safe-b));position:relative;transition:max-width .25s}
@@ -55,20 +56,21 @@ body.v-pc .qhead h2{font-size:18px}
 @media (max-width:700px){ body.v-pc .grid2{grid-template-columns:1fr} body.v-pc .grid2 .hero{position:static} }
 
 /* ---------- View toggle ---------- */
-.seg{display:inline-flex;padding:3px;border-radius:12px;background:rgba(255,255,255,.16);
-  border:1px solid var(--w-line);gap:3px}
+.seg{display:inline-flex;padding:3px;border-radius:12px;background:var(--surf-3);
+  border:1px solid var(--line);gap:3px;box-shadow:0 2px 8px rgba(12,74,50,.07)}
 .seg button{border:none;background:transparent;color:var(--ink-dim);font-family:inherit;font-size:12px;
   padding:6px 11px;border-radius:9px;cursor:pointer;white-space:nowrap;line-height:1.4}
 @media (max-width:410px){ #segView button{padding:6px 7px} .iconbtn{width:34px;height:34px;flex:0 0 34px;font-size:15px} }
-.seg button.on{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;font-weight:600}
+.seg button.on{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;font-weight:600;
+  box-shadow:0 3px 9px rgba(15,122,79,.28)}
 
 /* ---------- Excel-like form table ---------- */
 .xwrap{margin-top:11px;border-radius:var(--r-md);overflow:auto;-webkit-overflow-scrolling:touch;
-  background:rgba(255,255,255,.16);border:1px solid var(--w-line);
-  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 5px 18px rgba(3,45,28,.2)}
-table.xform{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
-table.xform th,table.xform td{border:1px solid rgba(255,255,255,.28);padding:7px 8px;vertical-align:middle}
-table.xform thead th{background:rgba(255,255,255,.24);font-weight:600;font-size:12px;
+  background:var(--surf-3);border:1px solid var(--line);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:var(--shadow)}
+table.xform{width:100%;border-collapse:collapse;font-size:13px;min-width:640px;color:var(--ink)}
+table.xform th,table.xform td{border:1px solid rgba(15,122,79,.16);padding:7px 8px;vertical-align:middle}
+table.xform thead th{background:var(--g-pale);font-weight:600;font-size:12px;color:var(--g-deep);
   position:sticky;top:0;z-index:5;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
 table.xform td.n{text-align:center;width:44px;font-weight:600;font-size:12px}
 table.xform td.n small{display:block;font-size:9px;opacity:.6;font-weight:400}
@@ -76,82 +78,83 @@ table.xform td.d{line-height:1.65;min-width:250px}
 table.xform td.c{text-align:center;width:64px;padding:4px}
 table.xform td.p{text-align:center;width:66px;font-weight:600;font-size:12px}
 table.xform td.o{width:190px;padding:3px}
-table.xform tr.a-yes{background:rgba(31,165,100,.30)}
-table.xform tr.a-no {background:rgba(240,180,41,.26)}
-table.xform tr.a-na {background:rgba(255,255,255,.07);opacity:.75}
+table.xform tr.a-yes{background:rgba(31,165,100,.13)}
+table.xform tr.a-no {background:rgba(240,180,41,.16)}
+table.xform tr.a-na {background:rgba(14,47,33,.05);color:var(--ink-dim)}
 .xbox{width:30px;height:30px;margin:0 auto;border-radius:8px;cursor:pointer;display:grid;place-items:center;
-  border:1.5px solid rgba(255,255,255,.5);background:rgba(255,255,255,.12);font-size:15px;color:transparent;
+  border:1.5px solid rgba(15,122,79,.3);background:#fff;font-size:15px;color:transparent;
   transition:transform .12s,background .18s}
 .xbox:active{transform:scale(.88)}
-.xbox.on{color:#07331f;background:linear-gradient(135deg,var(--y-soft),#fff);border-color:#fff;font-weight:700}
-tr.a-yes .xbox.on{background:linear-gradient(135deg,#d8ffe9,#fff)}
-.xnote{width:100%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.14);color:#fff;
+.xbox.on{color:#fff;background:linear-gradient(135deg,var(--g-bright),var(--g-mid));border-color:var(--g-mid);font-weight:700}
+tr.a-no .xbox.on{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#5a3d00;border-color:var(--y-mid)}
+tr.a-na .xbox.on{background:#7d8f86;border-color:#7d8f86;color:#fff}
+.xnote{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);
   border-radius:8px;padding:6px 8px;font-family:inherit;font-size:12px;outline:none;resize:vertical;min-height:34px}
-.xnote::placeholder{color:rgba(255,255,255,.4)}
+.xnote::placeholder{color:var(--ink-faint)}
 .xcam{display:block;width:100%;margin-top:4px;font-size:10.5px;padding:4px;border-radius:7px;cursor:pointer;
-  font-family:inherit;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:var(--ink-dim)}
-.xcam.has{background:rgba(255,224,138,.3);color:#fff}
-table.xform tfoot td{background:rgba(255,224,138,.28);font-weight:700;font-size:12.5px;color:#fff}
+  font-family:inherit;border:1px solid var(--line);background:#fff;color:var(--ink-dim)}
+.xcam.has{background:var(--y-pale);color:var(--y-deep);border-color:var(--y-mid)}
+table.xform tfoot td{background:var(--y-pale);font-weight:700;font-size:12.5px;color:var(--g-deep)}
 .scrollhint{font-size:10.5px;color:var(--ink-dim);text-align:center;margin-top:6px}
 
 /* ---------- Excel-style header block ---------- */
-.xhead{display:grid;grid-template-columns:1fr auto auto;gap:1px;background:rgba(255,255,255,.28);
-  border:1px solid var(--w-line);border-radius:var(--r-md);overflow:hidden;margin-top:14px}
-.xhead .cell{background:rgba(11,98,66,.55);padding:10px 12px;font-size:12.5px}
+.xhead{display:grid;grid-template-columns:1fr auto auto;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;margin-top:14px;box-shadow:var(--shadow)}
+.xhead .cell{background:var(--surf-3);padding:10px 12px;font-size:12.5px}
 .xhead .cell.k{color:var(--ink-dim);font-size:10.5px;margin-bottom:2px;display:block}
-.xhead .cell b{font-size:14px;font-weight:600}
-.xhead .sc{text-align:center;min-width:96px;background:rgba(240,180,41,.30)}
-.xhead .sc b{font-size:22px;display:block;line-height:1.15}
+.xhead .cell b{font-size:14px;font-weight:600;color:var(--ink)}
+.xhead .sc{text-align:center;min-width:96px;background:var(--y-pale)}
+.xhead .sc b{font-size:22px;display:block;line-height:1.15;color:var(--g-deep)}
 @media (max-width:520px){ .xhead{grid-template-columns:1fr 1fr} .xhead .info{grid-column:1/-1} }
 
 /* ---------- Glass primitives ---------- */
 .glass{
-  background:var(--w-glass);
-  -webkit-backdrop-filter:blur(18px) saturate(150%);
-  backdrop-filter:blur(18px) saturate(150%);
-  border:1px solid var(--w-line);
+  background:var(--surf);
+  -webkit-backdrop-filter:blur(20px) saturate(150%);
+  backdrop-filter:blur(20px) saturate(150%);
+  border:1px solid var(--line-2);
   border-radius:var(--r-lg);
   box-shadow:var(--shadow);
 }
 .glass-green{
-  background:linear-gradient(140deg,rgba(31,165,100,.60),rgba(15,122,79,.52));
-  border:1px solid rgba(143,224,180,.48);
+  background:linear-gradient(140deg,rgba(31,165,100,.20),rgba(255,255,255,.80));
+  border:1px solid rgba(31,165,100,.28);
 }
 .glass-yellow{
-  background:linear-gradient(140deg,rgba(240,180,41,.42),rgba(255,224,138,.26));
-  border:1px solid rgba(255,224,138,.55);
+  background:linear-gradient(140deg,rgba(240,180,41,.22),rgba(255,255,255,.82));
+  border:1px solid rgba(240,180,41,.38);
 }
 
 /* ---------- Header ---------- */
 header.top{
   position:sticky;top:0;z-index:60;
   padding:calc(10px + var(--safe-t)) 14px 10px;
-  background:linear-gradient(180deg,rgba(6,78,52,.92),rgba(6,78,52,.62) 70%,transparent);
-  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.72) 72%,rgba(255,255,255,0));
+  -webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);
+  border-bottom:1px solid rgba(15,122,79,.10);
 }
 .top-inner{max-width:560px;margin:0 auto;display:flex;align-items:center;gap:11px}
 .brand{
   width:42px;height:42px;flex:0 0 42px;border-radius:13px;
-  background:linear-gradient(140deg,var(--y-mid),var(--y-soft));
-  color:#07331f;display:grid;place-items:center;font-weight:700;font-size:12px;
-  box-shadow:0 5px 16px rgba(0,0,0,.25);letter-spacing:-.3px;
+  background:linear-gradient(140deg,var(--g-bright),var(--g-mid));
+  color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px;
+  box-shadow:0 5px 14px rgba(15,122,79,.32);letter-spacing:-.3px;
 }
-.brand small{display:block;font-size:8px;font-weight:600;opacity:.8;line-height:1}
+.brand small{display:block;font-size:8px;font-weight:600;opacity:.85;line-height:1}
 .top-t{flex:1;min-width:0}
-.top-t h1{margin:0;font-size:14.5px;font-weight:600;line-height:1.35;
+.top-t h1{margin:0;font-size:14.5px;font-weight:600;line-height:1.35;color:var(--ink);
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .top-t p{margin:0;font-size:11px;color:var(--ink-dim)}
 .iconbtn{
-  width:38px;height:38px;flex:0 0 38px;border-radius:12px;border:1px solid var(--w-line);
-  background:var(--w-glass);color:#fff;font-size:17px;display:grid;place-items:center;cursor:pointer;
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  width:38px;height:38px;flex:0 0 38px;border-radius:12px;border:1px solid var(--line);
+  background:var(--surf-3);color:var(--g-deep);font-size:17px;display:grid;place-items:center;cursor:pointer;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 2px 8px rgba(12,74,50,.08);
 }
 .iconbtn:active{transform:scale(.93)}
-
 /* progress bar under header */
-.pbar{max-width:560px;margin:9px auto 0;height:7px;border-radius:99px;background:rgba(255,255,255,.20);overflow:hidden}
+.pbar{max-width:560px;margin:9px auto 0;height:7px;border-radius:99px;background:rgba(15,122,79,.13);overflow:hidden}
 .pbar i{display:block;height:100%;width:0%;border-radius:99px;
-  background:linear-gradient(90deg,var(--y-soft),var(--y-mid));transition:width .45s cubic-bezier(.4,0,.2,1)}
+  background:linear-gradient(90deg,var(--g-bright),var(--y-mid));transition:width .45s cubic-bezier(.4,0,.2,1)}
 .pbar-txt{max-width:560px;margin:5px auto 0;font-size:10.5px;color:var(--ink-dim);display:flex;justify-content:space-between}
 
 /* ---------- Screens ---------- */
@@ -161,258 +164,278 @@ header.top{
 
 /* ---------- Farm info ---------- */
 .card{padding:16px;margin-top:14px}
-.card h2{margin:0 0 12px;font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.card h2{margin:0 0 12px;font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px;color:var(--ink)}
 .chip-i{width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-size:13px;
-  background:rgba(255,255,255,.22);border:1px solid var(--w-line);flex:0 0 26px}
+  background:var(--g-pale);border:1px solid rgba(15,122,79,.18);flex:0 0 26px}
 .field{margin-bottom:11px}
 .field:last-child{margin-bottom:0}
 .field label{display:block;font-size:11.5px;color:var(--ink-dim);margin-bottom:5px;font-weight:500}
 .field input,.field textarea,.field select{
   width:100%;padding:11px 13px;border-radius:var(--r-sm);
-  border:1px solid var(--w-line);background:rgba(255,255,255,.16);color:#fff;
+  border:1px solid var(--line);background:#fff;color:var(--ink);
   font-family:inherit;font-size:14px;outline:none;transition:.2s;
 }
-.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.45)}
+.field input::placeholder,.field textarea::placeholder{color:var(--ink-faint)}
 .field input:focus,.field textarea:focus,.field select:focus{
-  background:rgba(255,255,255,.26);border-color:var(--y-soft);box-shadow:0 0 0 3px rgba(240,180,41,.22)}
-.field select option{background:#0b6242;color:#fff}
+  border-color:var(--g-bright);box-shadow:0 0 0 3px rgba(31,165,100,.16)}
+.field select option{background:#fff;color:var(--ink)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 
 /* ---------- Score hero ---------- */
 .hero{padding:20px 16px;margin-top:14px;text-align:center;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:auto -30% -60% -30%;height:150px;
-  background:radial-gradient(closest-side,rgba(255,224,138,.30),transparent);pointer-events:none}
+  background:radial-gradient(closest-side,rgba(255,224,138,.42),transparent);pointer-events:none}
 .ring{width:150px;height:150px;margin:0 auto 10px;position:relative}
 .ring svg{transform:rotate(-90deg);display:block}
-.ring .bg{stroke:rgba(255,255,255,.20)}
+.ring .bg{stroke:rgba(15,122,79,.12)}
 .ring .fg{stroke:url(#grad);stroke-linecap:round;transition:stroke-dasharray .7s cubic-bezier(.34,1.3,.64,1)}
 .ring .val{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
-.ring .val b{font-size:38px;font-weight:700;line-height:1;letter-spacing:-1px;
-  background:linear-gradient(180deg,#fff,var(--y-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ring .val b{font-size:38px;font-weight:700;line-height:1;letter-spacing:-1px;color:var(--g-deep)}
 .ring .val span{font-size:10.5px;color:var(--ink-dim);display:block;margin-top:3px}
-.grade{display:inline-block;padding:5px 18px;border-radius:99px;font-weight:700;font-size:14px;
-  background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;box-shadow:0 5px 16px rgba(0,0,0,.22)}
+.grade{display:inline-block;padding:6px 18px;border-radius:99px;font-weight:700;font-size:14px;
+  background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;box-shadow:0 5px 16px rgba(15,122,79,.30)}
 .hero-sub{font-size:11.5px;color:var(--ink-dim);margin-top:9px}
 .mini3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
-.mini3 div{padding:9px 4px;border-radius:13px;background:rgba(255,255,255,.16);border:1px solid var(--w-line)}
-.mini3 b{display:block;font-size:19px;font-weight:700;line-height:1.2}
+.mini3 div{padding:9px 4px;border-radius:13px;background:var(--surf-3);border:1px solid var(--line)}
+.mini3 b{display:block;font-size:19px;font-weight:700;line-height:1.2;color:var(--ink)}
 .mini3 span{font-size:9.5px;color:var(--ink-dim)}
-.mini3 .ok b{color:var(--g-soft)} .mini3 .no b{color:var(--y-soft)} .mini3 .na b{color:rgba(255,255,255,.85)}
+.mini3 .ok b{color:var(--g-mid)} .mini3 .no b{color:var(--y-deep)} .mini3 .na b{color:var(--ink-dim)}
 
 /* ---------- Section list ---------- */
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin:20px 4px 9px}
-.sec-head h3{margin:0;font-size:13px;font-weight:600;letter-spacing:.2px}
+.sec-head h3{margin:0;font-size:13px;font-weight:600;letter-spacing:.2px;color:var(--ink)}
 .sec-head span{font-size:10.5px;color:var(--ink-dim)}
 .slist{display:flex;flex-direction:column;gap:10px}
 .sitem{
   display:flex;align-items:center;gap:12px;padding:13px 14px;cursor:pointer;
   border-radius:var(--r-md);transition:transform .18s, background .18s;
-  background:var(--w-glass);border:1px solid var(--w-line);
-  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 5px 18px rgba(3,45,28,.20);
+  background:var(--surf);border:1px solid var(--line-2);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:var(--shadow);
 }
 .sitem:active{transform:scale(.98)}
-.sitem.done{background:linear-gradient(135deg,rgba(31,165,100,.50),rgba(255,255,255,.16));border-color:rgba(143,224,180,.55)}
+.sitem.done{background:linear-gradient(135deg,rgba(31,165,100,.16),rgba(255,255,255,.86));border-color:rgba(31,165,100,.34)}
 .snum{width:40px;height:40px;flex:0 0 40px;border-radius:13px;display:grid;place-items:center;
-  font-weight:700;font-size:15px;color:#07331f;background:linear-gradient(140deg,var(--y-mid),var(--y-soft));
-  box-shadow:0 4px 12px rgba(0,0,0,.18)}
+  font-weight:700;font-size:15px;background:var(--y-pale);border:1px solid rgba(240,180,41,.4)}
 .sbody{flex:1;min-width:0}
-.sbody b{display:block;font-size:14px;font-weight:600;line-height:1.4}
+.sbody b{display:block;font-size:14px;font-weight:600;line-height:1.4;color:var(--ink)}
 .sbody .meta{display:flex;align-items:center;gap:7px;margin-top:5px}
-.sbody .bar{flex:1;height:5px;border-radius:99px;background:rgba(255,255,255,.22);overflow:hidden}
-.sbody .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--g-soft),var(--y-soft));width:0;transition:width .45s}
+.sbody .bar{flex:1;height:5px;border-radius:99px;background:rgba(15,122,79,.13);overflow:hidden}
+.sbody .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--g-bright),var(--y-mid));width:0;transition:width .45s}
 .sbody .meta small{font-size:10px;color:var(--ink-dim);white-space:nowrap}
 .sscore{text-align:right;flex:0 0 auto;min-width:52px}
-.sscore b{display:block;font-size:17px;font-weight:700;line-height:1}
+.sscore b{display:block;font-size:17px;font-weight:700;line-height:1;color:var(--g-deep)}
 .sscore small{font-size:9px;color:var(--ink-dim)}
 
 /* ---------- Question cards ---------- */
 .qhead{padding:15px 16px;margin-top:14px}
 .qhead .t{display:flex;align-items:center;gap:11px}
-.qhead h2{margin:0;font-size:15.5px;font-weight:600;flex:1}
-.qhead .note{margin-top:10px;font-size:11.5px;color:#07331f;background:rgba(255,224,138,.75);
-  padding:9px 12px;border-radius:11px;line-height:1.6;border:1px solid rgba(255,224,138,.9)}
+.qhead h2{margin:0;font-size:15.5px;font-weight:600;flex:1;color:var(--g-deep)}
+.qhead .note{margin-top:10px;font-size:11.5px;color:var(--y-deep);background:var(--y-pale);
+  padding:9px 12px;border-radius:11px;line-height:1.6;border:1px solid rgba(240,180,41,.45)}
 .filters{display:flex;gap:7px;margin:13px 2px 4px;overflow-x:auto;padding-bottom:3px;scrollbar-width:none}
 .filters::-webkit-scrollbar{display:none}
 .fchip{padding:6px 13px;border-radius:99px;font-size:11.5px;white-space:nowrap;cursor:pointer;
-  border:1px solid var(--w-line);background:rgba(255,255,255,.14);color:var(--ink-dim);transition:.18s}
-.fchip.on{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;font-weight:600;border-color:transparent}
-
+  border:1px solid var(--line);background:var(--surf-3);color:var(--ink-dim);transition:.18s}
+.fchip.on{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;font-weight:600;border-color:transparent}
 .qlist{display:flex;flex-direction:column;gap:11px;margin-top:11px}
-.q{padding:13px 14px;border-radius:var(--r-md);background:var(--w-glass);border:1px solid var(--w-line);
-  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 4px 16px rgba(3,45,28,.18);
+.q{padding:13px 14px;border-radius:var(--r-md);background:var(--surf);border:1px solid var(--line-2);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:var(--shadow);
   transition:border-color .25s, background .25s}
-.q.a-yes{background:linear-gradient(135deg,rgba(31,165,100,.44),rgba(255,255,255,.14));border-color:rgba(143,224,180,.60)}
-.q.a-no{background:linear-gradient(135deg,rgba(240,180,41,.40),rgba(255,255,255,.14));border-color:rgba(255,224,138,.65)}
-.q.a-na{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.25);opacity:.82}
+.q.a-yes{background:linear-gradient(135deg,rgba(31,165,100,.15),rgba(255,255,255,.88));border-color:rgba(31,165,100,.34)}
+.q.a-no{background:linear-gradient(135deg,rgba(240,180,41,.18),rgba(255,255,255,.88));border-color:rgba(240,180,41,.45)}
+.q.a-na{background:rgba(255,255,255,.55);border-color:var(--line);opacity:.9}
 .qtop{display:flex;gap:10px}
 .qn{width:27px;height:27px;flex:0 0 27px;border-radius:9px;display:grid;place-items:center;
-  font-size:12px;font-weight:700;background:rgba(255,255,255,.24);border:1px solid var(--w-line)}
-.qt{flex:1;font-size:14px;line-height:1.7;padding-top:2px}
+  font-size:12px;font-weight:700;background:var(--g-pale);border:1px solid rgba(15,122,79,.2);color:var(--g-deep)}
+.qt{flex:1;font-size:14px;line-height:1.7;padding-top:2px;color:var(--ink)}
+.qsub{font-size:11.5px;color:var(--ink-dim);line-height:1.6;margin-top:3px}
 .ans{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:11px}
 .ab{padding:9px 3px;border-radius:11px;font-size:12px;font-weight:600;cursor:pointer;text-align:center;
   min-height:46px;line-height:1.35;display:flex;align-items:center;justify-content:center;
-  border:1px solid var(--w-line);background:rgba(255,255,255,.13);color:var(--ink-dim);
+  border:1px solid var(--line);background:#fff;color:var(--ink-dim);
   font-family:inherit;transition:transform .15s,background .2s,color .2s}
 .ab:active{transform:scale(.94)}
-.ab.on-yes{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;border-color:rgba(143,224,180,.8);box-shadow:0 4px 13px rgba(31,165,100,.45)}
-.ab.on-no{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#5a3d00;border-color:rgba(255,224,138,.9);box-shadow:0 4px 13px rgba(240,180,41,.42)}
-.ab.on-na{background:rgba(255,255,255,.62);color:#07331f;border-color:#fff}
+.ab.on-yes{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;border-color:var(--g-mid);box-shadow:0 4px 13px rgba(31,165,100,.32)}
+.ab.on-no{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#5a3d00;border-color:var(--y-mid);box-shadow:0 4px 13px rgba(240,180,41,.32)}
+.ab.on-na{background:#7d8f86;color:#fff;border-color:#7d8f86}
 .qtools{display:flex;gap:7px;margin-top:9px;align-items:center;flex-wrap:wrap}
 .tbtn{padding:6px 11px;border-radius:9px;font-size:11px;cursor:pointer;font-family:inherit;
-  border:1px solid var(--w-line);background:rgba(255,255,255,.14);color:var(--ink-dim)}
-.tbtn.has{background:rgba(255,224,138,.30);color:#fff;border-color:rgba(255,224,138,.6)}
+  border:1px solid var(--line);background:#fff;color:var(--ink-dim)}
+.tbtn.has{background:var(--y-pale);color:var(--y-deep);border-color:rgba(240,180,41,.5)}
 .qnote{width:100%;margin-top:8px;padding:9px 11px;border-radius:10px;font-size:12.5px;font-family:inherit;
-  border:1px solid var(--w-line);background:rgba(255,255,255,.15);color:#fff;resize:vertical;min-height:56px;outline:none}
-.qnote::placeholder{color:rgba(255,255,255,.45)}
+  border:1px solid var(--line);background:#fff;color:var(--ink);resize:vertical;min-height:56px;outline:none}
+.qnote::placeholder{color:var(--ink-faint)}
 .thumbs{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}
-.thumb{position:relative;width:62px;height:62px;border-radius:10px;overflow:hidden;border:1px solid var(--w-line)}
+.thumb{position:relative;width:62px;height:62px;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .thumb b{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,.62);
   color:#fff;font-size:11px;display:grid;place-items:center;cursor:pointer;line-height:1}
 .hide{display:none !important}
 
 /* ---------- Summary ---------- */
-.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:4px}
-.tbl th,.tbl td{padding:9px 7px;text-align:left;border-bottom:1px solid rgba(255,255,255,.18)}
-.tbl th{font-size:10.5px;color:var(--ink-dim);font-weight:500}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+.tbl th,.tbl td{padding:9px 7px;text-align:left;border-bottom:1px solid var(--line);color:var(--ink)}
+.tbl th{font-size:10.5px;color:var(--ink-dim);font-weight:600}
 .tbl td:last-child,.tbl th:last-child{text-align:right}
 .tbl tr:last-child td{border-bottom:none}
-.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600}
-.p-hi{background:rgba(143,224,180,.35);color:#d6ffe9}
-.p-mid{background:rgba(255,224,138,.35);color:#ffeeb8}
-.p-lo{background:rgba(255,255,255,.22);color:#fff}
-.failitem{padding:10px 12px;border-radius:12px;background:rgba(240,180,41,.22);border:1px solid rgba(255,224,138,.4);
-  font-size:12.5px;line-height:1.6;margin-bottom:8px}
-.failitem b{color:var(--y-soft);font-size:11px;display:block;margin-bottom:2px;font-weight:600}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:700}
+.p-hi{background:rgba(31,165,100,.18);color:var(--g-deep)}
+.p-mid{background:rgba(240,180,41,.25);color:var(--y-deep)}
+.p-lo{background:rgba(14,47,33,.08);color:var(--ink-dim)}
+.failitem{padding:10px 12px;border-radius:12px;background:var(--y-pale);border:1px solid rgba(240,180,41,.4);
+  font-size:12.5px;line-height:1.6;margin-bottom:8px;color:var(--ink)}
+.failitem b{color:var(--y-deep);font-size:11px;display:block;margin-bottom:2px;font-weight:700}
 .btnrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 .btn{padding:13px;border-radius:14px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;
-  border:1px solid var(--w-line);background:rgba(255,255,255,.18);color:#fff;text-align:center;transition:transform .15s}
+  border:1px solid var(--line);background:var(--surf-3);color:var(--g-deep);text-align:center;transition:transform .15s;
+  box-shadow:0 2px 8px rgba(12,74,50,.07)}
 .btn:active{transform:scale(.97)}
-.btn.pri{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;border-color:transparent;
-  box-shadow:0 6px 18px rgba(240,180,41,.35)}
+.btn.pri{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;border-color:transparent;
+  box-shadow:0 6px 18px rgba(15,122,79,.30)}
 .btn.wide{grid-column:1/-1}
 
 /* ---------- Bottom nav ---------- */
 nav.bot{
   position:fixed;left:0;right:0;bottom:0;z-index:70;
   padding:8px 14px calc(8px + var(--safe-b));
-  background:linear-gradient(0deg,rgba(6,78,52,.96),rgba(6,78,52,.72));
-  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-  border-top:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(20px) saturate(150%);backdrop-filter:blur(20px) saturate(150%);
+  border-top:1px solid rgba(15,122,79,.13);
 }
 .bot-inner{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
 .nb{padding:7px 2px;border-radius:13px;text-align:center;cursor:pointer;border:none;background:transparent;
   color:var(--ink-dim);font-family:inherit;font-size:10px;transition:.2s}
 .nb i{display:block;font-size:18px;font-style:normal;margin-bottom:1px}
-.nb.on{background:rgba(255,255,255,.20);color:#fff;font-weight:600}
+.nb.on{background:var(--g-pale);color:var(--g-deep);font-weight:700}
 
 /* ---------- Toast / FAB ---------- */
 #toast{position:fixed;left:50%;bottom:calc(88px + var(--safe-b));transform:translate(-50%,20px);
-  background:rgba(7,51,31,.94);color:#fff;padding:10px 18px;border-radius:99px;font-size:12.5px;
-  z-index:200;opacity:0;pointer-events:none;transition:.3s;border:1px solid rgba(255,255,255,.25);max-width:90vw;text-align:center}
+  background:var(--g-deep);color:#fff;padding:10px 18px;border-radius:99px;font-size:12.5px;
+  z-index:200;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 8px 24px rgba(10,92,60,.35);max-width:90vw;text-align:center}
 #toast.on{opacity:1;transform:translate(-50%,0)}
 .fab{position:fixed;right:16px;bottom:calc(84px + var(--safe-b));z-index:65;width:50px;height:50px;border-radius:17px;
-  background:linear-gradient(140deg,var(--y-mid),var(--y-soft));color:#07331f;border:none;font-size:20px;
-  box-shadow:0 8px 22px rgba(0,0,0,.32);cursor:pointer;display:none;place-items:center}
+  background:linear-gradient(140deg,var(--g-bright),var(--g-mid));color:#fff;border:none;font-size:20px;
+  box-shadow:0 8px 22px rgba(15,122,79,.34);cursor:pointer;display:none;place-items:center}
 .fab.on{display:grid}
 .empty{text-align:center;padding:34px 14px;color:var(--ink-dim);font-size:13px}
 
-/* ---------- Save sheet ---------- */
-#sheetBg{position:fixed;inset:0;z-index:150;background:rgba(3,40,25,.62);
+/* ---------- Sheets ---------- */
+#sheetBg{position:fixed;inset:0;z-index:150;background:rgba(10,60,42,.34);
   -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
   opacity:0;pointer-events:none;transition:opacity .28s}
 #sheetBg.on{opacity:1;pointer-events:auto}
-#sheet{position:fixed;left:0;right:0;bottom:0;z-index:160;
+#sheet,#clearSheet{position:fixed;left:0;right:0;bottom:0;z-index:160;
   max-width:560px;margin:0 auto;padding:16px 16px calc(20px + var(--safe-b));
   border-radius:26px 26px 0 0;
-  background:linear-gradient(160deg,rgba(31,165,100,.72),rgba(9,92,60,.86));
+  background:rgba(255,255,255,.96);
   -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
-  border:1px solid rgba(255,255,255,.34);border-bottom:none;
-  box-shadow:0 -12px 40px rgba(0,0,0,.4);
+  border:1px solid rgba(15,122,79,.16);border-bottom:none;
+  box-shadow:0 -12px 40px rgba(10,60,42,.22);
   transform:translateY(102%);transition:transform .34s cubic-bezier(.32,1.15,.5,1)}
-#sheet.on{transform:translateY(0)}
-#sheet .grab{width:44px;height:4px;border-radius:99px;background:rgba(255,255,255,.45);margin:0 auto 14px}
-#sheet h3{margin:0 0 3px;font-size:16px;font-weight:600;text-align:center}
-#sheet .sub{margin:0 0 14px;font-size:11.5px;color:var(--ink-dim);text-align:center}
+#sheet.on,#clearSheet.on{transform:translateY(0)}
+#sheet .grab,#clearSheet .grab{width:44px;height:4px;border-radius:99px;background:rgba(15,122,79,.25);margin:0 auto 14px}
+#sheet h3,#clearSheet h3{margin:0 0 3px;font-size:16px;font-weight:600;text-align:center;color:var(--ink)}
+#sheet .sub,#clearSheet .sub{margin:0 0 14px;font-size:11.5px;color:var(--ink-dim);text-align:center}
 .sv{display:flex;align-items:center;gap:13px;width:100%;text-align:left;font-family:inherit;
-  padding:13px 14px;margin-bottom:9px;border-radius:15px;cursor:pointer;color:#fff;
-  border:1px solid var(--w-line);background:rgba(255,255,255,.16);transition:transform .15s,background .2s}
+  padding:13px 14px;margin-bottom:9px;border-radius:15px;cursor:pointer;color:var(--ink);
+  border:1px solid var(--line);background:var(--surf-3);transition:transform .15s,background .2s}
 .sv:active{transform:scale(.975)}
-.sv.pri{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;border-color:transparent;
-  box-shadow:0 6px 18px rgba(240,180,41,.34)}
+.sv.pri{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;border-color:transparent;
+  box-shadow:0 6px 18px rgba(15,122,79,.28)}
 .sv i{font-style:normal;font-size:21px;width:38px;height:38px;flex:0 0 38px;border-radius:12px;
-  display:grid;place-items:center;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.3)}
-.sv.pri i{background:rgba(7,51,31,.16);border-color:rgba(7,51,31,.2)}
+  display:grid;place-items:center;background:var(--g-pale);border:1px solid rgba(15,122,79,.16)}
+.sv.pri i{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.3)}
 .sv b{display:block;font-size:14px;font-weight:600;line-height:1.35}
-.sv small{display:block;font-size:10.5px;opacity:.78;line-height:1.45}
+.sv small{display:block;font-size:10.5px;opacity:.75;line-height:1.45}
+.sv.danger{background:#fdeceb;border-color:#f0b6ae;color:#8a2a1c}
+.sv.danger i{background:#fbdcd8;border-color:#f0b6ae}
+
 .calc{margin-top:11px;padding:10px 12px;border-radius:12px;font-size:11.5px;line-height:1.8;
-  background:rgba(255,255,255,.14);border:1px solid var(--w-line);color:var(--ink-dim);text-align:left}
-.calc b{color:#fff;font-weight:600}
-.calcrow{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.18)}
+  background:var(--g-pale);border:1px solid rgba(15,122,79,.16);color:var(--ink-dim);text-align:left}
+.calc b{color:var(--g-deep);font-weight:700}
+.calcrow{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line)}
 .calcrow:last-child{border-bottom:none}
-.calcrow b{font-size:13px}
+.calcrow b{font-size:13px;color:var(--g-deep)}
 .formula{font-size:11.5px;line-height:1.9;color:var(--ink-dim)}
-.formula b{color:#fff}
-.formula code{background:rgba(255,255,255,.18);padding:1px 6px;border-radius:6px;font-size:11px;color:#fff}
+.formula b{color:var(--ink)}
+.formula code{background:var(--g-pale);padding:1px 6px;border-radius:6px;font-size:11px;color:var(--g-deep)}
+
 .rec{display:flex;align-items:center;gap:10px;padding:10px 11px;border-radius:13px;margin-bottom:9px;
-  background:rgba(255,255,255,.15);border:1px solid var(--w-line)}
+  background:var(--surf-3);border:1px solid var(--line)}
 .rec:last-child{margin-bottom:0}
 .rec .rn{width:26px;height:26px;flex:0 0 26px;border-radius:8px;display:grid;place-items:center;font-size:11px;
-  font-weight:700;background:rgba(255,255,255,.22);border:1px solid var(--w-line)}
+  font-weight:700;background:var(--g-pale);border:1px solid rgba(15,122,79,.18);color:var(--g-deep)}
 .rec .rb{flex:1;min-width:0}
-.rec .rb b{display:block;font-size:13.5px;font-weight:600;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rec .rb b{display:block;font-size:13.5px;font-weight:600;line-height:1.4;color:var(--ink);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .rec .rb small{display:block;font-size:10px;color:var(--ink-dim);line-height:1.55;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .rec .rs{text-align:center;flex:0 0 auto}
-.rec .rs small{display:block;font-size:10px;color:var(--ink-dim);margin-top:2px;font-weight:600}
+.rec .rs small{display:block;font-size:10px;color:var(--ink-dim);margin-top:2px;font-weight:700}
 .rec .ra{display:flex;flex-direction:column;gap:4px;flex:0 0 auto}
 .rec .ra .tbtn{padding:5px 8px;font-size:10.5px}
-.badge{display:inline-block;padding:1px 8px;border-radius:99px;font-size:10.5px;font-weight:600;
-  background:rgba(255,224,138,.32);color:#fff;margin-left:6px}
-#clearSheet{position:fixed;left:0;right:0;bottom:0;z-index:160;max-width:560px;margin:0 auto;
-  padding:16px 16px calc(20px + var(--safe-b));border-radius:26px 26px 0 0;
-  background:linear-gradient(160deg,rgba(31,165,100,.72),rgba(9,92,60,.88));
-  -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
-  border:1px solid rgba(255,255,255,.34);border-bottom:none;box-shadow:0 -12px 40px rgba(0,0,0,.4);
-  transform:translateY(102%);transition:transform .34s cubic-bezier(.32,1.15,.5,1)}
-#clearSheet.on{transform:translateY(0)}
-#clearSheet .grab{width:44px;height:4px;border-radius:99px;background:rgba(255,255,255,.45);margin:0 auto 14px}
-#clearSheet h3{margin:0 0 3px;font-size:16px;font-weight:600;text-align:center}
-#clearSheet .sub{margin:0 0 14px;font-size:11.5px;color:var(--ink-dim);text-align:center}
-.sv.danger{background:rgba(226,90,76,.34);border-color:rgba(255,180,170,.5)}
-.sv.danger i{background:rgba(255,255,255,.2)}
+.badge{display:inline-block;padding:1px 8px;border-radius:99px;font-size:10.5px;font-weight:700;
+  background:var(--y-pale);color:var(--y-deep);margin-left:6px;border:1px solid rgba(240,180,41,.4)}
 .savebar{margin-top:14px}
 .savebar .btn{display:flex;align-items:center;justify-content:center;gap:8px}
 
-/* Browser ចាស់គ្មាន backdrop-filter → ដាក់ផ្ទៃពណ៌ជំនួស ដើម្បីកុំឱ្យអក្សរលិច */
 @supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))){
-  .glass,.sitem,.q,.xwrap,.iconbtn,header.top,nav.bot{background:rgba(10,95,63,.92)}
-  #sheet,#clearSheet{background:#0b6242}
+  .glass,.sitem,.q,.xwrap,.iconbtn,header.top,nav.bot{background:#fff}
+  #sheet,#clearSheet{background:#fff}
 }
-
-/* iPhone/Android: ការពារ browser ពង្រីកអេក្រង់ពេលចុចប្រអប់បំពេញ */
 @media (hover:none){ input,textarea,select{font-size:16px !important} }
-
 #errBar{display:none;position:fixed;left:0;right:0;top:0;z-index:9999;
   background:#7a1f16;color:#fff;padding:10px 14px;font-size:12px;line-height:1.6;
   font-family:'Kantumruy Pro',system-ui,sans-serif;border-bottom:2px solid #ffb4aa;
   max-height:45vh;overflow:auto}
 
 /* ---------- Print report ---------- */
+
 #report{display:none}
+@page{ size:A4 portrait; margin:7mm 6mm 13mm 6mm; }
 @media print{
-  body{background:#fff !important;color:#000 !important}
-  header.top,nav.bot,.fab,#toast,.screen,#sheet,#sheetBg{display:none !important}
-  #report{display:block !important;font-family:'Kantumruy Pro','Khmer OS Battambang',sans-serif;font-size:11px;color:#000;padding:0}
-  #report h1{font-size:16px;text-align:center;margin:0 0 4px}
-  #report .rsub{text-align:center;font-size:10px;margin-bottom:10px;color:#444}
-  #report table{width:100%;border-collapse:collapse;margin-bottom:12px}
-  #report th,#report td{border:1px solid #666;padding:3px 5px;font-size:10px;vertical-align:top}
-  #report th{background:#e8f5ee;font-weight:600}
-  #report h2{font-size:12px;background:#d7efe2;padding:4px 6px;margin:12px 0 4px;border:1px solid #666}
-  #report .sig{display:flex;justify-content:space-between;margin-top:26px;text-align:center;font-size:10px}
-  #report .sig div{width:30%;border-top:1px solid #000;padding-top:4px}
-  .pgbrk{page-break-after:always}
+  html,body{background:#fff !important;color:#000 !important;
+    font-family:'Kantumruy Pro','Khmer OS Battambang','Noto Sans Khmer',sans-serif !important}
+  header.top,nav.bot,.fab,#toast,.screen,#sheet,#clearSheet,#sheetBg,#errBar{display:none !important}
+  #report{display:block !important;color:#000}
+  #report *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #report h1{font-size:14px;text-align:center;margin:0 0 2px;font-weight:700;letter-spacing:.2px}
+  #report .rsub{text-align:center;font-size:9px;margin:0 0 7px;font-weight:700}
+  #report .warn{border:1pt solid #000;background:#FFF3CD !important;padding:3px 6px;
+    margin:0 0 5px;font-weight:700;font-size:9px}
+  table.fm{width:100%;border-collapse:collapse;table-layout:fixed;margin-bottom:0}
+  table.fm td{border:.5pt solid #000;padding:2.2px 4px;font-size:9px;line-height:1.6;
+    vertical-align:middle;word-wrap:break-word;overflow-wrap:break-word}
+  table.fm tr td:first-child{border-left:1pt solid #000}
+  table.fm tr td:last-child{border-right:1pt solid #000}
+  table.fm tr{page-break-inside:avoid;break-inside:avoid}
+  table.fm tr.keep{page-break-after:avoid;break-after:avoid}
+  #report td.inf{border:none;border-left:1pt solid #000;border-right:1pt solid #000;
+    font-size:10px;padding:5px 6px;height:22px}
+  #report td.inf.t{border-top:1pt solid #000}
+  #report td.inf.b{border-bottom:1pt solid #000}
+  #report td.box{border:1pt solid #000;text-align:center;font-weight:700;font-size:9px;line-height:1.5}
+  #report td.box b{font-size:13px}
+  #report td.sec{border-top:none;border-left:1pt solid #000;border-right:1pt solid #000;
+    font-weight:700;font-size:10px;padding:3px 6px}
+  #report tr.hd td{text-align:center;font-weight:700;font-size:9px;background:#F2F2F2 !important;padding:2px 1px}
+  #report td.c{text-align:center}
+  #report td.d{text-align:left}
+  #report td.d .sub{font-size:7.5px;color:#555;line-height:1.45}
+  #report td.m{text-align:center;font-size:12px;font-weight:700;line-height:1}
+  #report td.r{font-size:8px;color:#333}
+  #report td.note{border-top:none;border-bottom:none;
+    border-left:1pt solid #000;border-right:1pt solid #000;font-size:9px;padding:3px 6px}
+  #report td.note.b{border-bottom:1pt solid #000}
+  table.fm.tot{margin-top:8px}
+  table.fm.tot td{border:1pt solid #000;font-weight:700;font-size:11px;padding:6px;text-align:center}
+  table.fm.tot td.tv{background:#FFE9A8 !important;font-size:12.5px}
+  #report .sig{display:flex;justify-content:space-between;margin-top:26px;
+    page-break-inside:avoid;break-inside:avoid}
+  #report .sig div{width:30%;text-align:center;font-size:9.5px}
+  #report .sig .sl{display:block;font-weight:700;margin-bottom:34px}
+  #report .sig .sn{display:block;border-top:.8pt solid #000;padding-top:3px}
+  .pgbrk{page-break-after:always;break-after:page}
 }
 @media (min-width:600px){ body{font-size:15.5px} }
 </style>
@@ -423,13 +446,14 @@ nav.bot{
   <div class="top-inner">
     <div class="brand">M's<small>PIG</small></div>
     <div class="top-t">
-      <h1 id="topTitle">ត្រួតពិនិត្យជីវៈសុវត្ថិភាព</h1>
+      <h1 id="topTitle" data-i18n="appTitle">ត្រួតពិនិត្យជីវៈសុវត្ថិភាព</h1>
       <p id="topSub">កសិដ្ឋាន M's PIG ACMC (Cambodia)</p>
     </div>
     <div class="seg" id="segView" title="ប្តូររូបរាង">
       <button data-v="phone">📱</button><button data-v="pc">💻</button>
     </div>
-    <button class="iconbtn" id="btnClear" title="សម្អាតទិន្នន័យ">🧹</button>
+    <button class="iconbtn" id="btnLang" title="ភាសា / Language" style="font-size:11px;font-weight:700">EN</button>
+    <button class="iconbtn" id="btnClear" title="សម្អាតទិន្នន័យ / Clear data">🧹</button>
     <button class="iconbtn" id="btnSave" title="Save PDF / Excel / CSV">⬇️</button>
   </div>
   <div class="pbar"><i id="pbarFill"></i></div>
@@ -443,12 +467,12 @@ nav.bot{
 
   <div class="xhead">
     <div class="cell info">
-      <span class="k">ឈ្មោះកសិដ្ឋាន៖</span><b id="xhFarm">…………………………</b>
-      <div style="margin-top:7px"><span class="k">តំបន់៖</span><b id="xhZone">…………………</b></div>
-      <div style="margin-top:7px"><span class="k">កាលបរិច្ឆេទ៖</span><b id="xhDate">…………………</b></div>
+      <span class="k" data-i18n="farmName">ឈ្មោះកសិដ្ឋាន៖</span><b id="xhFarm">…………………………</b>
+      <div style="margin-top:7px"><span class="k" data-i18n="zone">តំបន់៖</span><b id="xhZone">…………………</b></div>
+      <div style="margin-top:7px"><span class="k" data-i18n="date">កាលបរិច្ឆេទ៖</span><b id="xhDate">…………………</b></div>
     </div>
-    <div class="cell sc"><span class="k">ពិន្ទុ</span><b id="xhScore">–</b></div>
-    <div class="cell sc"><span class="k">ចំំណាប់ថ្នាក់</span><b id="xhGrade">–</b></div>
+    <div class="cell sc"><span class="k" data-i18n="score">ពិន្ទុ</span><b id="xhScore">–</b></div>
+    <div class="cell sc"><span class="k" data-i18n="grade">ចំំណាប់ថ្នាក់</span><b id="xhGrade">–</b></div>
   </div>
 
   <div class="grid2"><div>
@@ -456,7 +480,7 @@ nav.bot{
     <div class="ring">
       <svg width="150" height="150" viewBox="0 0 150 150">
         <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#8fe0b4"/><stop offset="55%" stop-color="#ffe08a"/><stop offset="100%" stop-color="#f0b429"/>
+          <stop offset="0%" stop-color="#1fa564"/><stop offset="55%" stop-color="#8fe0b4"/><stop offset="100%" stop-color="#f0b429"/>
         </linearGradient></defs>
         <circle class="bg" cx="75" cy="75" r="62" fill="none" stroke-width="13"/>
         <circle class="fg" id="ringFg" cx="75" cy="75" r="62" fill="none" stroke-width="13" stroke-dasharray="0 999"/>
@@ -466,26 +490,26 @@ nav.bot{
     <div class="grade" id="heroGrade">មិនទាន់វាយតម្លៃ</div>
     <div class="hero-sub" id="heroSub">សូមចាប់ផ្តើមបំពេញផ្នែកទី ១</div>
     <div class="mini3">
-      <div class="ok"><b id="cYes">0</b><span>មាន</span></div>
-      <div class="no"><b id="cNo">0</b><span>មិនមាន</span></div>
-      <div class="na"><b id="cNa">0</b><span>មិនពាក់ព័ន្ធ</span></div>
+      <div class="ok"><b id="cYes">0</b><span data-i18n="yes">មាន</span></div>
+      <div class="no"><b id="cNo">0</b><span data-i18n="no">មិនមាន</span></div>
+      <div class="na"><b id="cNa">0</b><span data-i18n="na">មិនពាក់ព័ន្ធ</span></div>
     </div>
     <div class="calc" id="heroCalc"></div>
   </div>
 
   </div><div>
-  <div class="sec-head"><h3>📋 ផ្នែកទាំង ៧</h3><span id="secDoneTxt"></span></div>
+  <div class="sec-head"><h3 data-i18n="sections7">📋 ផ្នែកទាំង ៧</h3><span id="secDoneTxt"></span></div>
   <div class="slist" id="secList"></div>
 
   <div class="btnrow">
-    <button class="btn pri wide" id="btnContinue">▶️ បន្តបំពេញកន្លែងដែលនៅសល់</button>
+    <button class="btn pri wide" id="btnContinue" data-i18n="btnContinue">▶️ បន្តបំពេញកន្លែងដែលនៅសល់</button>
   </div>
   </div></div>
 
   <div class="btnrow savebar">
-    <button class="btn pri" id="btnSaveRec">📚 រក្សាទុកជាកំណត់ត្រា</button>
-    <button class="btn sv-open">⬇️ Save PDF / Excel</button>
-    <button class="btn wide" id="btnGoRecs">📂 មើលកំណត់ត្រាចុងក្រោយ <span class="badge recBadge">០</span></button>
+    <button class="btn pri" id="btnSaveRec" data-i18n="btnSaveRec">📚 រក្សាទុកជាកំណត់ត្រា</button>
+    <button class="btn sv-open" data-i18n="btnSaveExp">⬇️ Save PDF / Excel</button>
+    <button class="btn wide" id="btnGoRecs"><span data-i18n="btnViewRecs">📂 មើលកំណត់ត្រាចុងក្រោយ</span> <span class="badge recBadge">០</span></button>
   </div>
 </section>
 
@@ -504,23 +528,23 @@ nav.bot{
 
   <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px;flex-wrap:wrap">
     <div class="seg" id="segStyle">
-      <button data-s="card">🃏 កាត</button><button data-s="table">📋 តារាង (ដូច Excel)</button>
+      <button data-s="card" data-i18n="styleCard">🃏 កាត</button><button data-s="table" data-i18n="styleTable">📋 តារាង (ដូច Excel)</button>
     </div>
     <span style="font-size:10.5px;color:var(--ink-dim)" id="styleHint"></span>
   </div>
 
   <div class="filters">
-    <div class="fchip on" data-f="all">ទាំងអស់</div>
-    <div class="fchip" data-f="todo">នៅសល់</div>
-    <div class="fchip" data-f="yes">✔ មាន</div>
-    <div class="fchip" data-f="no">✖ មិនមាន</div>
-    <div class="fchip" data-f="na">⊘ មិនពាក់ព័ន្ធ</div>
+    <div class="fchip on" data-f="all" data-i18n="all">ទាំងអស់</div>
+    <div class="fchip" data-f="todo" data-i18n="todo">នៅសល់</div>
+    <div class="fchip" data-f="yes" data-i18n="fYes">✔ មាន</div>
+    <div class="fchip" data-f="no" data-i18n="fNo">✖ មិនមាន</div>
+    <div class="fchip" data-f="na" data-i18n="fNa">⊘ មិនពាក់ព័ន្ធ</div>
   </div>
 
   <div class="glass card" style="padding:12px 14px">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <button class="btn" id="btnAllYes" style="font-size:12px;padding:10px">✔ ដាក់ "មាន" ទាំងអស់</button>
-      <button class="btn" id="btnClearSec" style="font-size:12px;padding:10px">↺ សម្អាតផ្នែកនេះ</button>
+      <button class="btn" id="btnAllYes" style="font-size:12px;padding:10px" data-i18n="allYes">✔ ដាក់ "មាន" ទាំងអស់</button>
+      <button class="btn" id="btnClearSec" style="font-size:12px;padding:10px" data-i18n="clearSec">↺ សម្អាតផ្នែកនេះ</button>
     </div>
   </div>
 
@@ -529,14 +553,14 @@ nav.bot{
   <div class="scrollhint hide" id="scrollHint">↔ អូសទៅឆ្វេង-ស្តាំ ដើម្បីមើលគ្រប់ជួរ</div>
 
   <div class="glass card">
-    <h2><span class="chip-i">✍️</span> បរិយាយ÷</h2>
+    <h2><span class="chip-i">✍️</span> <span data-i18n="secComment">បរិយាយ÷</span></h2>
     <textarea id="secComment" rows="3" class="qnote" style="min-height:74px"
-      placeholder="សរសេរបរិយាយសម្រាប់ផ្នែកនេះ..."></textarea>
+      data-i18n-ph="secCommentPh" placeholder="សរសេរបរិយាយសម្រាប់ផ្នែកនេះ..."></textarea>
   </div>
 
   <div class="btnrow">
-    <button class="btn" id="btnPrevSec">‹ ផ្នែកមុន</button>
-    <button class="btn pri" id="btnNextSec">ផ្នែកបន្ទាប់ ›</button>
+    <button class="btn" id="btnPrevSec" data-i18n="prevSec">‹ ផ្នែកមុន</button>
+    <button class="btn pri" id="btnNextSec" data-i18n="nextSec">ផ្នែកបន្ទាប់ ›</button>
   </div>
   <div class="btnrow savebar">
     <button class="btn wide sv-open">⬇️ Save PDF / Excel / CSV</button>
@@ -546,9 +570,9 @@ nav.bot{
 <!-- ============ SCREEN 3 : FARM INFO ============ -->
 <section class="screen" id="sc-info">
   <div class="glass card" id="recCard">
-    <h2><span class="chip-i">📚</span> កំណត់ត្រាចុងក្រោយ <span class="badge" id="recCount">០ / ២០</span></h2>
+    <h2><span class="chip-i">📚</span> <span data-i18n="recTitle">កំណត់ត្រាចុងក្រោយ</span> <span class="badge" id="recCount">០ / ២០</span></h2>
     <div class="btnrow" style="margin-top:0;margin-bottom:12px">
-      <button class="btn pri wide" id="btnSaveRec3">📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា</button>
+      <button class="btn pri wide" id="btnSaveRec3" data-i18n="recSaveBtn">📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា</button>
     </div>
     <div id="recList"></div>
     <p style="font-size:10.5px;color:var(--ink-dim);margin:11px 0 0;line-height:1.7">
@@ -558,32 +582,32 @@ nav.bot{
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">🏠</span> ព័ត៌មានកសិដ្ឋាន</h2>
-    <div class="field"><label>ឈ្មោះកសិដ្ឋាន</label><input id="f_farm" placeholder="ឧ. កសិដ្ឋាន ស្វាយរៀង ០១"></div>
-    <div class="field"><label>តំបន់ / ខេត្ត</label><input id="f_zone" placeholder="ឧ. ខេត្តត្បូងឃ្មុំ"></div>
+    <h2><span class="chip-i">🏠</span> <span data-i18n="farmInfo">ព័ត៌មានកសិដ្ឋាន</span></h2>
+    <div class="field"><label data-i18n="farmName">ឈ្មោះកសិដ្ឋាន</label><input id="f_farm" placeholder="ឧ. កសិដ្ឋាន ស្វាយរៀង ០១"></div>
+    <div class="field"><label data-i18n="zone">តំបន់ / ខេត្ត</label><input id="f_zone" placeholder="ឧ. ខេត្តត្បូងឃ្មុំ"></div>
     <div class="two">
-      <div class="field"><label>កាលបរិច្ឆេទ</label><input id="f_date" type="date"></div>
-      <div class="field"><label>ចំនួនជ្រូក (ក្បាល)</label><input id="f_head" type="number" inputmode="numeric" placeholder="0"></div>
+      <div class="field"><label data-i18n="date">កាលបរិច្ឆេទ</label><input id="f_date" type="date"></div>
+      <div class="field"><label data-i18n="head">ចំនួនជ្រូក (ក្បាល)</label><input id="f_head" type="number" inputmode="numeric" placeholder="0"></div>
     </div>
-    <div class="field"><label>ឈ្មោះអ្នកធ្វើរបាយការណ៍</label><input id="f_by" placeholder="ឈ្មោះ​ពេញ"></div>
-    <div class="field"><label>តំណាងម្ចាស់កសិដ្ឋាន</label><input id="f_owner" placeholder="ឈ្មោះ​ពេញ"></div>
-    <div class="field"><label>តំណាងក្រុមហ៊ុន</label><input id="f_comp" placeholder="ឈ្មោះ​ពេញ"></div>
-    <div class="field"><label>កំណត់សម្គាល់ទូទៅ</label><textarea id="f_note" rows="3" placeholder="សេចក្តីសង្ខេប ឬ អនុសាសន៍..."></textarea></div>
+    <div class="field"><label data-i18n="auditor">ឈ្មោះអ្នកធ្វើរបាយការណ៍</label><input id="f_by" placeholder="ឈ្មោះ​ពេញ"></div>
+    <div class="field"><label data-i18n="owner">តំណាងម្ចាស់កសិដ្ឋាន</label><input id="f_owner" placeholder="ឈ្មោះ​ពេញ"></div>
+    <div class="field"><label data-i18n="comp">តំណាងក្រុមហ៊ុន</label><input id="f_comp" placeholder="ឈ្មោះ​ពេញ"></div>
+    <div class="field"><label data-i18n="genNote">កំណត់សម្គាល់ទូទៅ</label><textarea id="f_note" rows="3" placeholder="សេចក្តីសង្ខេប ឬ អនុសាសន៍..."></textarea></div>
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">🧹</span> សម្អាតទិន្នន័យ</h2>
+    <h2><span class="chip-i">🧹</span> <span data-i18n="clearTitle">សម្អាតទិន្នន័យ</span></h2>
     <div class="btnrow" style="margin-top:0">
-      <button class="btn wide" id="btnClear2">🧹 បើកជម្រើសសម្អាតទិន្នន័យ</button>
+      <button class="btn wide" id="btnClear2" data-i18n="clearBtn">🧹 បើកជម្រើសសម្អាតទិន្នន័យ</button>
     </div>
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">⚙️</span> ទិន្នន័យ</h2>
+    <h2><span class="chip-i">⚙️</span> <span data-i18n="dataTitle">ទិន្នន័យ</span></h2>
     <div class="btnrow" style="margin-top:0">
       <button class="btn pri wide sv-open">⬇️ Save PDF / Excel / CSV</button>
-      <button class="btn" id="btnBackup">💾 Backup (JSON)</button>
-      <button class="btn" id="btnRestore">⬆️ ស្តារឡើងវិញ</button>
+      <button class="btn" id="btnBackup" data-i18n="backup">💾 Backup (JSON)</button>
+      <button class="btn" id="btnRestore" data-i18n="restore">⬆️ ស្តារឡើងវិញ</button>
     </div>
     <p style="font-size:11px;color:var(--ink-dim);margin:12px 0 0;line-height:1.7">
       ទិន្នន័យស្ថិតក្នុងទូរស័ព្ទ/កុំព្យូទ័ររបស់អ្នកតែប៉ុណ្ណោះ — មិនផ្ញើទៅណាទេ។
@@ -591,8 +615,8 @@ nav.bot{
     </p>
   </div>
   <div class="glass glass-yellow card">
-    <h2 style="color:#07331f"><span class="chip-i">🔗</span> របៀបចែករំលែកឱ្យអ្នកដទៃ</h2>
-    <div class="formula" style="color:#0b3a24">
+    <h2 style="color:var(--g-deep)"><span class="chip-i">🔗</span> <span data-i18n="shareTitle">របៀបចែករំលែកឱ្យអ្នកដទៃ</span></h2>
+    <div class="formula" data-i18n-html="shareHtml">
       <b>❌ កុំប្រើ Google Drive link</b> — Drive បានបិទសេវាបង្ហាញ HTML តាំងពីឆ្នាំ ២០១៦។
       Link របស់ Drive បង្ហាញត្រឹមទំព័រ preview ដែលធ្វើឱ្យ App ដំណើរការមិនពេញលេញ
       ហើយ<b>រក្សាទុកស្វ័យប្រវត្តិក៏មិនដើរដែរ</b>។<br><br>
@@ -609,16 +633,16 @@ nav.bot{
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">🩺</span> ពិនិត្យស្ថានភាព App</h2>
+    <h2><span class="chip-i">🩺</span> <span data-i18n="diagTitle">ពិនិត្យស្ថានភាព App</span></h2>
     <div class="formula" id="diagBox"></div>
     <div class="btnrow" style="margin-top:11px">
-      <button class="btn wide" id="btnDiag">🔄 ពិនិត្យឡើងវិញ</button>
+      <button class="btn wide" id="btnDiag" data-i18n="diagBtn">🔄 ពិនិត្យឡើងវិញ</button>
     </div>
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">📲</span> ដំឡើងលើទូរស័ព្ទ (ដូច App ពិត)</h2>
-    <div class="formula">
+    <h2><span class="chip-i">📲</span> <span data-i18n="installTitle">ដំឡើងលើទូរស័ព្ទ (ដូច App ពិត)</span></h2>
+    <div class="formula" data-i18n-html="installHtml">
       <b>📱 iPhone / iPad (Safari)</b><br>
       ១. បើកឯកសារនេះដោយ <b>Safari</b> (មិនមែន Chrome)<br>
       ២. ចុចរូប <b>􀈂 Share</b> ខាងក្រោមអេក្រង់<br>
@@ -650,12 +674,12 @@ nav.bot{
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">🧮</span> ការគណនាពិន្ទុសរុប</h2>
+    <h2><span class="chip-i">🧮</span> <span data-i18n="sumCalc">ការគណនាពិន្ទុសរុប</span></h2>
     <div id="sumCalc"></div>
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">📊</span> ពិន្ទុតាមផ្នែក</h2>
+    <h2><span class="chip-i">📊</span> <span data-i18n="sumBySec">ពិន្ទុតាមផ្នែក</span></h2>
     <table class="tbl" id="sumTbl"></table>
     <p style="font-size:10.5px;color:var(--ink-dim);margin:10px 0 0;line-height:1.7">
       «គិត» = ចំនួនសំណួរដែលគិតពិន្ទុ (សំណួរសរុប − N/A)។ ពិន្ទុផ្នែក = មាន ÷ គិត × ១០០។
@@ -663,21 +687,21 @@ nav.bot{
   </div>
 
   <div class="glass glass-yellow card">
-    <h2 style="color:#07331f"><span class="chip-i">📖</span> របៀបគិតពិន្ទុ (ច្បាប់ផ្លូវការ)</h2>
-    <div class="formula" style="color:#0b3a24">
+    <h2 style="color:var(--g-deep)"><span class="chip-i">📖</span> <span data-i18n="howScore">របៀបគិតពិន្ទុ (ច្បាប់ផ្លូវការ)</span></h2>
+    <div class="formula" data-i18n-html="rulesHtml">
       <b>១.</b> ផ្នែកនីមួយៗ = <b>១០០ ពិន្ទុ</b> ដាច់ដោយឡែក (តាម Form ដើម)<br>
       <b>២.</b> សំណួរគិតពិន្ទុ = <code>សំណួរសរុប − N/A</code><br>
       <b>៣.</b> ១ សំណួរ = <code>១០០ ÷ សំណួរគិតពិន្ទុ</code> (បូកគ្នាវិញ = ១០០ គត់)<br>
       <b>៤.</b> មាន = ពេញពិន្ទុ · មិនមាន = ០ · <b>មិនទាន់បំពេញ = ០</b><br>
       <b>៥.</b> ពិន្ទុផ្នែក = <code>មាន ÷ សំណួរគិតពិន្ទុ × ១០០</code><br>
-      <b>៦.</b> ផ្នែកដែល N/A ទាំងអស់ ឬ<b>មិនទាន់ចាប់ផ្តើម</b> → គ្មានពិន្ទុ ហើយ<b>ដកចេញ</b>ពីមធ្យមភាគ<br>
+      <b>៦.</b> ផ្នែកដែល N/A ទាំងអស់ → ដកចេញពីមធ្យមភាគ · ផ្នែក<b>មិនទាន់ចាប់ផ្តើម = ០ ពិន្ទុ</b><br>
       <b>៧.</b> ពិន្ទុសរុប = <code>មធ្យមភាគនៃពិន្ទុផ្នែក</code> (៧ ផ្នែកមានទម្ងន់ស្មើគ្នា)<br>
       <b>៨.</b> ចំណាប់ថ្នាក់ចេញផ្លូវការ<b>លុះត្រាតែ</b>បំពេញគ្រប់ ១២១ សំណួរ
     </div>
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">⚠️</span> ចំណុចត្រូវកែតម្រូវ (<span id="failN">0</span>)</h2>
+    <h2><span class="chip-i">⚠️</span> <span data-i18n="toFix">ចំណុចត្រូវកែតម្រូវ</span> (<span id="failN">0</span>)</h2>
     <div id="failList"></div>
   </div>
 
@@ -695,31 +719,31 @@ nav.bot{
 <div id="sheetBg"></div>
 <div id="clearSheet">
   <div class="grab"></div>
-  <h3>🧹 សម្អាតទិន្នន័យ</h3>
+  <h3 data-i18n="clearTitle">🧹 សម្អាតទិន្នន័យ</h3>
   <p class="sub" id="clearSub"></p>
-  <button class="sv" id="clForm"><i>🧽</i><span><b>សម្អាតទម្រង់បច្ចុប្បន្ន</b><small>លុប ចម្លើយ · ចំណាំ · រូបថត · បរិយាយ÷ &nbsp;|&nbsp; រក្សា ព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
-  <button class="sv" id="clRecs"><i>📚</i><span><b>លុបកំណត់ត្រាទាំងអស់</b><small>លុបតែបញ្ជីកំណត់ត្រា ២០ · ទម្រង់បច្ចុប្បន្នមិនប៉ះពាល់</small></span></button>
-  <button class="sv danger" id="clAll"><i>⚠️</i><span><b>លុបទាំងអស់ ចាប់ផ្តើមថ្មី</b><small>លុបគ្រប់យ៉ាង រួមទាំងព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
-  <button class="sv" id="clClose" style="justify-content:center;margin-bottom:0"><span><b>បិទ</b></span></button>
+  <button class="sv" id="clForm"><i>🧽</i><span><b data-i18n="clForm">សម្អាតទម្រង់បច្ចុប្បន្ន</b><small>លុប ចម្លើយ · ចំណាំ · រូបថត · បរិយាយ÷ &nbsp;|&nbsp; រក្សា ព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
+  <button class="sv" id="clRecs"><i>📚</i><span><b data-i18n="clRecs">លុបកំណត់ត្រាទាំងអស់</b><small>លុបតែបញ្ជីកំណត់ត្រា ២០ · ទម្រង់បច្ចុប្បន្នមិនប៉ះពាល់</small></span></button>
+  <button class="sv danger" id="clAll"><i>⚠️</i><span><b data-i18n="clAll">លុបទាំងអស់ ចាប់ផ្តើមថ្មី</b><small>លុបគ្រប់យ៉ាង រួមទាំងព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
+  <button class="sv" id="clClose" style="justify-content:center;margin-bottom:0"><span><b data-i18n="close">បិទ</b></span></button>
 </div>
 
 <div id="sheet">
   <div class="grab"></div>
-  <h3>⬇️ Save / នាំចេញ</h3>
+  <h3 data-i18n="saveSheet">⬇️ Save / នាំចេញ</h3>
   <p class="sub" id="sheetSub"></p>
-  <button class="sv pri" id="svPdf"><i>🖨️</i><span><b>Save PDF</b><small>របាយការណ៍ពេញលេញ ដូច Form ដើម · ជ្រើស “Save as PDF”</small></span></button>
-  <button class="sv" id="svXls"><i>📊</i><span><b>Save Excel (.xls)</b><small>តារាងពិន្ទុពេញលេញ បើកដោយ Excel ភ្លាម</small></span></button>
-  <button class="sv" id="svCsv"><i>📄</i><span><b>Save CSV (.csv)</b><small>UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets</small></span></button>
-  <button class="sv" id="svRec"><i>📚</i><span><b>រក្សាទុកជាកំណត់ត្រា</b><small>ទុកក្នុង App ដើម្បីមើលវិញ (អតិបរមា ២០ ចុងក្រោយ)</small></span></button>
-  <button class="sv" id="svJson"><i>💾</i><span><b>Backup (.json)</b><small>ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ</small></span></button>
-  <button class="sv" id="svClose" style="justify-content:center;margin-bottom:0"><span><b>បិទ</b></span></button>
+  <button class="sv pri" id="svPdf"><i>🖨️</i><span><b data-i18n="savePdf">Save PDF</b><small>របាយការណ៍ពេញលេញ ដូច Form ដើម · ជ្រើស “Save as PDF”</small></span></button>
+  <button class="sv" id="svXls"><i>📊</i><span><b data-i18n="saveXls">Save Excel (.xlsx)</b><small>ឯកសារ Excel ពិតប្រាកដ ២ សន្លឹក · បើកបានគ្រប់ Excel / Google Sheets</small></span></button>
+  <button class="sv" id="svCsv"><i>📄</i><span><b data-i18n="saveCsv">Save CSV (.csv)</b><small>UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets</small></span></button>
+  <button class="sv" id="svRec"><i>📚</i><span><b data-i18n="saveRecOpt">រក្សាទុកជាកំណត់ត្រា</b><small>ទុកក្នុង App ដើម្បីមើលវិញ (អតិបរមា ២០ ចុងក្រោយ)</small></span></button>
+  <button class="sv" id="svJson"><i>💾</i><span><b data-i18n="saveJson">Backup (.json)</b><small>ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ</small></span></button>
+  <button class="sv" id="svClose" style="justify-content:center;margin-bottom:0"><span><b data-i18n="close">បិទ</b></span></button>
 </div>
 
 <nav class="bot"><div class="bot-inner">
-  <button class="nb on" data-go="home"><i>🏠</i>ទំព័រដើម</button>
-  <button class="nb" data-go="sec"><i>📝</i>បំពេញ</button>
-  <button class="nb" data-go="sum"><i>📊</i>សង្ខេប</button>
-  <button class="nb" data-go="info"><i>⚙️</i>ព័ត៌មាន</button>
+  <button class="nb on" data-go="home"><i>🏠</i><span data-i18n="navHome">ទំព័រដើម</span></button>
+  <button class="nb" data-go="sec"><i>📝</i><span data-i18n="navFill">បំពេញ</span></button>
+  <button class="nb" data-go="sum"><i>📊</i><span data-i18n="navSum">សង្ខេប</span></button>
+  <button class="nb" data-go="info"><i>⚙️</i><span data-i18n="navInfo">ព័ត៌មាន</span></button>
 </div></nav>
 
 <div id="report"></div>
@@ -889,9 +913,140 @@ const SECTIONS = [
 ];
 const TOTAL_Q = SECTIONS.reduce((a,s)=>a+s.items.length,0);
 
+/* ================= ភាសាអង់គ្លេស — ឈ្មោះផ្នែក និងសំណួរទាំង ១២១ ================= */
+(function(){
+  var EN_SEC = ['Infrastructure','Vehicles','People','Pig Movement','Feed & Water','Hygiene','Pest Control'];
+  var EN = [
+[ 'Entrance gate closed and properly locked',
+  'Biosecurity warning sign posted at the farm entrance',
+  'Fence around the farm (solid wall)',
+  'Fence can prevent animals from entering',
+  'Shower room before entering the farm',
+  'Shower room is clean and has soap',
+  'Office is clean and hygienic',
+  'Shower room before entering the animal area',
+  'Shower room is clean and has soap',
+  'Fence separating the living area from the animal area',
+  'Accommodation building for farm staff',
+  'Living area is clean and hygienic',
+  'Kitchen separated from the living area, with fly-proof netting',
+  'Kitchen area is clean and hygienic',
+  'Dining area inside the farm with a cleaner (fly-proof netting installed)',
+  'Pig-rearing premises are hygienic',
+  'Farm premises have a waste incinerator',
+  'Toilets for staff in the animal area, cleaned regularly',
+  'UV cabinet available and working' ],
+[ 'Record of vehicles entering and leaving',
+  'Staff inspect, record and disinfect pig trucks, feed trucks and all vehicles on arrival at the farm',
+  'Vehicle disinfection shed exists and works properly',
+  'Record of the disinfectant types used on vehicles',
+  'Sign showing how to mix disinfectant, and mixing follows the standard',
+  'Designated vehicle parking area within the living zone',
+  'Vehicles rest 30 minutes after disinfection',
+  'Wheel dip / disinfection bath for vehicles',
+  'Record of disinfectant mixing for the wheel dip',
+  'Sign showing how to mix disinfectant, mixing follows the standard',
+  'Pig trucks, feed trucks and all vehicles do not enter the pig area',
+  'Pig-truck parking area is clean',
+  'No vehicle enters the pig-rearing area',
+  'Pig-buyer trucks do not collect pigs directly from the farm',
+  'Staff clearly know how to use disinfectant' ],
+[ 'Record of people entering the farm',
+  'People without necessary business are prohibited from entering the farm',
+  'Staff may leave the farm only with permission from the farm manager',
+  'Staff handling pigs must rest 48 hours after coming from outside (cut nails, shower with soap)',
+  'Quarantine house is clean and adequately equipped',
+  'Workers must stay in the farm accommodation building',
+  'Body soap and shampoo available in the shower room before entering the farm',
+  'Workers shower and wash hair before entering the farm',
+  'Body soap and shampoo available in the shower room before entering the pig area',
+  'Workers shower and wash hair before entering the pig area',
+  'Record of showering when entering and leaving the farm',
+  'Workers wear farm uniform and rubber boots used only inside the pig area',
+  'Workers disinfect hands with alcohol, soap or disinfectant before entering the pig house',
+  'Food made from pork, beef, buffalo or goat is prohibited inside the farm',
+  'Food is prohibited inside the animal area',
+  'Unnecessary personal belongings are prohibited inside the pig area',
+  'Necessary items used inside the house are disinfected by UV cabinet or alcohol',
+  'Workers working outside and inside the animal area must be separated',
+  'Workers must be trained on the biosecurity system',
+  'Workers are separated by pig house',
+  'Workers are instructed not to enter other pig houses unless necessary' ],
+[ 'Loading / selling station is clean and hygienic',
+  'Safety walkway is clean and hygienic',
+  'Clean and disinfect the loading/selling station before and after receiving or selling pigs',
+  'Disinfection system and equipment prepared for pig-moving activities',
+  'Workers know how to use disinfectant for pig-moving activities',
+  'Pig trucks do not drive directly to the pig house',
+  'Workers are trained on the receiving, loading and selling process' ],
+[ 'Feed store exists and is separated from the pig houses',
+  'Feed store is hygienic',
+  'Feed store is dry (humidity meter available)',
+  'Feed store is protected from birds',
+  'Feed store is protected from rodents',
+  'Pallets / racks for feed',
+  'Feed stored at least 15 cm away from walls',
+  'Area around the feed silo is clean and hygienic',
+  'Silo cleaning programme',
+  'Water from a source inside the farm is used',
+  'Water from outside does not flow into the farm',
+  'Chlorine is used in the water',
+  'Sign showing how to mix chlorine',
+  'Record of chlorine use',
+  'Chlorine concentration right after mixing is more than 5 ppm',
+  'Chlorine in pig-house water < 2 ppm',
+  'Programme for sending water samples to a laboratory',
+  'Netting to prevent insects entering the water',
+  'Water tank cleaning programme',
+  'Water pipe system cleaned before pigs arrive' ],
+[ 'Separate bins for general waste and for kitchen waste',
+  'Kitchen waste management programme',
+  'General waste management programme',
+  'Accommodation waste-water management programme',
+  'Office waste-water management programme',
+  'Pig manure management programme (Biogas)',
+  'Storage room for items brought in from outside',
+  'All items are disinfected before being taken into the farm',
+  'Medicine storage room or cabinet',
+  'Medicine storage area is hygienic',
+  'Record of medicines, vaccines and supplies',
+  'Control over the use of medicines and vaccines',
+  'Place for washing farm uniforms',
+  'Farm uniforms washed by machine with detergent',
+  'Separate rubber boots for inside and outside the pig house',
+  'Separate rubber boots for each pig house',
+  'Boot dip with disinfectant',
+  'Rubber boots cleaned every day',
+  'Stock of supplies such as: 70% alcohol, body soap, shampoo, disinfectant and uniforms' ],
+[ 'Kitchen area is hygienic and free of flies',
+  'Accommodation area is hygienic and free of flies',
+  'Office area is hygienic and free of flies',
+  'Feed store is clean and free of flies',
+  'Insecticide available for fly control',
+  'Equipment available for fly control',
+  'Staff understand how to use fly insecticide',
+  'Fly and insect control programme',
+  'Flies and insects prevented from entering the pig house',
+  'Area around the kitchen is clean and free of rodents',
+  'Accommodation area is clean and free of rodents',
+  'Office area is clean and free of rodents',
+  'Feed store is clean and free of rodents',
+  'Rodenticide available for rodent control',
+  'Equipment available for rodent control',
+  'Workers know how to use rodenticide',
+  'Rodent control programme',
+  'No other animals enter the pig-rearing area',
+  'Insects prevented from entering the water tank',
+  'No pets or other livestock on the farm premises (chickens, ducks, dogs, cats ....)' ]
+  ];
+  for(var i=0;i<SECTIONS.length;i++){ SECTIONS[i].en=EN_SEC[i]; SECTIONS[i].itemsEn=EN[i]; }
+  SECTIONS[0].noteEn='Clean = no overgrown grass, no rubbish, no waste, no bad smell, no dirt anywhere';
+})();
+
+
 /* ================= ឧបករណ៍ជំនួយ ================= */
 const KH='០១២៣៤៥៦៧៨៩';
-const kh = n => String(n).replace(/\d/g,d=>KH[+d]);
+const kh = n => (S.lang==='en') ? String(n) : String(n).replace(/\d/g,d=>KH[+d]);
 const $  = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 
@@ -927,20 +1082,20 @@ let purgedOld = false;
 })();
 
 /* ================= ស្ថានភាព ================= */
-let S = { info:{}, ans:{}, cur:0, filter:'all', view:null, style:null, cmt:{}, recs:[] };
+let S = { info:{}, ans:{}, cur:0, filter:'all', view:null, style:null, cmt:{}, recs:[], lang:'km' };
 
 function load(){
   try{
     const raw = Store.get(KEY);
     if(raw){ const d=JSON.parse(raw); S.info=d.info||{}; S.ans=d.ans||{}; S.cmt=d.cmt||{};
              S.recs=Array.isArray(d.recs)?d.recs.slice(0,MAXREC):[];
-             S.view=d.view||null; S.style=d.style||null; }
+             S.view=d.view||null; S.style=d.style||null; S.lang=(d.lang==='en'?'en':'km'); }
   }catch(e){ console.warn('load fail',e); }
   if(!S.info.date) S.info.date = new Date().toISOString().slice(0,10);
 }
 function snapshot(){
   return JSON.stringify({info:S.info, ans:S.ans, cmt:S.cmt, recs:S.recs,
-                         view:S.view, style:S.style, at:Date.now()});
+                         view:S.view, style:S.style, lang:S.lang, at:Date.now()});
 }
 /* រក្សាទុកភ្លាម — បើអង្គចងចាំពេញ នឹងបន្ថយទិន្នន័យចាស់ដោយស្វ័យប្រវត្តិ */
 function saveNow(){
@@ -989,9 +1144,9 @@ function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('on'); 
    ៤. ពិន្ទុផ្លូវការ (final)      = មាន ÷ applicable × ១០០
       ពិន្ទុបណ្តោះអាសន្ន (prov) = មាន ÷ (មាន + មិនមាន) × ១០០
         → នៅពេលបំពេញគ្រប់ ១០០% តម្លៃទាំងពីរស្មើគ្នាជានិច្ច
-   ៥. ផ្នែកគ្មានពិន្ទុ (ដកចេញពីមធ្យមភាគសរុប) ក្នុង ២ ករណី៖
-        ក. ដាក់ N/A ទាំងអស់ (applicable = 0)
-        ខ. មិនទាន់ចាប់ផ្តើមទាល់តែសោះ (answered = 0)
+   ៥. ផ្នែកគ្មានពិន្ទុ (ដកចេញពីមធ្យមភាគសរុប) មានតែករណីតែមួយ៖
+        ដាក់ N/A ទាំងអស់ (applicable = 0)
+        ផ្នែកមិនទាន់ចាប់ផ្តើម = ០ ពិន្ទុ (រាប់បញ្ចូលក្នុងមធ្យមភាគ)
    ៦. ពិន្ទុសរុប = មធ្យមភាគនៃពិន្ទុផ្នែក (ផ្នែកនីមួយៗមានទម្ងន់ស្មើគ្នា)
         បន្ថែម: ពិន្ទុថ្លឹងតាមសំណួរ = Σមាន ÷ Σapplicable × ១០០
    ៧. ចំណាប់ថ្នាក់ចេញបានលុះត្រាតែបំពេញគ្រប់ ១២១ សំណួរ
@@ -1009,9 +1164,9 @@ function secStat(si){
   const todo     = n - answered;
   const applicable = n - na;                 // សំណួរដែលគិតពិន្ទុ
   const per = applicable>0 ? 100/applicable : 0;   // ១ សំណួរ = ? ពិន្ទុ
-  // ផ្នែកមិនទាន់ចាប់ផ្តើមទាល់តែសោះ (answered=0) → គ្មានពិន្ទុ
-  // (កុំរាប់ជា ០ ព្រោះនឹងធ្វើឱ្យពិន្ទុសរុបធ្លាក់ខុសពីការពិត)
-  const scoreFinal = (applicable>0 && answered>0) ? yes*per : null;  // ចាប់ផ្តើមហើយ: មិនទាន់បំពេញ = ០
+  // សំណួរមិនទាន់បំពេញ = ០ ពិន្ទុ (រួមទាំងផ្នែកដែលមិនទាន់ចាប់ផ្តើមទាល់តែសោះ)
+  // ដកចេញពីមធ្យមភាគតែផ្នែកដែលដាក់ N/A ទាំងអស់ (applicable = 0) ប៉ុណ្ណោះ
+  const scoreFinal = (applicable>0) ? yes*per : null;
   const scoreProv  = (yes+no)>0 ? (yes/(yes+no))*100 : null; // តែក្នុងចំណោមដែលបានឆ្លើយ
   const complete = todo===0;
   return { yes,no,na,todo,answered,total:n,applicable,per,
@@ -1048,17 +1203,16 @@ const r1 = v => v===null||v===undefined ? null : Math.round(v*10)/10;
 const fx = (v,d) => v===null||v===undefined ? '–' : v.toFixed(d===undefined?1:d);
 
 function gradeOf(sc, complete){
-  if(sc===null) return {t:'មិនទាន់វាយតម្លៃ', d:'សូមចាប់ផ្តើមបំពេញសំណួរ', k:'-'};
-  let g;
-  if(sc>=90)      g={t:'A — ល្អប្រសើរ',  d:'រក្សាស្តង់ដារនេះឱ្យបានជាប់លាប់', k:'A'};
-  else if(sc>=80) g={t:'B — ល្អ',        d:'នៅមានចំណុចតូចតាចត្រូវកែ', k:'B'};
-  else if(sc>=70) g={t:'C — មធ្យម',      d:'ត្រូវកែតម្រូវក្នុងរយៈពេល ១ ខែ', k:'C'};
-  else if(sc>=60) g={t:'D — ខ្សោយ',      d:'ហានិភ័យខ្ពស់ — ត្រូវកែបន្ទាន់', k:'D'};
-  else            g={t:'F — ធ្លាក់',      d:'ហានិភ័យធ្ងន់ធ្ងរ — ត្រូវផ្អាកចលនា និងកែជាបន្ទាន់', k:'F'};
-  if(complete===false){
-    return {t:'ចំណាប់ថ្នាក់ '+g.k+' (បណ្តោះអាសន្ន)', d:'មិនទាន់ផ្លូវការ — ត្រូវបំពេញឱ្យគ្រប់ ១២១ សំណួរសិន', k:g.k, prov:true};
-  }
-  return {t:'ចំណាប់ថ្នាក់ '+g.t, d:g.d, k:g.k};
+  var d=T();
+  if(sc===null) return {t:d.notRated, d:d.startFill, k:'-'};
+  var g;
+  if(sc>=90)      g={t:d.gA,d:d.dA,k:'A'};
+  else if(sc>=80) g={t:d.gB,d:d.dB,k:'B'};
+  else if(sc>=70) g={t:d.gC,d:d.dC,k:'C'};
+  else if(sc>=60) g={t:d.gD,d:d.dD,k:'D'};
+  else            g={t:d.gF,d:d.dF,k:'F'};
+  if(complete===false) return {t:d.gradePfx+g.k+d.provTag, d:d.provDesc, k:g.k, prov:true};
+  return {t:d.gradePfx+g.t, d:g.d, k:g.k};
 }
 
 /* ================= រូបរាង (ទូរស័ព្ទ / កុំព្យូទ័រ · កាត / តារាង) ================= */
@@ -1082,24 +1236,23 @@ function _renderTop(){
   const o=overall();
   const pct=Math.round(o.answered/o.total*100);
   $('#pbarFill').style.width=pct+'%';
-  $('#pbarL').textContent='បំពេញ '+kh(o.answered)+' / '+kh(o.total);
+  $('#pbarL').textContent=T().filled+' '+kh(o.answered)+' / '+kh(o.total);
   $('#pbarR').textContent=kh(pct)+'%';
 }
 function _renderHome(){
   const o=overall(), g=gradeOf(o.score, o.complete);
   $('#heroScore').textContent = o.score===null?'–':kh(Math.round(o.score));
   ringSet($('#ringFg'), o.score||0);
-  $('#heroLbl').textContent = o.complete ? 'ពិន្ទុផ្លូវការ / ១០០' : 'បណ្តោះអាសន្ន / ១០០';
+  $('#heroLbl').textContent = o.complete ? T().pts100 : T().provPts;
   $('#heroGrade').textContent=g.t;
   $('#heroSub').textContent=g.d;
   $('#heroCalc').innerHTML = o.scoreFinal===null ? ''
-    : ('បើបញ្ចប់ត្រឹមឥឡូវ (សំណួរមិនទាន់បំពេញ = ០) ➜ <b>'+fx(o.scoreFinal)+'</b> ពិន្ទុ'
-      +'<br>ថ្លឹងតាមចំនួនសំណួរ ('+kh(o.yes)+' ÷ '+kh(o.secs.reduce((a,x)=>a+x.applicable,0))+') ➜ <b>'+fx(o.scoreWeighted)+'</b> ពិន្ទុ'
-      +(o.naSecs? '<br>ផ្នែក N/A ទាំងស្រុង '+kh(o.naSecs)+' — ដកចេញពីមធ្យមភាគ':''));
+    : ((S.lang==='en'?'If finished now (unanswered = 0) ➜ <b>':'បើបញ្ចប់ត្រឹមឥឡូវ (សំណួរមិនទាន់បំពេញ = ០) ➜ <b>')+fx(o.scoreFinal)+'</b> '+T().pts
+      +'<br>'+T().weighted+' ('+kh(o.yes)+' ÷ '+kh(o.secs.reduce((a,x)=>a+x.applicable,0))+') ➜ <b>'+fx(o.scoreWeighted)+'</b> '+T().pts);
   $('#cYes').textContent=kh(o.yes); $('#cNo').textContent=kh(o.no); $('#cNa').textContent=kh(o.na);
-  $('#secDoneTxt').textContent='បញ្ចប់ '+kh(o.doneSec)+'/៧ ផ្នែក';
+  $('#secDoneTxt').textContent=T().doneSec+' '+kh(o.doneSec)+T().secOf;
   $$('.recBadge').forEach(e=>e.textContent = kh(S.recs.length)+'/'+kh(MAXREC));
-  $('#topSub').textContent = S.info.farm ? S.info.farm : "កសិដ្ឋាន M's PIG ACMC (Cambodia)";
+  $('#topSub').textContent = S.info.farm ? S.info.farm : T().appSub;
   $('#xhFarm').textContent = S.info.farm || '…………………………';
   $('#xhZone').textContent = S.info.zone || '…………………';
   $('#xhDate').textContent = S.info.date || '…………………';
@@ -1111,11 +1264,11 @@ function _renderHome(){
     return `<div class="sitem ${st.complete?'done':''}" data-i="${i}">
       <div class="snum">${sec.icon}</div>
       <div class="sbody">
-        <b>${sec.rn}.${sec.name}</b>
+        <b>${sec.rn}.${secName(sec)}</b>
         <div class="meta"><div class="bar"><i style="width:${st.pct}%"></i></div>
           <small>${kh(st.answered)}/${kh(st.total)}</small></div>
       </div>
-      <div class="sscore"><b>${st.score===null?'–':kh(Math.round(st.score))}</b><small>${st.complete?'/១០០':'បណ្តោះអាសន្ន'}</small></div>
+      <div class="sscore"><b>${st.score===null?'–':kh(Math.round(st.score))}</b><small>${st.complete?(S.lang==='en'?'/100':'/១០០'):(S.lang==='en'?'prov.':'បណ្តោះអាសន្ន')}</small></div>
     </div>`;
   }).join('');
   $$('#secList .sitem').forEach(el=>el.onclick=()=>openSec(+el.dataset.i));
@@ -1123,22 +1276,27 @@ function _renderHome(){
 
 function _renderSec(){
   const si=S.cur, sec=SECTIONS[si], st=secStat(si);
-  $('#secTitle').textContent = sec.rn+'.'+sec.name
-      + (viewMode()==='pc' ? '  ( '+(st.score===null?'____':fx(st.score))+' / 100 ពិន្ទុ )' : '');
-  $('#topTitle').textContent = sec.name;
+  $('#secTitle').textContent = sec.rn+'.'+secName(sec)
+      + (viewMode()==='pc' ? '  ( '+(st.score===null?'____':fx(st.score))+' / 100 '+T().pts+' )' : '');
+  $('#topTitle').textContent = secName(sec);
   $('#secBarFill').style.width=st.pct+'%';
-  $('#secBarL').textContent='បំពេញ '+kh(st.answered)+' / '+kh(st.total);
-  $('#secBarR').textContent = (st.score===null?'–':fx(st.score))+' / ១០០ '+(st.complete?'ពិន្ទុ':'(បណ្តោះអាសន្ន)');
+  $('#secBarL').textContent=T().filled+' '+kh(st.answered)+' / '+kh(st.total);
+  $('#secBarR').textContent = (st.score===null?'–':fx(st.score))+' / '+kh(100)+' '+(st.complete?T().pts:T().provTag.trim());
+  var EN=(S.lang==='en');
   $('#secCalc').innerHTML = st.allNa
-    ? '⊘ ផ្នែកនេះដាក់ N/A ទាំងអស់ — គ្មានពិន្ទុ ហើយត្រូវដកចេញពីមធ្យមភាគសរុប'
-    : ('សំណួរគិតពិន្ទុ <b>'+kh(st.applicable)+'</b> (សរុប '+kh(st.total)+' − N/A '+kh(st.na)+') · ១ សំណួរ = <b>'+fx(st.per,2)+'</b> ពិន្ទុ'
-      +'<br>មាន '+kh(st.yes)+' × '+fx(st.per,2)+' = <b>'+fx(st.scoreFinal)+'</b> ពិន្ទុ'
-      + (st.todo? ' · នៅសល់ '+kh(st.todo)+' សំណួរ (អាចបាន '+fx(st.pending)+' ពិន្ទុទៀត)' : ' ✅ បញ្ចប់'));
+    ? (EN?'⊘ All questions in this section are N/A — no score, excluded from the overall average'
+        :'⊘ ផ្នែកនេះដាក់ N/A ទាំងអស់ — គ្មានពិន្ទុ ហើយត្រូវដកចេញពីមធ្យមភាគសរុប')
+    : ((EN?'Applicable <b>':'សំណួរគិតពិន្ទុ <b>')+kh(st.applicable)+'</b> ('+(EN?'total ':'សរុប ')+kh(st.total)+' − N/A '+kh(st.na)+') · '
+      +(EN?'1 question = <b>':'១ សំណួរ = <b>')+fx(st.per,2)+'</b> '+T().pts
+      +'<br>'+T().yes+' '+kh(st.yes)+' × '+fx(st.per,2)+' = <b>'+fx(st.scoreFinal)+'</b> '+T().pts
+      + (st.todo? ' · '+T().todo+' '+kh(st.todo)+' (+'+fx(st.pending)+')' : ' ✅'));
   const nt=$('#secNote');
-  if(sec.note){ nt.textContent='ℹ️ '+sec.note; nt.classList.remove('hide'); } else nt.classList.add('hide');
+  var nte=(S.lang==='en'&&sec.noteEn)?sec.noteEn:sec.note;
+  if(nte){ nt.textContent='ℹ️ '+nte; nt.classList.remove('hide'); } else nt.classList.add('hide');
 
-  const f=S.filter;
+  const f=S.filter, D=T();
   const html = sec.items.map((txt,idx)=>{
+    const sub = (S.lang==='en' && sec.itemsEn && sec.itemsEn[idx]) ? txt : '';
     const n=idx+1, key=sec.id+'-'+n, a=S.ans[key]||{};
     const v=a.v||'';
     if(f==='todo'&&v) return '';
@@ -1147,17 +1305,17 @@ function _renderSec(){
     if(f==='na'&&v!=='na') return '';
     const ph=(a.photos||[]);
     return `<div class="q ${v?'a-'+v:''}" data-k="${key}">
-      <div class="qtop"><div class="qn">${kh(n)}</div><div class="qt">${txt}</div></div>
+      <div class="qtop"><div class="qn">${kh(n)}</div><div class="qt">${itemText(sec,idx)}${sub?'<div class="qsub">'+sub+'</div>':''}</div></div>
       <div class="ans">
-        <button class="ab ${v==='yes'?'on-yes':''}" data-v="yes">✔ មាន</button>
-        <button class="ab ${v==='no' ?'on-no' :''}" data-v="no">✖ មិនមាន</button>
-        <button class="ab ${v==='na' ?'on-na' :''}" data-v="na">⊘ មិនពាក់ព័ន្ធ</button>
+        <button class="ab ${v==='yes'?'on-yes':''}" data-v="yes">✔ ${D.yes}</button>
+        <button class="ab ${v==='no' ?'on-no' :''}" data-v="no">✖ ${D.no}</button>
+        <button class="ab ${v==='na' ?'on-na' :''}" data-v="na">⊘ ${D.na}</button>
       </div>
       <div class="qtools">
-        <button class="tbtn tnote ${a.note?'has':''}">📝 ចំណាំ${a.note?' ✓':''}</button>
-        <button class="tbtn tcam ${ph.length?'has':''}">📷 រូបថត${ph.length?' ('+kh(ph.length)+')':''}</button>
+        <button class="tbtn tnote ${a.note?'has':''}">${D.note}${a.note?' ✓':''}</button>
+        <button class="tbtn tcam ${ph.length?'has':''}">${D.photo}${ph.length?' ('+kh(ph.length)+')':''}</button>
       </div>
-      <textarea class="qnote ${a.note?'':'hide'}" placeholder="សរសេរចំណាំ ឬអនុសាសន៍...">${(a.note||'').replace(/</g,'&lt;')}</textarea>
+      <textarea class="qnote ${a.note?'':'hide'}" placeholder="${D.notePh}">${(a.note||'').replace(/</g,'&lt;')}</textarea>
       <div class="thumbs">${ph.map((p,pi)=>`<div class="thumb"><img src="${p}" alt=""><b data-p="${pi}">×</b></div>`).join('')}</div>
     </div>`;
   }).join('');
@@ -1166,7 +1324,7 @@ function _renderSec(){
   $('#xWrap').classList.toggle('hide', !useTable);
   $('#scrollHint').classList.toggle('hide', !(useTable && viewMode()!=='pc'));
   if(useTable){ renderTable(si, st); } else {
-    $('#qList').innerHTML = html || '<div class="empty">គ្មានសំណួរក្នុងតម្រងនេះទេ ✨</div>';
+    $('#qList').innerHTML = html || '<div class="empty">'+T().noQ+'</div>';
     bindQ();
   }
   const ta=$('#secComment'); ta.value = S.cmt[sec.id]||'';
@@ -1183,25 +1341,25 @@ function _renderTable(si, st){
     if(f==='todo'&&v) return;
     if((f==='yes'||f==='no'||f==='na') && v!==f) return;
     const ph=(a.photos||[]).length;
-    const og = sec.orig && sec.orig[idx]!==n ? '<small>ដើម '+sec.orig[idx]+'</small>' : '';
+    const og = sec.orig && sec.orig[idx]!==n ? '<small>'+(S.lang==='en'?'orig ':'ដើម ')+sec.orig[idx]+'</small>' : '';
     const pts = v==='yes' ? st.per.toFixed(2) : (v==='na' ? '—' : (v==='no' ? '0.00' : ''));
     rows+=`<tr class="${v?'a-'+v:''}" data-k="${key}">
       <td class="n">${kh(n)}${og}</td>
-      <td class="d">${txt}</td>
+      <td class="d">${itemText(sec,idx)}${(S.lang==='en'&&sec.itemsEn&&sec.itemsEn[idx])?'<div class="qsub">'+txt+'</div>':''}</td>
       <td class="c"><div class="xbox ${v==='yes'?'on':''}" data-v="yes">✔</div></td>
       <td class="c"><div class="xbox ${v==='no' ?'on':''}" data-v="no">✔</div></td>
       <td class="c"><div class="xbox ${v==='na' ?'on':''}" data-v="na">✔</div></td>
       <td class="p">${pts}</td>
-      <td class="o"><textarea class="xnote" rows="1" placeholder="ផ្សេងៗ...">${(a.note||'').replace(/</g,'&lt;')}</textarea>
-        <button class="xcam ${ph?'has':''}">📷 រូបថត${ph?' ('+kh(ph)+')':''}</button></td>
+      <td class="o"><textarea class="xnote" rows="1" placeholder="${T().otherPh}">${(a.note||'').replace(/</g,'&lt;')}</textarea>
+        <button class="xcam ${ph?'has':''}">${T().photo}${ph?' ('+kh(ph)+')':''}</button></td>
     </tr>`;
   });
   $('#xTable').innerHTML =
-    `<thead><tr><th>ល.រ</th><th>បរិយាយ</th><th>មាន</th><th>មិនមាន</th><th>N/A</th><th>ពិន្ទុ</th><th>ផ្សេងៗ</th></tr></thead>
-     <tbody>${rows||'<tr><td class="d" colspan="7" style="text-align:center;padding:22px">គ្មានសំណួរក្នុងតម្រងនេះទេ ✨</td></tr>'}</tbody>
-     <tfoot><tr><td colspan="2" style="text-align:right">សរុបផ្នែក · គិតពិន្ទុ ${kh(st.applicable)} × ${st.per.toFixed(2)}</td>
+    `<thead><tr><th>${T().thNo}</th><th>${T().thDesc}</th><th>${T().yes}</th><th>${T().no}</th><th>N/A</th><th>${T().thPts}</th><th>${T().thOther}</th></tr></thead>
+     <tbody>${rows||'<tr><td class="d" colspan="7" style="text-align:center;padding:22px">'+T().noQ+'</td></tr>'}</tbody>
+     <tfoot><tr><td colspan="2" style="text-align:right">${T().thSecTotal} ${kh(st.applicable)} × ${st.per.toFixed(2)}</td>
        <td class="c">${kh(st.yes)}</td><td class="c">${kh(st.no)}</td><td class="c">${kh(st.na)}</td>
-       <td class="p">${st.scoreFinal===null?'–':fx(st.scoreFinal)}</td><td class="o">/ 100 ពិន្ទុ</td></tr></tfoot>`;
+       <td class="p">${st.scoreFinal===null?'–':fx(st.scoreFinal)}</td><td class="o">/ 100 ${T().pts}</td></tr></tfoot>`;
   $$('#xTable tbody tr[data-k]').forEach(tr=>{
     const key=tr.dataset.k;
     tr.querySelectorAll('.xbox').forEach(bx=>bx.onclick=()=>{
@@ -1249,7 +1407,7 @@ function pickPhoto(key){
         c.getContext('2d').drawImage(img,0,0,c.width,c.height);
         const a=S.ans[key]||(S.ans[key]={});
         (a.photos=a.photos||[]).push(c.toDataURL('image/jpeg',0.62));
-        save(); renderSec(); toast('📷 បានបញ្ចូលរូបភាព');
+        save(); renderSec(); toast(T().tPhoto);
       };
       img.src=r.result;
     };
@@ -1263,22 +1421,22 @@ function _renderSum(){
   const o=overall(), g=gradeOf(o.score, o.complete);
   $('#sumScore').textContent = o.score===null?'–':kh(Math.round(o.score));
   ringSet($('#ringFg2'), o.score||0);
-  $('#sumLbl').textContent = o.complete ? 'ពិន្ទុផ្លូវការ / ១០០' : 'បណ្តោះអាសន្ន / ១០០';
+  $('#sumLbl').textContent = o.complete ? T().pts100 : T().provPts;
   $('#sumGrade').textContent=g.t;
-  $('#sumSub').textContent = g.d+' · បំពេញ '+kh(o.answered)+'/'+kh(o.total)+' សំណួរ';
+  $('#sumSub').textContent = g.d+' · '+T().filled+' '+kh(o.answered)+'/'+kh(o.total);
   const sApp=o.secs.reduce((a,x)=>a+x.applicable,0);
   $('#sumCalc').innerHTML =
-     '<div class="calcrow"><span>មធ្យមភាគ ៧ ផ្នែក (ផ្លូវការ)</span><b>'+fx(o.scoreFinal)+'</b></div>'
-    +'<div class="calcrow"><span>មធ្យមភាគតែផ្នែកដែលឆ្លើយហើយ</span><b>'+fx(o.scoreProv)+'</b></div>'
-    +'<div class="calcrow"><span>ថ្លឹងតាមសំណួរ ('+kh(o.yes)+' ÷ '+kh(sApp)+')</span><b>'+fx(o.scoreWeighted)+'</b></div>'
-    +'<div class="calcrow"><span>មាន / មិនមាន / N/A / មិនទាន់</span><b>'+kh(o.yes)+' / '+kh(o.no)+' / '+kh(o.na)+' / '+kh(o.total-o.answered)+'</b></div>';
+     '<div class="calcrow"><span>'+T().avg7+'</span><b>'+fx(o.scoreFinal)+'</b></div>'
+    +'<div class="calcrow"><span>'+T().avgAns+'</span><b>'+fx(o.scoreProv)+'</b></div>'
+    +'<div class="calcrow"><span>'+T().weighted+' ('+kh(o.yes)+' ÷ '+kh(sApp)+')</span><b>'+fx(o.scoreWeighted)+'</b></div>'
+    +'<div class="calcrow"><span>'+T().counts+'</span><b>'+kh(o.yes)+' / '+kh(o.no)+' / '+kh(o.na)+' / '+kh(o.total-o.answered)+'</b></div>';
 
-  let rows='<tr><th>ផ្នែក</th><th>មាន</th><th>មិន</th><th>N/A</th><th>គិត</th><th>ពិន្ទុ</th></tr>';
+  let rows='<tr><th>'+(S.lang==='en'?'Section':'ផ្នែក')+'</th><th>'+T().yes+'</th><th>'+T().no+'</th><th>N/A</th><th>'+T().applicable+'</th><th>'+T().thPts+'</th></tr>';
   SECTIONS.forEach((sec,i)=>{
     const st=secStat(i);
     const sc=st.scoreFinal;
     const cls = sc===null?'p-lo' : sc>=80?'p-hi' : sc>=60?'p-mid':'p-lo';
-    rows+=`<tr><td>${sec.rn}.${sec.name}${st.complete?'':' <small style="opacity:.7">('+kh(st.todo)+' នៅសល់)</small>'}</td>
+    rows+=`<tr><td>${sec.rn}.${secName(sec)}${st.complete?'':' <small style="opacity:.7">('+kh(st.todo)+')</small>'}</td>
       <td>${kh(st.yes)}</td><td>${kh(st.no)}</td><td>${kh(st.na)}</td><td>${kh(st.applicable)}</td>
       <td><span class="pill ${cls}">${sc===null?'–':fx(sc)}</span></td></tr>`;
   });
@@ -1287,12 +1445,12 @@ function _renderSum(){
   const fails=[];
   SECTIONS.forEach((sec,i)=>sec.items.forEach((t,idx)=>{
     const a=S.ans[sec.id+'-'+(idx+1)];
-    if(a&&a.v==='no') fails.push({s:sec.rn+'.'+sec.name, n:idx+1, t, note:a.note||''});
+    if(a&&a.v==='no') fails.push({s:sec.rn+'.'+secName(sec), n:idx+1, t:itemText(sec,idx), note:a.note||''});
   }));
   $('#failN').textContent=kh(fails.length);
   $('#failList').innerHTML = fails.length
-    ? fails.map(f=>`<div class="failitem"><b>${f.s} · លេខ ${kh(f.n)}</b>${f.t}${f.note?'<div style="color:var(--ink-dim);font-size:11.5px;margin-top:4px">📝 '+f.note+'</div>':''}</div>`).join('')
-    : '<div class="empty">👏 គ្មានចំណុចត្រូវកែតម្រូវទេ</div>';
+    ? fails.map(f=>`<div class="failitem"><b>${f.s} · ${T().thNo} ${kh(f.n)}</b>${f.t}${f.note?'<div style="color:var(--ink-dim);font-size:11.5px;margin-top:4px">📝 '+f.note+'</div>':''}</div>`).join('')
+    : '<div class="empty">'+T().noFix+'</div>';
 }
 
 /* ---- រុំដោយ safe() ---- */
@@ -1369,35 +1527,43 @@ function bindInfo(){ F.forEach(([id,k])=>{ const el=$('#'+id); if(el) el.oninput
 
 /* ================= នាំចេញ CSV (Excel) ================= */
 function toCsv(){
-  const q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
-  const L=[];
-  L.push(['របាយការណ៍ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន'].map(q).join(','));
-  L.push([ 'ឈ្មោះកសិដ្ឋាន',S.info.farm||'','តំបន់',S.info.zone||'','កាលបរិច្ឆេទ',S.info.date||''].map(q).join(','));
-  L.push([ 'អ្នកធ្វើរបាយការណ៍',S.info.by||'','ចំនួនជ្រូក',S.info.head||''].map(q).join(','));
-  const o=overall();
-  L.push(['ពិន្ទុសរុប (ផ្លូវការ)', fx(o.scoreFinal), 'ចំណាប់ថ្នាក់', gradeOf(o.score,o.complete).t].map(q).join(','));
-  L.push(['ពិន្ទុបណ្តោះអាសន្ន', fx(o.scoreProv), 'ថ្លឹងតាមសំណួរ', fx(o.scoreWeighted)].map(q).join(','));
-  L.push(['ស្ថានភាព', o.complete?'បំពេញគ្រប់ ១០០%':'មិនទាន់បញ្ចប់ — នៅសល់ '+(o.total-o.answered)+' សំណួរ'].map(q).join(','));
-  L.push('');
-  L.push(['ផ្នែក','ល.រ','បរិយាយ','លទ្ធផល','ពិន្ទុពេញ/សំណួរ','ពិន្ទុទទួលបាន','ចំណាំ','រូបថត'].map(q).join(','));
-  SECTIONS.forEach((sec,i)=>{
-    const st=secStat(i);
-    sec.items.forEach((t,idx)=>{
-      const a=S.ans[sec.id+'-'+(idx+1)]||{};
-      const lab = a.v==='yes'?'មាន' : a.v==='no'?'មិនមាន' : a.v==='na'?'មិនពាក់ព័ន្ធ' : 'មិនទាន់បំពេញ';
-      const full= a.v==='na' ? '-' : st.per.toFixed(2);
-      const got = a.v==='yes'? st.per.toFixed(2) : (a.v==='na' ? '-' : '0.00');
-      L.push([sec.rn+'.'+sec.name, idx+1, t, lab, full, got, a.note||'', (a.photos||[]).length].map(q).join(','));
-    });
-    L.push([sec.rn+'.'+sec.name+' — សរុបផ្នែក',
-            'មាន '+st.yes, 'មិនមាន '+st.no, 'N/A '+st.na,
-            'គិតពិន្ទុ '+st.applicable+' × '+st.per.toFixed(2),
-            (st.scoreFinal===null?'-':fx(st.scoreFinal))+' /100', S.cmt[sec.id]||'',''].map(q).join(','));
-    L.push('');
-  });
-  const blob=new Blob(['﻿'+L.join('\r\n')],{type:'text/csv;charset=utf-8;'});
-  dl(blob, fname('csv'));
-  toast('📄 Save CSV រួចរាល់');
+  var q=function(v){return '"'+String(v==null?'':v).replace(/"/g,'""')+'"';};
+  var o=overall(), g=gradeOf(o.score,o.complete), L=(S.lang==='en'), i, j, L2=[];
+  var W = L ? {t:'BIOSECURITY FARM AUDIT REPORT',farm:'Farm name',zone:'Zone',date:'Date',by:'Auditor',head:'Pigs',
+    tot:'Total score (official)',grade:'Grade',prov:'Provisional score',wt:'Weighted by questions',st:'Status',
+    ok:'Complete 100%',left:'Incomplete — remaining ',sec:'Section',no:'No.',desc:'Description',res:'Result',
+    full:'Full points/question',got:'Points earned',rem:'Remark',ph:'Photos',
+    yes:'Yes',nno:'No',na:'N/A',todo:'Not answered',secTot:' — section total',appl:'Applicable '}
+   : {t:'របាយការណ៍ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន',farm:'ឈ្មោះកសិដ្ឋាន',zone:'តំបន់',date:'កាលបរិច្ឆេទ',by:'អ្នកធ្វើរបាយការណ៍',head:'ចំនួនជ្រូក',
+    tot:'ពិន្ទុសរុប (ផ្លូវការ)',grade:'ចំណាប់ថ្នាក់',prov:'ពិន្ទុបណ្តោះអាសន្ន',wt:'ថ្លឹងតាមសំណួរ',st:'ស្ថានភាព',
+    ok:'បំពេញគ្រប់ ១០០%',left:'មិនទាន់បញ្ចប់ — នៅសល់ ',sec:'ផ្នែក',no:'ល.រ',desc:'បរិយាយ',res:'លទ្ធផល',
+    full:'ពិន្ទុពេញ/សំណួរ',got:'ពិន្ទុទទួលបាន',rem:'ផ្សេងៗ',ph:'រូបថត',
+    yes:'មាន',nno:'មិនមាន',na:'មិនពាក់ព័ន្ធ',todo:'មិនទាន់បំពេញ',secTot:' — សរុបផ្នែក',appl:'គិតពិន្ទុ '};
+  L2.push([W.t].map(q).join(','));
+  L2.push([W.farm,S.info.farm||'',W.zone,S.info.zone||'',W.date,S.info.date||''].map(q).join(','));
+  L2.push([W.by,S.info.by||'',W.head,S.info.head||''].map(q).join(','));
+  L2.push([W.tot,fx(o.scoreFinal),W.grade,g.t].map(q).join(','));
+  L2.push([W.prov,fx(o.scoreProv),W.wt,fx(o.scoreWeighted)].map(q).join(','));
+  L2.push([W.st,(o.complete?W.ok:W.left+(o.total-o.answered))].map(q).join(','));
+  L2.push('');
+  L2.push([W.sec,W.no,W.desc,W.res,W.full,W.got,W.rem,W.ph].map(q).join(','));
+  for(i=0;i<SECTIONS.length;i++){
+    var sec=SECTIONS[i], st=o.secs[i];
+    for(j=0;j<sec.items.length;j++){
+      var an=S.ans[sec.id+'-'+(j+1)]||{}, v=an.v||'';
+      var lab = v==='yes'?W.yes : v==='no'?W.nno : v==='na'?W.na : W.todo;
+      var full= (v==='na')?'-':st.per.toFixed(2);
+      var got = (v==='yes')?st.per.toFixed(2):((v==='na')?'-':'0.00');
+      var num = (sec.orig && sec.orig[j]!==j+1) ? (j+1)+' ('+sec.orig[j]+')' : (j+1);
+      L2.push([sec.rn+'.'+secName(sec), num, itemText(sec,j), lab, full, got, an.note||'', (an.photos||[]).length].map(q).join(','));
+    }
+    L2.push([sec.rn+'.'+secName(sec)+W.secTot, W.yes+' '+st.yes, W.nno+' '+st.no, 'N/A '+st.na,
+             W.appl+st.applicable+' × '+st.per.toFixed(2),
+             (st.scoreFinal===null?'-':fx(st.scoreFinal))+' /100', S.cmt[sec.id]||'',''].map(q).join(','));
+    L2.push('');
+  }
+  dl(new Blob(['﻿'+L2.join('\r\n')],{type:'text/csv;charset=utf-8;'}), fname('csv'));
+  toast(T().tCsv);
 }
 function dl(blob,name){
   const u=URL.createObjectURL(blob), a=document.createElement('a');
@@ -1405,42 +1571,394 @@ function dl(blob,name){
   setTimeout(()=>{URL.revokeObjectURL(u);a.remove();},600);
 }
 
-/* ================= នាំចេញ Excel (.xls) ================= */
-function toXls(){
-  const esc=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  const o=overall(), g=gradeOf(o.score);
-  let h='<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="UTF-8">'
-      +'<style>td,th{font-family:"Khmer OS Battambang",Calibri,sans-serif;font-size:11pt;border:.5pt solid #888;vertical-align:top}'
-      +'th{background:#D7EFE2;font-weight:bold}.h{background:#0F7A4F;color:#fff;font-weight:bold;font-size:12pt}'
-      +'.t{background:#FFE08A;font-weight:bold}</style></head><body>';
-  h+='<table><tr><td class="h" colspan="7">របាយការណ៍ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន — M\'S PIG ACMC (CAMBODIA) CO., LTD.</td></tr>'
-   +'<tr><th>ឈ្មោះកសិដ្ឋាន</th><td colspan="2">'+esc(S.info.farm)+'</td><th>តំបន់</th><td>'+esc(S.info.zone)+'</td><th>កាលបរិច្ឆេទ</th><td>'+esc(S.info.date)+'</td></tr>'
-   +'<tr><th>អ្នកធ្វើរបាយការណ៍</th><td colspan="2">'+esc(S.info.by)+'</td><th>ចំនួនជ្រូក</th><td>'+esc(S.info.head)+'</td><th>បំពេញ</th><td>'+o.answered+' / '+o.total+'</td></tr>'
-   +'<tr class="t"><th>ពិន្ទុសរុប (ផ្លូវការ)</th><td colspan="2">'+fx(o.scoreFinal)+' / 100</td><th>ចំណាប់ថ្នាក់</th><td colspan="3">'+esc(g.t)+'</td></tr>'
-   +'<tr><th>ពិន្ទុបណ្តោះអាសន្ន</th><td colspan="2">'+fx(o.scoreProv)+'</td><th>ថ្លឹងតាមសំណួរ</th><td colspan="3">'+fx(o.scoreWeighted)+'</td></tr>'
-   +'<tr><th>ស្ថានភាព</th><td colspan="6">'+(o.complete?'បំពេញគ្រប់ ១០០%':'មិនទាន់បញ្ចប់ — នៅសល់ '+(o.total-o.answered)+' សំណួរ')+'</td></tr></table><br>';
-  h+='<table><tr><th>ផ្នែក</th><th>សំណួរ</th><th>មាន</th><th>មិនមាន</th><th>N/A</th><th>មិនទាន់</th><th>គិតពិន្ទុ</th><th>១ សំណួរ =</th><th>ពិន្ទុ /100</th></tr>';
-  SECTIONS.forEach((sec,i)=>{const st=secStat(i);
-    h+='<tr><td>'+sec.rn+'.'+esc(sec.name)+'</td><td>'+st.total+'</td><td>'+st.yes+'</td><td>'+st.no+'</td><td>'+st.na+'</td><td>'+st.todo+'</td>'
-      +'<td>'+st.applicable+'</td><td>'+(st.applicable?st.per.toFixed(2):'-')+'</td><td>'+(st.scoreFinal===null?'-':fx(st.scoreFinal))+'</td></tr>';});
-  h+='<tr class="t"><td>ពិន្ទុសរុប = មធ្យមភាគផ្នែក</td><td colspan="7"></td><td>'+fx(o.scoreFinal)+'</td></tr>';
-  h+='</table><br>';
-  h+='<table><tr><th>ផ្នែក</th><th>ល.រ</th><th>បរិយាយ</th><th>លទ្ធផល</th><th>ពិន្ទុពេញ</th><th>ពិន្ទុទទួលបាន</th><th>ចំណាំ</th><th>រូបថត</th></tr>';
-  SECTIONS.forEach((sec,i)=>{
-    const st=secStat(i);
-    sec.items.forEach((t,idx)=>{
-      const a=S.ans[sec.id+'-'+(idx+1)]||{};
-      const lab=a.v==='yes'?'មាន':a.v==='no'?'មិនមាន':a.v==='na'?'មិនពាក់ព័ន្ធ':'មិនទាន់បំពេញ';
-      const full=a.v==='na'?'-':st.per.toFixed(2);
-      const got =a.v==='yes'?st.per.toFixed(2):(a.v==='na'?'-':'0.00');
-      h+='<tr><td>'+sec.rn+'.'+esc(sec.name)+'</td><td>'+(idx+1)+'</td><td>'+esc(t)+'</td><td>'+lab+'</td><td>'+full+'</td><td>'+got+'</td><td>'+esc(a.note)+'</td><td>'+((a.photos||[]).length||'')+'</td></tr>';
-    });
-    h+='<tr class="t"><td colspan="3">'+sec.rn+'.'+esc(sec.name)+' — សរុបផ្នែក</td><td>មាន '+st.yes+' / '+st.applicable+'</td><td>'+(st.applicable?(st.applicable*st.per).toFixed(2):'-')+'</td><td>'+(st.scoreFinal===null?'-':fx(st.scoreFinal))+'</td><td colspan="2">'+esc(S.cmt[sec.id])+'</td></tr>';
-  });
-  h+='</table></body></html>';
-  dl(new Blob(['\ufeff'+h],{type:'application/vnd.ms-excel;charset=utf-8'}), fname('xls'));
-  toast('📊 Save Excel រួចរាល់');
+/* ---- i18n ---- */
+function T(){ return LANG[S.lang] || LANG.km; }
+
+/* ================= វចនានុក្រម UI ================= */
+var LANG={
+km:{
+ appTitle:'ត្រួតពិនិត្យជីវៈសុវត្ថិភាព', appSub:"កសិដ្ឋាន M's PIG ACMC (Cambodia)",
+ filled:'បំពេញ', of:'/', pts:'ពិន្ទុ', pts100:'ពិន្ទុ / ១០០', provPts:'បណ្តោះអាសន្ន / ១០០',
+ yes:'មាន', no:'មិនមាន', na:'មិនពាក់ព័ន្ធ', todo:'នៅសល់', all:'ទាំងអស់', fYes:'✔ មាន', fNo:'✖ មិនមាន', fNa:'⊘ មិនពាក់ព័ន្ធ',
+ farmName:'ឈ្មោះកសិដ្ឋាន៖', zone:'តំបន់៖', date:'កាលបរិច្ឆេទ៖', score:'ពិន្ទុ', grade:'ចំំណាប់ថ្នាក់',
+ sections7:'📋 ផ្នែកទាំង ៧', doneSec:'បញ្ចប់', secOf:'/៧ ផ្នែក',
+ btnContinue:'▶️ បន្តបំពេញកន្លែងដែលនៅសល់', btnSaveRec:'📚 រក្សាទុកជាកំណត់ត្រា',
+ btnSaveExp:'⬇️ Save PDF / Excel', btnViewRecs:'📂 មើលកំណត់ត្រាចុងក្រោយ',
+ styleCard:'🃏 កាត', styleTable:'📋 តារាង (ដូច Excel)', hintTable:'ដូច Form ក្នុង Excel', hintCard:'ងាយចុចលើទូរស័ព្ទ',
+ allYes:'✔ ដាក់ "មាន" ទាំងអស់', clearSec:'↺ សម្អាតផ្នែកនេះ',
+ thNo:'ល.រ', thDesc:'បរិយាយ', thPts:'ពិន្ទុ', thOther:'ផ្សេងៗ', thSecTotal:'សរុបផ្នែក · គិតពិន្ទុ',
+ note:'📝 ចំណាំ', photo:'📷 រូបថត', notePh:'សរសេរចំណាំ ឬអនុសាសន៍...', otherPh:'ផ្សេងៗ...',
+ secComment:'✍️ បរិយាយ÷', secCommentPh:'សរសេរបរិយាយសម្រាប់ផ្នែកនេះ...',
+ prevSec:'‹ ផ្នែកមុន', nextSec:'ផ្នែកបន្ទាប់ ›', noQ:'គ្មានសំណួរក្នុងតម្រងនេះទេ ✨',
+ sumCalc:'🧮 ការគណនាពិន្ទុសរុប', sumBySec:'📊 ពិន្ទុតាមផ្នែក', howScore:'📖 របៀបគិតពិន្ទុ (ច្បាប់ផ្លូវការ)',
+ toFix:'⚠️ ចំណុចត្រូវកែតម្រូវ', noFix:'👏 គ្មានចំណុចត្រូវកែតម្រូវទេ',
+ avg7:'មធ្យមភាគ ៧ ផ្នែក (ផ្លូវការ)', avgAns:'មធ្យមភាគតែផ្នែកដែលឆ្លើយហើយ', weighted:'ថ្លឹងតាមសំណួរ',
+ counts:'មាន / មិនមាន / N/A / មិនទាន់', applicable:'គិត',
+ farmInfo:'🏠 ព័ត៌មានកសិដ្ឋាន', head:'ចំនួនជ្រូក (ក្បាល)', auditor:'ឈ្មោះអ្នកធ្វើរបាយការណ៍',
+ owner:'តំណាងម្ចាស់កសិដ្ឋាន', comp:'តំណាងក្រុមហ៊ុន', genNote:'កំណត់សម្គាល់ទូទៅ',
+ recTitle:'📚 កំណត់ត្រាចុងក្រោយ', recSaveBtn:'📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា',
+ recEmpty:'មិនទាន់មានកំណត់ត្រា — ចុច «រក្សាទុកជាកំណត់ត្រា» ពេលបញ្ចប់ការត្រួតពិនិត្យ',
+ open:'📂 បើក', clearTitle:'🧹 សម្អាតទិន្នន័យ', clearBtn:'🧹 បើកជម្រើសសម្អាតទិន្នន័យ',
+ dataTitle:'⚙️ ទិន្នន័យ', backup:'💾 Backup (JSON)', restore:'⬆️ ស្តារឡើងវិញ',
+ shareTitle:'🔗 របៀបចែករំលែកឱ្យអ្នកដទៃ', diagTitle:'🩺 ពិនិត្យស្ថានភាព App', diagBtn:'🔄 ពិនិត្យឡើងវិញ',
+ installTitle:'📲 ដំឡើងលើទូរស័ព្ទ (ដូច App ពិត)',
+ navHome:'ទំព័រដើម', navFill:'បំពេញ', navSum:'សង្ខេប', navInfo:'ព័ត៌មាន',
+ saveSheet:'⬇️ Save / នាំចេញ', savePdf:'Save PDF', saveXls:'Save Excel (.xlsx)', saveCsv:'Save CSV (.csv)',
+ saveRecOpt:'រក្សាទុកជាកំណត់ត្រា', saveJson:'Backup (.json)', close:'បិទ',
+ clForm:'សម្អាតទម្រង់បច្ចុប្បន្ន', clRecs:'លុបកំណត់ត្រាទាំងអស់', clAll:'លុបទាំងអស់ ចាប់ផ្តើមថ្មី',
+ notRated:'មិនទាន់វាយតម្លៃ', startFill:'សូមចាប់ផ្តើមបំពេញសំណួរ',
+ gA:'A — ល្អប្រសើរ', gB:'B — ល្អ', gC:'C — មធ្យម', gD:'D — ខ្សោយ', gF:'F — ធ្លាក់',
+ dA:'រក្សាស្តង់ដារនេះឱ្យបានជាប់លាប់', dB:'នៅមានចំណុចតូចតាចត្រូវកែ', dC:'ត្រូវកែតម្រូវក្នុងរយៈពេល ១ ខែ',
+ dD:'ហានិភ័យខ្ពស់ — ត្រូវកែបន្ទាន់', dF:'ហានិភ័យធ្ងន់ធ្ងរ — ត្រូវផ្អាកចលនា និងកែជាបន្ទាន់',
+ gradePfx:'ចំណាប់ថ្នាក់ ', provTag:' (បណ្តោះអាសន្ន)', provDesc:'មិនទាន់ផ្លូវការ — ត្រូវបំពេញឱ្យគ្រប់ ១២១ សំណួរសិន',
+ tXls:'📊 Save Excel (.xlsx) រួចរាល់', tCsv:'📄 Save CSV រួចរាល់', tJson:'💾 Backup រួចរាល់',
+ tPhoto:'📷 បានបញ្ចូលរូបភាព', tLangEn:'🌐 ប្តូរជាភាសាអង់គ្លេស',
+ rulesHtml:'<b>១.</b> ផ្នែកនីមួយៗ = <b>១០០ ពិន្ទុ</b> ដាច់ដោយឡែក (តាម Form ដើម)<br>       <b>២.</b> សំណួរគិតពិន្ទុ = <code>សំណួរសរុប − N/A</code><br>       <b>៣.</b> ១ សំណួរ = <code>១០០ ÷ សំណួរគិតពិន្ទុ</code> (បូកគ្នាវិញ = ១០០ គត់)<br>       <b>៤.</b> មាន = ពេញពិន្ទុ · មិនមាន = ០ · <b>មិនទាន់បំពេញ = ០</b><br>       <b>៥.</b> ពិន្ទុផ្នែក = <code>មាន ÷ សំណួរគិតពិន្ទុ × ១០០</code><br>       <b>៦.</b> ផ្នែកដែល N/A ទាំងអស់ ឬ<b>មិនទាន់ចាប់ផ្តើម</b> → គ្មានពិន្ទុ ហើយ<b>ដកចេញ</b>ពីមធ្យមភាគ<br>       <b>៧.</b> ពិន្ទុសរុប = <code>មធ្យមភាគនៃពិន្ទុផ្នែក</code> (៧ ផ្នែកមានទម្ងន់ស្មើគ្នា)<br>       <b>៨.</b> ចំណាប់ថ្នាក់ចេញផ្លូវការ<b>លុះត្រាតែ</b>បំពេញគ្រប់ ១២១ សំណួរ',
+ shareHtml:'<b>❌ កុំប្រើ Google Drive link</b> — Drive បានបិទសេវាបង្ហាញ HTML តាំងពីឆ្នាំ ២០១៦។       Link របស់ Drive បង្ហាញត្រឹមទំព័រ preview ដែលធ្វើឱ្យ App ដំណើរការមិនពេញលេញ       ហើយ<b>រក្សាទុកស្វ័យប្រវត្តិក៏មិនដើរដែរ</b>។<br><br>       <b>✅ វិធីត្រឹមត្រូវ ៣ យ៉ាង</b><br>       <b>១. ផ្ញើឯកសារផ្ទាល់</b> (ងាយបំផុត) — ផ្ញើ <code>.html</code> តាម Telegram/Email       → អ្នកទទួល <b>Download</b> → ចុចពីរដងបើក។ ដើរបាន offline ១០០%។<br>       <b>២. Netlify Drop</b> (បាន link ក្នុង ១ នាទី គ្មានគណនី) —       ចូល <code>app.netlify.com/drop</code> → អូសឯកសារដាក់ → បាន link ចែកបាន។<br>       <b>៣. GitHub Pages</b> (link អចិន្ត្រៃយ៍ ឥតគិតថ្លៃ) —       បង្កើត repository → Upload ឯកសារ (ប្តូរឈ្មោះជា <code>index.html</code>)       → Settings → Pages → Branch: main → Save។<br><br>       💡 បើនៅតែចង់ប្រើ Drive៖ ត្រូវ<b>ទាញយក (Download)</b>មកក្នុងកុំព្យូទ័រសិន រួចទើបបើក។',
+ installHtml:'<b>📱 iPhone / iPad (Safari)</b><br>       ១. បើកឯកសារនេះដោយ <b>Safari</b> (មិនមែន Chrome)<br>       ២. ចុចរូប <b>􀈂 Share</b> ខាងក្រោមអេក្រង់<br>       ៣. រំកិលចុះ ចុច <b>Add to Home Screen</b><br>       ៤. ចុច <b>Add</b> → រូប App នឹងលេចលើអេក្រង់ដើម<br>       <span style="opacity:.8">💡 បើផ្ញើតាម Telegram សូមចុច «Open in Safari» ជាមុនសិន</span><br><br>       <b>🤖 Android (Chrome)</b><br>       ១. បើកដោយ <b>Chrome</b> → ចុច <b>⋮</b> ខាងលើស្តាំ<br>       ២. ចុច <b>Add to Home screen</b> → <b>Add</b><br><br>       <b>💻 កុំព្យូទ័រ</b> — ចុចពីរដងលើឯកសារ ឬអូសដាក់ក្នុង Browser'
+},
+en:{
+ appTitle:'Biosecurity Farm Audit', appSub:"M's PIG ACMC (Cambodia) Farm",
+ filled:'Completed', of:'/', pts:'points', pts100:'points / 100', provPts:'provisional / 100',
+ yes:'Yes', no:'No', na:'N/A', todo:'Remaining', all:'All', fYes:'✔ Yes', fNo:'✖ No', fNa:'⊘ N/A',
+ farmName:'Farm name:', zone:'Zone:', date:'Date:', score:'Score', grade:'Grade',
+ sections7:'📋 All 7 sections', doneSec:'Completed', secOf:'/7 sections',
+ btnContinue:'▶️ Continue where you left off', btnSaveRec:'📚 Save as record',
+ btnSaveExp:'⬇️ Save PDF / Excel', btnViewRecs:'📂 View recent records',
+ styleCard:'🃏 Cards', styleTable:'📋 Table (like Excel)', hintTable:'Same as the Excel form', hintCard:'Easier to tap on a phone',
+ allYes:'✔ Set all to "Yes"', clearSec:'↺ Clear this section',
+ thNo:'No.', thDesc:'Description', thPts:'Points', thOther:'Remark', thSecTotal:'Section total · applicable',
+ note:'📝 Remark', photo:'📷 Photo', notePh:'Write a remark or recommendation...', otherPh:'Remark...',
+ secComment:'✍️ Section comment', secCommentPh:'Write a comment for this section...',
+ prevSec:'‹ Previous', nextSec:'Next section ›', noQ:'No questions match this filter ✨',
+ sumCalc:'🧮 How the total was calculated', sumBySec:'📊 Score by section', howScore:'📖 Scoring rules (official)',
+ toFix:'⚠️ Items to fix', noFix:'👏 Nothing to fix',
+ avg7:'Average of 7 sections (official)', avgAns:'Average of answered sections only', weighted:'Weighted by questions',
+ counts:'Yes / No / N/A / Not answered', applicable:'Appl.',
+ farmInfo:'🏠 Farm information', head:'Number of pigs (head)', auditor:'Auditor name',
+ owner:'Farm owner representative', comp:'Company representative', genNote:'General remarks',
+ recTitle:'📚 Recent records', recSaveBtn:'📚 Save the current audit as a record',
+ recEmpty:'No records yet — tap "Save as record" when you finish an audit',
+ open:'📂 Open', clearTitle:'🧹 Clear data', clearBtn:'🧹 Open clear-data options',
+ dataTitle:'⚙️ Data', backup:'💾 Backup (JSON)', restore:'⬆️ Restore',
+ shareTitle:'🔗 How to share with others', diagTitle:'🩺 App health check', diagBtn:'🔄 Re-check',
+ installTitle:'📲 Install on your phone (like a real app)',
+ navHome:'Home', navFill:'Audit', navSum:'Summary', navInfo:'Settings',
+ saveSheet:'⬇️ Save / Export', savePdf:'Save PDF', saveXls:'Save Excel (.xlsx)', saveCsv:'Save CSV (.csv)',
+ saveRecOpt:'Save as record', saveJson:'Backup (.json)', close:'Close',
+ clForm:'Clear the current form', clRecs:'Delete all records', clAll:'Delete everything and start over',
+ notRated:'Not yet rated', startFill:'Start answering the questions',
+ gA:'A — Excellent', gB:'B — Good', gC:'C — Average', gD:'D — Poor', gF:'F — Fail',
+ dA:'Maintain this standard consistently', dB:'A few minor items to fix', dC:'Must be corrected within 1 month',
+ dD:'High risk — correct urgently', dF:'Severe risk — halt movement and correct immediately',
+ gradePfx:'Grade ', provTag:' (provisional)', provDesc:'Not official yet — all 121 questions must be answered',
+ tXls:'📊 Excel (.xlsx) saved', tCsv:'📄 CSV saved', tJson:'💾 Backup saved',
+ tPhoto:'📷 Photo added', tLangEn:'🌐 Switched to Khmer',
+ rulesHtml:'<b>1.</b> Each section = <b>100 points</b>, independent (as in the original form)<br><b>2.</b> Applicable questions = <code>total questions − N/A</code><br><b>3.</b> 1 question = <code>100 ÷ applicable</code> (sums to exactly 100)<br><b>4.</b> Yes = full points · No = 0 · <b>Not answered = 0</b><br><b>5.</b> Section score = <code>Yes ÷ applicable × 100</code><br><b>6.</b> A section that is all N/A is <b>excluded</b> from the average · a section not started scores <b>0</b><br><b>7.</b> Total score = <code>average of the section scores</code> (all 7 sections weighted equally)<br><b>8.</b> The grade becomes official <b>only</b> when all 121 questions are answered',
+ shareHtml:'<b>❌ Do not share a Google Drive link</b> — Google shut down HTML hosting from Drive back in 2016. A Drive link only shows a preview page, so the app does not run properly and <b>auto-save will not work</b>.<br><br><b>✅ Three ways that do work</b><br><b>1. Send the file itself</b> (easiest) — send the <code>.html</code> by Telegram/Email → the other person clicks <b>Download</b> → double-click to open. Works 100% offline.<br><b>2. Netlify Drop</b> (a link in 1 minute, no account) — go to <code>app.netlify.com/drop</code> → drag the file in → you get a shareable link.<br><b>3. GitHub Pages</b> (free permanent link) — create a repository → upload the file (rename it <code>index.html</code>) → Settings → Pages → Branch: main → Save.<br><br>💡 If you must use Drive: <b>Download</b> the file to the computer first, then open it.',
+ installHtml:'<b>📱 iPhone / iPad (Safari)</b><br>1. Open this file in <b>Safari</b> (not Chrome)<br>2. Tap the <b>􀈂 Share</b> icon at the bottom<br>3. Scroll down and tap <b>Add to Home Screen</b><br>4. Tap <b>Add</b> → the app icon appears on your home screen<br><span style="opacity:.8">💡 If it arrived via Telegram, tap “Open in Safari” first</span><br><br><b>🤖 Android (Chrome)</b><br>1. Open in <b>Chrome</b> → tap <b>⋮</b> top right<br>2. Tap <b>Add to Home screen</b> → <b>Add</b><br><br><b>💻 Computer</b> — double-click the file, or drag it into a browser window'
+}};
+function applyLang(){
+  var d=T(), i, els=document.querySelectorAll('[data-i18n]');
+  for(i=0;i<els.length;i++){ var k=els[i].getAttribute('data-i18n'); if(d[k]!==undefined) els[i].textContent=d[k]; }
+  els=document.querySelectorAll('[data-i18n-html]');
+  for(i=0;i<els.length;i++){ var k3=els[i].getAttribute('data-i18n-html'); if(d[k3]!==undefined) els[i].innerHTML=d[k3]; }
+  els=document.querySelectorAll('[data-i18n-ph]');
+  for(i=0;i<els.length;i++){ var k2=els[i].getAttribute('data-i18n-ph'); if(d[k2]!==undefined) els[i].setAttribute('placeholder',d[k2]); }
+  document.documentElement.setAttribute('lang', S.lang);
+  document.body.classList.toggle('lang-en', S.lang==='en');
+  var lb=document.getElementById('btnLang'); if(lb) lb.textContent = (S.lang==='km' ? 'EN' : 'ខ្មែរ');
 }
+function setLang(l){
+  S.lang = l; save(true); applyLang();
+  renderTop(); renderHome(); renderSum(); renderRecs(); runDiag();
+  if(document.getElementById('sc-sec').className.indexOf('on')>=0) renderSec();
+  toast(S.lang==='en' ? '🌐 Switched to English' : '🌐 ប្តូរជាភាសាខ្មែរ');
+}
+
+function secName(sec){ return (S.lang==='en' && sec.en) ? sec.en : sec.name; }
+function itemText(sec,idx){
+  var km=sec.items[idx], en=(sec.itemsEn&&sec.itemsEn[idx])||'';
+  if(S.lang==='en' && en) return en;
+  return km;
+}
+function itemBoth(sec,idx){
+  var km=sec.items[idx], en=(sec.itemsEn&&sec.itemsEn[idx])||'';
+  if(S.lang==='en' && en) return {main:en, sub:km};
+  return {main:km, sub:(S.lang==='km'&&en)?'':''};
+}
+/* ================= ZIP (store) + XLSX ពិតប្រាកដ ================= */
+var CRC_T=(function(){var t=[],c,n,k;for(n=0;n<256;n++){c=n;for(k=0;k<8;k++)c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1);t[n]=c>>>0;}return t;})();
+function crc32(u8){var c=0xFFFFFFFF,i;for(i=0;i<u8.length;i++)c=CRC_T[(c^u8[i])&0xFF]^(c>>>8);return (c^0xFFFFFFFF)>>>0;}
+function utf8(str){
+  if(typeof TextEncoder!=='undefined') return new TextEncoder().encode(str);
+  var out=[],i,c,c2,cp;
+  for(i=0;i<str.length;i++){ c=str.charCodeAt(i);
+    if(c<0x80) out.push(c);
+    else if(c<0x800) out.push(0xC0|(c>>6),0x80|(c&63));
+    else if(c>=0xD800&&c<0xDC00){ c2=str.charCodeAt(++i); cp=0x10000+((c-0xD800)<<10)+(c2-0xDC00);
+      out.push(0xF0|(cp>>18),0x80|((cp>>12)&63),0x80|((cp>>6)&63),0x80|(cp&63)); }
+    else out.push(0xE0|(c>>12),0x80|((c>>6)&63),0x80|(c&63));
+  }
+  return new Uint8Array(out);
+}
+function zipStore(files){
+  var parts=[],central=[],offset=0,i,d=new Date();
+  var dosT=((d.getHours()<<11)|(d.getMinutes()<<5)|(Math.floor(d.getSeconds()/2)))&0xFFFF;
+  var dosD=((((d.getFullYear()-1980)&0x7F)<<9)|((d.getMonth()+1)<<5)|d.getDate())&0xFFFF;
+  function u16(a,v){a.push(v&255,(v>>8)&255);}
+  function u32(a,v){a.push(v&255,(v>>8)&255,(v>>16)&255,(v>>>24)&255);}
+  for(i=0;i<files.length;i++){
+    var nm=utf8(files[i].name),dt=files[i].data,c=crc32(dt),h=[];
+    u32(h,0x04034b50);u16(h,20);u16(h,0x0800);u16(h,0);u16(h,dosT);u16(h,dosD);
+    u32(h,c);u32(h,dt.length);u32(h,dt.length);u16(h,nm.length);u16(h,0);
+    var hd=new Uint8Array(h); parts.push(hd,nm,dt);
+    var cd=[];
+    u32(cd,0x02014b50);u16(cd,20);u16(cd,20);u16(cd,0x0800);u16(cd,0);u16(cd,dosT);u16(cd,dosD);
+    u32(cd,c);u32(cd,dt.length);u32(cd,dt.length);u16(cd,nm.length);
+    u16(cd,0);u16(cd,0);u16(cd,0);u16(cd,0);u32(cd,0);u32(cd,offset);
+    central.push(new Uint8Array(cd),nm);
+    offset+=hd.length+nm.length+dt.length;
+  }
+  var cLen=0,j; for(j=0;j<central.length;j++) cLen+=central[j].length;
+  var e=[]; u32(e,0x06054b50);u16(e,0);u16(e,0);u16(e,files.length);u16(e,files.length);
+  u32(e,cLen);u32(e,offset);u16(e,0);
+  var all=parts.concat(central,[new Uint8Array(e)]),total=0;
+  for(j=0;j<all.length;j++) total+=all[j].length;
+  var out=new Uint8Array(total),p=0;
+  for(j=0;j<all.length;j++){ out.set(all[j],p); p+=all[j].length; }
+  return out;
+}
+function xesc(s){ return String(s==null?'':s)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+  .replace(/"/g,'&quot;').replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g,''); }
+function colL(n){ var s=''; while(n>0){ var m=(n-1)%26; s=String.fromCharCode(65+m)+s; n=(n-m-1)/26; } return s; }
+
+/* rows: [ [cell,...], ... ]  cell = {v, n:true?number, s:styleIdx} | string | null */
+function sheetXml(sh){
+  var rows=sh.rows, cols=sh.cols, merges=sh.merges||[], i, j, sd='';
+  for(i=0;i<rows.length;i++){
+    var r=rows[i]||[], cells='';
+    for(j=0;j<r.length;j++){
+      var c=r[j]; if(c===null||c===undefined) continue;
+      if(typeof c!=='object') c={v:c};
+      if(c.v==='' && (c.s===undefined||c.s===0)) continue;
+      var ref=colL(j+1)+(i+1), st=(c.s===undefined?0:c.s);
+      if(c.n && c.v!=='' && c.v!==null && isFinite(c.v))
+        cells+='<c r="'+ref+'" s="'+st+'"><v>'+c.v+'</v></c>';
+      else if(c.v==='') cells+='<c r="'+ref+'" s="'+st+'"/>';
+      else cells+='<c r="'+ref+'" s="'+st+'" t="inlineStr"><is><t xml:space="preserve">'+xesc(c.v)+'</t></is></c>';
+    }
+    sd+='<row r="'+(i+1)+'"'+(r.h?' ht="'+r.h+'" customHeight="1"':'')+'>'+cells+'</row>';
+  }
+  var colXml=''; for(i=0;i<cols.length;i++)
+    colXml+='<col min="'+(i+1)+'" max="'+(i+1)+'" width="'+cols[i]+'" customWidth="1"/>';
+  var mg=''; if(merges.length){
+    mg='<mergeCells count="'+merges.length+'">';
+    for(i=0;i<merges.length;i++) mg+='<mergeCell ref="'+merges[i]+'"/>';
+    mg+='</mergeCells>';
+  }
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+   +'<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+   +'<sheetPr><pageSetUpPr fitToPage="1"/></sheetPr>'
+   +'<sheetViews><sheetView showGridLines="0" workbookViewId="0"/></sheetViews>'
+   +'<sheetFormatPr defaultRowHeight="16"/>'
+   +'<cols>'+colXml+'</cols><sheetData>'+sd+'</sheetData>'+mg
+   +'<pageMargins left="0.22" right="0.23" top="0.29" bottom="0.52" header="0.3" footer="0.3"/>'
+   +'<pageSetup paperSize="9" orientation="portrait" fitToWidth="1" fitToHeight="0" horizontalDpi="600" verticalDpi="600"/>'
+   +'</worksheet>';
+}
+var XL_STYLES='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
++'<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
++'<numFmts count="1"><numFmt numFmtId="165" formatCode="0.0"/></numFmts>'
++'<fonts count="7">'
++'<font><sz val="11"/><color rgb="FF000000"/><name val="Kh Battambang"/></font>'                    /*0*/
++'<font><sz val="14"/><color rgb="FF000000"/><name val="Khmer OS Muol Light"/></font>'              /*1*/
++'<font><b/><sz val="12"/><color rgb="FF000000"/><name val="Kh Battambang"/></font>'                /*2*/
++'<font><b/><sz val="11"/><color rgb="FF000000"/><name val="Kh Battambang"/></font>'                /*3*/
++'<font><b/><sz val="14"/><color rgb="FF000000"/><name val="Kh Battambang"/></font>'                /*4*/
++'<font><sz val="11"/><color rgb="FF000000"/><name val="Khmer OS Battambang"/></font>'              /*5*/
++'<font><sz val="10"/><color rgb="FF555555"/><name val="Kh Battambang"/></font>'                    /*6*/
++'</fonts>'
++'<fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills>'
++'<borders count="10">'
++'<border><left/><right/><top/><bottom/><diagonal/></border>'                                       /*0 none*/
++'<border><left style="thin"/><right style="thin"/><top style="thin"/><bottom style="thin"/><diagonal/></border>'          /*1 thin all*/
++'<border><left style="medium"/><right style="thin"/><top style="thin"/><bottom style="thin"/><diagonal/></border>'        /*2 L med*/
++'<border><left style="thin"/><right style="medium"/><top style="thin"/><bottom style="thin"/><diagonal/></border>'        /*3 R med*/
++'<border><left style="medium"/><right style="medium"/><top/><bottom style="thin"/><diagonal/></border>'                   /*4 sec hdr*/
++'<border><left style="medium"/><right style="medium"/><top style="medium"/><bottom/><diagonal/></border>'                 /*5 info top*/
++'<border><left style="medium"/><right style="medium"/><top/><bottom/><diagonal/></border>'                                /*6 info mid*/
++'<border><left style="medium"/><right style="medium"/><top/><bottom style="medium"/><diagonal/></border>'                 /*7 info bottom*/
++'<border><left style="medium"/><right style="medium"/><top style="medium"/><bottom style="medium"/><diagonal/></border>'  /*8 box*/
++'<border><left/><right/><top style="thin"/><bottom/><diagonal/></border>'                                                 /*9 sig line*/
++'</borders>'
++'<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>'
++'<cellXfs count="21">'
+/* 0 default   */ +'<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>'
+/* 1 title     */ +'<xf numFmtId="0" fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/* 2 spacer    */ +'<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0" applyAlignment="1"><alignment vertical="center"/></xf>'
+/* 3 infoTop   */ +'<xf numFmtId="0" fontId="5" fillId="0" borderId="5" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>'
+/* 4 infoMid   */ +'<xf numFmtId="0" fontId="5" fillId="0" borderId="6" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>'
+/* 5 infoBot   */ +'<xf numFmtId="0" fontId="5" fillId="0" borderId="7" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>'
+/* 6 scoreBox  */ +'<xf numFmtId="0" fontId="2" fillId="0" borderId="8" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center" wrapText="1"/></xf>'
+/* 7 secHdr    */ +'<xf numFmtId="0" fontId="3" fillId="0" borderId="4" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>'
+/* 8 thA       */ +'<xf numFmtId="0" fontId="2" fillId="0" borderId="2" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/* 9 thM       */ +'<xf numFmtId="0" fontId="2" fillId="0" borderId="1" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/*10 thF       */ +'<xf numFmtId="0" fontId="2" fillId="0" borderId="3" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/*11 tdA       */ +'<xf numFmtId="0" fontId="0" fillId="0" borderId="2" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/*12 tdB       */ +'<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center" wrapText="1"/></xf>'
+/*13 tdMark    */ +'<xf numFmtId="0" fontId="4" fillId="0" borderId="1" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/*14 tdBlank   */ +'<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/*15 tdF       */ +'<xf numFmtId="0" fontId="6" fillId="0" borderId="3" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center" wrapText="1"/></xf>'
+/*16 noteRow   */ +'<xf numFmtId="0" fontId="0" fillId="0" borderId="6" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center" wrapText="1"/></xf>'
+/*17 noteBot   */ +'<xf numFmtId="0" fontId="0" fillId="0" borderId="7" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>'
+/*18 sigLabel  */ +'<xf numFmtId="0" fontId="3" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/*19 sigLine   */ +'<xf numFmtId="0" fontId="0" fillId="0" borderId="9" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
+/*20 totalRow  */ +'<xf numFmtId="0" fontId="4" fillId="0" borderId="8" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>'
++'</cellXfs>'
++'<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>'
++'<dxfs count="0"/>'
++'<tableStyles count="0" defaultTableStyle="TableStyleMedium2" defaultPivotStyle="PivotStyleLight16"/>'
++'</styleSheet>';
+
+function buildXlsx(sheets){   /* sheets: [{name, rows, cols, merges, freeze}] */
+  var i, files=[], ct='', wbSheets='', wbRels='';
+  for(i=0;i<sheets.length;i++){
+    ct+='<Override PartName="/xl/worksheets/sheet'+(i+1)+'.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>';
+    wbSheets+='<sheet name="'+xesc(sheets[i].name)+'" sheetId="'+(i+1)+'" r:id="rId'+(i+1)+'"/>';
+    wbRels+='<Relationship Id="rId'+(i+1)+'" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet'+(i+1)+'.xml"/>';
+  }
+  wbRels+='<Relationship Id="rId'+(sheets.length+1)+'" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>';
+  files.push({name:'[Content_Types].xml', data:utf8('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    +'<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+    +'<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
+    +'<Default Extension="xml" ContentType="application/xml"/>'
+    +'<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>'
+    +ct
+    +'<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>'
+    +'</Types>')});
+  files.push({name:'_rels/.rels', data:utf8('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    +'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+    +'<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>'
+    +'</Relationships>')});
+  files.push({name:'xl/workbook.xml', data:utf8('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    +'<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" '
+    +'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+    +'<sheets>'+wbSheets+'</sheets></workbook>')});
+  files.push({name:'xl/_rels/workbook.xml.rels', data:utf8('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    +'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'+wbRels+'</Relationships>')});
+  files.push({name:'xl/styles.xml', data:utf8(XL_STYLES)});
+  for(i=0;i<sheets.length;i++)
+    files.push({name:'xl/worksheets/sheet'+(i+1)+'.xml',
+      data:utf8(sheetXml(sheets[i]))});
+  return zipStore(files);
+}
+
+
+/* ================= គំរូទម្រង់ (ប្រើរួមគ្នាដោយ Excel និង PDF) ================= */
+var DOTS='………………………………………………………………………………..………………………………………………………';
+function formModel(){
+  var o=overall(), g=gradeOf(o.score,o.complete), L=(S.lang==='en'), i, j;
+  var M={ L:L, o:o, g:g,
+    title: L?'BIOSECURITY FARM AUDIT REPORT':'របាយការណ៍ត្រួតពិនិត្យជីវ:សុវត្ថិភាពកសិដ្ឋាន',
+    sub:"M'S PIG ACMC (CAMBODIA) CO., LTD.",
+    kFarm:(L?'Farm name':'ឈ្មោះកសិដ្ឋាន')+'៖ ', kZone:(L?'Zone':'តំបន់')+'៖ ',
+    kDate:(L?'Date':'កាលបរិច្ឆេទ')+'៖ ',
+    vFarm:S.info.farm||'', vZone:S.info.zone||'', vDate:S.info.date||'',
+    started:(o.answered>0),
+    lblScore:L?'Score':'ពិន្ទុ', lblGrade:L?'Grade':'ចំំណាប់ថ្នាក់',
+    score:(o.answered>0 && o.scoreFinal!==null)?fx(o.scoreFinal):'',
+    grade:(o.answered>0 && o.scoreFinal!==null)?(gradeOf(o.scoreFinal,o.complete).k||''):'',
+    thNo:L?'No.':'ល.រ', thDesc:L?'Description':'បរិយាយ', thYes:L?'Yes':'មាន',
+    thNo2:L?'No':'មិនមាន', thPts:L?'Score':'ពិន្ទុ', thOther:L?'Remark':'ផ្សេងៗ',
+    lblCmt:L?'Comment÷':'បរិយាយ÷',
+    warn: o.complete?'':(L?('⚠ NOT COMPLETE — '+(o.total-o.answered)+' question(s) remaining'):
+                           ('⚠ មិនទាន់បញ្ចប់ — នៅសល់ '+(o.total-o.answered)+' សំណួរ')),
+    sig:[ {l:L?'Company representative':'តំណាងក្រុមហ៊ុន', n:S.info.comp||''},
+          {l:L?'Farm owner representative':'តំណាងម្ចាស់កសិដ្ឋាន', n:S.info.owner||''},
+          {l:L?'Auditor':'អ្នកធ្វើរបាយការណ៍', n:S.info.by||''} ],
+    secs:[] };
+  for(i=0;i<SECTIONS.length;i++){
+    var sec=SECTIONS[i], st=o.secs[i], rows=[];
+    for(j=0;j<sec.items.length;j++){
+      var a=S.ans[sec.id+'-'+(j+1)]||{}, v=a.v||'';
+      var other=a.note||'';
+      if(v==='na') other = 'N/A' + (other?' · '+other:'');
+      rows.push({ num:(sec.orig?sec.orig[j]:(j+1)), text:itemText(sec,j),
+                  sub:(L&&sec.itemsEn&&sec.itemsEn[j])?sec.items[j]:'',
+                  mYes:(v==='yes'?'✓':''), mNo:(v==='no'?'☓':''), other:other });
+    }
+    M.secs.push({ rn:sec.rn, name:secName(sec),
+      head: sec.rn+'.'+secName(sec)+' ('
+            + ((o.answered===0) ? '___________'
+               : (st.scoreFinal===null ? '     N/A     ' : '  '+fx(st.scoreFinal)+'  '))
+            + ' / 100 '+(L?'points':'ពិន្ទុ')+')',
+      note: (i===0 ? ((L&&sec.noteEn)?sec.noteEn:sec.note) : ''),
+      cmt: S.cmt[sec.id]||'', rows:rows });
+  }
+  return M;
+}
+
+/* ================= នាំចេញ Excel (.xlsx) — ដូចទម្រង់ដើម ១០០% ================= */
+function toXlsx(){
+  var M=formModel(), R=[], MG=[], i, j;
+  function push(cells,h){ cells.h=h; R.push(cells); return R.length; }
+  function span(r,c1,c2){ MG.push(colL(c1)+r+':'+colL(c2)+r); }
+
+  /* ---- ក្បាល ---- */
+  var r=push([{v:M.title,s:1},'','','','',''],28.2); span(r,1,6);
+  r=push([{v:M.sub,s:1},'','','','',''],20);          span(r,1,6);
+  push([],12);
+  /* ---- ប្រអប់ព័ត៌មាន (ដូចទម្រង់ដើម) ---- */
+  var r0=push([{v:M.kFarm+M.vFarm,s:3},{v:'',s:3},
+               {v:M.lblScore+'\n'+(M.score||'______'),s:6},{v:'',s:6},
+               {v:M.lblGrade+'\n'+(M.grade||'______'),s:6},{v:'',s:6}],30);
+  push([{v:M.kZone+M.vZone,s:4},{v:'',s:4},{v:'',s:6},{v:'',s:6},{v:'',s:6},{v:'',s:6}],27.6);
+  var r2=push([{v:M.kDate+M.vDate,s:5},{v:'',s:5},{v:'',s:6},{v:'',s:6},{v:'',s:6},{v:'',s:6}],27.6);
+  span(r0,1,2); span(r0+1,1,2); span(r2,1,2);
+  MG.push('C'+r0+':D'+r2);   /* ប្រអប់ ពិន្ទុ ខ្ពស់ ៣ ជួរ */
+  MG.push('E'+r0+':F'+r2);   /* ប្រអប់ ចំណាប់ថ្នាក់ */
+  if(M.warn){ r=push([{v:M.warn,s:7},'','','','',''],22); span(r,1,6); }
+
+  /* ---- ផ្នែកនីមួយៗ ---- */
+  for(i=0;i<M.secs.length;i++){
+    var sc=M.secs[i];
+    r=push([{v:sc.head,s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7}],25.2); span(r,1,6);
+    push([{v:M.thNo,s:8},{v:M.thDesc,s:9},{v:M.thYes,s:9},{v:M.thNo2,s:9},{v:M.thPts,s:9},{v:M.thOther,s:10}],25.2);
+    for(j=0;j<sc.rows.length;j++){
+      var q=sc.rows[j];
+      push([{v:q.num,s:11},{v:q.text+(q.sub?'\n'+q.sub:''),s:12},
+            {v:q.mYes,s:13},{v:q.mNo,s:13},{v:'',s:14},{v:q.other,s:15}], q.sub?36:25.2);
+    }
+    if(sc.note){ r=push([{v:sc.note,s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16}],25.2); span(r,1,6); }
+    if(i===0 || i===1 || sc.cmt){
+      r=push([{v:M.lblCmt,s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16}],25.2); span(r,1,6);
+      var lines=[ sc.cmt||DOTS, DOTS, DOTS ];
+      for(j=0;j<3;j++){
+        var last=(i===M.secs.length-1 && j===2);
+        r=push([{v:lines[j],s:last?17:16},{v:'',s:last?17:16},{v:'',s:last?17:16},
+                {v:'',s:last?17:16},{v:'',s:last?17:16},{v:'',s:last?17:16}],25.2); span(r,1,6);
+      }
+    } else if(i===M.secs.length-1){
+      r=push([{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17}],6); span(r,1,6);
+    }
+  }
+
+  /* ---- ហត្ថលេខា ---- */
+  push([],24);
+  r=push([{v:M.sig[0].l,s:18},{v:'',s:18},{v:M.sig[1].l,s:18},{v:'',s:18},{v:M.sig[2].l,s:18},{v:'',s:18}],25.2);
+  span(r,1,2); span(r,3,4); span(r,5,6);
+  push([],22); push([],22); push([],22);
+  r=push([{v:M.sig[0].n,s:19},{v:'',s:19},{v:M.sig[1].n,s:19},{v:'',s:19},{v:M.sig[2].n,s:19},{v:'',s:19}],25.2);
+  span(r,1,2); span(r,3,4); span(r,5,6);
+
+  var bytes=buildXlsx([{ name:(M.L?'Audit form':'ទម្រង់ត្រួតពិនិត្យ'), rows:R,
+                         cols:[4.89,84.11,11.11,8.43,8.43,23.66], merges:MG }]);
+  dl(new Blob([bytes],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}), fname('xlsx'));
+  toast(T().tXls);
+}
+
 function fname(ext){
   const f=(S.info.farm||'Biosecurity').trim(), d=(S.info.date||new Date().toISOString().slice(0,10));
   return f+'_'+d+'.'+ext;
@@ -1458,54 +1976,56 @@ function closeSave(){ $('#sheetBg').classList.remove('on'); $('#sheet').classLis
 
 /* ================= របាយការណ៍បោះពុម្ព / PDF ================= */
 function buildReport(){
-  const o=overall(), g=gradeOf(o.score,o.complete);
-  const sApp=o.secs.reduce((a,x)=>a+x.applicable,0);
-  let h=`<h1>របាយការណ៍ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន</h1>
-  <div class="rsub">M'S PIG ACMC (CAMBODIA) CO., LTD.</div>
-  ${o.complete?'':'<div style="border:1.2pt solid #000;background:#FFF3CD;padding:5px 7px;margin-bottom:8px;font-weight:bold">⚠ របាយការណ៍មិនទាន់បញ្ចប់ — នៅសល់ '+(o.total-o.answered)+' សំណួរ។ ពិន្ទុខាងក្រោមមិនទាន់ជាផ្លូវការទេ។</div>'}
-  <table><tr><th style="width:22%">ឈ្មោះកសិដ្ឋាន</th><td>${S.info.farm||''}</td><th style="width:18%">ពិន្ទុសរុប</th>
-  <td style="text-align:center;font-weight:700;font-size:13px">${fx(o.scoreFinal)} / 100</td></tr>
-  <tr><th>តំបន់</th><td>${S.info.zone||''}</td><th>ចំណាប់ថ្នាក់</th><td style="text-align:center;font-weight:700">${g.t}</td></tr>
-  <tr><th>កាលបរិច្ឆេទ</th><td>${S.info.date||''}</td><th>ចំនួនជ្រូក</th><td>${S.info.head||''}</td></tr>
-  <tr><th>អ្នកធ្វើរបាយការណ៍</th><td>${S.info.by||''}</td><th>បំពេញ</th><td>${o.answered} / ${o.total} សំណួរ</td></tr></table>
+  var M=formModel(), i, j, h='';
+  var W=[4.6,57.4,8.0,7.5,6.0,16.5];
+  h+='<h1>'+esc0(M.title)+'</h1><div class="rsub">'+esc0(M.sub)+'</div>';
+  h+='<table class="fm"><colgroup>';
+  for(i=0;i<6;i++) h+='<col style="width:'+W[i]+'%">';
+  h+='</colgroup><tbody>';
+  /* ---- ប្រអប់ព័ត៌មាន ---- */
+  h+='<tr><td class="inf t" colspan="2">'+esc0(M.kFarm)+'<b>'+esc0(M.vFarm)+'</b></td>'
+   + '<td class="box" colspan="2" rowspan="3">'+esc0(M.lblScore)+'<br><b>'+esc0(M.score||'______')+'</b></td>'
+   + '<td class="box" colspan="2" rowspan="3">'+esc0(M.lblGrade)+'<br><b>'+esc0(M.grade||'______')+'</b></td></tr>'
+   + '<tr><td class="inf" colspan="2">'+esc0(M.kZone)+'<b>'+esc0(M.vZone)+'</b></td></tr>'
+   + '<tr><td class="inf b" colspan="2">'+esc0(M.kDate)+'<b>'+esc0(M.vDate)+'</b></td></tr>';
+  h+='</tbody></table>';
+  if(M.warn) h+='<div class="warn">'+esc0(M.warn)+'</div>';
 
-  <h2>វិធីគិតពិន្ទុ</h2>
-  <table><tr><th style="width:34%">ចំនួនសំណួរគិតពិន្ទុ (Applicable)</th><td>សំណួរសរុប − N/A · ១ សំណួរ = 100 ÷ Applicable</td></tr>
-  <tr><th>មាន / មិនមាន / មិនទាន់បំពេញ</th><td>ពេញពិន្ទុ / 0 / 0</td></tr>
-  <tr><th>ពិន្ទុផ្នែក</th><td>មាន ÷ Applicable × 100</td></tr>
-  <tr><th>ពិន្ទុសរុប (ផ្លូវការ)</th><td>មធ្យមភាគនៃពិន្ទុផ្នែកទាំង 7 (ទម្ងន់ស្មើគ្នា) = <b>${fx(o.scoreFinal)}</b></td></tr>
-  <tr><th>ពិន្ទុថ្លឹងតាមចំនួនសំណួរ (បន្ថែម)</th><td>${o.yes} ÷ ${sApp} × 100 = <b>${fx(o.scoreWeighted)}</b></td></tr></table>
-
-  <table><tr><th>ផ្នែក</th><th style="width:7%">សំណួរ</th><th style="width:7%">មាន</th><th style="width:8%">មិនមាន</th><th style="width:7%">N/A</th><th style="width:8%">មិនទាន់</th><th style="width:8%">គិតពិន្ទុ</th><th style="width:9%">១ សំណួរ</th><th style="width:11%">ពិន្ទុ /100</th></tr>`;
-  SECTIONS.forEach((sec,i)=>{ const st=secStat(i);
-    h+=`<tr><td>${sec.rn}.${sec.name}</td><td style="text-align:center">${st.total}</td>
-    <td style="text-align:center">${st.yes}</td><td style="text-align:center">${st.no}</td>
-    <td style="text-align:center">${st.na}</td><td style="text-align:center">${st.todo||''}</td>
-    <td style="text-align:center">${st.applicable}</td><td style="text-align:center">${st.applicable?st.per.toFixed(2):'–'}</td>
-    <td style="text-align:center;font-weight:700">${st.scoreFinal===null?'–':fx(st.scoreFinal)}</td></tr>`; });
-  h+=`<tr><td colspan="8" style="text-align:right;font-weight:700">ពិន្ទុសរុប = មធ្យមភាគនៃផ្នែក</td>
-      <td style="text-align:center;font-weight:700;background:#FFE08A">${fx(o.scoreFinal)}</td></tr></table>`;
-
-  SECTIONS.forEach((sec,i)=>{
-    const st=secStat(i);
-    h+=`<h2>${sec.rn}.${sec.name} — ${st.scoreFinal===null?'–':fx(st.scoreFinal)} / 100 ពិន្ទុ &nbsp;·&nbsp; មាន ${st.yes} ÷ គិតពិន្ទុ ${st.applicable} &nbsp;·&nbsp; ១ សំណួរ = ${st.applicable?st.per.toFixed(2):'–'} ពិន្ទុ</h2>
-    <table><tr><th style="width:6%">ល.រ</th><th>បរិយាយ</th><th style="width:9%">មាន</th><th style="width:9%">មិនមាន</th><th style="width:9%">N/A</th><th style="width:22%">ចំណាំ</th></tr>`;
-    sec.items.forEach((t,idx)=>{
-      const a=S.ans[sec.id+'-'+(idx+1)]||{};
-      const m=v=>a.v===v?'✔':'';
-      h+=`<tr><td style="text-align:center">${idx+1}${sec.orig&&sec.orig[idx]!==idx+1?'<br><span style="font-size:7pt;color:#666">('+sec.orig[idx]+')</span>':''}</td><td>${t}</td>
-      <td style="text-align:center">${m('yes')}</td><td style="text-align:center">${m('no')}</td>
-      <td style="text-align:center">${m('na')}</td><td>${a.note||''}</td></tr>`;
-    });
-    h+='</table>';
-    if(S.cmt[sec.id]) h+=`<div style="border:1px solid #666;border-top:none;padding:4px 6px;font-size:10px"><b>បរិយាយ÷</b> ${S.cmt[sec.id]}</div>`;
-  });
-  if(S.info.note) h+=`<h2>កំណត់សម្គាល់ទូទៅ</h2><div style="border:1px solid #666;padding:6px;min-height:40px">${S.info.note}</div>`;
-  h+=`<div class="sig"><div>តំណាងក្រុមហ៊ុន<br>${S.info.comp||''}</div>
-      <div>តំណាងម្ចាស់កសិដ្ឋាន<br>${S.info.owner||''}</div>
-      <div>អ្នកធ្វើរបាយការណ៍<br>${S.info.by||''}</div></div>`;
+  h+='<table class="fm"><colgroup>';
+  for(i=0;i<6;i++) h+='<col style="width:'+W[i]+'%">';
+  h+='</colgroup><tbody>';
+  for(i=0;i<M.secs.length;i++){
+    var sc=M.secs[i];
+    h+='<tr class="keep"><td class="sec" colspan="6">'+esc0(sc.head)+'</td></tr>'
+     + '<tr class="hd keep"><td>'+esc0(M.thNo)+'</td><td>'+esc0(M.thDesc)+'</td><td>'+esc0(M.thYes)+'</td>'
+     + '<td>'+esc0(M.thNo2)+'</td><td>'+esc0(M.thPts)+'</td><td>'+esc0(M.thOther)+'</td></tr>';
+    for(j=0;j<sc.rows.length;j++){
+      var q=sc.rows[j];
+      h+='<tr><td class="c">'+q.num+'</td><td class="d">'+esc0(q.text)
+       + (q.sub?'<div class="sub">'+esc0(q.sub)+'</div>':'')+'</td>'
+       + '<td class="m">'+q.mYes+'</td><td class="m">'+q.mNo+'</td><td></td>'
+       + '<td class="r">'+esc0(q.other)+'</td></tr>';
+    }
+    if(sc.note) h+='<tr><td class="note" colspan="6">'+esc0(sc.note)+'</td></tr>';
+    if(i===0 || i===1 || sc.cmt){
+      h+='<tr><td class="note" colspan="6">'+esc0(M.lblCmt)+'</td></tr>';
+      var ln=[sc.cmt||DOTS, DOTS, DOTS];
+      for(j=0;j<3;j++){
+        var last=(i===M.secs.length-1 && j===2);
+        h+='<tr><td class="note'+(last?' b':'')+'" colspan="6">'+esc0(ln[j])+'</td></tr>';
+      }
+    } else if(i===M.secs.length-1){
+      h+='<tr><td class="note b" colspan="6" style="height:4px"></td></tr>';
+    }
+  }
+  h+='</tbody></table>';
+  /* ---- ហត្ថលេខា ---- */
+  h+='<div class="sig">';
+  for(i=0;i<3;i++) h+='<div><span class="sl">'+esc0(M.sig[i].l)+'</span><span class="sn">'+esc0(M.sig[i].n)+'</span></div>';
+  h+='</div>';
   $('#report').innerHTML=h;
 }
+function esc0(v){ return String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 /* ================= កំណត់ត្រាចុងក្រោយ (អតិបរមា ២០) ================= */
 const clone = o => JSON.parse(JSON.stringify(o||{}));
@@ -1554,7 +2074,7 @@ function _renderRecs(){
   const box=$('#recList'); if(!box) return;
   $('#recCount').textContent = kh(S.recs.length)+' / '+kh(MAXREC);
   $$('.recBadge').forEach(e=>{ e.textContent = S.recs.length? kh(S.recs.length)+'/'+kh(MAXREC) : '០'; });
-  if(!S.recs.length){ box.innerHTML='<div class="empty">មិនទាន់មានកំណត់ត្រា — ចុច «រក្សាទុកជាកំណត់ត្រា» ពេលបញ្ចប់ការត្រួតពិនិត្យ</div>'; return; }
+  if(!S.recs.length){ box.innerHTML='<div class="empty">'+T().recEmpty+'</div>'; return; }
   box.innerHTML = S.recs.map((r,i)=>{
     const cls = r.score===null?'p-lo' : r.score>=80?'p-hi' : r.score>=60?'p-mid':'p-lo';
     return `<div class="rec">
@@ -1562,11 +2082,11 @@ function _renderRecs(){
       <div class="rb">
         <b>${(recTitle(r)).replace(/</g,'&lt;')}</b>
         <small>🕘 ${fmtWhen(r.at)}${r.zone?' · '+r.zone:''}${(r.date && r.date!==fmtWhen(r.at).slice(0,10))?' · ត្រួតពិនិត្យ '+r.date:''}</small>
-        <small>${r.complete?'✅ បញ្ចប់':'⏳ '+kh(r.answered)+'/'+kh(r.total)}${r.photos?' · 📷 '+kh(r.photos):''}${r.photosDropped?' · <span style="color:var(--y-soft)">រូបថតត្រូវលុប</span>':''}</small>
+        <small>${r.complete?(S.lang==='en'?'✅ Complete':'✅ បញ្ចប់'):'⏳ '+kh(r.answered)+'/'+kh(r.total)}${r.photos?' · 📷 '+kh(r.photos):''}${r.photosDropped?' · <span style="color:var(--y-soft)">រូបថតត្រូវលុប</span>':''}</small>
       </div>
       <div class="rs"><span class="pill ${cls}">${r.score===null?'–':fx(r.score)}</span><small>${r.grade}</small></div>
       <div class="ra">
-        <button class="tbtn" data-open="${r.id}">📂 បើក</button>
+        <button class="tbtn" data-open="${r.id}">${T().open}</button>
         <button class="tbtn" data-del="${r.id}">🗑️</button>
       </div>
     </div>`;
@@ -1602,7 +2122,7 @@ function clearAll(){
 /* ================= បម្រុងទុក / ស្តារ ================= */
 function backup(){
   const blob=new Blob([JSON.stringify({info:S.info,ans:S.ans,cmt:S.cmt,recs:S.recs,at:Date.now()},null,1)],{type:'application/json'});
-  dl(blob, fname('json')); toast('💾 Backup រួចរាល់');
+  dl(blob, fname('json')); toast(T().tJson);
 }
 function restore(file){
   const r=new FileReader();
@@ -1617,16 +2137,17 @@ function runDiag(){
   var box=$('#diagBox'); if(!box) return;
   var qCount=0; for(var i=0;i<SECTIONS.length;i++) qCount+=SECTIONS[i].items.length;
   var proto=location.protocol, framed=(window.top!==window.self);
+  var E=(S.lang==='en');
   var rows=[
-    ['កំណែ App', APP_VER],
-    ['ផ្នែក / សំណួរ', kh(SECTIONS.length)+' / '+kh(qCount) + (qCount===121?' ✅':' ❌')],
-    ['របៀបបើក', proto + (proto==='file:'?' (ឯកសារក្នុងម៉ាស៊ីន ✅)':' (តាមអ៊ីនធឺណិត)')],
-    ['ក្នុងស៊ុម (iframe)', framed ? 'បាទ ⚠️ (ដូច Google Drive preview)' : 'ទេ ✅'],
-    ['រក្សាទុកស្វ័យប្រវត្តិ', Store.ok ? 'ដំណើរការ ✅' : 'មិនដំណើរការ ❌ — សូម Save PDF/Excel'],
-    ['កំណត់ត្រា', kh(S.recs.length)+' / '+kh(MAXREC)],
-    ['រូបរាង', viewMode()==='pc'?'កុំព្យូទ័រ':'ទូរស័ព្ទ'],
-    ['ទំហំអេក្រង់', window.innerWidth+' × '+window.innerHeight],
-    ['កំហុសដែលចាប់បាន', ERRS.length ? kh(ERRS.length)+' ❌' : 'គ្មាន ✅']
+    [E?'App version':'កំណែ App', APP_VER],
+    [E?'Sections / questions':'ផ្នែក / សំណួរ', kh(SECTIONS.length)+' / '+kh(qCount) + (qCount===121?' ✅':' ❌')],
+    [E?'Opened via':'របៀបបើក', proto + (proto==='file:'?(E?' (local file ✅)':' (ឯកសារក្នុងម៉ាស៊ីន ✅)'):(E?' (web)':' (តាមអ៊ីនធឺណិត)'))],
+    [E?'Inside an iframe':'ក្នុងស៊ុម (iframe)', framed ? (E?'Yes ⚠️ (like Google Drive preview)':'បាទ ⚠️ (ដូច Google Drive preview)') : (E?'No ✅':'ទេ ✅')],
+    [E?'Auto-save':'រក្សាទុកស្វ័យប្រវត្តិ', Store.ok ? (E?'Working ✅':'ដំណើរការ ✅') : (E?'Blocked ❌ — use Save PDF/Excel':'មិនដំណើរការ ❌ — សូម Save PDF/Excel')],
+    [E?'Records':'កំណត់ត្រា', kh(S.recs.length)+' / '+kh(MAXREC)],
+    [E?'Layout':'រូបរាង', viewMode()==='pc'?(E?'Desktop':'កុំព្យូទ័រ'):(E?'Phone':'ទូរស័ព្ទ')],
+    [E?'Screen size':'ទំហំអេក្រង់', window.innerWidth+' × '+window.innerHeight],
+    [E?'Errors captured':'កំហុសដែលចាប់បាន', ERRS.length ? kh(ERRS.length)+' ❌' : (E?'None ✅':'គ្មាន ✅')]
   ];
   box.innerHTML = rows.map(function(r){
     return '<div class="calcrow"><span>'+r[0]+'</span><b style="font-size:12px">'+r[1]+'</b></div>';
@@ -1653,10 +2174,11 @@ $('#clAll').onclick  =()=>{ closeClear(); setTimeout(clearAll ,180); };
 $('#svRec').onclick  =()=>{ closeSave();  saveRecord(); };
 ['#btnSaveRec','#btnSaveRec2','#btnSaveRec3'].forEach(id=>{ const e=$(id); if(e) e.onclick=saveRecord; });
 $('#btnDiag').onclick=runDiag;
+$('#btnLang').onclick=()=>setLang(S.lang==='km'?'en':'km');
 $('#btnGoRecs').onclick=()=>{ go('info'); setTimeout(()=>$('#recCard').scrollIntoView({behavior:'smooth',block:'start'}),260); };
 $('#svClose').onclick=closeSave;
 $('#svPdf').onclick =()=>{ closeSave(); buildReport(); setTimeout(()=>window.print(),260); };
-$('#svXls').onclick =()=>{ closeSave(); toXls(); };
+$('#svXls').onclick =()=>{ closeSave(); toXlsx(); };
 $('#svCsv').onclick =()=>{ closeSave(); toCsv(); };
 $('#svJson').onclick=()=>{ closeSave(); backup(); };
 window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeSave(); closeClear(); } });
@@ -1682,7 +2204,7 @@ window.addEventListener('scroll',()=>$('#fabUp').classList.toggle('on', window.s
 window.addEventListener('beforeunload',()=>{ try{ saveNow(); }catch(e){} });
 
 /* ================= ចាប់ផ្តើម ================= */
-load(); applyView(); bindInfo(); fillInfo(); renderRecs(); go('home');
+load(); applyLang(); applyView(); bindInfo(); fillInfo(); renderRecs(); go('home');
 if(purgedOld) setTimeout(()=>toast('🧹 ទិន្នន័យជំនាន់ចាស់ត្រូវបានសម្អាត — ចាប់ផ្តើមថ្មី'), 900);
 if(!Store.ok) toast('ℹ️ រក្សាទុកស្វ័យប្រវត្តិមិនដំណើរការ — សូម Save PDF / Excel / CSV រាល់ពេលបញ្ចប់');
 console.log('ផ្នែក:',SECTIONS.length,'| សំណួរសរុប:',TOTAL_Q);
