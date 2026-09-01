@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+<meta name="theme-color" content="#0d6b45">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ជីវៈសុវត្ថិភាព">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEmklEQVR42u3dPW5cZRiG4TmfTm831FClCRIL8CJYABUS8iJYQBYRRaJiAVmEF4CUNFShTuNZQagGjSzyM+Pz837Pd90NDVHMmWuevBPFYToU6fs/f/t0ULf988ubqcLXMQGsJOATxErCPUGsJNwTyEqCPYGsJNgNZu3Z0mYmkJW01g1mJa11g1lJqCeQlXSCNJiVtNYNZiWhbjArCXXzuJRUW/odIu250g1mJaFuMCsJtRtaY9zQ1lk9rnSDWUmonRzKPjmss3peaQut3IW2zup9pS20opo9gsv76+Zhs5/rp+OdB35Bk3OjJmSwL+v0zQAWujjkp18D2Bd8KFRNzJW/npKgnRvqvZNhC93hGlppJ4eAts6+vg5Bu5+VdEdbaEUV/fvQH+5eXP1jj+8eov/7fnj4G+h0xCN1/pyScDeYlfTcZi+Izp9h72tdBvTj+4/X/bh7f7Zhadi3ry///HD78ruxQV8LGOYNXpv7u4tRP3099wI+94Z4q25+/PVwfPdH6a+v9Jvi7LXeEvfcK2LrXG+lK+Bua0LuHXPVFdzq61rjOa/pYpWF7ums0P4nydKL3WDua6Wr3857m5mW+MNJW0Le83be80PinpCXuqW/+vMssNZzT5irrOOWsNMW+WuWnot6hhmyJNQzyEr6wNhgVtIHxgazklA3mJWE2rdgKaq29DtE2nOlG8xKQt2+9C/BrJ5QP77/6IbWIDe0dVaPK91gVhLqBrCSgDfrrKSV9qEwpK3+zHL1Zsucg/n0z5G+gfipWwttraMCOhTv7euHIWEDHb7Eo6EGehD4o8AGeqA7eQTUQA/2oS99rYEeCPOp5N/WA1pAyzoDLZiBloC2zoOuM9AwA62+Gu1/3QF0+Dq7oeXUAFpODaDl1AAaZusMNMxAS0DLOgMtmIGWgLbOQAtmoLVNMAO9+mJW/LmAHhjzFtCcGkBvCqz6esIM9MVruRZqpwbQu/3SvzQ+pwbQu9+xS6GGGegyH8qcCUDHYF4CtXUGuuQHsr3+CluYgS59CwvoUiu35QdK6wx0CdQwAx271DAD3TVqdzbQMaidGkA7P2AGerSbWkB3t4rWGegYTDADDZWArojaGwnoGGAwAw2agK6I2psG6BjUMAMdgxpmoN3UAroiam8MoGNQwwy080NAV0TtTQB0BOrH+zuYge4L9efAgrx9s0fgrrbQEtAS0BLQAloCWgJaAloCWkBLQEtAS0BLQAvowvk7mD1vCy0LLQHtl0HnBtBQe75AS/8P+vjq7WRFlPBcj6/eTs3DV9LznJNeBH+VgGFoXhQlPbf/7ueb33/+lPZCWexx3vynz4KzF01J+W07ZYLu+bfvNHbndi20nBxSF6CdHer53LDQyj85rLR6XWcLrTE+FFpp9bjOX1xoqNUbZieHxjg5rLR6XOdvWmio1Qvmbz45oFYPmN3QGuuGttLqaZ0vXmioVRnzVScH1KqK+XA4+57Ca0r8PkT1CXmRD4XWWpUwPxs01KqE+dknhxNEVSAvttDWWpXMrAbQWmuP8Vt9UcHWlr+Kb3oiwA3x2u1288INcRRowAFeo38Bjj5umVEYv4cAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEmklEQVR42u3dPW5cZRiG4TmfTm831FClCRIL8CJYABUS8iJYQBYRRaJiAVmEF4CUNFShTuNZQagGjSzyM+Pz837Pd90NDVHMmWuevBPFYToU6fs/f/t0ULf988ubqcLXMQGsJOATxErCPUGsJNwTyEqCPYGsJNgNZu3Z0mYmkJW01g1mJa11g1lJqCeQlXSCNJiVtNYNZiWhbjArCXXzuJRUW/odIu250g1mJaFuMCsJtRtaY9zQ1lk9rnSDWUmonRzKPjmss3peaQut3IW2zup9pS20opo9gsv76+Zhs5/rp+OdB35Bk3OjJmSwL+v0zQAWujjkp18D2Bd8KFRNzJW/npKgnRvqvZNhC93hGlppJ4eAts6+vg5Bu5+VdEdbaEUV/fvQH+5eXP1jj+8eov/7fnj4G+h0xCN1/pyScDeYlfTcZi+Izp9h72tdBvTj+4/X/bh7f7Zhadi3ry///HD78ruxQV8LGOYNXpv7u4tRP3099wI+94Z4q25+/PVwfPdH6a+v9Jvi7LXeEvfcK2LrXG+lK+Bua0LuHXPVFdzq61rjOa/pYpWF7ums0P4nydKL3WDua6Wr3857m5mW+MNJW0Le83be80PinpCXuqW/+vMssNZzT5irrOOWsNMW+WuWnot6hhmyJNQzyEr6wNhgVtIHxgazklA3mJWE2rdgKaq29DtE2nOlG8xKQt2+9C/BrJ5QP77/6IbWIDe0dVaPK91gVhLqBrCSgDfrrKSV9qEwpK3+zHL1Zsucg/n0z5G+gfipWwttraMCOhTv7euHIWEDHb7Eo6EGehD4o8AGeqA7eQTUQA/2oS99rYEeCPOp5N/WA1pAyzoDLZiBloC2zoOuM9AwA62+Gu1/3QF0+Dq7oeXUAFpODaDl1AAaZusMNMxAS0DLOgMtmIGWgLbOQAtmoLVNMAO9+mJW/LmAHhjzFtCcGkBvCqz6esIM9MVruRZqpwbQu/3SvzQ+pwbQu9+xS6GGGegyH8qcCUDHYF4CtXUGuuQHsr3+CluYgS59CwvoUiu35QdK6wx0CdQwAx271DAD3TVqdzbQMaidGkA7P2AGerSbWkB3t4rWGegYTDADDZWArojaGwnoGGAwAw2agK6I2psG6BjUMAMdgxpmoN3UAroiam8MoGNQwwy080NAV0TtTQB0BOrH+zuYge4L9efAgrx9s0fgrrbQEtAS0BLQAloCWgJaAloCWkBLQEtAS0BLQAvowvk7mD1vCy0LLQHtl0HnBtBQe75AS/8P+vjq7WRFlPBcj6/eTs3DV9LznJNeBH+VgGFoXhQlPbf/7ueb33/+lPZCWexx3vynz4KzF01J+W07ZYLu+bfvNHbndi20nBxSF6CdHer53LDQyj85rLR6XWcLrTE+FFpp9bjOX1xoqNUbZieHxjg5rLR6XOdvWmio1Qvmbz45oFYPmN3QGuuGttLqaZ0vXmioVRnzVScH1KqK+XA4+57Ca0r8PkT1CXmRD4XWWpUwPxs01KqE+dknhxNEVSAvttDWWpXMrAbQWmuP8Vt9UcHWlr+Kb3oiwA3x2u1288INcRRowAFeo38Bjj5umVEYv4cAAAAASUVORK5CYII=">
+<title>ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន | M's PIG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Battambang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g-deep:#064e34; --g-mid:#0f7a4f; --g-bright:#1fa564; --g-soft:#8fe0b4;
+  --y-deep:#b8860b; --y-mid:#f0b429; --y-soft:#ffe08a;
+  --w-glass:rgba(255,255,255,.20);
+  --w-glass-hi:rgba(255,255,255,.32);
+  --w-line:rgba(255,255,255,.35);
+  --ink:#ffffff; --ink-dim:rgba(255,255,255,.72); --ink-dark:#07331f;
+  --r-lg:22px; --r-md:16px; --r-sm:11px;
+  --shadow:0 8px 28px rgba(3,45,28,.28);
+  --safe-b:env(safe-area-inset-bottom,0px);
+  --safe-t:env(safe-area-inset-top,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{overscroll-behavior-y:none}
+input,textarea,select,button{font-size:16px}  /* ការពារ iPhone ពង្រីកអេក្រង់ស្វ័យប្រវត្តិ */
+body{
+  font-family:'Kantumruy Pro','Khmer OS Battambang','Noto Sans Khmer',system-ui,sans-serif;
+  color:var(--ink); font-size:15px; line-height:1.75;
+  min-height:100vh; min-height:100dvh; overflow-x:hidden;
+  background:
+    radial-gradient(1000px 620px at 88% -8%, rgba(240,180,41,.42), transparent 62%),
+    radial-gradient(760px 520px at -12% 12%, rgba(143,224,180,.30), transparent 60%),
+    radial-gradient(900px 700px at 50% 108%, rgba(255,224,138,.22), transparent 65%),
+    linear-gradient(168deg,#064e34 0%,#0b6242 34%,#12854f 68%,#1fa564 100%);
+  background-attachment:fixed;
+}
+.wrap{max-width:560px;margin:0 auto;padding:0 14px calc(104px + var(--safe-b));position:relative;transition:max-width .25s}
+body.v-pc .wrap{max-width:1180px;padding-left:22px;padding-right:22px}
+body.v-pc .top-inner,body.v-pc .pbar,body.v-pc .pbar-txt,body.v-pc .bot-inner{max-width:1180px}
+body.v-pc{font-size:15px}
+body.v-pc .grid2{display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:16px;align-items:start}
+body.v-pc .grid2 .hero{margin-top:14px;position:sticky;top:96px}
+body.v-pc .two{grid-template-columns:repeat(4,1fr)}
+body.v-pc .btnrow{grid-template-columns:repeat(4,1fr)}
+body.v-pc .qhead h2{font-size:18px}
+@media (max-width:700px){ body.v-pc .grid2{grid-template-columns:1fr} body.v-pc .grid2 .hero{position:static} }
+
+/* ---------- View toggle ---------- */
+.seg{display:inline-flex;padding:3px;border-radius:12px;background:rgba(255,255,255,.16);
+  border:1px solid var(--w-line);gap:3px}
+.seg button{border:none;background:transparent;color:var(--ink-dim);font-family:inherit;font-size:12px;
+  padding:6px 11px;border-radius:9px;cursor:pointer;white-space:nowrap;line-height:1.4}
+@media (max-width:410px){ #segView button{padding:6px 7px} .iconbtn{width:34px;height:34px;flex:0 0 34px;font-size:15px} }
+.seg button.on{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;font-weight:600}
+
+/* ---------- Excel-like form table ---------- */
+.xwrap{margin-top:11px;border-radius:var(--r-md);overflow:auto;-webkit-overflow-scrolling:touch;
+  background:rgba(255,255,255,.16);border:1px solid var(--w-line);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 5px 18px rgba(3,45,28,.2)}
+table.xform{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
+table.xform th,table.xform td{border:1px solid rgba(255,255,255,.28);padding:7px 8px;vertical-align:middle}
+table.xform thead th{background:rgba(255,255,255,.24);font-weight:600;font-size:12px;
+  position:sticky;top:0;z-index:5;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+table.xform td.n{text-align:center;width:44px;font-weight:600;font-size:12px}
+table.xform td.n small{display:block;font-size:9px;opacity:.6;font-weight:400}
+table.xform td.d{line-height:1.65;min-width:250px}
+table.xform td.c{text-align:center;width:64px;padding:4px}
+table.xform td.p{text-align:center;width:66px;font-weight:600;font-size:12px}
+table.xform td.o{width:190px;padding:3px}
+table.xform tr.a-yes{background:rgba(31,165,100,.30)}
+table.xform tr.a-no {background:rgba(240,180,41,.26)}
+table.xform tr.a-na {background:rgba(255,255,255,.07);opacity:.75}
+.xbox{width:30px;height:30px;margin:0 auto;border-radius:8px;cursor:pointer;display:grid;place-items:center;
+  border:1.5px solid rgba(255,255,255,.5);background:rgba(255,255,255,.12);font-size:15px;color:transparent;
+  transition:transform .12s,background .18s}
+.xbox:active{transform:scale(.88)}
+.xbox.on{color:#07331f;background:linear-gradient(135deg,var(--y-soft),#fff);border-color:#fff;font-weight:700}
+tr.a-yes .xbox.on{background:linear-gradient(135deg,#d8ffe9,#fff)}
+.xnote{width:100%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.14);color:#fff;
+  border-radius:8px;padding:6px 8px;font-family:inherit;font-size:12px;outline:none;resize:vertical;min-height:34px}
+.xnote::placeholder{color:rgba(255,255,255,.4)}
+.xcam{display:block;width:100%;margin-top:4px;font-size:10.5px;padding:4px;border-radius:7px;cursor:pointer;
+  font-family:inherit;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:var(--ink-dim)}
+.xcam.has{background:rgba(255,224,138,.3);color:#fff}
+table.xform tfoot td{background:rgba(255,224,138,.28);font-weight:700;font-size:12.5px;color:#fff}
+.scrollhint{font-size:10.5px;color:var(--ink-dim);text-align:center;margin-top:6px}
+
+/* ---------- Excel-style header block ---------- */
+.xhead{display:grid;grid-template-columns:1fr auto auto;gap:1px;background:rgba(255,255,255,.28);
+  border:1px solid var(--w-line);border-radius:var(--r-md);overflow:hidden;margin-top:14px}
+.xhead .cell{background:rgba(11,98,66,.55);padding:10px 12px;font-size:12.5px}
+.xhead .cell.k{color:var(--ink-dim);font-size:10.5px;margin-bottom:2px;display:block}
+.xhead .cell b{font-size:14px;font-weight:600}
+.xhead .sc{text-align:center;min-width:96px;background:rgba(240,180,41,.30)}
+.xhead .sc b{font-size:22px;display:block;line-height:1.15}
+@media (max-width:520px){ .xhead{grid-template-columns:1fr 1fr} .xhead .info{grid-column:1/-1} }
+
+/* ---------- Glass primitives ---------- */
+.glass{
+  background:var(--w-glass);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  backdrop-filter:blur(18px) saturate(150%);
+  border:1px solid var(--w-line);
+  border-radius:var(--r-lg);
+  box-shadow:var(--shadow);
+}
+.glass-green{
+  background:linear-gradient(140deg,rgba(31,165,100,.60),rgba(15,122,79,.52));
+  border:1px solid rgba(143,224,180,.48);
+}
+.glass-yellow{
+  background:linear-gradient(140deg,rgba(240,180,41,.42),rgba(255,224,138,.26));
+  border:1px solid rgba(255,224,138,.55);
+}
+
+/* ---------- Header ---------- */
+header.top{
+  position:sticky;top:0;z-index:60;
+  padding:calc(10px + var(--safe-t)) 14px 10px;
+  background:linear-gradient(180deg,rgba(6,78,52,.92),rgba(6,78,52,.62) 70%,transparent);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+}
+.top-inner{max-width:560px;margin:0 auto;display:flex;align-items:center;gap:11px}
+.brand{
+  width:42px;height:42px;flex:0 0 42px;border-radius:13px;
+  background:linear-gradient(140deg,var(--y-mid),var(--y-soft));
+  color:#07331f;display:grid;place-items:center;font-weight:700;font-size:12px;
+  box-shadow:0 5px 16px rgba(0,0,0,.25);letter-spacing:-.3px;
+}
+.brand small{display:block;font-size:8px;font-weight:600;opacity:.8;line-height:1}
+.top-t{flex:1;min-width:0}
+.top-t h1{margin:0;font-size:14.5px;font-weight:600;line-height:1.35;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top-t p{margin:0;font-size:11px;color:var(--ink-dim)}
+.iconbtn{
+  width:38px;height:38px;flex:0 0 38px;border-radius:12px;border:1px solid var(--w-line);
+  background:var(--w-glass);color:#fff;font-size:17px;display:grid;place-items:center;cursor:pointer;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+.iconbtn:active{transform:scale(.93)}
+
+/* progress bar under header */
+.pbar{max-width:560px;margin:9px auto 0;height:7px;border-radius:99px;background:rgba(255,255,255,.20);overflow:hidden}
+.pbar i{display:block;height:100%;width:0%;border-radius:99px;
+  background:linear-gradient(90deg,var(--y-soft),var(--y-mid));transition:width .45s cubic-bezier(.4,0,.2,1)}
+.pbar-txt{max-width:560px;margin:5px auto 0;font-size:10.5px;color:var(--ink-dim);display:flex;justify-content:space-between}
+
+/* ---------- Screens ---------- */
+.screen{display:none;animation:fade .32s ease}
+.screen.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---------- Farm info ---------- */
+.card{padding:16px;margin-top:14px}
+.card h2{margin:0 0 12px;font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.chip-i{width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-size:13px;
+  background:rgba(255,255,255,.22);border:1px solid var(--w-line);flex:0 0 26px}
+.field{margin-bottom:11px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:11.5px;color:var(--ink-dim);margin-bottom:5px;font-weight:500}
+.field input,.field textarea,.field select{
+  width:100%;padding:11px 13px;border-radius:var(--r-sm);
+  border:1px solid var(--w-line);background:rgba(255,255,255,.16);color:#fff;
+  font-family:inherit;font-size:14px;outline:none;transition:.2s;
+}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.45)}
+.field input:focus,.field textarea:focus,.field select:focus{
+  background:rgba(255,255,255,.26);border-color:var(--y-soft);box-shadow:0 0 0 3px rgba(240,180,41,.22)}
+.field select option{background:#0b6242;color:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+/* ---------- Score hero ---------- */
+.hero{padding:20px 16px;margin-top:14px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -30% -60% -30%;height:150px;
+  background:radial-gradient(closest-side,rgba(255,224,138,.30),transparent);pointer-events:none}
+.ring{width:150px;height:150px;margin:0 auto 10px;position:relative}
+.ring svg{transform:rotate(-90deg);display:block}
+.ring .bg{stroke:rgba(255,255,255,.20)}
+.ring .fg{stroke:url(#grad);stroke-linecap:round;transition:stroke-dasharray .7s cubic-bezier(.34,1.3,.64,1)}
+.ring .val{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.ring .val b{font-size:38px;font-weight:700;line-height:1;letter-spacing:-1px;
+  background:linear-gradient(180deg,#fff,var(--y-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ring .val span{font-size:10.5px;color:var(--ink-dim);display:block;margin-top:3px}
+.grade{display:inline-block;padding:5px 18px;border-radius:99px;font-weight:700;font-size:14px;
+  background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;box-shadow:0 5px 16px rgba(0,0,0,.22)}
+.hero-sub{font-size:11.5px;color:var(--ink-dim);margin-top:9px}
+.mini3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.mini3 div{padding:9px 4px;border-radius:13px;background:rgba(255,255,255,.16);border:1px solid var(--w-line)}
+.mini3 b{display:block;font-size:19px;font-weight:700;line-height:1.2}
+.mini3 span{font-size:9.5px;color:var(--ink-dim)}
+.mini3 .ok b{color:var(--g-soft)} .mini3 .no b{color:var(--y-soft)} .mini3 .na b{color:rgba(255,255,255,.85)}
+
+/* ---------- Section list ---------- */
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin:20px 4px 9px}
+.sec-head h3{margin:0;font-size:13px;font-weight:600;letter-spacing:.2px}
+.sec-head span{font-size:10.5px;color:var(--ink-dim)}
+.slist{display:flex;flex-direction:column;gap:10px}
+.sitem{
+  display:flex;align-items:center;gap:12px;padding:13px 14px;cursor:pointer;
+  border-radius:var(--r-md);transition:transform .18s, background .18s;
+  background:var(--w-glass);border:1px solid var(--w-line);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 5px 18px rgba(3,45,28,.20);
+}
+.sitem:active{transform:scale(.98)}
+.sitem.done{background:linear-gradient(135deg,rgba(31,165,100,.50),rgba(255,255,255,.16));border-color:rgba(143,224,180,.55)}
+.snum{width:40px;height:40px;flex:0 0 40px;border-radius:13px;display:grid;place-items:center;
+  font-weight:700;font-size:15px;color:#07331f;background:linear-gradient(140deg,var(--y-mid),var(--y-soft));
+  box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.sbody{flex:1;min-width:0}
+.sbody b{display:block;font-size:14px;font-weight:600;line-height:1.4}
+.sbody .meta{display:flex;align-items:center;gap:7px;margin-top:5px}
+.sbody .bar{flex:1;height:5px;border-radius:99px;background:rgba(255,255,255,.22);overflow:hidden}
+.sbody .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--g-soft),var(--y-soft));width:0;transition:width .45s}
+.sbody .meta small{font-size:10px;color:var(--ink-dim);white-space:nowrap}
+.sscore{text-align:right;flex:0 0 auto;min-width:52px}
+.sscore b{display:block;font-size:17px;font-weight:700;line-height:1}
+.sscore small{font-size:9px;color:var(--ink-dim)}
+
+/* ---------- Question cards ---------- */
+.qhead{padding:15px 16px;margin-top:14px}
+.qhead .t{display:flex;align-items:center;gap:11px}
+.qhead h2{margin:0;font-size:15.5px;font-weight:600;flex:1}
+.qhead .note{margin-top:10px;font-size:11.5px;color:#07331f;background:rgba(255,224,138,.75);
+  padding:9px 12px;border-radius:11px;line-height:1.6;border:1px solid rgba(255,224,138,.9)}
+.filters{display:flex;gap:7px;margin:13px 2px 4px;overflow-x:auto;padding-bottom:3px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.fchip{padding:6px 13px;border-radius:99px;font-size:11.5px;white-space:nowrap;cursor:pointer;
+  border:1px solid var(--w-line);background:rgba(255,255,255,.14);color:var(--ink-dim);transition:.18s}
+.fchip.on{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;font-weight:600;border-color:transparent}
+
+.qlist{display:flex;flex-direction:column;gap:11px;margin-top:11px}
+.q{padding:13px 14px;border-radius:var(--r-md);background:var(--w-glass);border:1px solid var(--w-line);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 4px 16px rgba(3,45,28,.18);
+  transition:border-color .25s, background .25s}
+.q.a-yes{background:linear-gradient(135deg,rgba(31,165,100,.44),rgba(255,255,255,.14));border-color:rgba(143,224,180,.60)}
+.q.a-no{background:linear-gradient(135deg,rgba(240,180,41,.40),rgba(255,255,255,.14));border-color:rgba(255,224,138,.65)}
+.q.a-na{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.25);opacity:.82}
+.qtop{display:flex;gap:10px}
+.qn{width:27px;height:27px;flex:0 0 27px;border-radius:9px;display:grid;place-items:center;
+  font-size:12px;font-weight:700;background:rgba(255,255,255,.24);border:1px solid var(--w-line)}
+.qt{flex:1;font-size:14px;line-height:1.7;padding-top:2px}
+.ans{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:11px}
+.ab{padding:9px 3px;border-radius:11px;font-size:12px;font-weight:600;cursor:pointer;text-align:center;
+  min-height:46px;line-height:1.35;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--w-line);background:rgba(255,255,255,.13);color:var(--ink-dim);
+  font-family:inherit;transition:transform .15s,background .2s,color .2s}
+.ab:active{transform:scale(.94)}
+.ab.on-yes{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;border-color:rgba(143,224,180,.8);box-shadow:0 4px 13px rgba(31,165,100,.45)}
+.ab.on-no{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#5a3d00;border-color:rgba(255,224,138,.9);box-shadow:0 4px 13px rgba(240,180,41,.42)}
+.ab.on-na{background:rgba(255,255,255,.62);color:#07331f;border-color:#fff}
+.qtools{display:flex;gap:7px;margin-top:9px;align-items:center;flex-wrap:wrap}
+.tbtn{padding:6px 11px;border-radius:9px;font-size:11px;cursor:pointer;font-family:inherit;
+  border:1px solid var(--w-line);background:rgba(255,255,255,.14);color:var(--ink-dim)}
+.tbtn.has{background:rgba(255,224,138,.30);color:#fff;border-color:rgba(255,224,138,.6)}
+.qnote{width:100%;margin-top:8px;padding:9px 11px;border-radius:10px;font-size:12.5px;font-family:inherit;
+  border:1px solid var(--w-line);background:rgba(255,255,255,.15);color:#fff;resize:vertical;min-height:56px;outline:none}
+.qnote::placeholder{color:rgba(255,255,255,.45)}
+.thumbs{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}
+.thumb{position:relative;width:62px;height:62px;border-radius:10px;overflow:hidden;border:1px solid var(--w-line)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb b{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,.62);
+  color:#fff;font-size:11px;display:grid;place-items:center;cursor:pointer;line-height:1}
+.hide{display:none !important}
+
+/* ---------- Summary ---------- */
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:4px}
+.tbl th,.tbl td{padding:9px 7px;text-align:left;border-bottom:1px solid rgba(255,255,255,.18)}
+.tbl th{font-size:10.5px;color:var(--ink-dim);font-weight:500}
+.tbl td:last-child,.tbl th:last-child{text-align:right}
+.tbl tr:last-child td{border-bottom:none}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600}
+.p-hi{background:rgba(143,224,180,.35);color:#d6ffe9}
+.p-mid{background:rgba(255,224,138,.35);color:#ffeeb8}
+.p-lo{background:rgba(255,255,255,.22);color:#fff}
+.failitem{padding:10px 12px;border-radius:12px;background:rgba(240,180,41,.22);border:1px solid rgba(255,224,138,.4);
+  font-size:12.5px;line-height:1.6;margin-bottom:8px}
+.failitem b{color:var(--y-soft);font-size:11px;display:block;margin-bottom:2px;font-weight:600}
+.btnrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.btn{padding:13px;border-radius:14px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;
+  border:1px solid var(--w-line);background:rgba(255,255,255,.18);color:#fff;text-align:center;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.pri{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;border-color:transparent;
+  box-shadow:0 6px 18px rgba(240,180,41,.35)}
+.btn.wide{grid-column:1/-1}
+
+/* ---------- Bottom nav ---------- */
+nav.bot{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;
+  padding:8px 14px calc(8px + var(--safe-b));
+  background:linear-gradient(0deg,rgba(6,78,52,.96),rgba(6,78,52,.72));
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+  border-top:1px solid rgba(255,255,255,.18);
+}
+.bot-inner{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.nb{padding:7px 2px;border-radius:13px;text-align:center;cursor:pointer;border:none;background:transparent;
+  color:var(--ink-dim);font-family:inherit;font-size:10px;transition:.2s}
+.nb i{display:block;font-size:18px;font-style:normal;margin-bottom:1px}
+.nb.on{background:rgba(255,255,255,.20);color:#fff;font-weight:600}
+
+/* ---------- Toast / FAB ---------- */
+#toast{position:fixed;left:50%;bottom:calc(88px + var(--safe-b));transform:translate(-50%,20px);
+  background:rgba(7,51,31,.94);color:#fff;padding:10px 18px;border-radius:99px;font-size:12.5px;
+  z-index:200;opacity:0;pointer-events:none;transition:.3s;border:1px solid rgba(255,255,255,.25);max-width:90vw;text-align:center}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.fab{position:fixed;right:16px;bottom:calc(84px + var(--safe-b));z-index:65;width:50px;height:50px;border-radius:17px;
+  background:linear-gradient(140deg,var(--y-mid),var(--y-soft));color:#07331f;border:none;font-size:20px;
+  box-shadow:0 8px 22px rgba(0,0,0,.32);cursor:pointer;display:none;place-items:center}
+.fab.on{display:grid}
+.empty{text-align:center;padding:34px 14px;color:var(--ink-dim);font-size:13px}
+
+/* ---------- Save sheet ---------- */
+#sheetBg{position:fixed;inset:0;z-index:150;background:rgba(3,40,25,.62);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  opacity:0;pointer-events:none;transition:opacity .28s}
+#sheetBg.on{opacity:1;pointer-events:auto}
+#sheet{position:fixed;left:0;right:0;bottom:0;z-index:160;
+  max-width:560px;margin:0 auto;padding:16px 16px calc(20px + var(--safe-b));
+  border-radius:26px 26px 0 0;
+  background:linear-gradient(160deg,rgba(31,165,100,.72),rgba(9,92,60,.86));
+  -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
+  border:1px solid rgba(255,255,255,.34);border-bottom:none;
+  box-shadow:0 -12px 40px rgba(0,0,0,.4);
+  transform:translateY(102%);transition:transform .34s cubic-bezier(.32,1.15,.5,1)}
+#sheet.on{transform:translateY(0)}
+#sheet .grab{width:44px;height:4px;border-radius:99px;background:rgba(255,255,255,.45);margin:0 auto 14px}
+#sheet h3{margin:0 0 3px;font-size:16px;font-weight:600;text-align:center}
+#sheet .sub{margin:0 0 14px;font-size:11.5px;color:var(--ink-dim);text-align:center}
+.sv{display:flex;align-items:center;gap:13px;width:100%;text-align:left;font-family:inherit;
+  padding:13px 14px;margin-bottom:9px;border-radius:15px;cursor:pointer;color:#fff;
+  border:1px solid var(--w-line);background:rgba(255,255,255,.16);transition:transform .15s,background .2s}
+.sv:active{transform:scale(.975)}
+.sv.pri{background:linear-gradient(135deg,var(--y-mid),var(--y-soft));color:#07331f;border-color:transparent;
+  box-shadow:0 6px 18px rgba(240,180,41,.34)}
+.sv i{font-style:normal;font-size:21px;width:38px;height:38px;flex:0 0 38px;border-radius:12px;
+  display:grid;place-items:center;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.3)}
+.sv.pri i{background:rgba(7,51,31,.16);border-color:rgba(7,51,31,.2)}
+.sv b{display:block;font-size:14px;font-weight:600;line-height:1.35}
+.sv small{display:block;font-size:10.5px;opacity:.78;line-height:1.45}
+.calc{margin-top:11px;padding:10px 12px;border-radius:12px;font-size:11.5px;line-height:1.8;
+  background:rgba(255,255,255,.14);border:1px solid var(--w-line);color:var(--ink-dim);text-align:left}
+.calc b{color:#fff;font-weight:600}
+.calcrow{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.18)}
+.calcrow:last-child{border-bottom:none}
+.calcrow b{font-size:13px}
+.formula{font-size:11.5px;line-height:1.9;color:var(--ink-dim)}
+.formula b{color:#fff}
+.formula code{background:rgba(255,255,255,.18);padding:1px 6px;border-radius:6px;font-size:11px;color:#fff}
+.rec{display:flex;align-items:center;gap:10px;padding:10px 11px;border-radius:13px;margin-bottom:9px;
+  background:rgba(255,255,255,.15);border:1px solid var(--w-line)}
+.rec:last-child{margin-bottom:0}
+.rec .rn{width:26px;height:26px;flex:0 0 26px;border-radius:8px;display:grid;place-items:center;font-size:11px;
+  font-weight:700;background:rgba(255,255,255,.22);border:1px solid var(--w-line)}
+.rec .rb{flex:1;min-width:0}
+.rec .rb b{display:block;font-size:13.5px;font-weight:600;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rec .rb small{display:block;font-size:10px;color:var(--ink-dim);line-height:1.55;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rec .rs{text-align:center;flex:0 0 auto}
+.rec .rs small{display:block;font-size:10px;color:var(--ink-dim);margin-top:2px;font-weight:600}
+.rec .ra{display:flex;flex-direction:column;gap:4px;flex:0 0 auto}
+.rec .ra .tbtn{padding:5px 8px;font-size:10.5px}
+.badge{display:inline-block;padding:1px 8px;border-radius:99px;font-size:10.5px;font-weight:600;
+  background:rgba(255,224,138,.32);color:#fff;margin-left:6px}
+#clearSheet{position:fixed;left:0;right:0;bottom:0;z-index:160;max-width:560px;margin:0 auto;
+  padding:16px 16px calc(20px + var(--safe-b));border-radius:26px 26px 0 0;
+  background:linear-gradient(160deg,rgba(31,165,100,.72),rgba(9,92,60,.88));
+  -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
+  border:1px solid rgba(255,255,255,.34);border-bottom:none;box-shadow:0 -12px 40px rgba(0,0,0,.4);
+  transform:translateY(102%);transition:transform .34s cubic-bezier(.32,1.15,.5,1)}
+#clearSheet.on{transform:translateY(0)}
+#clearSheet .grab{width:44px;height:4px;border-radius:99px;background:rgba(255,255,255,.45);margin:0 auto 14px}
+#clearSheet h3{margin:0 0 3px;font-size:16px;font-weight:600;text-align:center}
+#clearSheet .sub{margin:0 0 14px;font-size:11.5px;color:var(--ink-dim);text-align:center}
+.sv.danger{background:rgba(226,90,76,.34);border-color:rgba(255,180,170,.5)}
+.sv.danger i{background:rgba(255,255,255,.2)}
+.savebar{margin-top:14px}
+.savebar .btn{display:flex;align-items:center;justify-content:center;gap:8px}
+
+/* Browser ចាស់គ្មាន backdrop-filter → ដាក់ផ្ទៃពណ៌ជំនួស ដើម្បីកុំឱ្យអក្សរលិច */
+@supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))){
+  .glass,.sitem,.q,.xwrap,.iconbtn,header.top,nav.bot{background:rgba(10,95,63,.92)}
+  #sheet,#clearSheet{background:#0b6242}
+}
+
+/* iPhone/Android: ការពារ browser ពង្រីកអេក្រង់ពេលចុចប្រអប់បំពេញ */
+@media (hover:none){ input,textarea,select{font-size:16px !important} }
+
+#errBar{display:none;position:fixed;left:0;right:0;top:0;z-index:9999;
+  background:#7a1f16;color:#fff;padding:10px 14px;font-size:12px;line-height:1.6;
+  font-family:'Kantumruy Pro',system-ui,sans-serif;border-bottom:2px solid #ffb4aa;
+  max-height:45vh;overflow:auto}
+
+/* ---------- Print report ---------- */
+#report{display:none}
+@media print{
+  body{background:#fff !important;color:#000 !important}
+  header.top,nav.bot,.fab,#toast,.screen,#sheet,#sheetBg{display:none !important}
+  #report{display:block !important;font-family:'Kantumruy Pro','Khmer OS Battambang',sans-serif;font-size:11px;color:#000;padding:0}
+  #report h1{font-size:16px;text-align:center;margin:0 0 4px}
+  #report .rsub{text-align:center;font-size:10px;margin-bottom:10px;color:#444}
+  #report table{width:100%;border-collapse:collapse;margin-bottom:12px}
+  #report th,#report td{border:1px solid #666;padding:3px 5px;font-size:10px;vertical-align:top}
+  #report th{background:#e8f5ee;font-weight:600}
+  #report h2{font-size:12px;background:#d7efe2;padding:4px 6px;margin:12px 0 4px;border:1px solid #666}
+  #report .sig{display:flex;justify-content:space-between;margin-top:26px;text-align:center;font-size:10px}
+  #report .sig div{width:30%;border-top:1px solid #000;padding-top:4px}
+  .pgbrk{page-break-after:always}
+}
+@media (min-width:600px){ body{font-size:15.5px} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">M's<small>PIG</small></div>
+    <div class="top-t">
+      <h1 id="topTitle">ត្រួតពិនិត្យជីវៈសុវត្ថិភាព</h1>
+      <p id="topSub">កសិដ្ឋាន M's PIG ACMC (Cambodia)</p>
+    </div>
+    <div class="seg" id="segView" title="ប្តូររូបរាង">
+      <button data-v="phone">📱</button><button data-v="pc">💻</button>
+    </div>
+    <button class="iconbtn" id="btnClear" title="សម្អាតទិន្នន័យ">🧹</button>
+    <button class="iconbtn" id="btnSave" title="Save PDF / Excel / CSV">⬇️</button>
+  </div>
+  <div class="pbar"><i id="pbarFill"></i></div>
+  <div class="pbar-txt"><span id="pbarL">បំពេញ ០ / ១២១</span><span id="pbarR">០%</span></div>
+</header>
+
+<div class="wrap">
+
+<!-- ============ SCREEN 1 : HOME ============ -->
+<section class="screen on" id="sc-home">
+
+  <div class="xhead">
+    <div class="cell info">
+      <span class="k">ឈ្មោះកសិដ្ឋាន៖</span><b id="xhFarm">…………………………</b>
+      <div style="margin-top:7px"><span class="k">តំបន់៖</span><b id="xhZone">…………………</b></div>
+      <div style="margin-top:7px"><span class="k">កាលបរិច្ឆេទ៖</span><b id="xhDate">…………………</b></div>
+    </div>
+    <div class="cell sc"><span class="k">ពិន្ទុ</span><b id="xhScore">–</b></div>
+    <div class="cell sc"><span class="k">ចំំណាប់ថ្នាក់</span><b id="xhGrade">–</b></div>
+  </div>
+
+  <div class="grid2"><div>
+  <div class="glass hero" id="heroCard">
+    <div class="ring">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#8fe0b4"/><stop offset="55%" stop-color="#ffe08a"/><stop offset="100%" stop-color="#f0b429"/>
+        </linearGradient></defs>
+        <circle class="bg" cx="75" cy="75" r="62" fill="none" stroke-width="13"/>
+        <circle class="fg" id="ringFg" cx="75" cy="75" r="62" fill="none" stroke-width="13" stroke-dasharray="0 999"/>
+      </svg>
+      <div class="val"><b id="heroScore">0</b><span id="heroLbl">ពិន្ទុ / ១០០</span></div>
+    </div>
+    <div class="grade" id="heroGrade">មិនទាន់វាយតម្លៃ</div>
+    <div class="hero-sub" id="heroSub">សូមចាប់ផ្តើមបំពេញផ្នែកទី ១</div>
+    <div class="mini3">
+      <div class="ok"><b id="cYes">0</b><span>មាន</span></div>
+      <div class="no"><b id="cNo">0</b><span>មិនមាន</span></div>
+      <div class="na"><b id="cNa">0</b><span>មិនពាក់ព័ន្ធ</span></div>
+    </div>
+    <div class="calc" id="heroCalc"></div>
+  </div>
+
+  </div><div>
+  <div class="sec-head"><h3>📋 ផ្នែកទាំង ៧</h3><span id="secDoneTxt"></span></div>
+  <div class="slist" id="secList"></div>
+
+  <div class="btnrow">
+    <button class="btn pri wide" id="btnContinue">▶️ បន្តបំពេញកន្លែងដែលនៅសល់</button>
+  </div>
+  </div></div>
+
+  <div class="btnrow savebar">
+    <button class="btn pri" id="btnSaveRec">📚 រក្សាទុកជាកំណត់ត្រា</button>
+    <button class="btn sv-open">⬇️ Save PDF / Excel</button>
+    <button class="btn wide" id="btnGoRecs">📂 មើលកំណត់ត្រាចុងក្រោយ <span class="badge recBadge">០</span></button>
+  </div>
+</section>
+
+<!-- ============ SCREEN 2 : SECTION ============ -->
+<section class="screen" id="sc-sec">
+  <div class="glass glass-green qhead">
+    <div class="t">
+      <button class="iconbtn" id="btnBack">←</button>
+      <h2 id="secTitle"></h2>
+    </div>
+    <div class="pbar" style="margin-top:11px"><i id="secBarFill"></i></div>
+    <div class="pbar-txt"><span id="secBarL"></span><span id="secBarR"></span></div>
+    <div class="calc" id="secCalc"></div>
+    <div class="note hide" id="secNote"></div>
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px;flex-wrap:wrap">
+    <div class="seg" id="segStyle">
+      <button data-s="card">🃏 កាត</button><button data-s="table">📋 តារាង (ដូច Excel)</button>
+    </div>
+    <span style="font-size:10.5px;color:var(--ink-dim)" id="styleHint"></span>
+  </div>
+
+  <div class="filters">
+    <div class="fchip on" data-f="all">ទាំងអស់</div>
+    <div class="fchip" data-f="todo">នៅសល់</div>
+    <div class="fchip" data-f="yes">✔ មាន</div>
+    <div class="fchip" data-f="no">✖ មិនមាន</div>
+    <div class="fchip" data-f="na">⊘ មិនពាក់ព័ន្ធ</div>
+  </div>
+
+  <div class="glass card" style="padding:12px 14px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <button class="btn" id="btnAllYes" style="font-size:12px;padding:10px">✔ ដាក់ "មាន" ទាំងអស់</button>
+      <button class="btn" id="btnClearSec" style="font-size:12px;padding:10px">↺ សម្អាតផ្នែកនេះ</button>
+    </div>
+  </div>
+
+  <div class="qlist" id="qList"></div>
+  <div class="xwrap hide" id="xWrap"><table class="xform" id="xTable"></table></div>
+  <div class="scrollhint hide" id="scrollHint">↔ អូសទៅឆ្វេង-ស្តាំ ដើម្បីមើលគ្រប់ជួរ</div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">✍️</span> បរិយាយ÷</h2>
+    <textarea id="secComment" rows="3" class="qnote" style="min-height:74px"
+      placeholder="សរសេរបរិយាយសម្រាប់ផ្នែកនេះ..."></textarea>
+  </div>
+
+  <div class="btnrow">
+    <button class="btn" id="btnPrevSec">‹ ផ្នែកមុន</button>
+    <button class="btn pri" id="btnNextSec">ផ្នែកបន្ទាប់ ›</button>
+  </div>
+  <div class="btnrow savebar">
+    <button class="btn wide sv-open">⬇️ Save PDF / Excel / CSV</button>
+  </div>
+</section>
+
+<!-- ============ SCREEN 3 : FARM INFO ============ -->
+<section class="screen" id="sc-info">
+  <div class="glass card" id="recCard">
+    <h2><span class="chip-i">📚</span> កំណត់ត្រាចុងក្រោយ <span class="badge" id="recCount">០ / ២០</span></h2>
+    <div class="btnrow" style="margin-top:0;margin-bottom:12px">
+      <button class="btn pri wide" id="btnSaveRec3">📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា</button>
+    </div>
+    <div id="recList"></div>
+    <p style="font-size:10.5px;color:var(--ink-dim);margin:11px 0 0;line-height:1.7">
+      រក្សាទុកបានត្រឹម <b>២០ កំណត់ត្រាចុងក្រោយ</b> — ពេលលើស ២០ កំណត់ត្រាចាស់បំផុតត្រូវលុបដោយស្វ័យប្រវត្តិ។
+      បើអង្គចងចាំពេញ រូបថតក្នុងកំណត់ត្រាចាស់នឹងត្រូវលុបជាមុនសិន។
+    </p>
+  </div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">🏠</span> ព័ត៌មានកសិដ្ឋាន</h2>
+    <div class="field"><label>ឈ្មោះកសិដ្ឋាន</label><input id="f_farm" placeholder="ឧ. កសិដ្ឋាន ស្វាយរៀង ០១"></div>
+    <div class="field"><label>តំបន់ / ខេត្ត</label><input id="f_zone" placeholder="ឧ. ខេត្តត្បូងឃ្មុំ"></div>
+    <div class="two">
+      <div class="field"><label>កាលបរិច្ឆេទ</label><input id="f_date" type="date"></div>
+      <div class="field"><label>ចំនួនជ្រូក (ក្បាល)</label><input id="f_head" type="number" inputmode="numeric" placeholder="0"></div>
+    </div>
+    <div class="field"><label>ឈ្មោះអ្នកធ្វើរបាយការណ៍</label><input id="f_by" placeholder="ឈ្មោះ​ពេញ"></div>
+    <div class="field"><label>តំណាងម្ចាស់កសិដ្ឋាន</label><input id="f_owner" placeholder="ឈ្មោះ​ពេញ"></div>
+    <div class="field"><label>តំណាងក្រុមហ៊ុន</label><input id="f_comp" placeholder="ឈ្មោះ​ពេញ"></div>
+    <div class="field"><label>កំណត់សម្គាល់ទូទៅ</label><textarea id="f_note" rows="3" placeholder="សេចក្តីសង្ខេប ឬ អនុសាសន៍..."></textarea></div>
+  </div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">🧹</span> សម្អាតទិន្នន័យ</h2>
+    <div class="btnrow" style="margin-top:0">
+      <button class="btn wide" id="btnClear2">🧹 បើកជម្រើសសម្អាតទិន្នន័យ</button>
+    </div>
+  </div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">⚙️</span> ទិន្នន័យ</h2>
+    <div class="btnrow" style="margin-top:0">
+      <button class="btn pri wide sv-open">⬇️ Save PDF / Excel / CSV</button>
+      <button class="btn" id="btnBackup">💾 Backup (JSON)</button>
+      <button class="btn" id="btnRestore">⬆️ ស្តារឡើងវិញ</button>
+    </div>
+    <p style="font-size:11px;color:var(--ink-dim);margin:12px 0 0;line-height:1.7">
+      ទិន្នន័យស្ថិតក្នុងទូរស័ព្ទ/កុំព្យូទ័ររបស់អ្នកតែប៉ុណ្ណោះ — មិនផ្ញើទៅណាទេ។
+      រៀងរាល់ពេលបញ្ចប់ការត្រួតពិនិត្យម្តងៗ សូមចុច <b>Save PDF / Excel / CSV</b> ដើម្បីទុកជាឯកសារ។
+    </p>
+  </div>
+  <div class="glass glass-yellow card">
+    <h2 style="color:#07331f"><span class="chip-i">🔗</span> របៀបចែករំលែកឱ្យអ្នកដទៃ</h2>
+    <div class="formula" style="color:#0b3a24">
+      <b>❌ កុំប្រើ Google Drive link</b> — Drive បានបិទសេវាបង្ហាញ HTML តាំងពីឆ្នាំ ២០១៦។
+      Link របស់ Drive បង្ហាញត្រឹមទំព័រ preview ដែលធ្វើឱ្យ App ដំណើរការមិនពេញលេញ
+      ហើយ<b>រក្សាទុកស្វ័យប្រវត្តិក៏មិនដើរដែរ</b>។<br><br>
+      <b>✅ វិធីត្រឹមត្រូវ ៣ យ៉ាង</b><br>
+      <b>១. ផ្ញើឯកសារផ្ទាល់</b> (ងាយបំផុត) — ផ្ញើ <code>.html</code> តាម Telegram/Email
+      → អ្នកទទួល <b>Download</b> → ចុចពីរដងបើក។ ដើរបាន offline ១០០%។<br>
+      <b>២. Netlify Drop</b> (បាន link ក្នុង ១ នាទី គ្មានគណនី) —
+      ចូល <code>app.netlify.com/drop</code> → អូសឯកសារដាក់ → បាន link ចែកបាន។<br>
+      <b>៣. GitHub Pages</b> (link អចិន្ត្រៃយ៍ ឥតគិតថ្លៃ) —
+      បង្កើត repository → Upload ឯកសារ (ប្តូរឈ្មោះជា <code>index.html</code>)
+      → Settings → Pages → Branch: main → Save។<br><br>
+      💡 បើនៅតែចង់ប្រើ Drive៖ ត្រូវ<b>ទាញយក (Download)</b>មកក្នុងកុំព្យូទ័រសិន រួចទើបបើក។
+    </div>
+  </div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">🩺</span> ពិនិត្យស្ថានភាព App</h2>
+    <div class="formula" id="diagBox"></div>
+    <div class="btnrow" style="margin-top:11px">
+      <button class="btn wide" id="btnDiag">🔄 ពិនិត្យឡើងវិញ</button>
+    </div>
+  </div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">📲</span> ដំឡើងលើទូរស័ព្ទ (ដូច App ពិត)</h2>
+    <div class="formula">
+      <b>📱 iPhone / iPad (Safari)</b><br>
+      ១. បើកឯកសារនេះដោយ <b>Safari</b> (មិនមែន Chrome)<br>
+      ២. ចុចរូប <b>􀈂 Share</b> ខាងក្រោមអេក្រង់<br>
+      ៣. រំកិលចុះ ចុច <b>Add to Home Screen</b><br>
+      ៤. ចុច <b>Add</b> → រូប App នឹងលេចលើអេក្រង់ដើម<br>
+      <span style="opacity:.8">💡 បើផ្ញើតាម Telegram សូមចុច «Open in Safari» ជាមុនសិន</span><br><br>
+      <b>🤖 Android (Chrome)</b><br>
+      ១. បើកដោយ <b>Chrome</b> → ចុច <b>⋮</b> ខាងលើស្តាំ<br>
+      ២. ចុច <b>Add to Home screen</b> → <b>Add</b><br><br>
+      <b>💻 កុំព្យូទ័រ</b> — ចុចពីរដងលើឯកសារ ឬអូសដាក់ក្នុង Browser
+    </div>
+  </div>
+
+  <input type="file" id="fileRestore" accept="application/json" class="hide">
+</section>
+
+<!-- ============ SCREEN 4 : SUMMARY ============ -->
+<section class="screen" id="sc-sum">
+  <div class="glass hero">
+    <div class="ring">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <circle class="bg" cx="75" cy="75" r="62" fill="none" stroke-width="13"/>
+        <circle class="fg" id="ringFg2" cx="75" cy="75" r="62" fill="none" stroke-width="13" stroke-dasharray="0 999"/>
+      </svg>
+      <div class="val"><b id="sumScore">0</b><span id="sumLbl">ពិន្ទុ / ១០០</span></div>
+    </div>
+    <div class="grade" id="sumGrade">–</div>
+    <div class="hero-sub" id="sumSub"></div>
+  </div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">🧮</span> ការគណនាពិន្ទុសរុប</h2>
+    <div id="sumCalc"></div>
+  </div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">📊</span> ពិន្ទុតាមផ្នែក</h2>
+    <table class="tbl" id="sumTbl"></table>
+    <p style="font-size:10.5px;color:var(--ink-dim);margin:10px 0 0;line-height:1.7">
+      «គិត» = ចំនួនសំណួរដែលគិតពិន្ទុ (សំណួរសរុប − N/A)។ ពិន្ទុផ្នែក = មាន ÷ គិត × ១០០។
+    </p>
+  </div>
+
+  <div class="glass glass-yellow card">
+    <h2 style="color:#07331f"><span class="chip-i">📖</span> របៀបគិតពិន្ទុ (ច្បាប់ផ្លូវការ)</h2>
+    <div class="formula" style="color:#0b3a24">
+      <b>១.</b> ផ្នែកនីមួយៗ = <b>១០០ ពិន្ទុ</b> ដាច់ដោយឡែក (តាម Form ដើម)<br>
+      <b>២.</b> សំណួរគិតពិន្ទុ = <code>សំណួរសរុប − N/A</code><br>
+      <b>៣.</b> ១ សំណួរ = <code>១០០ ÷ សំណួរគិតពិន្ទុ</code> (បូកគ្នាវិញ = ១០០ គត់)<br>
+      <b>៤.</b> មាន = ពេញពិន្ទុ · មិនមាន = ០ · <b>មិនទាន់បំពេញ = ០</b><br>
+      <b>៥.</b> ពិន្ទុផ្នែក = <code>មាន ÷ សំណួរគិតពិន្ទុ × ១០០</code><br>
+      <b>៦.</b> ផ្នែកដែល N/A ទាំងអស់ ឬ<b>មិនទាន់ចាប់ផ្តើម</b> → គ្មានពិន្ទុ ហើយ<b>ដកចេញ</b>ពីមធ្យមភាគ<br>
+      <b>៧.</b> ពិន្ទុសរុប = <code>មធ្យមភាគនៃពិន្ទុផ្នែក</code> (៧ ផ្នែកមានទម្ងន់ស្មើគ្នា)<br>
+      <b>៨.</b> ចំណាប់ថ្នាក់ចេញផ្លូវការ<b>លុះត្រាតែ</b>បំពេញគ្រប់ ១២១ សំណួរ
+    </div>
+  </div>
+
+  <div class="glass card">
+    <h2><span class="chip-i">⚠️</span> ចំណុចត្រូវកែតម្រូវ (<span id="failN">0</span>)</h2>
+    <div id="failList"></div>
+  </div>
+
+  <div class="btnrow savebar">
+    <button class="btn pri sv-open">⬇️ Save PDF / Excel / CSV</button>
+    <button class="btn" id="btnSaveRec2">📚 រក្សាទុកជាកំណត់ត្រា</button>
+  </div>
+</section>
+
+</div><!-- /wrap -->
+
+<button class="fab" id="fabUp">↑</button>
+<div id="toast"></div>
+
+<div id="sheetBg"></div>
+<div id="clearSheet">
+  <div class="grab"></div>
+  <h3>🧹 សម្អាតទិន្នន័យ</h3>
+  <p class="sub" id="clearSub"></p>
+  <button class="sv" id="clForm"><i>🧽</i><span><b>សម្អាតទម្រង់បច្ចុប្បន្ន</b><small>លុប ចម្លើយ · ចំណាំ · រូបថត · បរិយាយ÷ &nbsp;|&nbsp; រក្សា ព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
+  <button class="sv" id="clRecs"><i>📚</i><span><b>លុបកំណត់ត្រាទាំងអស់</b><small>លុបតែបញ្ជីកំណត់ត្រា ២០ · ទម្រង់បច្ចុប្បន្នមិនប៉ះពាល់</small></span></button>
+  <button class="sv danger" id="clAll"><i>⚠️</i><span><b>លុបទាំងអស់ ចាប់ផ្តើមថ្មី</b><small>លុបគ្រប់យ៉ាង រួមទាំងព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
+  <button class="sv" id="clClose" style="justify-content:center;margin-bottom:0"><span><b>បិទ</b></span></button>
+</div>
+
+<div id="sheet">
+  <div class="grab"></div>
+  <h3>⬇️ Save / នាំចេញ</h3>
+  <p class="sub" id="sheetSub"></p>
+  <button class="sv pri" id="svPdf"><i>🖨️</i><span><b>Save PDF</b><small>របាយការណ៍ពេញលេញ ដូច Form ដើម · ជ្រើស “Save as PDF”</small></span></button>
+  <button class="sv" id="svXls"><i>📊</i><span><b>Save Excel (.xls)</b><small>តារាងពិន្ទុពេញលេញ បើកដោយ Excel ភ្លាម</small></span></button>
+  <button class="sv" id="svCsv"><i>📄</i><span><b>Save CSV (.csv)</b><small>UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets</small></span></button>
+  <button class="sv" id="svRec"><i>📚</i><span><b>រក្សាទុកជាកំណត់ត្រា</b><small>ទុកក្នុង App ដើម្បីមើលវិញ (អតិបរមា ២០ ចុងក្រោយ)</small></span></button>
+  <button class="sv" id="svJson"><i>💾</i><span><b>Backup (.json)</b><small>ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ</small></span></button>
+  <button class="sv" id="svClose" style="justify-content:center;margin-bottom:0"><span><b>បិទ</b></span></button>
+</div>
+
+<nav class="bot"><div class="bot-inner">
+  <button class="nb on" data-go="home"><i>🏠</i>ទំព័រដើម</button>
+  <button class="nb" data-go="sec"><i>📝</i>បំពេញ</button>
+  <button class="nb" data-go="sum"><i>📊</i>សង្ខេប</button>
+  <button class="nb" data-go="info"><i>⚙️</i>ព័ត៌មាន</button>
+</div></nav>
+
+<div id="report"></div>
+
+<div id="errBar"></div>
+<script>
+/* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
+var APP_VER='2026-08-19', ERRS=[];
+function showErr(msg){
+  ERRS.push(msg);
+  var el=document.getElementById('errBar'); if(!el) return;
+  el.style.display='block';
+  el.innerHTML='<b>⚠️ App មានបញ្ហា — សូមថតអេក្រង់នេះផ្ញើមកវិញ</b><br>'
+    + ERRS.slice(-3).map(function(m){return String(m).replace(/</g,'&lt;');}).join('<br>')
+    + '<br><span style="opacity:.8">កំណែ '+APP_VER+' · '+navigator.userAgent.slice(0,90)+'</span>'
+    + '<br><button onclick="this.parentNode.style.display=\'none\'" style="margin-top:6px;padding:4px 12px;border-radius:8px;border:0;font-family:inherit;cursor:pointer">បិទ</button>';
+}
+window.onerror=function(m,src,ln,col){ showErr(m+'  (បន្ទាត់ '+ln+':'+col+')'); };
+window.addEventListener('unhandledrejection',function(e){ showErr('Promise: '+(e.reason&&e.reason.message||e.reason)); });
+/* រុំមុខងារសំខាន់ៗ កុំឱ្យកំហុសមួយធ្វើឱ្យទំព័រទទេទាំងស្រុង */
+function safe(name, fn){ return function(){ try{ return fn.apply(this,arguments); }
+  catch(e){ showErr(name+'(): '+(e&&e.message||e)); } }; }
+
+/* ==========================================================
+   ទិន្នន័យ Checklist — ដកស្រង់ពី "របាយការណ៍ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន"
+   M'S PIG ACMC (CAMBODIA) CO., LTD.  |  ៧ ផ្នែក / ១២១ សំណួរ
+   លេខរៀងត្រូវបានរៀបឡើងវិញ ១,២,៣... ដោយគ្មានចន្លោះ
+   ========================================================== */
+const CLEAN_DEF = 'ស្អាត =គ្មានស្មៅរញ៉េរញ៉ៃ គ្មានសំរាម គ្មានកាកសំណល់ គ្មានក្លិន គ្មានការកខ្វក់កន្លែងណាមួយ';
+
+const SECTIONS = [
+{ id:'S1', rn:'I', icon:'🏗️', name:'ហេដ្ឋារចនាសម្ព័ន្ធ', note:CLEAN_DEF, items:[
+ 'ច្រកចូលបិតទ្វា ចាក់សោឱ្យបានត្រឹមត្រូវ',
+ 'មានផ្លាកសញ្ញាប្រមានជីវៈសុវត្ថិភាពបិតនៅមុខកសិដ្ឋាន',
+ 'មានរបងជុំវិញ កសិដ្ធាន (របងថ្ម)',
+ 'របងអាចរការពារសត្វចូលបាន',
+ 'មានបន្ទប់ងូតទឹកមុនចូលក្នុងកសិដ្ឋាន',
+ 'បន្ទប់ងូតទឹកស្អាត ហើយមានសាប៊ូ',
+ 'មានការិយាល័យ ស្អាត និងមានអនាម័យ',
+ 'មានបន្ទប់ងូតទឹកមុនចូលតំបន់ចិញ្ចឹមសត្វ',
+ 'បន្ទប់ងូតទឹកស្អាត ហើយមានសាប៊ូ',
+ 'មានរបងញែកតំបន់ស្នាក់នៅនិងតំបន់ចិញ្ចឹមសត្វ',
+ 'មានអគាស្នាក់នៅសំរាប់បុគ្គលិកកសិដ្ឋាន',
+ 'តំបន់ស្នាក់នៅស្អាត និងមានអនាម័យ',
+ 'មានផ្ទះបាយដាច់ពីតំបន់ស្នាក់នៅ ដោយមានសំណាញ់ហុំព័ទ្ធការពារសត្វរុយ',
+ 'តំបន់ផ្ទះបាយស្អាត និងមានអនាម័យ',
+ 'កន្លែងញាំបាយក្នុងកសិដ្ឋាន និងមានអ្នកអនាម័យ (មានសំណាញ់ហុំព័ទ្ធការពារសត្វរុយ)',
+ 'បរិវេណចិញ្ចឹមជ្រូកមានអនាម័យ',
+ 'បរិវេណកសិដ្ឋានមានឡដុតសំរាម',
+ 'មានបង្គន់សម្រាប់បុគ្គលិកក្នុងបរិវេណចិញ្ចឹមសត្វ និងមានអនាម័យស្អាតជាប្រចាំ',
+ 'មានទូរ UV និងអាចប្រើប្រាស់បាន'
+]},
+{ id:'S2', rn:'II', icon:'🚛', name:'យានជំនិះ', note:'', orig:[1,2,4,6,7,9,10,11,12,13,15,16,17,18,19], items:[
+ 'មានឯកសារកត់ត្រាយាន្តជំនិះចេញចូល',
+ 'បុគ្គលិកបានត្រួតពិនិត្យ និងកត់ត្រា បាញ់ថ្នាំឡានដឹកជ្រូក និងចំណី និងឡានគ្រប់ប្រភេទពេលមកដល់កសិដ្ឋាន',
+ 'មានរោងបាញ់ថ្នាំសំលាប់មេរោគ យាន្តជំនិះ និងរោងបាញ់ថ្នាំមានដំណើរការល្អ',
+ 'មានឯកសារកត់ត្រាប្រភេទថ្នាំបាញ់ថ្នាំយាន្តយន្ត',
+ 'មានផ្លាកបង្ហាញ របៀបលាយថ្នាំសំលាប់មេរោគ និងការលាយថ្នាំត្រូវតាមស្តង់ដា',
+ 'មានកន្លែងចត់យាន្តយន្តជាក់លាក់ក្នុងតំបន់ស្នាក់នៅ',
+ 'យាន្តជំនិះសម្រាក ៣០នាទី ក្រោយបាញ់ថ្នាំ',
+ 'មានអាងត្រំាកង់យាន្តជំនិះ សំលាប់មេរោគ',
+ 'មានឯកសារកត់ត្រាការលាយថ្នាំ សម្រាប់អាងត្រាំកង់យាន្តជំនិះ',
+ 'មានផ្លាកបង្ហាញ របៀបលាយថ្នាំសំលាប់មេរោគ ការលាយថ្នាំត្រូវតាមស្តង់ដា',
+ 'ឡានដឹកជ្រូក ដឹកចំណី និងឡានគ្រប់ប្រភេទមិនចូលក្នុងតំបន់ចិញ្ចឹមជ្រូក',
+ 'កន្លែងចតឡានដឹកជ្រូកមានអនាម័យល្អ',
+ 'គ្រប់យាន្តជំនិះមិនចូលក្នុងតំបន់ចិញ្ចឹមជ្រូក',
+ 'ឡានទិញជ្រូក មិនទៅដឹកជ្រូកពីកសិដ្ឋានផ្ទាល់',
+ 'បុគ្គលិកដឹងច្បាស់ពីរបៀបប្រើប្រាស់ថ្នាំសំលាប់មេរោគ'
+]},
+{ id:'S3', rn:'III', icon:'👷', name:'មនុស្ស', note:'', items:[
+ 'មានឯកសារកត់ត្រា មនុស្សចូលកសិដ្ឋាន',
+ 'ហាមមនុស្សគ្មានភារៈកិច្ចចាំបាច់ ចូលក្នុងកសិដ្ឋាន',
+ 'បុគ្គលិកអាចចេញក្រៅកសិដ្ឋានក្នុងករណីមានការអនុញ្ញាត្តិ ពីអ្នកគ្រប់គ្រងកសិដ្ឋាន',
+ 'បុគ្គលិកកម្មករដែលមើលជ្រូកផ្ទាល់ត្រូវសម្រាក ៤៨ ម៉ោងបន្ទាប់មកពីខាងក្រៅ (កាត់ក្រចកដៃ និងដុះសាប៊ូ)',
+ 'ផ្ទះចត្តាឡីស័កស្អាត មានសម្ភារៈប្រើប្រាស់គ្រប់គ្រាន់',
+ 'កម្មករត្រូវស្នាក់នៅក្នុងអគារស្នាក់នៅរបស់កសិដ្ឋាន',
+ 'មានសាប៊ូ ដុះខ្លួន និងសាប៊ូកក់សក់ក្នុងបន្ទប់ងូតទឹកមុនចូលក្នុងកសិដ្ឋាន',
+ 'កម្មករ ងូតទឹក កក់សក់ មុននឹងចូលក្នុងកសិដ្ឋាន',
+ 'មានសាប៊ូ ដុះខ្លួន សាប៊ូកក់សក់ ក្នុងបន្ទប់ងូតទឹកមុនចូលក្នុងតំបន់ចិញ្ចឹមជ្រូក',
+ 'កម្មករ ងូតទឹក កក់សក់ មុននឹងចូលក្នុងតំបន់ចិញ្ចឹមជ្រូក',
+ 'មានឯកសារកត់ត្រាការងូតទឹក ចេញចូលក្នុងកសិដ្ឋាន',
+ 'កម្មករស្លៀកពាក់ឯកសណ្ឋាន និងស្បែកជើងកវែង សម្រាប់ប្រើក្នុងតំបន់ចិញ្ចឹមជ្រូកប៉ុណ្ណោះ',
+ 'កម្មករបាញ់ថ្នាំសំលាប់មេរោគដៃដោយអាល់កុល សាប៊ូ ឬថ្នាំសំលាប់មេរោគ មុនចូលក្នុងរោងជ្រូក',
+ 'ហាមនាំយកម្ហូប ច្នៃពីសាច់ជ្រូក សាច់គោ សាច់ក្របី ពពែ ចូលក្នុងកសិដ្ឋាន',
+ 'ហាមយកម្ហូបចូលក្នុងតំបន់ចិញ្ចឹមសត្វ',
+ 'ហាមយកសម្ភារៈប្រើប្រាស់ផ្ទាល់ខ្លួន មិនចាំបាច់ចូលក្នុងតំបន់ចិញ្ចឹមជ្រូក',
+ 'បាញ់សំលាប់មេរោគលើសម្ភារៈប្រើប្រាស់ចាំបាច់ក្នុងរោង ដោយទូយូវី ឬអាល់កុល',
+ 'ត្រូវញែកកម្មករធ្វើការខាងក្រៅ និងខាងក្នុងតំបន់ចិញ្ចឹមសត្វ',
+ 'ត្រូវបង្រៀនពីប្រព័ន្ធជីវសុវត្ថិភាពដល់កម្មករ',
+ 'ញែកកម្មករធ្វើការតាមរោងដាច់ៗពីគ្នា',
+ 'បង្រៀនកម្មករកុំឱ្យចូលទៅរោងជ្រូកផ្សេងៗ បើមិនមានការចាំបាច់'
+]},
+{ id:'S4', rn:'IV', icon:'🐖', name:'ចលនា​​ជ្រូក', note:'', items:[
+ 'មានស្ថានីយ៍បញ្ចេញ ឬលក់ជ្រូក ស្អាតមានអនាម័យ',
+ 'មានផ្លូវសុវត្ថិភាព (Walkway) ស្អាតមានអនាម័យ',
+ 'សម្អាត និងបាញ់ថ្នាំសំលាប់មេរោគនៅស្ថានីយ៍បញ្ចេញ ឬលក់ មុន/ក្រោយទទួល ឬលក់ជ្រូក',
+ 'រៀបចំប្រព័ន្ធបាញ់ថ្នាំសំលាប់ និងសម្ភារៈសម្រាប់សកម្មភាពដេញជ្រូក',
+ 'កម្មករដឹងរបៀបប្រើប្រាស់ថ្នាំសំលាប់មេរោគ សម្រាស់សកម្មភាពដេញជ្រូក',
+ 'ឡានដឹកជ្រូកមិនដឹកជ្រូកទៅដល់រោងជ្រូកដោយផ្ទាល់',
+ 'បង្រៀនកម្មករអោយយល់ពីដំណើរការទទួល ឬបញ្ចេញ ឬលក់ជ្រូក'
+]},
+{ id:'S5', rn:'V', icon:'🌾', name:'ចំណី​ និងទឹក', note:'', items:[
+ 'មានឃ្លាំងស្តុកចំណី និងឃ្លាំងញែកដាច់ពីរោងជ្រូក',
+ 'ឃ្លាំងស្តុកចំណី មានអនាម័យ',
+ 'ឃ្លាំងស្តុកចំណីមានសភាពស្ងួត (មានឧបករណ៍វាស់សំណើម)',
+ 'ឃ្លាំងស្តុកចំណីមានជីវសុវត្ថិភាពពីបក្សី',
+ 'ឃ្លាំងស្តុកចំណីមានសុវត្ថិភាពពីកណ្តុរ',
+ 'មានធ្នើរទ្រចំណី',
+ 'ការទុកដាក់ចំណីឆ្ងាយពីជញ្ចាំង ១៥ស.ម',
+ 'តំបន់ជុំវិញចំណីសៃឡូ ស្អាតអនាម័យ',
+ 'មានកម្មវិធីលាងសម្អាតសៃឡូ',
+ 'ប្រើប្រាស់ទឹកដែលមានប្រភពនៅក្នុងកសិដ្ឋាន',
+ 'ទឹកប្រភពពីខាងក្រៅ មិនហូរចូលក្នុងកសិដ្ឋាន',
+ 'ប្រើប្រាស់ក្លរីនក្នុងទឹក',
+ 'មានផ្លាកបង្ហាញរបៀបលាយក្លរីន',
+ 'មានឯកសារកត់ត្រាការប្រើប្រាស់ក្លរីន',
+ 'កំហាប់ក្លរីនក្នុងទឹកបន្ទាប់ពីលាយភ្លាមច្រើនជាង 5ppm',
+ 'ក្លរីនទឹកក្នុងរោងជ្រូក <2ppm',
+ 'មានកម្មវិធីយកសំណាកទឹកទៅឡាបូ',
+ 'មានសំណាញ់ការពារសត្វល្អិតចូលទឹក',
+ 'មានកម្មវិធីសំអាតស៊ីទែនទឹក',
+ 'សម្អាតប្រព័ន្ធទុយោទឹកមុនចូលជ្រូក'
+]},
+{ id:'S6', rn:'VI', icon:'🧼', name:'អនាម័យ', note:'', items:[
+ 'ញែកធុងសំរាមសម្រាប់ប្រើប្រាស់ទូទៅ និងធុងសម្រាប់ទុកដាក់កាកសំណល់ផ្ទះបាយ',
+ 'មានកម្មវិធីគ្រប់គ្រងកាកសំណល់ផ្ទះបាយ',
+ 'មានកម្មវិធីគ្រប់គ្រងកាកសំណល់ទូទៅ',
+ 'មានកម្មវិធីគ្រប់គ្រងកាកសំណល់ទឹកអគាស្នាក់នៅ',
+ 'មានកម្មវិធីគ្រប់គ្រងកាកសំណល់ទឹកនៅ​ Office',
+ 'មានកម្មវិធីគ្រប់គ្រងកាកសំណល់លាមកជ្រូក (Biogas)',
+ 'មានបន្ទប់ស្តុកសម្ភារៈនាំចូលពីខាងក្រៅ',
+ 'សម្លាប់មេរោគគ្រប់សម្ភារៈមុនយកចូលក្នុងកសិដ្ឋាន',
+ 'មានបន្ទប់ ឬទូស្តុកថ្នាំ',
+ 'កន្លែងស្តុកថ្នាំមានអនាម័យ',
+ 'មានឯកសារកត់ត្រាថ្នាំ វ៉ាក់សាំង និងសម្ភារៈប្រើប្រាស់',
+ 'មានការគ្រប់គ្រងលើការប្រើប្រាស់ថ្នាំ និងវ៉ាក់សាំង',
+ 'មានទីតាំងសម្រាប់បោកគក់ឯកសណ្ឋានកសិដ្ឋាន',
+ 'ឯកសណ្ឋានកសិដ្ឋានត្រូវបោកគក់ដោយម៉ាស៊ីនជាមួយសាប៊ូ',
+ 'ញែកស្បែកជើងកវែងសម្រាប់ប្រើខាងក្នុង និងក្រៅរោងជ្រូក',
+ 'មានស្បែកជើងកវែងញែកដាច់ពីគ្នាតាមរោងនីមួយៗ',
+ 'មានទឹកថ្នាំជ្រលក់ស្បែកជើង',
+ 'សម្អាតស្បែកជើងកវែងជារៀងរាល់ថ្ងៃ',
+ 'មានស្តុកទុកផលិតផល ដូចជា៖ អាល់កុល៧០% សាប៊ូដុះខ្លួន សាប៊ូកក់សក់ ថ្នាំសំលាប់មេរោគ និងឯកសណ្ឋាន'
+]},
+{ id:'S7', rn:'VII', icon:'🦟', name:'ការគ្រប់គ្រងសត្វល្អិត', note:'', items:[
+ 'បរិវេណផ្ទះបាយមានអនាម័យ និងគ្មានរុយ',
+ 'បរិវេណផ្ទះស្នាក់នៅ មានអនាម័យ និងគ្មានរុយ',
+ 'បរិវេណការិយាល័យ មានអនាម័យ និងគ្មានរុយ',
+ 'ស្តុកចំណីស្អាត គ្មានរុយ',
+ 'មានថ្នាំប្រើគ្រប់គ្រងរុយ',
+ 'មានឧបការណ៍ប្រើសម្រាប់គ្រប់គ្រងរុយ',
+ 'បុគ្គលិកកម្មករយល់ដឹងពីរបៀបប្រើថ្នាំរុយ',
+ 'មានកម្មវិធីគ្រប់គ្រងរុយ និងសត្វល្អិត',
+ 'ការពាររុយ និងសត្វល្អិតចូលក្នុងរោងជ្រូក',
+ 'បរិវេណជុំវិញផ្ទះបាយស្អាត គ្មានកណ្តុរ',
+ 'បរិវេណផ្ទះស្នាក់នៅស្អាត គ្មានកណ្តុរ',
+ 'បរិវេណការិយាល័យស្អាត គ្មានកណ្តុរ',
+ 'ឃ្លាំងចំណីស្អាត គ្មានកណ្តុរ',
+ 'មានថ្នាំប្រើសម្រាប់គ្រប់គ្រងកណ្តុរ',
+ 'មានឧបករណ៍ប្រើសម្រាប់គ្រប់គ្រងកណ្តុរ',
+ 'កម្មករដឹងពីរបៀបប្រើប្រាស់ថ្នាំកណ្តុរ',
+ 'មានកម្មវិធីគ្រប់គ្រងកណ្តុរ',
+ 'គ្មានសត្វផ្សេងទៀត ចូលក្នុងតំបន់ចិញ្ចឹមជ្រូក',
+ 'ការពារសត្វល្អិតចូលក្នុងស៊ីទែនទឹក',
+ 'ក្នុងបរិវេណកសិដ្ឋានគ្មានសត្វចិញ្ចឹម (មាន់ ទា ឆ្កែ ឆ្មា….)'
+]}
+];
+const TOTAL_Q = SECTIONS.reduce((a,s)=>a+s.items.length,0);
+
+/* ================= ឧបករណ៍ជំនួយ ================= */
+const KH='០១២៣៤៥៦៧៨៩';
+const kh = n => String(n).replace(/\d/g,d=>KH[+d]);
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+
+/* ---- ការរក្សាទុក (មានផ្លូវបម្រុងបើ browser មិនអនុញ្ញាត) ---- */
+var MEM = {};
+var Store = {
+  ok: (function(){ try{ var k='__t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }
+                   catch(e){ return false; } })(),
+  get: function(k){
+    try{ if(this.ok){ var v=localStorage.getItem(k); return v===null?null:v; } }catch(e){}
+    return (MEM[k]===undefined)?null:MEM[k];
+  },
+  /* ត្រឡប់៖ 'ok' | 'mem' (browser មិនអនុញ្ញាត) | 'full' (អង្គចងចាំពេញ) */
+  set: function(k,v){
+    MEM[k]=v;
+    if(!this.ok) return 'mem';
+    try{ localStorage.setItem(k,v); return 'ok'; }catch(e){ return 'full'; }
+  }
+};
+const KEY     = 'msPigBio.v2';           // ទម្រង់ថ្មី (មានកំណត់ត្រា)
+const OLDKEYS = ['msPigBio.v1'];         // ទម្រង់ចាស់ — ត្រូវសម្អាតចោល
+const MAXREC  = 20;                      // កំណត់ត្រាចុងក្រោយ អតិបរមា ២០
+let purgedOld = false;
+(function purgeOldData(){
+  try{
+    OLDKEYS.forEach(k=>{ if(localStorage.getItem(k)!==null){ localStorage.removeItem(k); purgedOld=true; } });
+    // លុបសោចាស់ដទៃទៀតដែលបន្សល់ពីជំនាន់មុន
+    for(let i=localStorage.length-1;i>=0;i--){
+      const k=localStorage.key(i);
+      if(k && k.indexOf('msPigBio.')===0 && k!==KEY){ localStorage.removeItem(k); purgedOld=true; }
+    }
+  }catch(e){}
+})();
+
+/* ================= ស្ថានភាព ================= */
+let S = { info:{}, ans:{}, cur:0, filter:'all', view:null, style:null, cmt:{}, recs:[] };
+
+function load(){
+  try{
+    const raw = Store.get(KEY);
+    if(raw){ const d=JSON.parse(raw); S.info=d.info||{}; S.ans=d.ans||{}; S.cmt=d.cmt||{};
+             S.recs=Array.isArray(d.recs)?d.recs.slice(0,MAXREC):[];
+             S.view=d.view||null; S.style=d.style||null; }
+  }catch(e){ console.warn('load fail',e); }
+  if(!S.info.date) S.info.date = new Date().toISOString().slice(0,10);
+}
+function snapshot(){
+  return JSON.stringify({info:S.info, ans:S.ans, cmt:S.cmt, recs:S.recs,
+                         view:S.view, style:S.style, at:Date.now()});
+}
+/* រក្សាទុកភ្លាម — បើអង្គចងចាំពេញ នឹងបន្ថយទិន្នន័យចាស់ដោយស្វ័យប្រវត្តិ */
+function saveNow(){
+  var r = Store.set(KEY, snapshot());
+  if(r==='ok')  return 'ok';
+  if(r==='mem') return 'mem';        // browser ហាមរក្សាទុក — កុំលុបទិន្នន័យអ្វីទាំងអស់!
+  // r==='full' → អង្គចងចាំពេញ ទើបបន្ថយបន្តិចម្តងៗ
+  for(var i=S.recs.length-1;i>=0;i--){
+    if(stripPhotos(S.recs[i]) && Store.set(KEY, snapshot())==='ok') return 'stripped';
+  }
+  while(S.recs.length){ S.recs.pop(); if(Store.set(KEY, snapshot())==='ok') return 'dropped'; }
+  return 'fail';
+}
+function stripPhotos(rec){
+  let n=0;
+  const ans=rec && rec.data && rec.data.ans;
+  if(!ans) return 0;
+  for(var k in ans){ var a=ans[k]; if(a && a.photos && a.photos.length){ n+=a.photos.length; a.photos=[]; } }
+  if(n){ rec.photosDropped=(rec.photosDropped||0)+n; }
+  return n;
+}
+var memWarned=false;
+let saveT=null;
+function save(quiet){
+  clearTimeout(saveT);
+  saveT=setTimeout(()=>{
+    var r=saveNow();
+    if(r==='mem' && !memWarned){ memWarned=true;
+      toast('⚠️ Browser នេះហាមរក្សាទុក — សូម Save PDF/Excel មុនបិទទំព័រ'); return; }
+    if(quiet) return;
+    if(r==='stripped') toast('⚠️ អង្គចងចាំពេញ — បានលុបរូបថតក្នុងកំណត់ត្រាចាស់');
+    else if(r==='dropped') toast('⚠️ អង្គចងចាំពេញ — បានលុបកំណត់ត្រាចាស់បំផុត');
+    else if(r==='fail') toast('⚠️ រក្សាទុកមិនបាន — សូម Save PDF / Excel ភ្លាម');
+  },250);
+}
+function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('on'); clearTimeout(t._x); t._x=setTimeout(()=>t.classList.remove('on'),2100); }
+
+/* ================================================================
+   ប្រព័ន្ធពិន្ទុ  (Scoring engine)  —  ច្បាប់ផ្លូវការ
+   ----------------------------------------------------------------
+   ១. ផ្នែកនីមួយៗ = ១០០ ពិន្ទុ ដាច់ដោយឡែក (តាម Form ដើម)
+   ២. សំណួរ "មិនពាក់ព័ន្ធ (N/A)" ត្រូវដកចេញពីភាគបែង
+        ចំនួនសំណួរគិតពិន្ទុ (applicable) = សំណួរសរុប − N/A
+        ១ សំណួរ = ១០០ ÷ applicable  ពិន្ទុ   (Σ = ១០០ គត់)
+   ៣. មាន = ពេញពិន្ទុ · មិនមាន = ០ · មិនទាន់បំពេញ = ០
+   ៤. ពិន្ទុផ្លូវការ (final)      = មាន ÷ applicable × ១០០
+      ពិន្ទុបណ្តោះអាសន្ន (prov) = មាន ÷ (មាន + មិនមាន) × ១០០
+        → នៅពេលបំពេញគ្រប់ ១០០% តម្លៃទាំងពីរស្មើគ្នាជានិច្ច
+   ៥. ផ្នែកគ្មានពិន្ទុ (ដកចេញពីមធ្យមភាគសរុប) ក្នុង ២ ករណី៖
+        ក. ដាក់ N/A ទាំងអស់ (applicable = 0)
+        ខ. មិនទាន់ចាប់ផ្តើមទាល់តែសោះ (answered = 0)
+   ៦. ពិន្ទុសរុប = មធ្យមភាគនៃពិន្ទុផ្នែក (ផ្នែកនីមួយៗមានទម្ងន់ស្មើគ្នា)
+        បន្ថែម: ពិន្ទុថ្លឹងតាមសំណួរ = Σមាន ÷ Σapplicable × ១០០
+   ៧. ចំណាប់ថ្នាក់ចេញបានលុះត្រាតែបំពេញគ្រប់ ១២១ សំណួរ
+   ================================================================ */
+
+function secStat(si){
+  const sec=SECTIONS[si], n=sec.items.length;
+  let yes=0,no=0,na=0;
+  for(let i=1;i<=n;i++){
+    const a=S.ans[sec.id+'-'+i];
+    if(!a||!a.v) continue;
+    if(a.v==='yes') yes++; else if(a.v==='no') no++; else if(a.v==='na') na++;
+  }
+  const answered = yes+no+na;
+  const todo     = n - answered;
+  const applicable = n - na;                 // សំណួរដែលគិតពិន្ទុ
+  const per = applicable>0 ? 100/applicable : 0;   // ១ សំណួរ = ? ពិន្ទុ
+  // ផ្នែកមិនទាន់ចាប់ផ្តើមទាល់តែសោះ (answered=0) → គ្មានពិន្ទុ
+  // (កុំរាប់ជា ០ ព្រោះនឹងធ្វើឱ្យពិន្ទុសរុបធ្លាក់ខុសពីការពិត)
+  const scoreFinal = (applicable>0 && answered>0) ? yes*per : null;  // ចាប់ផ្តើមហើយ: មិនទាន់បំពេញ = ០
+  const scoreProv  = (yes+no)>0 ? (yes/(yes+no))*100 : null; // តែក្នុងចំណោមដែលបានឆ្លើយ
+  const complete = todo===0;
+  return { yes,no,na,todo,answered,total:n,applicable,per,
+           scoreFinal, scoreProv,
+           score: complete ? scoreFinal : scoreProv,   // លេខបង្ហាញលើអេក្រង់
+           complete, allNa: n>0 && applicable===0,
+           pct: n? Math.round(answered/n*100) : 0,
+           lost: applicable>0 ? no*per : 0,            // ពិន្ទុបាត់ព្រោះ "មិនមាន"
+           pending: applicable>0 ? todo*per : 0 };     // ពិន្ទុនៅសល់ដែលអាចទទួលបាន
+}
+
+function overall(){
+  let yes=0,no=0,na=0,answered=0,doneSec=0;
+  let sumF=0,cntF=0, sumP=0,cntP=0, sYes=0,sApp=0;
+  const secs=[];
+  SECTIONS.forEach((_,i)=>{
+    const st=secStat(i); secs.push(st);
+    yes+=st.yes; no+=st.no; na+=st.na; answered+=st.answered;
+    if(st.complete) doneSec++;
+    if(st.scoreFinal!==null){ sumF+=st.scoreFinal; cntF++; sYes+=st.yes; sApp+=st.applicable; }
+    if(st.scoreProv !==null){ sumP+=st.scoreProv;  cntP++; }
+  });
+  const complete = doneSec===SECTIONS.length;
+  return { secs, yes,no,na,answered,doneSec, total:TOTAL_Q, complete,
+           naSecs: SECTIONS.length-cntF,
+           scoreFinal: cntF? sumF/cntF : null,      // មធ្យមភាគផ្នែក (ផ្លូវការ)
+           scoreProv : cntP? sumP/cntP : null,      // មធ្យមភាគបណ្តោះអាសន្ន
+           scoreWeighted: sApp>0 ? sYes/sApp*100 : null, // ថ្លឹងតាមចំនួនសំណួរ
+           score: complete ? (cntF? sumF/cntF : null) : (cntP? sumP/cntP : null) };
+}
+
+/* បង្គត់ត្រឹម ១ ខ្ទង់ក្រោយក្បៀស (ប្រើគ្រប់ទីកន្លែង ដើម្បីកុំឱ្យលេខផ្ទុយគ្នា) */
+const r1 = v => v===null||v===undefined ? null : Math.round(v*10)/10;
+const fx = (v,d) => v===null||v===undefined ? '–' : v.toFixed(d===undefined?1:d);
+
+function gradeOf(sc, complete){
+  if(sc===null) return {t:'មិនទាន់វាយតម្លៃ', d:'សូមចាប់ផ្តើមបំពេញសំណួរ', k:'-'};
+  let g;
+  if(sc>=90)      g={t:'A — ល្អប្រសើរ',  d:'រក្សាស្តង់ដារនេះឱ្យបានជាប់លាប់', k:'A'};
+  else if(sc>=80) g={t:'B — ល្អ',        d:'នៅមានចំណុចតូចតាចត្រូវកែ', k:'B'};
+  else if(sc>=70) g={t:'C — មធ្យម',      d:'ត្រូវកែតម្រូវក្នុងរយៈពេល ១ ខែ', k:'C'};
+  else if(sc>=60) g={t:'D — ខ្សោយ',      d:'ហានិភ័យខ្ពស់ — ត្រូវកែបន្ទាន់', k:'D'};
+  else            g={t:'F — ធ្លាក់',      d:'ហានិភ័យធ្ងន់ធ្ងរ — ត្រូវផ្អាកចលនា និងកែជាបន្ទាន់', k:'F'};
+  if(complete===false){
+    return {t:'ចំណាប់ថ្នាក់ '+g.k+' (បណ្តោះអាសន្ន)', d:'មិនទាន់ផ្លូវការ — ត្រូវបំពេញឱ្យគ្រប់ ១២១ សំណួរសិន', k:g.k, prov:true};
+  }
+  return {t:'ចំណាប់ថ្នាក់ '+g.t, d:g.d, k:g.k};
+}
+
+/* ================= រូបរាង (ទូរស័ព្ទ / កុំព្យូទ័រ · កាត / តារាង) ================= */
+const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints>0;
+function viewMode(){ return S.view || (window.innerWidth>=900 && !isTouch ? 'pc' : 'phone'); }
+function qStyle(){ return S.style || (viewMode()==='pc' ? 'table' : 'card'); }
+function _applyView(){
+  const v=viewMode(), st=qStyle();
+  document.body.classList.toggle('v-pc', v==='pc');
+  document.body.classList.toggle('v-phone', v!=='pc');
+  $$('#segView button').forEach(b=>b.classList.toggle('on', b.dataset.v===v));
+  $$('#segStyle button').forEach(b=>b.classList.toggle('on', b.dataset.s===st));
+  const hint=$('#styleHint');
+  if(hint) hint.textContent = st==='table' ? 'ដូច Form ក្នុង Excel' : 'ងាយចុចលើទូរស័ព្ទ';
+}
+
+/* ================= ការបង្ហាញ ================= */
+function ringSet(el,pct){ const c=2*Math.PI*62; el.setAttribute('stroke-dasharray', (c*pct/100)+' '+c); }
+
+function _renderTop(){
+  const o=overall();
+  const pct=Math.round(o.answered/o.total*100);
+  $('#pbarFill').style.width=pct+'%';
+  $('#pbarL').textContent='បំពេញ '+kh(o.answered)+' / '+kh(o.total);
+  $('#pbarR').textContent=kh(pct)+'%';
+}
+function _renderHome(){
+  const o=overall(), g=gradeOf(o.score, o.complete);
+  $('#heroScore').textContent = o.score===null?'–':kh(Math.round(o.score));
+  ringSet($('#ringFg'), o.score||0);
+  $('#heroLbl').textContent = o.complete ? 'ពិន្ទុផ្លូវការ / ១០០' : 'បណ្តោះអាសន្ន / ១០០';
+  $('#heroGrade').textContent=g.t;
+  $('#heroSub').textContent=g.d;
+  $('#heroCalc').innerHTML = o.scoreFinal===null ? ''
+    : ('បើបញ្ចប់ត្រឹមឥឡូវ (សំណួរមិនទាន់បំពេញ = ០) ➜ <b>'+fx(o.scoreFinal)+'</b> ពិន្ទុ'
+      +'<br>ថ្លឹងតាមចំនួនសំណួរ ('+kh(o.yes)+' ÷ '+kh(o.secs.reduce((a,x)=>a+x.applicable,0))+') ➜ <b>'+fx(o.scoreWeighted)+'</b> ពិន្ទុ'
+      +(o.naSecs? '<br>ផ្នែក N/A ទាំងស្រុង '+kh(o.naSecs)+' — ដកចេញពីមធ្យមភាគ':''));
+  $('#cYes').textContent=kh(o.yes); $('#cNo').textContent=kh(o.no); $('#cNa').textContent=kh(o.na);
+  $('#secDoneTxt').textContent='បញ្ចប់ '+kh(o.doneSec)+'/៧ ផ្នែក';
+  $$('.recBadge').forEach(e=>e.textContent = kh(S.recs.length)+'/'+kh(MAXREC));
+  $('#topSub').textContent = S.info.farm ? S.info.farm : "កសិដ្ឋាន M's PIG ACMC (Cambodia)";
+  $('#xhFarm').textContent = S.info.farm || '…………………………';
+  $('#xhZone').textContent = S.info.zone || '…………………';
+  $('#xhDate').textContent = S.info.date || '…………………';
+  $('#xhScore').textContent = o.score===null?'–':fx(o.score);
+  $('#xhGrade').textContent = g.k||'–';
+
+  $('#secList').innerHTML = SECTIONS.map((sec,i)=>{
+    const st=secStat(i);
+    return `<div class="sitem ${st.complete?'done':''}" data-i="${i}">
+      <div class="snum">${sec.icon}</div>
+      <div class="sbody">
+        <b>${sec.rn}.${sec.name}</b>
+        <div class="meta"><div class="bar"><i style="width:${st.pct}%"></i></div>
+          <small>${kh(st.answered)}/${kh(st.total)}</small></div>
+      </div>
+      <div class="sscore"><b>${st.score===null?'–':kh(Math.round(st.score))}</b><small>${st.complete?'/១០០':'បណ្តោះអាសន្ន'}</small></div>
+    </div>`;
+  }).join('');
+  $$('#secList .sitem').forEach(el=>el.onclick=()=>openSec(+el.dataset.i));
+}
+
+function _renderSec(){
+  const si=S.cur, sec=SECTIONS[si], st=secStat(si);
+  $('#secTitle').textContent = sec.rn+'.'+sec.name
+      + (viewMode()==='pc' ? '  ( '+(st.score===null?'____':fx(st.score))+' / 100 ពិន្ទុ )' : '');
+  $('#topTitle').textContent = sec.name;
+  $('#secBarFill').style.width=st.pct+'%';
+  $('#secBarL').textContent='បំពេញ '+kh(st.answered)+' / '+kh(st.total);
+  $('#secBarR').textContent = (st.score===null?'–':fx(st.score))+' / ១០០ '+(st.complete?'ពិន្ទុ':'(បណ្តោះអាសន្ន)');
+  $('#secCalc').innerHTML = st.allNa
+    ? '⊘ ផ្នែកនេះដាក់ N/A ទាំងអស់ — គ្មានពិន្ទុ ហើយត្រូវដកចេញពីមធ្យមភាគសរុប'
+    : ('សំណួរគិតពិន្ទុ <b>'+kh(st.applicable)+'</b> (សរុប '+kh(st.total)+' − N/A '+kh(st.na)+') · ១ សំណួរ = <b>'+fx(st.per,2)+'</b> ពិន្ទុ'
+      +'<br>មាន '+kh(st.yes)+' × '+fx(st.per,2)+' = <b>'+fx(st.scoreFinal)+'</b> ពិន្ទុ'
+      + (st.todo? ' · នៅសល់ '+kh(st.todo)+' សំណួរ (អាចបាន '+fx(st.pending)+' ពិន្ទុទៀត)' : ' ✅ បញ្ចប់'));
+  const nt=$('#secNote');
+  if(sec.note){ nt.textContent='ℹ️ '+sec.note; nt.classList.remove('hide'); } else nt.classList.add('hide');
+
+  const f=S.filter;
+  const html = sec.items.map((txt,idx)=>{
+    const n=idx+1, key=sec.id+'-'+n, a=S.ans[key]||{};
+    const v=a.v||'';
+    if(f==='todo'&&v) return '';
+    if(f==='yes'&&v!=='yes') return '';
+    if(f==='no'&&v!=='no') return '';
+    if(f==='na'&&v!=='na') return '';
+    const ph=(a.photos||[]);
+    return `<div class="q ${v?'a-'+v:''}" data-k="${key}">
+      <div class="qtop"><div class="qn">${kh(n)}</div><div class="qt">${txt}</div></div>
+      <div class="ans">
+        <button class="ab ${v==='yes'?'on-yes':''}" data-v="yes">✔ មាន</button>
+        <button class="ab ${v==='no' ?'on-no' :''}" data-v="no">✖ មិនមាន</button>
+        <button class="ab ${v==='na' ?'on-na' :''}" data-v="na">⊘ មិនពាក់ព័ន្ធ</button>
+      </div>
+      <div class="qtools">
+        <button class="tbtn tnote ${a.note?'has':''}">📝 ចំណាំ${a.note?' ✓':''}</button>
+        <button class="tbtn tcam ${ph.length?'has':''}">📷 រូបថត${ph.length?' ('+kh(ph.length)+')':''}</button>
+      </div>
+      <textarea class="qnote ${a.note?'':'hide'}" placeholder="សរសេរចំណាំ ឬអនុសាសន៍...">${(a.note||'').replace(/</g,'&lt;')}</textarea>
+      <div class="thumbs">${ph.map((p,pi)=>`<div class="thumb"><img src="${p}" alt=""><b data-p="${pi}">×</b></div>`).join('')}</div>
+    </div>`;
+  }).join('');
+  const useTable = qStyle()==='table';
+  $('#qList').classList.toggle('hide', useTable);
+  $('#xWrap').classList.toggle('hide', !useTable);
+  $('#scrollHint').classList.toggle('hide', !(useTable && viewMode()!=='pc'));
+  if(useTable){ renderTable(si, st); } else {
+    $('#qList').innerHTML = html || '<div class="empty">គ្មានសំណួរក្នុងតម្រងនេះទេ ✨</div>';
+    bindQ();
+  }
+  const ta=$('#secComment'); ta.value = S.cmt[sec.id]||'';
+  ta.oninput=()=>{ S.cmt[sec.id]=ta.value; save(true); };
+  applyView();
+}
+
+/* ---------- តារាងបែប Excel ---------- */
+function _renderTable(si, st){
+  const sec=SECTIONS[si], f=S.filter;
+  let rows='';
+  sec.items.forEach((txt,idx)=>{
+    const n=idx+1, key=sec.id+'-'+n, a=S.ans[key]||{}, v=a.v||'';
+    if(f==='todo'&&v) return;
+    if((f==='yes'||f==='no'||f==='na') && v!==f) return;
+    const ph=(a.photos||[]).length;
+    const og = sec.orig && sec.orig[idx]!==n ? '<small>ដើម '+sec.orig[idx]+'</small>' : '';
+    const pts = v==='yes' ? st.per.toFixed(2) : (v==='na' ? '—' : (v==='no' ? '0.00' : ''));
+    rows+=`<tr class="${v?'a-'+v:''}" data-k="${key}">
+      <td class="n">${kh(n)}${og}</td>
+      <td class="d">${txt}</td>
+      <td class="c"><div class="xbox ${v==='yes'?'on':''}" data-v="yes">✔</div></td>
+      <td class="c"><div class="xbox ${v==='no' ?'on':''}" data-v="no">✔</div></td>
+      <td class="c"><div class="xbox ${v==='na' ?'on':''}" data-v="na">✔</div></td>
+      <td class="p">${pts}</td>
+      <td class="o"><textarea class="xnote" rows="1" placeholder="ផ្សេងៗ...">${(a.note||'').replace(/</g,'&lt;')}</textarea>
+        <button class="xcam ${ph?'has':''}">📷 រូបថត${ph?' ('+kh(ph)+')':''}</button></td>
+    </tr>`;
+  });
+  $('#xTable').innerHTML =
+    `<thead><tr><th>ល.រ</th><th>បរិយាយ</th><th>មាន</th><th>មិនមាន</th><th>N/A</th><th>ពិន្ទុ</th><th>ផ្សេងៗ</th></tr></thead>
+     <tbody>${rows||'<tr><td class="d" colspan="7" style="text-align:center;padding:22px">គ្មានសំណួរក្នុងតម្រងនេះទេ ✨</td></tr>'}</tbody>
+     <tfoot><tr><td colspan="2" style="text-align:right">សរុបផ្នែក · គិតពិន្ទុ ${kh(st.applicable)} × ${st.per.toFixed(2)}</td>
+       <td class="c">${kh(st.yes)}</td><td class="c">${kh(st.no)}</td><td class="c">${kh(st.na)}</td>
+       <td class="p">${st.scoreFinal===null?'–':fx(st.scoreFinal)}</td><td class="o">/ 100 ពិន្ទុ</td></tr></tfoot>`;
+  $$('#xTable tbody tr[data-k]').forEach(tr=>{
+    const key=tr.dataset.k;
+    tr.querySelectorAll('.xbox').forEach(bx=>bx.onclick=()=>{
+      const a=S.ans[key]||(S.ans[key]={});
+      a.v = (a.v===bx.dataset.v) ? '' : bx.dataset.v;
+      save(); renderTop(); renderSec();
+    });
+    const ta=tr.querySelector('.xnote');
+    ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; save(true); };
+    tr.querySelector('.xcam').onclick=()=>pickPhoto(key);
+  });
+}
+
+function _bindQ(){
+  $$('#qList .q').forEach(card=>{
+    const key=card.dataset.k;
+    card.querySelectorAll('.ab').forEach(b=>b.onclick=()=>{
+      const a=S.ans[key]||(S.ans[key]={});
+      a.v = (a.v===b.dataset.v) ? '' : b.dataset.v;
+      save(); renderTop(); renderSec();
+    });
+    const ta=card.querySelector('.qnote');
+    card.querySelector('.tnote').onclick=()=>{ ta.classList.toggle('hide'); if(!ta.classList.contains('hide')) ta.focus(); };
+    ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; save(true); };
+    card.querySelector('.tcam').onclick=()=>pickPhoto(key);
+    card.querySelectorAll('.thumb b').forEach(x=>x.onclick=()=>{
+      const a=S.ans[key]; a.photos.splice(+x.dataset.p,1); save(); renderSec();
+    });
+  });
+}
+
+/* ---- រូបថត (បង្រួមមុនរក្សាទុក) ---- */
+function pickPhoto(key){
+  const inp=document.createElement('input');
+  inp.type='file'; inp.accept='image/*'; inp.capture='environment';
+  inp.onchange=()=>{
+    const f=inp.files[0]; if(!f) return;
+    const r=new FileReader();
+    r.onload=()=>{
+      const img=new Image();
+      img.onload=()=>{
+        const max=820, sc=Math.min(1,max/Math.max(img.width,img.height));
+        const c=document.createElement('canvas');
+        c.width=Math.round(img.width*sc); c.height=Math.round(img.height*sc);
+        c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+        const a=S.ans[key]||(S.ans[key]={});
+        (a.photos=a.photos||[]).push(c.toDataURL('image/jpeg',0.62));
+        save(); renderSec(); toast('📷 បានបញ្ចូលរូបភាព');
+      };
+      img.src=r.result;
+    };
+    r.readAsDataURL(f);
+  };
+  inp.click();
+}
+
+/* ================= សង្ខេប ================= */
+function _renderSum(){
+  const o=overall(), g=gradeOf(o.score, o.complete);
+  $('#sumScore').textContent = o.score===null?'–':kh(Math.round(o.score));
+  ringSet($('#ringFg2'), o.score||0);
+  $('#sumLbl').textContent = o.complete ? 'ពិន្ទុផ្លូវការ / ១០០' : 'បណ្តោះអាសន្ន / ១០០';
+  $('#sumGrade').textContent=g.t;
+  $('#sumSub').textContent = g.d+' · បំពេញ '+kh(o.answered)+'/'+kh(o.total)+' សំណួរ';
+  const sApp=o.secs.reduce((a,x)=>a+x.applicable,0);
+  $('#sumCalc').innerHTML =
+     '<div class="calcrow"><span>មធ្យមភាគ ៧ ផ្នែក (ផ្លូវការ)</span><b>'+fx(o.scoreFinal)+'</b></div>'
+    +'<div class="calcrow"><span>មធ្យមភាគតែផ្នែកដែលឆ្លើយហើយ</span><b>'+fx(o.scoreProv)+'</b></div>'
+    +'<div class="calcrow"><span>ថ្លឹងតាមសំណួរ ('+kh(o.yes)+' ÷ '+kh(sApp)+')</span><b>'+fx(o.scoreWeighted)+'</b></div>'
+    +'<div class="calcrow"><span>មាន / មិនមាន / N/A / មិនទាន់</span><b>'+kh(o.yes)+' / '+kh(o.no)+' / '+kh(o.na)+' / '+kh(o.total-o.answered)+'</b></div>';
+
+  let rows='<tr><th>ផ្នែក</th><th>មាន</th><th>មិន</th><th>N/A</th><th>គិត</th><th>ពិន្ទុ</th></tr>';
+  SECTIONS.forEach((sec,i)=>{
+    const st=secStat(i);
+    const sc=st.scoreFinal;
+    const cls = sc===null?'p-lo' : sc>=80?'p-hi' : sc>=60?'p-mid':'p-lo';
+    rows+=`<tr><td>${sec.rn}.${sec.name}${st.complete?'':' <small style="opacity:.7">('+kh(st.todo)+' នៅសល់)</small>'}</td>
+      <td>${kh(st.yes)}</td><td>${kh(st.no)}</td><td>${kh(st.na)}</td><td>${kh(st.applicable)}</td>
+      <td><span class="pill ${cls}">${sc===null?'–':fx(sc)}</span></td></tr>`;
+  });
+  $('#sumTbl').innerHTML=rows;
+
+  const fails=[];
+  SECTIONS.forEach((sec,i)=>sec.items.forEach((t,idx)=>{
+    const a=S.ans[sec.id+'-'+(idx+1)];
+    if(a&&a.v==='no') fails.push({s:sec.rn+'.'+sec.name, n:idx+1, t, note:a.note||''});
+  }));
+  $('#failN').textContent=kh(fails.length);
+  $('#failList').innerHTML = fails.length
+    ? fails.map(f=>`<div class="failitem"><b>${f.s} · លេខ ${kh(f.n)}</b>${f.t}${f.note?'<div style="color:var(--ink-dim);font-size:11.5px;margin-top:4px">📝 '+f.note+'</div>':''}</div>`).join('')
+    : '<div class="empty">👏 គ្មានចំណុចត្រូវកែតម្រូវទេ</div>';
+}
+
+/* ---- រុំដោយ safe() ---- */
+/* បើកម្មវិធីសង់សំណួរបរាជ័យ → ប្រើកម្មវិធីសង់បម្រុង (សាមញ្ញបំផុត ដំណើរការគ្រប់ browser) */
+function fallbackList(si){
+  var sec=SECTIONS[si], box=document.getElementById('qList'), h='', i, n, key, a, v;
+  if(!box) return;
+  document.getElementById('xWrap').className='xwrap hide';
+  box.className='qlist';
+  for(i=0;i<sec.items.length;i++){
+    n=i+1; key=sec.id+'-'+n; a=S.ans[key]||{}; v=a.v||'';
+    h+='<div class="q '+(v?'a-'+v:'')+'" data-k="'+key+'">'
+     +  '<div class="qtop"><div class="qn">'+kh(n)+'</div><div class="qt">'+sec.items[i]+'</div></div>'
+     +  '<div class="ans">'
+     +   '<button class="ab '+(v==='yes'?'on-yes':'')+'" data-v="yes">✔ មាន</button>'
+     +   '<button class="ab '+(v==='no' ?'on-no' :'')+'" data-v="no">✖ មិនមាន</button>'
+     +   '<button class="ab '+(v==='na' ?'on-na' :'')+'" data-v="na">⊘ មិនពាក់ព័ន្ធ</button>'
+     +  '</div>'
+     +  '<textarea class="qnote" placeholder="ចំណាំ...">'+String(a.note||'').replace(/</g,'&lt;')+'</textarea>'
+     + '</div>';
+  }
+  box.innerHTML=h;
+  var cards=box.getElementsByClassName('q');
+  for(i=0;i<cards.length;i++){ (function(card){
+      var k=card.getAttribute('data-k'), bts=card.getElementsByTagName('button'), j;
+      for(j=0;j<bts.length;j++){ (function(bt){
+        bt.onclick=function(){ var x=S.ans[k]||(S.ans[k]={});
+          x.v = (x.v===bt.getAttribute('data-v')) ? '' : bt.getAttribute('data-v');
+          save(); renderTop(); renderSec(); };
+      })(bts[j]); }
+      var ta=card.getElementsByTagName('textarea')[0];
+      if(ta) ta.oninput=function(){ var x=S.ans[k]||(S.ans[k]={}); x.note=ta.value; save(true); };
+  })(cards[i]); }
+}
+/* ពិនិត្យក្រោយសង់រួច — បើទទេទាំងដែលមិនគួរ ➜ ជួសជុលដោយខ្លួនឯង */
+function healCheck(){
+  try{
+    var sc=document.getElementById('sc-sec');
+    if(!sc || sc.className.indexOf('on')<0) return;
+    var si=S.cur, want=SECTIONS[si].items.length;
+    var got = document.querySelectorAll('#qList .q').length
+            + document.querySelectorAll('#xTable tbody tr[data-k]').length;
+    if(got===0 && want>0 && S.filter==='all'){
+      showErr('បញ្ជីសំណួរទទេ — កំពុងជួសជុលដោយស្វ័យប្រវត្តិ');
+      fallbackList(si);
+    }
+  }catch(e){}
+}
+
+var renderTop=safe('renderTop',_renderTop), renderHome=safe('renderHome',_renderHome),
+    renderSec=safe('renderSec',function(){ _renderSec.apply(this,arguments); healCheck(); }),
+    renderTable=safe('renderTable',_renderTable),
+    renderSum=safe('renderSum',_renderSum), renderRecs=safe('renderRecs',_renderRecs),
+    applyView=safe('applyView',_applyView), bindQ=safe('bindQ',_bindQ);
+
+/* ================= ការផ្លាស់ទំព័រ ================= */
+function go(name){
+  $$('.screen').forEach(s=>s.classList.remove('on'));
+  $('#sc-'+name).classList.add('on');
+  $$('.nb').forEach(b=>b.classList.toggle('on', b.dataset.go===name));
+  if(name==='home'){ renderHome(); $('#topTitle').textContent='ត្រួតពិនិត្យជីវៈសុវត្ថិភាព'; }
+  if(name==='sec') renderSec();
+  if(name==='sum'){ renderSum(); $('#topTitle').textContent='សង្ខេប និងពិន្ទុ'; }
+  if(name==='info'){ fillInfo(); renderRecs(); runDiag(); $('#topTitle').textContent='ព័ត៌មានកសិដ្ឋាន'; }
+  renderTop(); window.scrollTo({top:0,behavior:'smooth'});
+}
+function openSec(i){ S.cur=i; S.filter='all'; $$('.fchip').forEach(c=>c.classList.toggle('on',c.dataset.f==='all')); go('sec'); }
+
+/* ================= ព័ត៌មានកសិដ្ឋាន ================= */
+const F=[['f_farm','farm'],['f_zone','zone'],['f_date','date'],['f_head','head'],
+         ['f_by','by'],['f_owner','owner'],['f_comp','comp'],['f_note','note']];
+function fillInfo(){ F.forEach(([id,k])=>{ const el=$('#'+id); if(el) el.value=S.info[k]||''; }); }
+function bindInfo(){ F.forEach(([id,k])=>{ const el=$('#'+id); if(el) el.oninput=()=>{ S.info[k]=el.value; save(true); if(k==='farm') $('#topSub').textContent=el.value||"កសិដ្ឋាន M's PIG ACMC (Cambodia)"; }; }); }
+
+/* ================= នាំចេញ CSV (Excel) ================= */
+function toCsv(){
+  const q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
+  const L=[];
+  L.push(['របាយការណ៍ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន'].map(q).join(','));
+  L.push([ 'ឈ្មោះកសិដ្ឋាន',S.info.farm||'','តំបន់',S.info.zone||'','កាលបរិច្ឆេទ',S.info.date||''].map(q).join(','));
+  L.push([ 'អ្នកធ្វើរបាយការណ៍',S.info.by||'','ចំនួនជ្រូក',S.info.head||''].map(q).join(','));
+  const o=overall();
+  L.push(['ពិន្ទុសរុប (ផ្លូវការ)', fx(o.scoreFinal), 'ចំណាប់ថ្នាក់', gradeOf(o.score,o.complete).t].map(q).join(','));
+  L.push(['ពិន្ទុបណ្តោះអាសន្ន', fx(o.scoreProv), 'ថ្លឹងតាមសំណួរ', fx(o.scoreWeighted)].map(q).join(','));
+  L.push(['ស្ថានភាព', o.complete?'បំពេញគ្រប់ ១០០%':'មិនទាន់បញ្ចប់ — នៅសល់ '+(o.total-o.answered)+' សំណួរ'].map(q).join(','));
+  L.push('');
+  L.push(['ផ្នែក','ល.រ','បរិយាយ','លទ្ធផល','ពិន្ទុពេញ/សំណួរ','ពិន្ទុទទួលបាន','ចំណាំ','រូបថត'].map(q).join(','));
+  SECTIONS.forEach((sec,i)=>{
+    const st=secStat(i);
+    sec.items.forEach((t,idx)=>{
+      const a=S.ans[sec.id+'-'+(idx+1)]||{};
+      const lab = a.v==='yes'?'មាន' : a.v==='no'?'មិនមាន' : a.v==='na'?'មិនពាក់ព័ន្ធ' : 'មិនទាន់បំពេញ';
+      const full= a.v==='na' ? '-' : st.per.toFixed(2);
+      const got = a.v==='yes'? st.per.toFixed(2) : (a.v==='na' ? '-' : '0.00');
+      L.push([sec.rn+'.'+sec.name, idx+1, t, lab, full, got, a.note||'', (a.photos||[]).length].map(q).join(','));
+    });
+    L.push([sec.rn+'.'+sec.name+' — សរុបផ្នែក',
+            'មាន '+st.yes, 'មិនមាន '+st.no, 'N/A '+st.na,
+            'គិតពិន្ទុ '+st.applicable+' × '+st.per.toFixed(2),
+            (st.scoreFinal===null?'-':fx(st.scoreFinal))+' /100', S.cmt[sec.id]||'',''].map(q).join(','));
+    L.push('');
+  });
+  const blob=new Blob(['﻿'+L.join('\r\n')],{type:'text/csv;charset=utf-8;'});
+  dl(blob, fname('csv'));
+  toast('📄 Save CSV រួចរាល់');
+}
+function dl(blob,name){
+  const u=URL.createObjectURL(blob), a=document.createElement('a');
+  a.href=u; a.download=name.replace(/[\\/:*?"<>|]/g,'-'); document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(u);a.remove();},600);
+}
+
+/* ================= នាំចេញ Excel (.xls) ================= */
+function toXls(){
+  const esc=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const o=overall(), g=gradeOf(o.score);
+  let h='<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="UTF-8">'
+      +'<style>td,th{font-family:"Khmer OS Battambang",Calibri,sans-serif;font-size:11pt;border:.5pt solid #888;vertical-align:top}'
+      +'th{background:#D7EFE2;font-weight:bold}.h{background:#0F7A4F;color:#fff;font-weight:bold;font-size:12pt}'
+      +'.t{background:#FFE08A;font-weight:bold}</style></head><body>';
+  h+='<table><tr><td class="h" colspan="7">របាយការណ៍ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន — M\'S PIG ACMC (CAMBODIA) CO., LTD.</td></tr>'
+   +'<tr><th>ឈ្មោះកសិដ្ឋាន</th><td colspan="2">'+esc(S.info.farm)+'</td><th>តំបន់</th><td>'+esc(S.info.zone)+'</td><th>កាលបរិច្ឆេទ</th><td>'+esc(S.info.date)+'</td></tr>'
+   +'<tr><th>អ្នកធ្វើរបាយការណ៍</th><td colspan="2">'+esc(S.info.by)+'</td><th>ចំនួនជ្រូក</th><td>'+esc(S.info.head)+'</td><th>បំពេញ</th><td>'+o.answered+' / '+o.total+'</td></tr>'
+   +'<tr class="t"><th>ពិន្ទុសរុប (ផ្លូវការ)</th><td colspan="2">'+fx(o.scoreFinal)+' / 100</td><th>ចំណាប់ថ្នាក់</th><td colspan="3">'+esc(g.t)+'</td></tr>'
+   +'<tr><th>ពិន្ទុបណ្តោះអាសន្ន</th><td colspan="2">'+fx(o.scoreProv)+'</td><th>ថ្លឹងតាមសំណួរ</th><td colspan="3">'+fx(o.scoreWeighted)+'</td></tr>'
+   +'<tr><th>ស្ថានភាព</th><td colspan="6">'+(o.complete?'បំពេញគ្រប់ ១០០%':'មិនទាន់បញ្ចប់ — នៅសល់ '+(o.total-o.answered)+' សំណួរ')+'</td></tr></table><br>';
+  h+='<table><tr><th>ផ្នែក</th><th>សំណួរ</th><th>មាន</th><th>មិនមាន</th><th>N/A</th><th>មិនទាន់</th><th>គិតពិន្ទុ</th><th>១ សំណួរ =</th><th>ពិន្ទុ /100</th></tr>';
+  SECTIONS.forEach((sec,i)=>{const st=secStat(i);
+    h+='<tr><td>'+sec.rn+'.'+esc(sec.name)+'</td><td>'+st.total+'</td><td>'+st.yes+'</td><td>'+st.no+'</td><td>'+st.na+'</td><td>'+st.todo+'</td>'
+      +'<td>'+st.applicable+'</td><td>'+(st.applicable?st.per.toFixed(2):'-')+'</td><td>'+(st.scoreFinal===null?'-':fx(st.scoreFinal))+'</td></tr>';});
+  h+='<tr class="t"><td>ពិន្ទុសរុប = មធ្យមភាគផ្នែក</td><td colspan="7"></td><td>'+fx(o.scoreFinal)+'</td></tr>';
+  h+='</table><br>';
+  h+='<table><tr><th>ផ្នែក</th><th>ល.រ</th><th>បរិយាយ</th><th>លទ្ធផល</th><th>ពិន្ទុពេញ</th><th>ពិន្ទុទទួលបាន</th><th>ចំណាំ</th><th>រូបថត</th></tr>';
+  SECTIONS.forEach((sec,i)=>{
+    const st=secStat(i);
+    sec.items.forEach((t,idx)=>{
+      const a=S.ans[sec.id+'-'+(idx+1)]||{};
+      const lab=a.v==='yes'?'មាន':a.v==='no'?'មិនមាន':a.v==='na'?'មិនពាក់ព័ន្ធ':'មិនទាន់បំពេញ';
+      const full=a.v==='na'?'-':st.per.toFixed(2);
+      const got =a.v==='yes'?st.per.toFixed(2):(a.v==='na'?'-':'0.00');
+      h+='<tr><td>'+sec.rn+'.'+esc(sec.name)+'</td><td>'+(idx+1)+'</td><td>'+esc(t)+'</td><td>'+lab+'</td><td>'+full+'</td><td>'+got+'</td><td>'+esc(a.note)+'</td><td>'+((a.photos||[]).length||'')+'</td></tr>';
+    });
+    h+='<tr class="t"><td colspan="3">'+sec.rn+'.'+esc(sec.name)+' — សរុបផ្នែក</td><td>មាន '+st.yes+' / '+st.applicable+'</td><td>'+(st.applicable?(st.applicable*st.per).toFixed(2):'-')+'</td><td>'+(st.scoreFinal===null?'-':fx(st.scoreFinal))+'</td><td colspan="2">'+esc(S.cmt[sec.id])+'</td></tr>';
+  });
+  h+='</table></body></html>';
+  dl(new Blob(['\ufeff'+h],{type:'application/vnd.ms-excel;charset=utf-8'}), fname('xls'));
+  toast('📊 Save Excel រួចរាល់');
+}
+function fname(ext){
+  const f=(S.info.farm||'Biosecurity').trim(), d=(S.info.date||new Date().toISOString().slice(0,10));
+  return f+'_'+d+'.'+ext;
+}
+
+/* ================= ផ្ទាំង Save (គ្រប់ផ្ទាំង) ================= */
+function openSave(){
+  const o=overall();
+  $('#sheetSub').textContent=(S.info.farm||'កសិដ្ឋាន')+' · បំពេញ '+kh(o.answered)+'/'+kh(o.total)
+    +' · ពិន្ទុ '+(o.score===null?'–':fx(o.score))+'/១០០'+(o.complete?'':' (បណ្តោះអាសន្ន)')
+    +' · កំណត់ត្រា '+kh(S.recs.length)+'/'+kh(MAXREC);
+  $('#sheetBg').classList.add('on'); $('#sheet').classList.add('on');
+}
+function closeSave(){ $('#sheetBg').classList.remove('on'); $('#sheet').classList.remove('on'); }
+
+/* ================= របាយការណ៍បោះពុម្ព / PDF ================= */
+function buildReport(){
+  const o=overall(), g=gradeOf(o.score,o.complete);
+  const sApp=o.secs.reduce((a,x)=>a+x.applicable,0);
+  let h=`<h1>របាយការណ៍ត្រួតពិនិត្យជីវៈសុវត្ថិភាពកសិដ្ឋាន</h1>
+  <div class="rsub">M'S PIG ACMC (CAMBODIA) CO., LTD.</div>
+  ${o.complete?'':'<div style="border:1.2pt solid #000;background:#FFF3CD;padding:5px 7px;margin-bottom:8px;font-weight:bold">⚠ របាយការណ៍មិនទាន់បញ្ចប់ — នៅសល់ '+(o.total-o.answered)+' សំណួរ។ ពិន្ទុខាងក្រោមមិនទាន់ជាផ្លូវការទេ។</div>'}
+  <table><tr><th style="width:22%">ឈ្មោះកសិដ្ឋាន</th><td>${S.info.farm||''}</td><th style="width:18%">ពិន្ទុសរុប</th>
+  <td style="text-align:center;font-weight:700;font-size:13px">${fx(o.scoreFinal)} / 100</td></tr>
+  <tr><th>តំបន់</th><td>${S.info.zone||''}</td><th>ចំណាប់ថ្នាក់</th><td style="text-align:center;font-weight:700">${g.t}</td></tr>
+  <tr><th>កាលបរិច្ឆេទ</th><td>${S.info.date||''}</td><th>ចំនួនជ្រូក</th><td>${S.info.head||''}</td></tr>
+  <tr><th>អ្នកធ្វើរបាយការណ៍</th><td>${S.info.by||''}</td><th>បំពេញ</th><td>${o.answered} / ${o.total} សំណួរ</td></tr></table>
+
+  <h2>វិធីគិតពិន្ទុ</h2>
+  <table><tr><th style="width:34%">ចំនួនសំណួរគិតពិន្ទុ (Applicable)</th><td>សំណួរសរុប − N/A · ១ សំណួរ = 100 ÷ Applicable</td></tr>
+  <tr><th>មាន / មិនមាន / មិនទាន់បំពេញ</th><td>ពេញពិន្ទុ / 0 / 0</td></tr>
+  <tr><th>ពិន្ទុផ្នែក</th><td>មាន ÷ Applicable × 100</td></tr>
+  <tr><th>ពិន្ទុសរុប (ផ្លូវការ)</th><td>មធ្យមភាគនៃពិន្ទុផ្នែកទាំង 7 (ទម្ងន់ស្មើគ្នា) = <b>${fx(o.scoreFinal)}</b></td></tr>
+  <tr><th>ពិន្ទុថ្លឹងតាមចំនួនសំណួរ (បន្ថែម)</th><td>${o.yes} ÷ ${sApp} × 100 = <b>${fx(o.scoreWeighted)}</b></td></tr></table>
+
+  <table><tr><th>ផ្នែក</th><th style="width:7%">សំណួរ</th><th style="width:7%">មាន</th><th style="width:8%">មិនមាន</th><th style="width:7%">N/A</th><th style="width:8%">មិនទាន់</th><th style="width:8%">គិតពិន្ទុ</th><th style="width:9%">១ សំណួរ</th><th style="width:11%">ពិន្ទុ /100</th></tr>`;
+  SECTIONS.forEach((sec,i)=>{ const st=secStat(i);
+    h+=`<tr><td>${sec.rn}.${sec.name}</td><td style="text-align:center">${st.total}</td>
+    <td style="text-align:center">${st.yes}</td><td style="text-align:center">${st.no}</td>
+    <td style="text-align:center">${st.na}</td><td style="text-align:center">${st.todo||''}</td>
+    <td style="text-align:center">${st.applicable}</td><td style="text-align:center">${st.applicable?st.per.toFixed(2):'–'}</td>
+    <td style="text-align:center;font-weight:700">${st.scoreFinal===null?'–':fx(st.scoreFinal)}</td></tr>`; });
+  h+=`<tr><td colspan="8" style="text-align:right;font-weight:700">ពិន្ទុសរុប = មធ្យមភាគនៃផ្នែក</td>
+      <td style="text-align:center;font-weight:700;background:#FFE08A">${fx(o.scoreFinal)}</td></tr></table>`;
+
+  SECTIONS.forEach((sec,i)=>{
+    const st=secStat(i);
+    h+=`<h2>${sec.rn}.${sec.name} — ${st.scoreFinal===null?'–':fx(st.scoreFinal)} / 100 ពិន្ទុ &nbsp;·&nbsp; មាន ${st.yes} ÷ គិតពិន្ទុ ${st.applicable} &nbsp;·&nbsp; ១ សំណួរ = ${st.applicable?st.per.toFixed(2):'–'} ពិន្ទុ</h2>
+    <table><tr><th style="width:6%">ល.រ</th><th>បរិយាយ</th><th style="width:9%">មាន</th><th style="width:9%">មិនមាន</th><th style="width:9%">N/A</th><th style="width:22%">ចំណាំ</th></tr>`;
+    sec.items.forEach((t,idx)=>{
+      const a=S.ans[sec.id+'-'+(idx+1)]||{};
+      const m=v=>a.v===v?'✔':'';
+      h+=`<tr><td style="text-align:center">${idx+1}${sec.orig&&sec.orig[idx]!==idx+1?'<br><span style="font-size:7pt;color:#666">('+sec.orig[idx]+')</span>':''}</td><td>${t}</td>
+      <td style="text-align:center">${m('yes')}</td><td style="text-align:center">${m('no')}</td>
+      <td style="text-align:center">${m('na')}</td><td>${a.note||''}</td></tr>`;
+    });
+    h+='</table>';
+    if(S.cmt[sec.id]) h+=`<div style="border:1px solid #666;border-top:none;padding:4px 6px;font-size:10px"><b>បរិយាយ÷</b> ${S.cmt[sec.id]}</div>`;
+  });
+  if(S.info.note) h+=`<h2>កំណត់សម្គាល់ទូទៅ</h2><div style="border:1px solid #666;padding:6px;min-height:40px">${S.info.note}</div>`;
+  h+=`<div class="sig"><div>តំណាងក្រុមហ៊ុន<br>${S.info.comp||''}</div>
+      <div>តំណាងម្ចាស់កសិដ្ឋាន<br>${S.info.owner||''}</div>
+      <div>អ្នកធ្វើរបាយការណ៍<br>${S.info.by||''}</div></div>`;
+  $('#report').innerHTML=h;
+}
+
+/* ================= កំណត់ត្រាចុងក្រោយ (អតិបរមា ២០) ================= */
+const clone = o => JSON.parse(JSON.stringify(o||{}));
+function photoCount(ans){ var n=0; ans=ans||{}; for(var k in ans){ var a=ans[k]; if(a&&a.photos) n+=a.photos.length; } return n; }
+
+function recTitle(r){ return (r.farm||'(គ្មានឈ្មោះកសិដ្ឋាន)'); }
+function fmtWhen(ms){
+  const d=new Date(ms);
+  const p=n=>(n<10?'0':'')+n;
+  return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes());
+}
+function saveRecord(){
+  const o=overall();
+  if(o.answered===0){ toast('⚠️ មិនទាន់មានចម្លើយ — គ្មានអ្វីរក្សាទុក'); return; }
+  const g=gradeOf(o.score,o.complete);
+  const rec={
+    id:'r'+Date.now()+'_'+Math.floor(Math.random()*1e4),
+    at:Date.now(),
+    farm:S.info.farm||'', zone:S.info.zone||'', date:S.info.date||'', by:S.info.by||'',
+    score:o.scoreFinal, prov:o.scoreProv, grade:g.k||'-', complete:o.complete,
+    answered:o.answered, total:o.total, photos:photoCount(S.ans),
+    data:{ info:clone(S.info), ans:clone(S.ans), cmt:clone(S.cmt) }
+  };
+  S.recs.unshift(rec);
+  let removed=0;
+  while(S.recs.length>MAXREC){ S.recs.pop(); removed++; }
+  const r=saveNow();
+  renderRecs(); renderHome();
+  toast(removed ? '📚 រក្សាទុករួច — លុបកំណត់ត្រាចាស់បំផុត '+kh(removed)
+                : '📚 រក្សាទុករួច ('+kh(S.recs.length)+'/'+kh(MAXREC)+')');
+}
+function openRecord(id){
+  const r=S.recs.find(x=>x.id===id); if(!r) return;
+  if(!confirm('បើកកំណត់ត្រានេះ?\n\n'+recTitle(r)+' · '+fmtWhen(r.at)+
+              '\n\nទិន្នន័យដែលកំពុងបំពេញឥឡូវនឹងត្រូវជំនួស។ បើចង់រក្សាទុកវាសិន សូមចុច «បិទ» រួចរក្សាទុកជាកំណត់ត្រាជាមុន។')) return;
+  S.info=clone(r.data.info); S.ans=clone(r.data.ans); S.cmt=clone(r.data.cmt);
+  save(); fillInfo(); go('home');
+  toast('📂 បើកកំណត់ត្រា៖ '+recTitle(r));
+}
+function delRecord(id){
+  const r=S.recs.find(x=>x.id===id); if(!r) return;
+  if(!confirm('លុបកំណត់ត្រានេះ?\n\n'+recTitle(r)+' · '+fmtWhen(r.at))) return;
+  S.recs=S.recs.filter(x=>x.id!==id); saveNow(); renderRecs(); renderHome(); toast('🗑️ លុបរួច');
+}
+function _renderRecs(){
+  const box=$('#recList'); if(!box) return;
+  $('#recCount').textContent = kh(S.recs.length)+' / '+kh(MAXREC);
+  $$('.recBadge').forEach(e=>{ e.textContent = S.recs.length? kh(S.recs.length)+'/'+kh(MAXREC) : '០'; });
+  if(!S.recs.length){ box.innerHTML='<div class="empty">មិនទាន់មានកំណត់ត្រា — ចុច «រក្សាទុកជាកំណត់ត្រា» ពេលបញ្ចប់ការត្រួតពិនិត្យ</div>'; return; }
+  box.innerHTML = S.recs.map((r,i)=>{
+    const cls = r.score===null?'p-lo' : r.score>=80?'p-hi' : r.score>=60?'p-mid':'p-lo';
+    return `<div class="rec">
+      <div class="rn">${kh(i+1)}</div>
+      <div class="rb">
+        <b>${(recTitle(r)).replace(/</g,'&lt;')}</b>
+        <small>🕘 ${fmtWhen(r.at)}${r.zone?' · '+r.zone:''}${(r.date && r.date!==fmtWhen(r.at).slice(0,10))?' · ត្រួតពិនិត្យ '+r.date:''}</small>
+        <small>${r.complete?'✅ បញ្ចប់':'⏳ '+kh(r.answered)+'/'+kh(r.total)}${r.photos?' · 📷 '+kh(r.photos):''}${r.photosDropped?' · <span style="color:var(--y-soft)">រូបថតត្រូវលុប</span>':''}</small>
+      </div>
+      <div class="rs"><span class="pill ${cls}">${r.score===null?'–':fx(r.score)}</span><small>${r.grade}</small></div>
+      <div class="ra">
+        <button class="tbtn" data-open="${r.id}">📂 បើក</button>
+        <button class="tbtn" data-del="${r.id}">🗑️</button>
+      </div>
+    </div>`;
+  }).join('');
+  box.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openRecord(b.dataset.open));
+  box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>delRecord(b.dataset.del));
+}
+
+/* ================= សម្អាតទិន្នន័យ ================= */
+function openClear(){
+  const o=overall();
+  $('#clearSub').textContent = 'កំពុងបំពេញ '+kh(o.answered)+'/'+kh(o.total)+' សំណួរ · កំណត់ត្រា '+kh(S.recs.length)+'/'+kh(MAXREC);
+  $('#sheetBg').classList.add('on'); $('#clearSheet').classList.add('on');
+}
+function closeClear(){ $('#sheetBg').classList.remove('on'); $('#clearSheet').classList.remove('on'); }
+
+function clearForm(){
+  if(!confirm('សម្អាតទម្រង់បច្ចុប្បន្ន?\n\nលុប៖ ចម្លើយ · ចំណាំ · រូបថត · បរិយាយ÷\nរក្សាទុក៖ ព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រាទាំង '+S.recs.length+'\n\nមិនអាចត្រឡប់វិញបានទេ។')) return;
+  S.ans={}; S.cmt={}; saveNow(); S.filter='all'; go('home'); toast('🧹 សម្អាតទម្រង់រួច');
+}
+function clearRecs(){
+  if(!S.recs.length){ toast('គ្មានកំណត់ត្រាទេ'); return; }
+  if(!confirm('លុបកំណត់ត្រាទាំង '+S.recs.length+' ?\n\nមិនអាចត្រឡប់វិញបានទេ។')) return;
+  S.recs=[]; saveNow(); renderRecs(); renderHome(); toast('🗑️ លុបកំណត់ត្រាទាំងអស់រួច');
+}
+function clearAll(){
+  if(!confirm('⚠️ លុបទាំងអស់ ចាប់ផ្តើមថ្មី?\n\nលុប៖ ចម្លើយ · ចំណាំ · រូបថត · ព័ត៌មានកសិដ្ឋាន · កំណត់ត្រាទាំង '+S.recs.length+'\n\nមិនអាចត្រឡប់វិញបានទេ។')) return;
+  if(!confirm('ប្រាកដមែនទេ? នេះជាការបញ្ជាក់លើកចុងក្រោយ។')) return;
+  S.info={date:new Date().toISOString().slice(0,10)}; S.ans={}; S.cmt={}; S.recs=[];
+  saveNow(); fillInfo(); renderRecs(); go('home'); toast('🗑️ លុបទាំងអស់រួច — ចាប់ផ្តើមថ្មី');
+}
+
+/* ================= បម្រុងទុក / ស្តារ ================= */
+function backup(){
+  const blob=new Blob([JSON.stringify({info:S.info,ans:S.ans,cmt:S.cmt,recs:S.recs,at:Date.now()},null,1)],{type:'application/json'});
+  dl(blob, fname('json')); toast('💾 Backup រួចរាល់');
+}
+function restore(file){
+  const r=new FileReader();
+  r.onload=()=>{ try{ const d=JSON.parse(r.result); S.info=d.info||{}; S.ans=d.ans||{}; S.cmt=d.cmt||{};
+    if(Array.isArray(d.recs)) S.recs=d.recs.slice(0,MAXREC);
+    saveNow(); fillInfo(); renderRecs(); go('home'); toast('⬆️ ស្តារទិន្នន័យរួចរាល់'); }catch(e){ toast('⚠️ ឯកសារមិនត្រឹមត្រូវ'); } };
+  r.readAsText(file);
+}
+
+/* ================= ពិនិត្យស្ថានភាព App ================= */
+function runDiag(){
+  var box=$('#diagBox'); if(!box) return;
+  var qCount=0; for(var i=0;i<SECTIONS.length;i++) qCount+=SECTIONS[i].items.length;
+  var proto=location.protocol, framed=(window.top!==window.self);
+  var rows=[
+    ['កំណែ App', APP_VER],
+    ['ផ្នែក / សំណួរ', kh(SECTIONS.length)+' / '+kh(qCount) + (qCount===121?' ✅':' ❌')],
+    ['របៀបបើក', proto + (proto==='file:'?' (ឯកសារក្នុងម៉ាស៊ីន ✅)':' (តាមអ៊ីនធឺណិត)')],
+    ['ក្នុងស៊ុម (iframe)', framed ? 'បាទ ⚠️ (ដូច Google Drive preview)' : 'ទេ ✅'],
+    ['រក្សាទុកស្វ័យប្រវត្តិ', Store.ok ? 'ដំណើរការ ✅' : 'មិនដំណើរការ ❌ — សូម Save PDF/Excel'],
+    ['កំណត់ត្រា', kh(S.recs.length)+' / '+kh(MAXREC)],
+    ['រូបរាង', viewMode()==='pc'?'កុំព្យូទ័រ':'ទូរស័ព្ទ'],
+    ['ទំហំអេក្រង់', window.innerWidth+' × '+window.innerHeight],
+    ['កំហុសដែលចាប់បាន', ERRS.length ? kh(ERRS.length)+' ❌' : 'គ្មាន ✅']
+  ];
+  box.innerHTML = rows.map(function(r){
+    return '<div class="calcrow"><span>'+r[0]+'</span><b style="font-size:12px">'+r[1]+'</b></div>';
+  }).join('') + (ERRS.length ? '<div style="margin-top:8px;color:var(--y-soft);font-size:11px">'
+    + ERRS.slice(-3).map(function(m){return String(m).replace(/</g,'&lt;');}).join('<br>') + '</div>' : '');
+}
+
+/* ================= ភ្ជាប់ព្រឹត្តិការណ៍ ================= */
+$$('#segView button').forEach(b=>b.onclick=()=>{ S.view=b.dataset.v; S.style=null; save(true); applyView(); renderSec&&renderSec(); renderHome();
+  toast(b.dataset.v==='pc'?'💻 រូបរាងកុំព្យូទ័រ':'📱 រូបរាងទូរស័ព្ទ'); });
+$$('#segStyle button').forEach(b=>b.onclick=()=>{ S.style=b.dataset.s; save(true); renderSec(); });
+window.addEventListener('resize',()=>{ if(!S.view) applyView(); });
+$$('.nb').forEach(b=>b.onclick=()=>go(b.dataset.go));
+$('#btnBack').onclick=()=>go('home');
+$('#btnSave').onclick=()=>{ save(true); openSave(); };
+$$('.sv-open').forEach(b=>b.onclick=()=>{ save(true); openSave(); });
+$('#sheetBg').onclick=()=>{ closeSave(); closeClear(); };
+$('#btnClear').onclick=()=>{ save(true); openClear(); };
+$('#btnClear2').onclick=()=>{ save(true); openClear(); };
+$('#clClose').onclick=closeClear;
+$('#clForm').onclick =()=>{ closeClear(); setTimeout(clearForm,180); };
+$('#clRecs').onclick =()=>{ closeClear(); setTimeout(clearRecs,180); };
+$('#clAll').onclick  =()=>{ closeClear(); setTimeout(clearAll ,180); };
+$('#svRec').onclick  =()=>{ closeSave();  saveRecord(); };
+['#btnSaveRec','#btnSaveRec2','#btnSaveRec3'].forEach(id=>{ const e=$(id); if(e) e.onclick=saveRecord; });
+$('#btnDiag').onclick=runDiag;
+$('#btnGoRecs').onclick=()=>{ go('info'); setTimeout(()=>$('#recCard').scrollIntoView({behavior:'smooth',block:'start'}),260); };
+$('#svClose').onclick=closeSave;
+$('#svPdf').onclick =()=>{ closeSave(); buildReport(); setTimeout(()=>window.print(),260); };
+$('#svXls').onclick =()=>{ closeSave(); toXls(); };
+$('#svCsv').onclick =()=>{ closeSave(); toCsv(); };
+$('#svJson').onclick=()=>{ closeSave(); backup(); };
+window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeSave(); closeClear(); } });
+$('#btnPrevSec').onclick=()=>{ if(S.cur>0){S.cur--; renderSec(); window.scrollTo({top:0,behavior:'smooth'});} else toast('នេះជាផ្នែកដំបូង'); };
+$('#btnNextSec').onclick=()=>{ if(S.cur<SECTIONS.length-1){S.cur++; renderSec(); window.scrollTo({top:0,behavior:'smooth'});} else go('sum'); };
+$('#btnAllYes').onclick=()=>{ const sec=SECTIONS[S.cur];
+  sec.items.forEach((_,i)=>{ const k=sec.id+'-'+(i+1); const a=S.ans[k]||(S.ans[k]={}); if(!a.v) a.v='yes'; });
+  save(); renderSec(); renderTop(); toast('✔ បំពេញសំណួរទំនេរជា "មាន"'); };
+$('#btnClearSec').onclick=()=>{ if(!confirm('លុបចម្លើយទាំងអស់ក្នុងផ្នែកនេះ?')) return;
+  const sec=SECTIONS[S.cur]; sec.items.forEach((_,i)=>delete S.ans[sec.id+'-'+(i+1)]);
+  save(); renderSec(); renderTop(); toast('↺ បានសម្អាត'); };
+$$('.fchip').forEach(c=>c.onclick=()=>{ $$('.fchip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); S.filter=c.dataset.f; renderSec(); });
+$('#btnContinue').onclick=()=>{
+  for(let i=0;i<SECTIONS.length;i++){ const st=secStat(i); if(!st.complete){ openSec(i); return; } }
+  go('sum'); toast('🎉 បំពេញគ្រប់សំណួររួចរាល់');
+};
+$('#btnBackup').onclick=backup;
+$('#btnRestore').onclick=()=>$('#fileRestore').click();
+$('#fileRestore').onchange=e=>{ if(e.target.files[0]) restore(e.target.files[0]); e.target.value=''; };
+
+$('#fabUp').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+window.addEventListener('scroll',()=>$('#fabUp').classList.toggle('on', window.scrollY>420));
+window.addEventListener('beforeunload',()=>{ try{ saveNow(); }catch(e){} });
+
+/* ================= ចាប់ផ្តើម ================= */
+load(); applyView(); bindInfo(); fillInfo(); renderRecs(); go('home');
+if(purgedOld) setTimeout(()=>toast('🧹 ទិន្នន័យជំនាន់ចាស់ត្រូវបានសម្អាត — ចាប់ផ្តើមថ្មី'), 900);
+if(!Store.ok) toast('ℹ️ រក្សាទុកស្វ័យប្រវត្តិមិនដំណើរការ — សូម Save PDF / Excel / CSV រាល់ពេលបញ្ចប់');
+console.log('ផ្នែក:',SECTIONS.length,'| សំណួរសរុប:',TOTAL_Q);
+</script>
+</body>
+</html>
