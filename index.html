@@ -563,7 +563,7 @@ nav.bot{
 
   <div class="qlist" id="qList"></div>
   <div class="xwrap hide" id="xWrap"><table class="xform" id="xTable"></table></div>
-  <div class="scrollhint hide" id="scrollHint">↔ អូសទៅឆ្វេង-ស្តាំ ដើម្បីមើលគ្រប់ជួរ</div>
+  <div class="scrollhint hide" id="scrollHint" data-i18n="scrollHint">↔ អូសទៅឆ្វេង-ស្តាំ ដើម្បីមើលគ្រប់ជួរ</div>
 
   <div class="glass card">
     <h2><span class="chip-i">✍️</span> <span data-i18n="secComment">បរិយាយ÷</span></h2>
@@ -588,7 +588,7 @@ nav.bot{
       <button class="btn pri wide" id="btnSaveRec3" data-i18n="recSaveBtn">📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា</button>
     </div>
     <div id="recList"></div>
-    <p style="font-size:10.5px;color:var(--ink-dim);margin:11px 0 0;line-height:1.7">
+    <p style="font-size:10.5px;color:var(--ink-dim);margin:11px 0 0;line-height:1.7" data-i18n-html="recNote">
       រក្សាទុកបានត្រឹម <b>២០ កំណត់ត្រាចុងក្រោយ</b> — ពេលលើស ២០ កំណត់ត្រាចាស់បំផុតត្រូវលុបដោយស្វ័យប្រវត្តិ។
       បើអង្គចងចាំពេញ រូបថតក្នុងកំណត់ត្រាចាស់នឹងត្រូវលុបជាមុនសិន។
     </p>
@@ -596,16 +596,16 @@ nav.bot{
 
   <div class="glass card">
     <h2><span class="chip-i">🏠</span> <span data-i18n="farmInfo">ព័ត៌មានកសិដ្ឋាន</span></h2>
-    <div class="field"><label data-i18n="farmName">ឈ្មោះកសិដ្ឋាន</label><input id="f_farm" placeholder="ឧ. កសិដ្ឋាន ស្វាយរៀង ០១"></div>
-    <div class="field"><label data-i18n="zone">តំបន់ / ខេត្ត</label><input id="f_zone" placeholder="ឧ. ខេត្តត្បូងឃ្មុំ"></div>
+    <div class="field"><label data-i18n="farmName">ឈ្មោះកសិដ្ឋាន</label><input id="f_farm" data-i18n-ph="farmPh" placeholder="ឧ. កសិដ្ឋាន ស្វាយរៀង ០១"></div>
+    <div class="field"><label data-i18n="zone">តំបន់ / ខេត្ត</label><input id="f_zone" data-i18n-ph="zonePh" placeholder="ឧ. ខេត្តត្បូងឃ្មុំ"></div>
     <div class="two">
       <div class="field"><label data-i18n="date">កាលបរិច្ឆេទ</label><input id="f_date" type="date"></div>
       <div class="field"><label data-i18n="head">ចំនួនជ្រូក (ក្បាល)</label><input id="f_head" type="number" inputmode="numeric" placeholder="0"></div>
     </div>
-    <div class="field"><label data-i18n="auditor">ឈ្មោះអ្នកធ្វើរបាយការណ៍</label><input id="f_by" placeholder="ឈ្មោះ​ពេញ"></div>
-    <div class="field"><label data-i18n="owner">តំណាងម្ចាស់កសិដ្ឋាន</label><input id="f_owner" placeholder="ឈ្មោះ​ពេញ"></div>
-    <div class="field"><label data-i18n="comp">តំណាងក្រុមហ៊ុន</label><input id="f_comp" placeholder="ឈ្មោះ​ពេញ"></div>
-    <div class="field"><label data-i18n="genNote">កំណត់សម្គាល់ទូទៅ</label><textarea id="f_note" rows="3" placeholder="សេចក្តីសង្ខេប ឬ អនុសាសន៍..."></textarea></div>
+    <div class="field"><label data-i18n="auditor">ឈ្មោះអ្នកធ្វើរបាយការណ៍</label><input id="f_by" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ"></div>
+    <div class="field"><label data-i18n="owner">តំណាងម្ចាស់កសិដ្ឋាន</label><input id="f_owner" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ"></div>
+    <div class="field"><label data-i18n="comp">តំណាងក្រុមហ៊ុន</label><input id="f_comp" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ"></div>
+    <div class="field"><label data-i18n="genNote">កំណត់សម្គាល់ទូទៅ</label><textarea id="f_note" rows="3" data-i18n-ph="genNotePh" placeholder="សេចក្តីសង្ខេប ឬ អនុសាសន៍..."></textarea></div>
   </div>
 
   <div class="glass card">
@@ -622,7 +622,7 @@ nav.bot{
       <button class="btn" id="btnBackup" data-i18n="backup">💾 Backup (JSON)</button>
       <button class="btn" id="btnRestore" data-i18n="restore">⬆️ ស្តារឡើងវិញ</button>
     </div>
-    <p style="font-size:11px;color:var(--ink-dim);margin:12px 0 0;line-height:1.7">
+    <p style="font-size:11px;color:var(--ink-dim);margin:12px 0 0;line-height:1.7" data-i18n-html="dataNote">
       ទិន្នន័យស្ថិតក្នុងទូរស័ព្ទ/កុំព្យូទ័ររបស់អ្នកតែប៉ុណ្ណោះ — មិនផ្ញើទៅណាទេ។
       រៀងរាល់ពេលបញ្ចប់ការត្រួតពិនិត្យម្តងៗ សូមចុច <b>Save PDF / Excel / CSV</b> ដើម្បីទុកជាឯកសារ។
     </p>
@@ -695,7 +695,7 @@ nav.bot{
   <div class="glass card">
     <h2><span class="chip-i">📊</span> <span data-i18n="sumBySec">ពិន្ទុតាមផ្នែក</span></h2>
     <table class="tbl" id="sumTbl"></table>
-    <p style="font-size:10.5px;color:var(--ink-dim);margin:10px 0 0;line-height:1.7">
+    <p style="font-size:10.5px;color:var(--ink-dim);margin:10px 0 0;line-height:1.7" data-i18n="sumNote">
       «គិត» = ចំនួនសំណួរដែលគិតពិន្ទុ (សំណួរសរុប − N/A)។ ពិន្ទុផ្នែក = មាន ÷ គិត × ១០០។
     </p>
   </div>
@@ -721,7 +721,7 @@ nav.bot{
 
   <div class="btnrow savebar">
     <button class="btn pri sv-open">⬇️ Save PDF / Excel / CSV</button>
-    <button class="btn" id="btnSaveRec2">📚 រក្សាទុកជាកំណត់ត្រា</button>
+    <button class="btn" id="btnSaveRec2" data-i18n="saveRecBtn2">📚 រក្សាទុកជាកំណត់ត្រា</button>
   </div>
 </section>
 
@@ -735,9 +735,9 @@ nav.bot{
   <div class="grab"></div>
   <h3 data-i18n="clearTitle">🧹 សម្អាតទិន្នន័យ</h3>
   <p class="sub" id="clearSub"></p>
-  <button class="sv" id="clForm"><i>🧽</i><span><b data-i18n="clForm">សម្អាតទម្រង់បច្ចុប្បន្ន</b><small>លុប ចម្លើយ · ចំណាំ · រូបថត · បរិយាយ÷ &nbsp;|&nbsp; រក្សា ព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
-  <button class="sv" id="clRecs"><i>📚</i><span><b data-i18n="clRecs">លុបកំណត់ត្រាទាំងអស់</b><small>លុបតែបញ្ជីកំណត់ត្រា ២០ · ទម្រង់បច្ចុប្បន្នមិនប៉ះពាល់</small></span></button>
-  <button class="sv danger" id="clAll"><i>⚠️</i><span><b data-i18n="clAll">លុបទាំងអស់ ចាប់ផ្តើមថ្មី</b><small>លុបគ្រប់យ៉ាង រួមទាំងព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
+  <button class="sv" id="clForm"><i>🧽</i><span><b data-i18n="clForm">សម្អាតទម្រង់បច្ចុប្បន្ន</b><small data-i18n-html="clFormSub">លុប ចម្លើយ · ចំណាំ · រូបថត · បរិយាយ÷ &nbsp;|&nbsp; រក្សា ព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
+  <button class="sv" id="clRecs"><i>📚</i><span><b data-i18n="clRecs">លុបកំណត់ត្រាទាំងអស់</b><small data-i18n="clRecsSub">លុបតែបញ្ជីកំណត់ត្រា ២០ · ទម្រង់បច្ចុប្បន្នមិនប៉ះពាល់</small></span></button>
+  <button class="sv danger" id="clAll"><i>⚠️</i><span><b data-i18n="clAll">លុបទាំងអស់ ចាប់ផ្តើមថ្មី</b><small data-i18n="clAllSub">លុបគ្រប់យ៉ាង រួមទាំងព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា</small></span></button>
   <button class="sv" id="clClose" style="justify-content:center;margin-bottom:0"><span><b data-i18n="close">បិទ</b></span></button>
 </div>
 
@@ -745,11 +745,11 @@ nav.bot{
   <div class="grab"></div>
   <h3 data-i18n="saveSheet">⬇️ Save / នាំចេញ</h3>
   <p class="sub" id="sheetSub"></p>
-  <button class="sv pri" id="svPdf"><i>🖨️</i><span><b data-i18n="savePdf">Save PDF</b><small>របាយការណ៍ពេញលេញ ដូច Form ដើម · ជ្រើស “Save as PDF”</small></span></button>
-  <button class="sv" id="svXls"><i>📊</i><span><b data-i18n="saveXls">Save Excel (.xlsx)</b><small>ឯកសារ Excel ពិតប្រាកដ ២ សន្លឹក · បើកបានគ្រប់ Excel / Google Sheets</small></span></button>
-  <button class="sv" id="svCsv"><i>📄</i><span><b data-i18n="saveCsv">Save CSV (.csv)</b><small>UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets</small></span></button>
-  <button class="sv" id="svRec"><i>📚</i><span><b data-i18n="saveRecOpt">រក្សាទុកជាកំណត់ត្រា</b><small>ទុកក្នុង App ដើម្បីមើលវិញ (អតិបរមា ២០ ចុងក្រោយ)</small></span></button>
-  <button class="sv" id="svJson"><i>💾</i><span><b data-i18n="saveJson">Backup (.json)</b><small>ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ</small></span></button>
+  <button class="sv pri" id="svPdf"><i>🖨️</i><span><b data-i18n="savePdf">Save PDF</b><small data-i18n="svPdfSub">របាយការណ៍ពេញលេញ ដូច Form ដើម · ជ្រើស “Save as PDF”</small></span></button>
+  <button class="sv" id="svXls"><i>📊</i><span><b data-i18n="saveXls">Save Excel (.xlsx)</b><small data-i18n="svXlsSub">ឯកសារ Excel ពិតប្រាកដ ២ សន្លឹក · បើកបានគ្រប់ Excel / Google Sheets</small></span></button>
+  <button class="sv" id="svCsv"><i>📄</i><span><b data-i18n="saveCsv">Save CSV (.csv)</b><small data-i18n="svCsvSub">UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets</small></span></button>
+  <button class="sv" id="svRec"><i>📚</i><span><b data-i18n="saveRecOpt">រក្សាទុកជាកំណត់ត្រា</b><small data-i18n="svRecSub">ទុកក្នុង App ដើម្បីមើលវិញ (អតិបរមា ២០ ចុងក្រោយ)</small></span></button>
+  <button class="sv" id="svJson"><i>💾</i><span><b data-i18n="saveJson">Backup (.json)</b><small data-i18n="svJsonSub">ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ</small></span></button>
   <button class="sv" id="svClose" style="justify-content:center;margin-bottom:0"><span><b data-i18n="close">បិទ</b></span></button>
 </div>
 
@@ -1250,7 +1250,7 @@ function _applyView(){
   $$('#segView button').forEach(b=>b.classList.toggle('on', b.dataset.v===v));
   $$('#segStyle button').forEach(b=>b.classList.toggle('on', b.dataset.s===st));
   const hint=$('#styleHint');
-  if(hint) hint.textContent = st==='table' ? 'ដូច Form ក្នុង Excel' : 'ងាយចុចលើទូរស័ព្ទ';
+  if(hint) hint.textContent = st==='table' ? T().hintTable : T().hintCard;
 }
 
 /* ================= ការបង្ហាញ ================= */
@@ -1495,7 +1495,7 @@ function fallbackList(si){
      +   '<button class="ab '+(v==='no' ?'on-no' :'')+'" data-v="no">✖ មិនមាន</button>'
      +   '<button class="ab '+(v==='na' ?'on-na' :'')+'" data-v="na">⊘ មិនពាក់ព័ន្ធ</button>'
      +  '</div>'
-     +  '<textarea class="qnote" placeholder="ចំណាំ...">'+String(a.note||'').replace(/</g,'&lt;')+'</textarea>'
+     +  '<textarea class="qnote" placeholder="'+T().qnotePh+'">'+String(a.note||'').replace(/</g,'&lt;')+'</textarea>'
      + '</div>';
   }
   box.innerHTML=h;
@@ -1537,10 +1537,10 @@ function go(name){
   $$('.screen').forEach(s=>s.classList.remove('on'));
   $('#sc-'+name).classList.add('on');
   $$('.nb').forEach(b=>b.classList.toggle('on', b.dataset.go===name));
-  if(name==='home'){ renderHome(); $('#topTitle').textContent='ត្រួតពិនិត្យជីវៈសុវត្ថិភាព'; }
+  if(name==='home'){ renderHome(); $('#topTitle').textContent=T().appTitle; }
   if(name==='sec') renderSec();
-  if(name==='sum'){ renderSum(); $('#topTitle').textContent='សង្ខេប និងពិន្ទុ'; }
-  if(name==='info'){ fillInfo(); renderRecs(); runDiag(); $('#topTitle').textContent='ព័ត៌មានកសិដ្ឋាន'; }
+  if(name==='sum'){ renderSum(); $('#topTitle').textContent=T().topSum; }
+  if(name==='info'){ fillInfo(); renderRecs(); runDiag(); $('#topTitle').textContent=T().topInfo; }
   renderTop(); window.scrollTo({top:0,behavior:'smooth'});
 }
 function openSec(i){ S.cur=i; S.filter='all'; $$('.fchip').forEach(c=>c.classList.toggle('on',c.dataset.f==='all')); go('sec'); }
@@ -1615,22 +1615,31 @@ km:{
  allYes:'✔ ដាក់ "មាន" ទាំងអស់', clearSec:'↺ សម្អាតផ្នែកនេះ',
  thNo:'ល.រ', thDesc:'បរិយាយ', thPts:'ពិន្ទុ', thOther:'ផ្សេងៗ', thSecTotal:'សរុបផ្នែក · គិតពិន្ទុ',
  note:'📝 ចំណាំ', photo:'📷 រូបថត', notePh:'សរសេរចំណាំ ឬអនុសាសន៍...', otherPh:'ផ្សេងៗ...',
- secComment:'✍️ បរិយាយ÷', secCommentPh:'សរសេរបរិយាយសម្រាប់ផ្នែកនេះ...',
+ secComment:'បរិយាយ÷', secCommentPh:'សរសេរបរិយាយសម្រាប់ផ្នែកនេះ...',
  prevSec:'‹ ផ្នែកមុន', nextSec:'ផ្នែកបន្ទាប់ ›', noQ:'គ្មានសំណួរក្នុងតម្រងនេះទេ ✨',
- sumCalc:'🧮 ការគណនាពិន្ទុសរុប', sumBySec:'📊 ពិន្ទុតាមផ្នែក', howScore:'📖 របៀបគិតពិន្ទុ (ច្បាប់ផ្លូវការ)',
- toFix:'⚠️ ចំណុចត្រូវកែតម្រូវ', noFix:'👏 គ្មានចំណុចត្រូវកែតម្រូវទេ',
+ sumCalc:'ការគណនាពិន្ទុសរុប', sumBySec:'ពិន្ទុតាមផ្នែក', howScore:'របៀបគិតពិន្ទុ (ច្បាប់ផ្លូវការ)',
+ toFix:'ចំណុចត្រូវកែតម្រូវ', noFix:'👏 គ្មានចំណុចត្រូវកែតម្រូវទេ',
  avg7:'មធ្យមភាគ ៧ ផ្នែក (ផ្លូវការ)', avgAns:'មធ្យមភាគតែផ្នែកដែលឆ្លើយហើយ', weighted:'ថ្លឹងតាមសំណួរ',
  counts:'មាន / មិនមាន / N/A / មិនទាន់', applicable:'គិត',
- farmInfo:'🏠 ព័ត៌មានកសិដ្ឋាន', head:'ចំនួនជ្រូក (ក្បាល)', auditor:'ឈ្មោះអ្នកធ្វើរបាយការណ៍',
+ farmInfo:'ព័ត៌មានកសិដ្ឋាន', head:'ចំនួនជ្រូក (ក្បាល)', auditor:'ឈ្មោះអ្នកធ្វើរបាយការណ៍',
  owner:'តំណាងម្ចាស់កសិដ្ឋាន', comp:'តំណាងក្រុមហ៊ុន', genNote:'កំណត់សម្គាល់ទូទៅ',
- recTitle:'📚 កំណត់ត្រាចុងក្រោយ', recSaveBtn:'📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា',
+ recTitle:'កំណត់ត្រាចុងក្រោយ', recSaveBtn:'📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា',
  recEmpty:'មិនទាន់មានកំណត់ត្រា — ចុច «រក្សាទុកជាកំណត់ត្រា» ពេលបញ្ចប់ការត្រួតពិនិត្យ',
- open:'📂 បើក', clearTitle:'🧹 សម្អាតទិន្នន័យ', clearBtn:'🧹 បើកជម្រើសសម្អាតទិន្នន័យ',
- dataTitle:'⚙️ ទិន្នន័យ', backup:'💾 Backup (JSON)', restore:'⬆️ ស្តារឡើងវិញ',
- shareTitle:'🔗 របៀបចែករំលែកឱ្យអ្នកដទៃ', diagTitle:'🩺 ពិនិត្យស្ថានភាព App', diagBtn:'🔄 ពិនិត្យឡើងវិញ',
- installTitle:'📲 ដំឡើងលើទូរស័ព្ទ (ដូច App ពិត)',
+ open:'📂 បើក', clearTitle:'សម្អាតទិន្នន័យ', clearBtn:'🧹 បើកជម្រើសសម្អាតទិន្នន័យ',
+ dataTitle:'ទិន្នន័យ', backup:'💾 Backup (JSON)', restore:'⬆️ ស្តារឡើងវិញ',
+ shareTitle:'របៀបចែករំលែកឱ្យអ្នកដទៃ', diagTitle:'ពិនិត្យស្ថានភាព App', diagBtn:'🔄 ពិនិត្យឡើងវិញ',
+ installTitle:'ដំឡើងលើទូរស័ព្ទ (ដូច App ពិត)',
  navHome:'ទំព័រដើម', navFill:'បំពេញ', navSum:'សង្ខេប', navInfo:'ព័ត៌មាន',
  saveSheet:'⬇️ Save / នាំចេញ', savePdf:'Save PDF', saveXls:'Save Excel (.xlsx)', saveCsv:'Save CSV (.csv)',
+ scrollHint:'↔ អូសទៅឆ្វេង-ស្តាំ ដើម្បីមើលគ្រប់ជួរ', saveRecBtn2:'📚 រក្សាទុកជាកំណត់ត្រា',
+ clFormSub:'លុប ចម្លើយ · ចំណាំ · រូបថត · បរិយាយ÷ &nbsp;|&nbsp; រក្សា ព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា',
+ clRecsSub:'លុបតែបញ្ជីកំណត់ត្រា ២០ · ទម្រង់បច្ចុប្បន្នមិនប៉ះពាល់', clAllSub:'លុបគ្រប់យ៉ាង រួមទាំងព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា',
+ svPdfSub:'របាយការណ៍ពេញលេញ ដូច Form ដើម · ជ្រើស “Save as PDF”', svXlsSub:'ឯកសារ Excel ពិតប្រាកដ ២ សន្លឹក · បើកបានគ្រប់ Excel / Google Sheets',
+ svCsvSub:'UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets', svRecSub:'ទុកក្នុង App ដើម្បីមើលវិញ (អតិបរមា ២០ ចុងក្រោយ)', svJsonSub:'ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ',
+ recNote:'រក្សាទុកបានត្រឹម <b>២០ កំណត់ត្រាចុងក្រោយ</b> — ពេលលើស ២០ កំណត់ត្រាចាស់បំផុតត្រូវលុបដោយស្វ័យប្រវត្តិ។ បើអង្គចងចាំពេញ រូបថតក្នុងកំណត់ត្រាចាស់នឹងត្រូវលុបជាមុនសិន។',
+ dataNote:'ទិន្នន័យស្ថិតក្នុងទូរស័ព្ទ/កុំព្យូទ័ររបស់អ្នកតែប៉ុណ្ណោះ — មិនផ្ញើទៅណាទេ។ រៀងរាល់ពេលបញ្ចប់ការត្រួតពិនិត្យម្តងៗ សូមចុច <b>Save PDF / Excel / CSV</b> ដើម្បីទុកជាឯកសារ។',
+ sumNote:'«គិត» = ចំនួនសំណួរដែលគិតពិន្ទុ (សំណួរសរុប − N/A)។ ពិន្ទុផ្នែក = មាន ÷ គិត × ១០០។',
+ topSum:'សង្ខេប និងពិន្ទុ', topInfo:'ព័ត៌មានកសិដ្ឋាន', farmPh:'ឧ. កសិដ្ឋាន ស្វាយរៀង ០១', zonePh:'ឧ. ខេត្តត្បូងឃ្មុំ', fullNamePh:'ឈ្មោះពេញ', genNotePh:'សេចក្តីសង្ខេប ឬ អនុសាសន៍...', qnotePh:'ចំណាំ...',
  saveRecOpt:'រក្សាទុកជាកំណត់ត្រា', saveJson:'Backup (.json)', close:'បិទ',
  clForm:'សម្អាតទម្រង់បច្ចុប្បន្ន', clRecs:'លុបកំណត់ត្រាទាំងអស់', clAll:'លុបទាំងអស់ ចាប់ផ្តើមថ្មី',
  notRated:'មិនទាន់វាយតម្លៃ', startFill:'សូមចាប់ផ្តើមបំពេញសំណួរ',
@@ -1657,22 +1666,31 @@ en:{
  allYes:'✔ Set all to "Yes"', clearSec:'↺ Clear this section',
  thNo:'No.', thDesc:'Description', thPts:'Points', thOther:'Remark', thSecTotal:'Section total · applicable',
  note:'📝 Remark', photo:'📷 Photo', notePh:'Write a remark or recommendation...', otherPh:'Remark...',
- secComment:'✍️ Section comment', secCommentPh:'Write a comment for this section...',
+ secComment:'Section comment', secCommentPh:'Write a comment for this section...',
  prevSec:'‹ Previous', nextSec:'Next section ›', noQ:'No questions match this filter ✨',
- sumCalc:'🧮 How the total was calculated', sumBySec:'📊 Score by section', howScore:'📖 Scoring rules (official)',
- toFix:'⚠️ Items to fix', noFix:'👏 Nothing to fix',
+ sumCalc:'How the total was calculated', sumBySec:'Score by section', howScore:'Scoring rules (official)',
+ toFix:'Items to fix', noFix:'👏 Nothing to fix',
  avg7:'Average of 7 sections (official)', avgAns:'Average of answered sections only', weighted:'Weighted by questions',
  counts:'Yes / No / N/A / Not answered', applicable:'Appl.',
- farmInfo:'🏠 Farm information', head:'Number of pigs (head)', auditor:'Auditor name',
+ farmInfo:'Farm information', head:'Number of pigs (head)', auditor:'Auditor name',
  owner:'Farm owner representative', comp:'Company representative', genNote:'General remarks',
- recTitle:'📚 Recent records', recSaveBtn:'📚 Save the current audit as a record',
+ recTitle:'Recent records', recSaveBtn:'📚 Save the current audit as a record',
  recEmpty:'No records yet — tap "Save as record" when you finish an audit',
- open:'📂 Open', clearTitle:'🧹 Clear data', clearBtn:'🧹 Open clear-data options',
- dataTitle:'⚙️ Data', backup:'💾 Backup (JSON)', restore:'⬆️ Restore',
- shareTitle:'🔗 How to share with others', diagTitle:'🩺 App health check', diagBtn:'🔄 Re-check',
- installTitle:'📲 Install on your phone (like a real app)',
+ open:'📂 Open', clearTitle:'Clear data', clearBtn:'🧹 Open clear-data options',
+ dataTitle:'Data', backup:'💾 Backup (JSON)', restore:'⬆️ Restore',
+ shareTitle:'How to share with others', diagTitle:'App health check', diagBtn:'🔄 Re-check',
+ installTitle:'Install on your phone (like a real app)',
  navHome:'Home', navFill:'Audit', navSum:'Summary', navInfo:'Settings',
  saveSheet:'⬇️ Save / Export', savePdf:'Save PDF', saveXls:'Save Excel (.xlsx)', saveCsv:'Save CSV (.csv)',
+ scrollHint:'↔ Swipe left / right to see all columns', saveRecBtn2:'📚 Save as record',
+ clFormSub:'Clears answers · notes · photos · comments &nbsp;|&nbsp; keeps farm info and records',
+ clRecsSub:'Deletes only the 20 saved records · the current form is not affected', clAllSub:'Deletes everything, including farm info and records',
+ svPdfSub:'Full report, same layout as the original form · choose “Save as PDF”', svXlsSub:'Real Excel file, 2 sheets · opens in any Excel / Google Sheets',
+ svCsvSub:'UTF-8 (Khmer text readable) · for Google Sheets', svRecSub:'Kept inside the app for later review (last 20 max)', svJsonSub:'Copy of all data, for restoring later',
+ recNote:'Only the <b>last 20 records</b> are kept — when there are more than 20, the oldest is deleted automatically. If storage is full, photos in older records are removed first.',
+ dataNote:'Data stays only on your phone/computer — nothing is sent anywhere. After each audit, tap <b>Save PDF / Excel / CSV</b> to keep a file copy.',
+ sumNote:'“Appl.” = number of scored (applicable) questions (total − N/A). Section score = Yes ÷ Appl. × 100.',
+ topSum:'Summary & score', topInfo:'Farm information', farmPh:'e.g. Svay Rieng Farm 01', zonePh:'e.g. Tbong Khmum province', fullNamePh:'Full name', genNotePh:'Summary or recommendations...', qnotePh:'Note...',
  saveRecOpt:'Save as record', saveJson:'Backup (.json)', close:'Close',
  clForm:'Clear the current form', clRecs:'Delete all records', clAll:'Delete everything and start over',
  notRated:'Not yet rated', startFill:'Start answering the questions',
@@ -1698,7 +1716,7 @@ function applyLang(){
   var lb=document.getElementById('btnLang'); if(lb) lb.textContent = (S.lang==='km' ? 'EN' : 'ខ្មែរ');
 }
 function setLang(l){
-  S.lang = l; save(true); applyLang();
+  S.lang = l; save(true); applyLang(); _applyView();
   renderTop(); renderHome(); renderSum(); renderRecs(); runDiag();
   if(document.getElementById('sc-sec').className.indexOf('on')>=0) renderSec();
   toast(S.lang==='en' ? '🌐 Switched to English' : '🌐 ប្តូរជាភាសាខ្មែរ');
@@ -2037,9 +2055,10 @@ function fname(ext){
 /* ================= ផ្ទាំង Save (គ្រប់ផ្ទាំង) ================= */
 function openSave(){
   const o=overall();
-  $('#sheetSub').textContent=(S.info.farm||'កសិដ្ឋាន')+' · បំពេញ '+kh(o.answered)+'/'+kh(o.total)
-    +' · ពិន្ទុ '+(o.score===null?'–':fx(o.score))+'/១០០'+(o.complete?'':' (កំពុងបំពេញ)')
-    +' · កំណត់ត្រា '+kh(S.recs.length)+'/'+kh(MAXREC);
+  const en=S.lang==='en';
+  $('#sheetSub').textContent=(S.info.farm||(en?'Farm':'កសិដ្ឋាន'))+(en?' · Completed ':' · បំពេញ ')+kh(o.answered)+'/'+kh(o.total)
+    +(en?' · Score ':' · ពិន្ទុ ')+(o.score===null?'–':fx(o.score))+'/'+kh(100)+(o.complete?'':(en?' (in progress)':' (កំពុងបំពេញ)'))
+    +(en?' · Records ':' · កំណត់ត្រា ')+kh(S.recs.length)+'/'+kh(MAXREC);
   $('#sheetBg').classList.add('on'); $('#sheet').classList.add('on');
 }
 function closeSave(){ $('#sheetBg').classList.remove('on'); $('#sheet').classList.remove('on'); }
