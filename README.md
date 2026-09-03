@@ -17,7 +17,8 @@ A single-file, offline-capable HTML web app for auditing pig-farm biosecurity, i
 - ឯកសារតែមួយ (`index.html`) — គ្មាន build, គ្មាន server
 - ដំណើរការលើទូរស័ព្ទ, ថេប្លេត និងកុំព្យូទ័រ
 - រក្សាទុកទិន្នន័យក្នុងឧបករណ៍ (localStorage)
-- នាំចេញជា PDF / Excel / CSV
+- នាំចេញជា PDF / Excel / CSV / JSON — ដើរបានគ្រប់ browser រួមទាំង browser ក្នុង Telegram / Facebook (ប្រើផ្ទាំង Share របស់ទូរស័ព្ទ)
+- ឯកសារ PDF បង្កើតដោយផ្ទាល់ក្នុង browser (offline) · Print / Save as PDF ក៏មានដែរ
 - អក្សរខ្មែរ (Kantumruy Pro, Battambang)
 
 ## របៀបប្រើ / Usage
@@ -25,6 +26,10 @@ A single-file, offline-capable HTML web app for auditing pig-farm biosecurity, i
 បើកតាម link ខាងលើ ឬទាញយក `index.html` រួចបើកដោយ browser ណាមួយ។
 
 Download `index.html` and open it in any browser — no installation required.
+
+**ចែករំលែក / Sharing:** ផ្ញើ link ខាងលើតាម Telegram / Email — អ្នកទទួលប្រើបានភ្លាម និង Save PDF / Excel / CSV បានគ្រប់មុខងារ។ បើ link បើកក្នុង browser របស់ Telegram/Facebook App នឹងប្រើផ្ទាំង Share ជំនួសការ Download ឬចុច ⋯ → *Open in Safari / Chrome*។
+
+Share the link above by Telegram / Email — recipients can use the app immediately with every export available. Inside Telegram/Facebook in-app browsers the app hands files to the system Share sheet, or tap ⋯ → *Open in Safari / Chrome*.
 
 ---
 
