@@ -8,7 +8,9 @@ A single-file, offline-capable HTML web app for auditing pig-farm biosecurity, i
 
 ## 🔗 ប្រើប្រាស់ / Live app
 
-👉 https://ornsamnang8-svg.github.io/mspig-biosecurity-checklist/
+👉 https://ornsamnang8-svg.github.io/mspig-biosecurity-checklist/ (GitHub Pages)
+
+👉 https://mspig-biosecurity-checklist.vercel.app/ (Vercel)
 
 ## លក្ខណៈពិសេស / Features
 
