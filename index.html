@@ -493,68 +493,80 @@ body.v-pc #sigSheet .btnrow,body.v-pc #iabBar .btnrow{grid-template-columns:1fr 
   font-family:var(--font);border-bottom:2px solid #ffb4aa;
   max-height:45vh;overflow:auto}
 
-/* ---------- Print report ---------- */
-
+/* ---------- របាយការណ៍ Print / PDF — ប្លង់ដូច Form Excel ដើម (A4 ទំព័រថេរ · វាស់ពី PDF ដើម ជាឯកតា pt) ----------
+   ទំព័រ A4 = 595.2 × 841.68pt · ស៊ុម x 15.7→568.9pt · ជួរ 16.92pt · ទំព័រ ១ ៣២ ជួរក្រោយប្រអប់ព័ត៌មាន · ទំព័របន្ទាប់ ៤១ ជួរ */
 #report{display:none}
-@page{ size:A4 portrait; margin:7mm 6mm 13mm 6mm; }
+@page{ size:A4 portrait; margin:0 }
+.rpage{position:relative;width:210mm;height:296.5mm;overflow:hidden;background:#fff;color:#000;
+  font-family:'Times New Roman',Times,'MsBattambang','Khmer OS Battambang','Noto Serif Khmer',serif;
+  font-size:7.32pt;line-height:1.2;font-weight:400;letter-spacing:0;text-align:left;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  page-break-after:always;break-after:page;page-break-inside:avoid;break-inside:avoid}
+.rpage:last-child{page-break-after:auto;break-after:auto}
+.rpage *,.rp-measure *{box-sizing:border-box}
+.rp-logo{position:absolute;left:16.7pt;top:61.6pt;height:31.1pt;width:auto;display:block}
+.rp-warn{position:absolute;right:26.3pt;top:66pt;max-width:210pt;padding:1.5pt 5pt;border:.6pt solid #b88600;
+  background:#fff3cd;font-size:6.6pt;font-weight:700;line-height:1.35;text-align:right}
+.rp-title{position:absolute;left:15.7pt;width:553.2pt;top:99.6pt;text-align:center;white-space:nowrap;
+  font-family:'Times New Roman',Times,'MsMoul','Khmer OS Muol Light','Khmer OS Muol',serif;
+  font-size:9.36pt;font-weight:700;font-synthesis:none;line-height:1.7}
+.rp-orn{position:absolute;left:252.6pt;top:122.4pt;width:80pt;height:8.6pt;display:block}
+.rp-frame{position:absolute;left:15.7pt;width:553.2pt;border-left:1.32pt solid #000;border-right:1.32pt solid #000}
+.rp-foot{position:absolute;left:0;width:100%;top:809.6pt;text-align:center;
+  font-family:Calibri,Carlito,'Liberation Sans',Arial,sans-serif;font-size:7.32pt;line-height:1.2}
+/* ប្រអប់ព័ត៌មាន (ទំព័រ ១) */
+.rp-info{position:relative;height:63.92pt;border-top:1.32pt solid #000;border-bottom:1.32pt solid #000}
+.rp-info .ib{position:absolute;top:0;bottom:0;border-left:1.32pt solid #000}
+.rp-info .il{position:absolute;left:.9pt;white-space:nowrap;font-weight:700;line-height:1.2}
+.rp-info .il b{font-weight:700}
+.rp-info .il .dt{font-weight:400}
+.rp-info .bl{position:absolute;text-align:center;font-size:8.04pt;font-weight:700;line-height:1.2}
+.rp-info .bl .u{display:inline-block;border-bottom:.45pt solid #000;line-height:1.05;padding-bottom:.3pt}
+.rp-info .bv{position:absolute;text-align:center;font-size:12pt;font-weight:700;line-height:1}
+.rp-info .bu{position:absolute;height:0;border-top:.34pt solid #4f81bd}
+/* ជួរ */
+.rr{display:flex;min-height:16.92pt;width:100%}
+.rr > div{padding:0 1.2pt 1.5pt;display:flex;align-items:flex-end;min-width:0;overflow-wrap:anywhere;word-break:normal}
+.rr .c0{width:17.6pt;flex:0 0 17.6pt;justify-content:center}
+.rr .c1{width:317.9pt;flex:0 0 317.9pt;flex-direction:column;justify-content:flex-end;align-items:stretch}
+.rr .c2,.rr .c3,.rr .c4{width:42pt;flex:0 0 42pt;justify-content:center}
+.rr .c5{flex:1 1 auto;font-size:6.4pt;line-height:1.25}
+.rr-item,.rr-th{border-bottom:.6pt solid #000}
+.rr-item > div,.rr-th > div{border-right:.6pt solid #000}
+.rr-item > div:last-child,.rr-th > div:last-child{border-right:none}
+.rr.top{border-top:.6pt solid #000}
+.rr.p1first{min-height:15.98pt}
+.rpage .k{font-size:113%}
+.rp-title .k,.rr-sig .sl .k{font-size:100%}
+.rr-th > div{font-weight:700}
+.rr-th > div{justify-content:center;font-size:8.04pt;padding-bottom:1.2pt}
+.rr-item .sub{font-size:6pt;line-height:1.25;color:#333}
+.rr-item .m{font-size:9pt;font-weight:700;line-height:1;align-self:center}
+.rr-item .c2,.rr-item .c3{align-items:center;padding-bottom:0}
+.rr-sec{border-bottom:.6pt solid #000}
+.rr-sec > div,.rr-note > div,.rr-cmt > div{width:100%;flex:1 1 auto;padding-left:.9pt;white-space:pre-wrap}
+.rr-sec > div{font-weight:700}
+.rr-cmt.ind > div{padding-left:19.4pt}
+.rr-sig{position:relative;height:135.36pt;min-height:135.36pt;border-bottom:1.32pt solid #000;display:block}
+.rr-sig .sg{position:absolute;top:0;bottom:0;width:150pt;margin-left:-75pt;padding:0;display:block;text-align:center}
+.rr-sig .sl{position:absolute;left:0;right:0;top:33pt;
+  font-family:'Times New Roman',Times,'MsMoul','Khmer OS Muol Light','Khmer OS Muol',serif;font-size:8.04pt;font-weight:700;font-synthesis:none;line-height:1.7}
+.rr-sig .si{position:absolute;left:0;right:0;top:52pt;height:63pt;display:flex;align-items:flex-end;justify-content:center}
+.rr-sig .si img{display:block;max-width:140pt;max-height:62pt;width:auto;height:auto}
+.rr-sig .ln{position:absolute;top:116.4pt;left:50%;height:0;border-top:.34pt solid #000}
+.rr-sig .sn{position:absolute;left:0;right:0;top:119pt;font-size:7.32pt;line-height:1.2}
+.rp-measure{position:absolute;left:-30000px;top:0;width:550.56pt;visibility:hidden;pointer-events:none}
 @media print{
-  html,body{background:#fff !important;color:#000 !important;
-    font-family:'Times New Roman',Times,'MsBattambang','Khmer OS Battambang','Noto Serif Khmer',serif !important}
-  /* អក្សរអង់គ្លេស = Times New Roman · អក្សរខ្មែរ = Battambang · ចំណងជើង = Muol */
-  #report,#report td,#report div,#report span,#report b{
-    font-family:'Times New Roman',Times,'MsBattambang','Khmer OS Battambang','Noto Serif Khmer',serif}
-  header.top,nav.bot,.fab,#toast,.screen,#sheet,#clearSheet,#fileSheet,#sigSheet,#sheetBg,#errBar,#iabBar,#pdfBusy{display:none !important}
+  html,body{background:#fff !important;margin:0 !important;padding:0 !important;min-height:0 !important;height:auto !important;
+    overflow:visible !important;overscroll-behavior:auto !important}
+  body > *:not(#report):not(.rp-mhost){display:none !important}
   body::before,body::after{display:none !important}
-  #report{display:block !important;color:#000}
-  #report *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  #report .rlogo{text-align:left;margin:0 0 6px}
-  #report .rlogo img{height:40px;width:auto;display:block}
-  #report h1{font-family:'Times New Roman',Times,'MsMoul','Khmer OS Muol Light','Khmer OS Muol',serif;
-    font-size:15px;text-align:center;margin:2px 0 8px;font-weight:700;font-synthesis:none;letter-spacing:0;line-height:1.9}
-  #report .rsub{text-align:center;font-size:9px;margin:0 0 7px;font-weight:700;display:none}
-  #report .warn{border:1pt solid #000;background:#FFF3CD !important;padding:3px 6px;
-    margin:0 0 5px;font-weight:700;font-size:9px}
-  table.fm{width:100%;border-collapse:collapse;table-layout:fixed;margin-bottom:0}
-  table.fm td{border:.5pt solid #000;padding:2.2px 4px;font-size:9px;line-height:1.6;
-    vertical-align:middle;word-wrap:break-word;overflow-wrap:break-word}
-  table.fm tr td:first-child{border-left:1pt solid #000}
-  table.fm tr td:last-child{border-right:1pt solid #000}
-  table.fm tr{page-break-inside:avoid;break-inside:avoid}
-  table.fm tr.keep{page-break-after:avoid;break-after:avoid}
-  #report td.inf{border:none;border-left:1pt solid #000;border-right:1pt solid #000;
-    font-size:10px;padding:5px 6px;height:22px}
-  #report td.inf.t{border-top:1pt solid #000}
-  #report td.inf.b{border-bottom:1pt solid #000}
-  #report td.box{border:1pt solid #000;text-align:center;font-weight:700;font-size:9px;line-height:1.5}
-  #report td.box b{font-size:13px}
-  #report td.sec{border-top:none;border-left:1pt solid #000;border-right:1pt solid #000;
-    font-weight:700;font-size:10px;padding:3px 6px}
-  #report tr.hd td{text-align:center;font-weight:700;font-size:9px;background:#F2F2F2 !important;padding:2px 1px}
-  #report td.c{text-align:center}
-  #report td.d{text-align:left}
-  #report td.d .sub{font-size:7.5px;color:#555;line-height:1.45}
-  #report td.m{text-align:center;font-size:12px;font-weight:700;line-height:1}
-  #report td.r{font-size:8px;color:#333}
-  #report td.note{border-top:none;border-bottom:none;
-    border-left:1pt solid #000;border-right:1pt solid #000;font-size:9px;padding:3px 6px}
-  #report td.note.b{border-bottom:1pt solid #000}
-  table.fm.tot{margin-top:8px}
-  table.fm.tot td{border:1pt solid #000;font-weight:700;font-size:11px;padding:6px;text-align:center}
-  table.fm.tot td.tv{background:#FFE9A8 !important;font-size:12.5px}
-  #report .sig{display:flex;justify-content:space-between;margin-top:26px;
-    page-break-inside:avoid;break-inside:avoid}
-  #report .sig div{width:30%;text-align:center;font-size:9.5px}
-  #report .sig .sl{display:block;font-weight:700;margin-bottom:4px}
-  #report .sig .sgi{display:flex;align-items:flex-end;justify-content:center;height:60px;margin:0 0 2px}
-  #report .sig .sgi img{display:block;max-height:58px;max-width:100%;width:auto;height:auto}
-  #report .sig .sn{display:block;padding-top:3px;min-height:15px}
-  #report .sig .sn.line{border-top:.8pt solid #000}
-  .pgbrk{page-break-after:always;break-after:page}
+  #report{display:block !important;margin:0;padding:0}
 }
 @media (min-width:600px){ body{font-size:15.5px} }
 
 /* ---------- PDF file (raster) + in-app browser helpers ---------- */
-#pdfHost{position:absolute;left:0;top:0;width:748px;background:#fff;color:#000;z-index:-5;pointer-events:none}
+#pdfHost{position:absolute;left:0;top:0;width:210mm;background:#fff;color:#000;z-index:-5;pointer-events:none}
 #pdfHost #report{display:block}
 #pdfBusy{display:none;position:fixed;inset:0;z-index:9000;background:rgba(255,255,255,.92);
   align-items:center;justify-content:center;flex-direction:column;gap:10px;font-size:14px;color:var(--g-deep);font-weight:600;text-align:center;padding:20px}
@@ -935,7 +947,7 @@ body.v-pc #sigSheet .btnrow,body.v-pc #iabBar .btnrow{grid-template-columns:1fr 
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-10-04', ERRS=[];
+var APP_VER='2026-10-06', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -2170,6 +2182,9 @@ function sheetXml(sh){
    +'<cols>'+colXml+'</cols><sheetData>'+sd+'</sheetData>'+mg
    +'<pageMargins left="0.22" right="0.23" top="0.29" bottom="0.52" header="0.3" footer="0.3"/>'
    +'<pageSetup paperSize="9" orientation="portrait" fitToWidth="1" fitToHeight="0" horizontalDpi="600" verticalDpi="600"/>'
+   +(sh.footer ? '<headerFooter><oddFooter>'+xesc(sh.footer)+'</oddFooter></headerFooter>' : '')
+   +((sh.rowBreaks&&sh.rowBreaks.length) ? '<rowBreaks count="'+sh.rowBreaks.length+'" manualBreakCount="'+sh.rowBreaks.length+'">'
+       + sh.rowBreaks.map(function(b){ return '<brk id="'+b+'" max="16383" man="1"/>'; }).join('') + '</rowBreaks>' : '')
    +(sh.drawingRid ? '<drawing r:id="'+sh.drawingRid+'"/>' : '')
    +'</worksheet>';
 }
@@ -2375,38 +2390,34 @@ function toXlsx(){
   MG.push('E'+r0+':F'+r2);   /* ប្រអប់ ចំណាប់ថ្នាក់ */
   if(M.warn){ r=push([{v:M.warn,s:7},'','','','',''],22); span(r,1,6); }
 
-  /* ---- ផ្នែកនីមួយៗ ---- */
-  for(i=0;i<M.secs.length;i++){
-    var sc=M.secs[i];
-    r=push([{v:sc.head,s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7}],25.2); span(r,1,6);
-    push([{v:M.thNo,s:8},{v:M.thDesc,s:9},{v:M.thYes,s:9},{v:M.thNo2,s:9},{v:M.thPts,s:9},{v:M.thOther,s:10}],25.2);
-    for(j=0;j<sc.rows.length;j++){
-      var q=sc.rows[j];
+  /* ---- ផ្នែកនីមួយៗ — ជួរតាមលំដាប់ដូចរបាយការណ៍ PDF ដើម្បីកាត់ទំព័រត្រង់ជួរដូចគ្នា ---- */
+  var RPg=buildReport(), U=RPg.units, uRow=[], lastU=U.length-2, rSig=0, SIG_ROWS=[22,22,22];
+  for(i=0;i<U.length;i++){
+    var u=U[i];
+    if(u.t==='sec'){ r=push([{v:u.text,s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7},{v:'',s:7}],25.2); span(r,1,6); }
+    else if(u.t==='th') push([{v:M.thNo,s:8},{v:M.thDesc,s:9},{v:M.thYes,s:9},{v:M.thNo2,s:9},{v:M.thPts,s:9},{v:M.thOther,s:10}],25.2);
+    else if(u.t==='item'){ var q=u.q;
       push([{v:q.num,s:11},{v:q.text+(q.sub?'\n'+q.sub:''),s:12},
-            {v:q.mYes,s:13},{v:q.mNo,s:13},{v:'',s:14},{v:q.other,s:15}], q.sub?36:25.2);
+            {v:q.mYes,s:13},{v:q.mNo,s:13},{v:'',s:14},{v:q.other,s:15}], q.sub?36:25.2); }
+    else if(u.t==='note' || u.t==='cmt'){
+      var st=(i===lastU)?17:16;
+      r=push([{v:u.text,s:st},{v:'',s:st},{v:'',s:st},{v:'',s:st},{v:'',s:st},{v:'',s:st}],25.2); span(r,1,6); }
+    else if(u.t==='sig'){
+      /* ហត្ថលេខា (រូបភាពហត្ថលេខា ជំនួសបន្ទាត់ · គ្មានរូប = ទុកបន្ទាត់សម្រាប់ចុះហត្ថលេខាដោយដៃ) */
+      push([],24);
+      rSig=push([{v:M.sig[0].l,s:18},{v:'',s:18},{v:M.sig[1].l,s:18},{v:'',s:18},{v:M.sig[2].l,s:18},{v:'',s:18}],25.2);
+      span(rSig,1,2); span(rSig,3,4); span(rSig,5,6);
+      push([],22); push([],22); push([],22);
+      var sn=function(k){ return M.sig[k].img ? 21 : 19; };
+      r=push([{v:M.sig[0].n,s:sn(0)},{v:'',s:sn(0)},{v:M.sig[1].n,s:sn(1)},{v:'',s:sn(1)},{v:M.sig[2].n,s:sn(2)},{v:'',s:sn(2)}],25.2);
+      span(r,1,2); span(r,3,4); span(r,5,6);
     }
-    if(sc.note){ r=push([{v:sc.note,s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16}],25.2); span(r,1,6); }
-    if(i===0 || i===1 || sc.cmt){
-      r=push([{v:M.lblCmt,s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16},{v:'',s:16}],25.2); span(r,1,6);
-      var lines=[ sc.cmt||DOTS, DOTS, DOTS ];
-      for(j=0;j<3;j++){
-        var last=(i===M.secs.length-1 && j===2);
-        r=push([{v:lines[j],s:last?17:16},{v:'',s:last?17:16},{v:'',s:last?17:16},
-                {v:'',s:last?17:16},{v:'',s:last?17:16},{v:'',s:last?17:16}],25.2); span(r,1,6);
-      }
-    } else if(i===M.secs.length-1){
-      r=push([{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17}],6); span(r,1,6);
-    }
+    if(i===lastU && u.t==='item'){ r=push([{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17},{v:'',s:17}],6); span(r,1,6); }
+    uRow[i]=R.length;
   }
-
-  /* ---- ហត្ថលេខា (រូបភាពហត្ថលេខា ជំនួសបន្ទាត់ · គ្មានរូប = ទុកបន្ទាត់សម្រាប់ចុះហត្ថលេខាដោយដៃ) ---- */
-  push([],24);
-  var rSig=push([{v:M.sig[0].l,s:18},{v:'',s:18},{v:M.sig[1].l,s:18},{v:'',s:18},{v:M.sig[2].l,s:18},{v:'',s:18}],25.2);
-  span(rSig,1,2); span(rSig,3,4); span(rSig,5,6);
-  var SIG_ROWS=[22,22,22]; push([],22); push([],22); push([],22);
-  var sn=function(k){ return M.sig[k].img ? 21 : 19; };
-  r=push([{v:M.sig[0].n,s:sn(0)},{v:'',s:sn(0)},{v:M.sig[1].n,s:sn(1)},{v:'',s:sn(1)},{v:M.sig[2].n,s:sn(2)},{v:'',s:sn(2)}],25.2);
-  span(r,1,2); span(r,3,4); span(r,5,6);
+  /* ការកាត់ទំព័រដោយដៃ (manual page break) — ដូចទំព័ររបស់ PDF */
+  var BRK=[], pgs=RPg.pages, pI;
+  for(pI=0;pI<pgs.length-1;pI++){ var lu=pgs[pI].u[pgs[pI].u.length-1]; BRK.push(uRow[lu]); }
 
   var COLS=[4.89,84.11,11.11,8.43,8.43,23.66];
   var EMU=12700, logoB64=LOGO_FULL.replace(/^data:image\/png;base64,/,'');
@@ -2428,7 +2439,8 @@ function toXlsx(){
                 cell:{col:cx.i, colOff:cx.off*EMU, row:rSig+ry.i, rowOff:ry.off*EMU},
                 cx:Math.round(wPt*EMU), cy:Math.round(hPt*EMU) });
   }
-  var bytes=buildXlsx([{ name:(M.L?'Audit form':'ទម្រង់ត្រួតពិនិត្យ'), rows:R, cols:COLS, merges:MG }], IMGS);
+  var bytes=buildXlsx([{ name:(M.L?'Audit form':'ទម្រង់ត្រួតពិនិត្យ'), rows:R, cols:COLS, merges:MG, rowBreaks:BRK,
+                         footer:'&C&"Calibri"&8Page &P of &N' }], IMGS);
   deliver(new Blob([bytes],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}), fname('xlsx'), T().tXls);
 }
 
@@ -2455,125 +2467,147 @@ function openSave(){
 }
 function closeSave(){ $('#sheetBg').classList.remove('on'); $('#sheet').classList.remove('on'); }
 
-/* ================= របាយការណ៍បោះពុម្ព / PDF ================= */
-function buildReport(){
-  var M=formModel(), i, j, h='';
-  var W=[4.6,57.4,8.0,7.5,6.0,16.5];
-  h+='<div class="rlogo"><img src="'+LOGO_FULL+'" alt="'+esc0(M.sub)+'"></div>';
-  h+='<h1>'+esc0(M.title)+'</h1><div class="rsub">'+esc0(M.sub)+'</div>';
-  h+='<table class="fm"><colgroup>';
-  for(i=0;i<6;i++) h+='<col style="width:'+W[i]+'%">';
-  h+='</colgroup><tbody>';
-  /* ---- ប្រអប់ព័ត៌មាន ---- */
-  h+='<tr><td class="inf t" colspan="2">'+esc0(M.kFarm)+'<b>'+esc0(M.vFarm)+'</b></td>'
-   + '<td class="box" colspan="2" rowspan="3">'+esc0(M.lblScore)+'<br><b>'+esc0(M.score||'______')+'</b></td>'
-   + '<td class="box" colspan="2" rowspan="3">'+esc0(M.lblGrade)+'<br><b>'+esc0(M.grade||'______')+'</b></td></tr>'
-   + '<tr><td class="inf" colspan="2">'+esc0(M.kZone)+'<b>'+esc0(M.vZone)+'</b></td></tr>'
-   + '<tr><td class="inf b" colspan="2">'+esc0(M.kDate)+'<b>'+esc0(M.vDate)+'</b></td></tr>';
-  h+='</tbody></table>';
-  if(M.warn) h+='<div class="warn">'+esc0(M.warn)+'</div>';
-
-  h+='<table class="fm"><colgroup>';
-  for(i=0;i<6;i++) h+='<col style="width:'+W[i]+'%">';
-  h+='</colgroup><tbody>';
+/* ================= របាយការណ៍បោះពុម្ព / PDF — ទំព័រ A4 ថេរ ដូច Form Excel ដើម =================
+   ទីតាំង/ទំហំទាំងអស់ (pt) វាស់ពី PDF ដែល Excel បោះពុម្ពចេញ៖ ស៊ុម x 15.7pt · ជួរ 16.92pt · ទំព័រ ១ ចាប់ពី 147.3pt · ទំព័របន្ទាប់ពី 58.9pt
+   ការកាត់ទំព័រ = ដាក់ជួរម្តងមួយៗ រហូតពេញទំព័រ (ដូច Excel) → Form ទទេ/ខ្មែរ ចេញ ៤ ទំព័រ កាត់ត្រង់ជួរដូចច្បាប់ដើម */
+var RP={ P1_TOP:147.3, P1_ROWS:211.22, P1_LIM:753.2, PN_TOP:58.9, PN_LIM:754.2 };
+var RP_ORN_SVG='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 8.6" width="320" height="34">'
+  +'<g fill="none" stroke="#000" stroke-width=".3" stroke-linecap="round">'
+  +'<path d="M2 4.3H23"/><path d="M57 4.3H78"/><path d="M27.5 4.3h4.5M48 4.3h4.5"/>'
+  +'<path d="M32.6 4.3c1.5-2 3.2-2 4.1 0c-.9 2-2.6 2-4.1 0z"/><path d="M47.4 4.3c-1.5-2-3.2-2-4.1 0c.9 2 2.6 2 4.1 0z"/>'
+  +'<circle cx="40" cy="4.3" r="1.3"/><circle cx="40" cy="4.3" r="2.3"/>'
+  +'<path d="M24.6 3v2.6M25.8 3v2.6M54.2 3v2.6M55.4 3v2.6"/></g>'
+  +'<g fill="#000"><circle cx="23.4" cy="4.3" r=".5"/><circle cx="56.6" cy="4.3" r=".5"/><circle cx="40" cy="4.3" r=".5"/></g></svg>';
+var RP_ORN='<img class="rp-orn" alt="" src="data:image/svg+xml;base64,'+btoa(RP_ORN_SVG)+'">';
+var REPORT_PAGES=null;
+/* អក្សរខ្មែរក្នុងរបាយការណ៍ពង្រីក ១១៣% ដើម្បីឱ្យទំហំស្មើ Kh Battambang ក្នុង Form ដើម (អក្សរអង់គ្លេសនៅ 7.32pt ដដែល) */
+function rpT(v){
+  var s=String(v==null?'':v), out='', run='', inK=false, i, ch, cp, isK;
+  for(i=0;i<s.length;i++){
+    ch=s.charAt(i); cp=s.charCodeAt(i);
+    isK=(cp>=0x1780&&cp<=0x17FF)||(cp>=0x19E0&&cp<=0x19FF)||(cp>=0x200B&&cp<=0x200D);
+    if(ch===' ' && inK){ run+=ch; continue; }
+    if(isK!==inK){ if(run) out+= inK ? '<span class="k">'+esc0(run)+'</span>' : esc0(run); run=''; inK=isK; }
+    run+=ch;
+  }
+  if(run) out+= inK ? '<span class="k">'+esc0(run)+'</span>' : esc0(run);
+  return out;
+}
+function rpUnits(M){
+  var U=[], i, j;
   for(i=0;i<M.secs.length;i++){
     var sc=M.secs[i];
-    h+='<tr class="keep"><td class="sec" colspan="6">'+esc0(sc.head)+'</td></tr>'
-     + '<tr class="hd keep"><td>'+esc0(M.thNo)+'</td><td>'+esc0(M.thDesc)+'</td><td>'+esc0(M.thYes)+'</td>'
-     + '<td>'+esc0(M.thNo2)+'</td><td>'+esc0(M.thPts)+'</td><td>'+esc0(M.thOther)+'</td></tr>';
-    for(j=0;j<sc.rows.length;j++){
-      var q=sc.rows[j];
-      h+='<tr><td class="c">'+q.num+'</td><td class="d">'+esc0(q.text)
-       + (q.sub?'<div class="sub">'+esc0(q.sub)+'</div>':'')+'</td>'
-       + '<td class="m">'+q.mYes+'</td><td class="m">'+q.mNo+'</td><td></td>'
-       + '<td class="r">'+esc0(q.other)+'</td></tr>';
-    }
-    if(sc.note) h+='<tr><td class="note" colspan="6">'+esc0(sc.note)+'</td></tr>';
+    U.push({t:'sec', s:i, text:sc.head, keep:1});
+    U.push({t:'th', s:i, keep:1});
+    for(j=0;j<sc.rows.length;j++) U.push({t:'item', s:i, q:sc.rows[j]});
+    if(sc.note) U.push({t:'note', s:i, text:sc.note});
     if(i===0 || i===1 || sc.cmt){
-      h+='<tr><td class="note" colspan="6">'+esc0(M.lblCmt)+'</td></tr>';
+      U.push({t:'cmt', s:i, text:M.lblCmt, ind:(i>0), keep:1});
       var ln=[sc.cmt||DOTS, DOTS, DOTS];
-      for(j=0;j<3;j++){
-        var last=(i===M.secs.length-1 && j===2);
-        h+='<tr><td class="note'+(last?' b':'')+'" colspan="6">'+esc0(ln[j])+'</td></tr>';
-      }
-    } else if(i===M.secs.length-1){
-      h+='<tr><td class="note b" colspan="6" style="height:4px"></td></tr>';
+      for(j=0;j<3;j++) U.push({t:'cmt', s:i, text:ln[j], ind:(i>0)});
     }
   }
-  h+='</tbody></table>';
-  /* ---- ហត្ថលេខា ---- */
-  h+='<div class="sig">';
-  for(i=0;i<3;i++){
-    var sg=M.sig[i];
-    h+='<div><span class="sl">'+esc0(sg.l)+'</span>'
-     + '<span class="sgi">'+(sg.img?'<img src="'+sg.img+'" alt="">':'')+'</span>'
-     + '<span class="sn'+(sg.img?'':' line')+'">'+esc0(sg.n)+'</span></div>';
+  U.push({t:'sig'});
+  return U;
+}
+function rpRow(u, M, cls){
+  cls=cls||'';
+  if(u.t==='sec')  return '<div class="rr rr-sec '+cls+'"><div>'+rpT(u.text)+'</div></div>';
+  if(u.t==='note') return '<div class="rr rr-note '+cls+'"><div>'+rpT(u.text)+'</div></div>';
+  if(u.t==='cmt')  return '<div class="rr rr-cmt'+(u.ind?' ind':'')+' '+cls+'"><div>'+rpT(u.text)+'</div></div>';
+  if(u.t==='th')   return '<div class="rr rr-th '+cls+'"><div class="c0">'+rpT(M.thNo)+'</div><div class="c1" style="align-items:center">'+rpT(M.thDesc)+'</div>'
+                      +'<div class="c2">'+rpT(M.thYes)+'</div><div class="c3">'+rpT(M.thNo2)+'</div><div class="c4">'+rpT(M.thPts)+'</div><div class="c5" style="justify-content:center;font-size:8.04pt">'+rpT(M.thOther)+'</div></div>';
+  if(u.t==='item'){ var q=u.q;
+    return '<div class="rr rr-item '+cls+'"><div class="c0">'+rpT(q.num)+'</div>'
+      +'<div class="c1"><span>'+rpT(q.text)+'</span>'+(q.sub?'<span class="sub">'+rpT(q.sub)+'</span>':'')+'</div>'
+      +'<div class="c2"><span class="m">'+q.mYes+'</span></div><div class="c3"><span class="m">'+q.mNo+'</span></div><div class="c4"></div>'
+      +'<div class="c5">'+rpT(q.other)+'</div></div>'; }
+  if(u.t==='sig'){
+    var X=[72,236,431], W=[99,99,84], h='<div class="rr rr-sig '+cls+'">';
+    for(var k=0;k<3;k++){ var sg=M.sig[k];
+      h+='<div class="sg" style="left:'+X[k]+'pt"><div class="sl">'+rpT(sg.l)+'</div>'
+        +(sg.img ? '<div class="si"><img src="'+sg.img+'" alt=""></div>'
+                 : '<div class="ln" style="width:'+W[k]+'pt;margin-left:-'+(W[k]/2)+'pt"></div>')
+        +'<div class="sn">'+rpT(sg.n)+'</div></div>';
+    }
+    return h+'</div>';
   }
-  h+='</div>';
+  return '';
+}
+function rpInfo(M){
+  var dots1='………………………...…………....……………', dots2='…..……………………….……....……….………………..', dots3='……………………………………………………….';
+  var line=function(top,k,v,d){ return '<div class="il" style="top:'+top+'pt">'+rpT(k)+(v?'<b>'+rpT(v)+'</b>':'<span class="dt">'+d+'</span>')+'</div>'; };
+  return '<div class="rp-info">'
+    + line(11.6,M.kFarm,M.vFarm,dots1) + line(30.5,M.kZone,M.vZone,dots2) + line(48.4,M.kDate,M.vDate,dots3)
+    + '<div class="ib" style="left:335.08pt"></div><div class="ib" style="left:419.18pt"></div>'
+    + '<div class="bl" style="left:336.4pt;width:82.8pt;top:7.6pt"><span class="u">'+rpT(M.lblScore)+'</span></div>'
+    + (M.score?'<div class="bv" style="left:336.4pt;width:82.8pt;top:28.6pt">'+rpT(M.score)+'</div>':'')
+    + '<div class="bu" style="left:352.9pt;width:48.1pt;top:41.2pt"></div>'
+    + '<div class="bl" style="left:420.5pt;width:130pt;top:11.9pt"><span class="u">'+rpT(M.lblGrade)+'</span></div>'
+    + (M.grade?'<div class="bv" style="left:420.5pt;width:130pt;top:28.6pt">'+rpT(M.grade)+'</div>':'')
+    + '<div class="bu" style="left:448.7pt;width:54.5pt;top:41.2pt"></div>'
+    + '</div>';
+}
+/* វាស់កម្ពស់ជួរនីមួយៗ (pt) ក្នុង CSS ដដែល — ជួរធម្មតា = 16.92pt · ជួរដែលអក្សររុំ/មានអក្សរខ្មែររង = ខ្ពស់ជាង */
+function rpMeasure(U, M){
+  var outer=document.createElement('div'), inner=document.createElement('div'), H=[], i;
+  outer.className='rpage rp-mhost'; outer.setAttribute('style','position:absolute;left:-30000px;top:0;height:auto;visibility:hidden;pointer-events:none;display:block');
+  inner.style.width='550.56pt';
+  inner.innerHTML=U.map(function(u,i){ return rpRow(u,M,(i===0?'p1first':'')); }).join('');
+  outer.appendChild(inner); document.body.appendChild(outer);
+  var kids=inner.children;
+  for(i=0;i<kids.length;i++) H.push(kids[i].getBoundingClientRect().height*0.75);
+  outer.remove();
+  return H;
+}
+function rpPaginate(U, H){
+  var pages=[], cur, i, k;
+  function newPage(){ var first=!pages.length; cur={u:[], y:first?RP.P1_ROWS:RP.PN_TOP, lim:first?RP.P1_LIM:RP.PN_LIM}; pages.push(cur); }
+  newPage();
+  for(i=0;i<U.length;i++){
+    var need=H[i];
+    for(k=i; U[k].keep && k+1<U.length; ){ k++; need+=H[k]; if(!U[k].keep) break; }   /* ក្បាលផ្នែក/ក្បាលតារាង មិននៅចុងទំព័រតែឯង */
+    if(cur.u.length && cur.y+need>cur.lim) newPage();
+    cur.u.push(i); cur.y+=H[i];
+  }
+  return pages;
+}
+function buildReport(){
+  var M=formModel(), U=rpUnits(M), H=rpMeasure(U,M), P=rpPaginate(U,H), n=P.length, h='', p;
+  for(p=0;p<n;p++){
+    h+='<div class="rpage">';
+    if(p===0){
+      h+='<img class="rp-logo" src="'+LOGO_FULL+'" alt="'+esc0(M.sub)+'">';
+      if(M.warn) h+='<div class="rp-warn">'+rpT(M.warn)+'</div>';
+      h+='<div class="rp-title">'+rpT(M.title)+'</div>'+RP_ORN;
+      h+='<div class="rp-frame" style="top:'+RP.P1_TOP+'pt">'+rpInfo(M);
+    } else h+='<div class="rp-frame" style="top:'+RP.PN_TOP+'pt">';
+    P[p].u.forEach(function(ui,idx){
+      var u=U[ui], cls='';
+      if(p===0 && idx===0) cls='p1first';
+      else if(p>0 && idx===0 && (u.t==='item'||u.t==='th')) cls='top';
+      h+=rpRow(u,M,cls);
+    });
+    h+='</div><div class="rp-foot">Page '+(p+1)+' of '+n+'</div></div>';
+  }
   $('#report').innerHTML=h;
+  REPORT_PAGES={units:U, heights:H, pages:P};
+  return REPORT_PAGES;
 }
 function esc0(v){ return String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 /* ================= ឯកសារ PDF ពិតប្រាកដ (ដើរបានគ្រប់ browser រួមទាំង Telegram / Facebook) =================
-   របាយការណ៍ដដែលនឹង Print ត្រូវបានគូរជារូបភាព (html2canvas) → កាត់ជាទំព័រ A4 តាមព្រំដែនជួរ → ខ្ចប់ជា PDF ដោយផ្ទាល់ (គ្មាន library បន្ថែម)  */
-var PDF_PX_W=748;                         /* ទទឹងផ្ទៃសរសេរ A4 (210−6−6 mm) នៅ 96dpi */
-var PDF_MM_W=198, PDF_MM_H=277;           /* ផ្ទៃសរសេរ A4 ក្រោយដក margin 7/6/13/6 mm (ដូច @page) */
+   ទំព័រ A4 នីមួយៗរបស់របាយការណ៍ ត្រូវបានគូរជារូបភាព (html2canvas) → ខ្ចប់ជា PDF ដោយផ្ទាល់ (គ្មាន library បន្ថែម)  */
 var PDF_SCALE=2;
-function pdfScopedCss(){
-  /* ចម្លងច្បាប់ @media print ទាំងអស់ ឱ្យប្រើក្នុង #pdfHost ពេលបង្កើត PDF */
-  var out=[], i, j, k, ss=document.styleSheets;
-  for(i=0;i<ss.length;i++){
-    var rules=null; try{ rules=ss[i].cssRules; }catch(e){ continue; }
-    if(!rules) continue;
-    for(j=0;j<rules.length;j++){
-      var r=rules[j];
-      if(r.type!==4 || !/print/.test(r.media.mediaText)) continue;
-      for(k=0;k<r.cssRules.length;k++){
-        var q=r.cssRules[k]; if(q.type!==1) continue;
-        var sel=q.selectorText.split(',').map(function(s){ s=s.trim(); return (s==='html'||s==='body')?'#pdfHost':'#pdfHost '+s; }).join(',');
-        out.push(sel+'{'+q.style.cssText+'}');
-      }
-    }
-  }
-  out.push('#pdfHost{padding:0;margin:0;background:#fff !important;color:#000 !important}');
-  out.push('#pdfHost #report{display:block !important;width:'+PDF_PX_W+'px}');
-  out.push('#pdfHost #report h1{letter-spacing:0}');
-  return out.join('\n');
-}
-function pdfCutPoints(host, total, pageH){
-  /* ព្រំដែនជួរ (tr / block) ដើម្បីកុំកាត់ជួរពាក់កណ្តាល · ជួរ .keep មិនត្រូវនៅចុងទំព័រ */
-  var top=host.getBoundingClientRect().top, els=host.querySelectorAll('tr, .rlogo, h1, .warn, .sig'), i;
-  var stops=[], keepTop={};
-  for(i=0;i<els.length;i++){
-    var r=els[i].getBoundingClientRect(), b=Math.round(r.bottom-top);
-    stops.push(b);
-    if(els[i].classList.contains('keep')) keepTop[b]=Math.round(r.top-top);
-  }
-  stops.sort(function(a,b){return a-b;});
-  var pages=[], y=0, guard=0;
-  while(y<total-2 && guard++<400){
-    var limit=y+pageH, cut=null;
-    for(i=0;i<stops.length;i++){ if(stops[i]>y+24 && stops[i]<=limit) cut=stops[i]; }
-    if(cut===null) cut=Math.min(limit,total);
-    var loop=0; while(keepTop[cut]!==undefined && keepTop[cut]>y+24 && loop++<6) cut=keepTop[cut];   /* រុញជួរ .keep ទៅទំព័របន្ទាប់ */
-    if(cut>=total-2) cut=total;
-    pages.push([y,cut]); y=cut;
-  }
-  if(!pages.length) pages.push([0,total]);
-  return pages;
-}
 function b64ToU8(b64){ var bin=atob(b64), n=bin.length, out=new Uint8Array(n), i; for(i=0;i<n;i++) out[i]=bin.charCodeAt(i); return out; }
 function buildPdf(imgs, title){
-  /* imgs: [{jpg:Uint8Array, w, h}] → PDF A4 · រូបភាពមួយក្នុងមួយទំព័រ */
+  /* imgs: [{jpg:Uint8Array, w, h, full?}] → PDF A4 · រូបភាពមួយក្នុងមួយទំព័រ (full = ពេញទំព័រ គ្មាន margin) */
   var PW=595.28, PH=841.89, ML=6*72/25.4, MT=7*72/25.4, CW=PW-2*ML;
   var enc=new TextEncoder(), parts=[], offs=[], pos=0, n=0;
   function push(x){ var u=(typeof x==='string')?enc.encode(x):x; parts.push(u); pos+=u.length; }
   function obj(body){ n++; offs[n]=pos; push(n+' 0 obj\n'); if(typeof body==='string') push(body); else { body.forEach(push); } push('\nendobj\n'); return n; }
   push('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n');
-  var kids=[], firstPage=3+0; /* 1=catalog 2=pages 3=info */
-  var catalogN=1, pagesN=2, infoN=3;
-  /* បម្រុងលេខ 1..3 · ទំព័រនីមួយៗ = 3 objects (page, content, image) */
-  var pageNums=[], i;
+  var kids=[], pageNums=[], i;
   for(i=0;i<imgs.length;i++){ pageNums.push({page:4+i*3, cont:5+i*3, img:6+i*3}); kids.push((4+i*3)+' 0 R'); }
   var safeTitle=String(title||'Biosecurity Report').replace(/[^\x20-\x7E]/g,'').replace(/[()\\]/g,'') || 'Biosecurity Report';
   var d=new Date(), pad=function(x){return (x<10?'0':'')+x;};
@@ -2582,8 +2616,8 @@ function buildPdf(imgs, title){
   obj('<< /Type /Pages /Kids ['+kids.join(' ')+'] /Count '+imgs.length+' >>');
   obj('<< /Title ('+safeTitle+') /Producer (MsPIG Biosecurity Checklist '+APP_VER+') /Creator (MsPIG Biosecurity Checklist) /CreationDate ('+ds+') >>');
   for(i=0;i<imgs.length;i++){
-    var im=imgs[i], H=CW*im.h/im.w, y=PH-MT-H;
-    var stream='q '+CW.toFixed(2)+' 0 0 '+H.toFixed(2)+' '+ML.toFixed(2)+' '+y.toFixed(2)+' cm /Im'+i+' Do Q';
+    var im=imgs[i], X=im.full?0:ML, Wd=im.full?PW:CW, H=Wd*im.h/im.w, y=PH-(im.full?0:MT)-H;
+    var stream='q '+Wd.toFixed(2)+' 0 0 '+H.toFixed(2)+' '+X.toFixed(2)+' '+y.toFixed(2)+' cm /Im'+i+' Do Q';
     obj('<< /Type /Page /Parent 2 0 R /MediaBox [0 0 '+PW+' '+PH+'] /Resources << /XObject << /Im'+i+' '+pageNums[i].img+' 0 R >> /ProcSet [/PDF /ImageC] >> /Contents '+pageNums[i].cont+' 0 R >>');
     obj('<< /Length '+stream.length+' >>\nstream\n'+stream+'\nendstream');
     obj(['<< /Type /XObject /Subtype /Image /Width '+im.w+' /Height '+im.h+' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '+im.jpg.length+' >>\nstream\n', im.jpg, '\nendstream']);
@@ -2604,45 +2638,46 @@ function makePdf(){
   PDF_BUSY=true;
   $('#pdfBusyT').textContent=E?'⏳ Building PDF…':'⏳ កំពុងបង្កើត PDF…';
   $('#pdfBusy').classList.add('on');
-  var rep=$('#report'), host=document.createElement('div'), st=document.createElement('style');
+  var rep=$('#report'), host=document.createElement('div'), npages=0;
   var restore=function(){
     try{ document.body.appendChild(rep); }catch(e){}
-    try{ host.remove(); }catch(e){} try{ st.remove(); }catch(e){}
+    try{ host.remove(); }catch(e){}
     $('#pdfBusy').classList.remove('on'); PDF_BUSY=false;
   };
-  try{
+  loadReportFonts().then(function(){
     buildReport();
-    st.textContent=pdfScopedCss();
-    host.id='pdfHost'; document.head.appendChild(st); host.appendChild(rep); document.body.appendChild(host);
-  }catch(e){ restore(); showErr('PDF: '+(e&&e.message||e)); printReport(); return; }
-  var fontsReady=loadReportFonts();
-  fontsReady.then(function(){ return new Promise(function(r){ setTimeout(r,60); }); }).then(function(){
-    var total=Math.ceil(host.getBoundingClientRect().height);
-    var pageH=Math.floor(PDF_PX_W*PDF_MM_H/PDF_MM_W);
-    var pages=pdfCutPoints(host,total,pageH);
-    return html2canvas(host,{scale:PDF_SCALE,backgroundColor:'#ffffff',useCORS:true,logging:false,
-      scrollX:0,scrollY:0,windowWidth:Math.max(PDF_PX_W,document.documentElement.clientWidth),width:PDF_PX_W,height:total})
-    .then(function(cv){
-      var imgs=[], i;
-      for(i=0;i<pages.length;i++){
-        var y0=Math.round(pages[i][0]*PDF_SCALE), y1=Math.min(cv.height,Math.round(pages[i][1]*PDF_SCALE)), h=Math.max(1,y1-y0);
-        var c=document.createElement('canvas'); c.width=cv.width; c.height=h;
-        var ctx=c.getContext('2d'); ctx.fillStyle='#fff'; ctx.fillRect(0,0,c.width,c.height);
-        ctx.drawImage(cv,0,y0,cv.width,h,0,0,cv.width,h);
-        var b64=c.toDataURL('image/jpeg',0.82).split(',')[1];
-        imgs.push({jpg:b64ToU8(b64),w:c.width,h:h});
-      }
-      var bytes=buildPdf(imgs, fname('pdf').replace(/\.pdf$/,''));
-      restore();
-      var blob=new Blob([bytes],{type:'application/pdf'});
-      var ok=E?'📕 PDF saved ('+kh(pages.length)+' pages)':'📕 PDF រួចរាល់ ('+kh(pages.length)+' ទំព័រ)';
-      if(ENV.mobile){ LASTFILE={blob:blob,name:fname('pdf'),file:null,msg:ok}; try{ LASTFILE.file=new File([blob],fname('pdf'),{type:'application/pdf'}); }catch(e){}
-        openFileSheet(false); }   /* ត្រូវការចុចម្តងទៀត ដើម្បីបើកផ្ទាំង Share (ច្បាប់ Safari) */
-      else deliver(blob,fname('pdf'),ok);
+    host.id='pdfHost'; host.appendChild(rep); document.body.appendChild(host);
+    return new Promise(function(r){ setTimeout(r,80); });
+  }).then(function(){
+    var pages=[].slice.call(rep.querySelectorAll('.rpage')), imgs=[], chain=Promise.resolve();
+    npages=pages.length;
+    pages.forEach(function(pg){
+      chain=chain.then(function(){
+        var r=pg.getBoundingClientRect();
+        return html2canvas(pg,{scale:PDF_SCALE,backgroundColor:'#ffffff',useCORS:true,logging:false,
+          scrollX:-window.scrollX, scrollY:-window.scrollY, windowWidth:Math.max(820,document.documentElement.clientWidth),
+          width:Math.round(r.width), height:Math.round(r.height)});
+      }).then(function(cv){
+        var b64=cv.toDataURL('image/jpeg',0.88).split(',')[1];
+        imgs.push({jpg:b64ToU8(b64), w:cv.width, h:cv.height, full:true});
+      });
     });
+    return chain.then(function(){ return imgs; });
+  }).then(function(imgs){
+    var bytes=buildPdf(imgs, fname('pdf').replace(/\.pdf$/,''));
+    restore();
+    var blob=new Blob([bytes],{type:'application/pdf'});
+    var ok=E?'📕 PDF saved ('+kh(npages)+' pages)':'📕 PDF រួចរាល់ ('+kh(npages)+' ទំព័រ)';
+    if(ENV.mobile){ LASTFILE={blob:blob,name:fname('pdf'),file:null,msg:ok}; try{ LASTFILE.file=new File([blob],fname('pdf'),{type:'application/pdf'}); }catch(e){}
+      openFileSheet(false); }   /* ត្រូវការចុចម្តងទៀត ដើម្បីបើកផ្ទាំង Share (ច្បាប់ Safari) */
+    else deliver(blob,fname('pdf'),ok);
   }).catch(function(e){ restore(); showErr('PDF: '+(e&&e.message||e)); toast(E?'⚠️ PDF failed — opening Print':'⚠️ បង្កើត PDF មិនបាន — បើក Print ជំនួស'); setTimeout(printReport,300); });
 }
-function printReport(){ buildReport(); setTimeout(function(){ window.print(); },260); }
+function printReport(){
+  loadReportFonts().then(function(){ buildReport(); setTimeout(function(){ window.print(); },260); });
+}
+window.addEventListener('beforeprint', function(){ try{ if(!PDF_BUSY) buildReport(); }catch(e){} });
+
 
 /* ================= ពុម្ពអក្សររបាយការណ៍ (ផ្ទុកជាមុន ដើម្បីឱ្យ PDF / Print ចេញត្រឹមត្រូវ) ================= */
 function loadReportFonts(){
