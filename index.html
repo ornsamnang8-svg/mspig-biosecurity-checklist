@@ -544,6 +544,146 @@ body.v-pc .grid2 .hero#heroCard{margin-top:12px;top:124px}
 #sc-home .btnrow{gap:8px;margin-top:10px}
 #sc-home .btn{padding:10px 10px;font-size:12.5px;border-radius:14px}
 
+/* ---------- រចនាថ្មីសម្រាប់ទូរស័ព្ទ (2026-10-27b)៖ Header តូច · ផ្ទាំងបំពេញពេញអេក្រង់ · ការកំណត់ខ្លី ---------- */
+header.top{padding-top:calc(6px + var(--safe-t))}
+.topcard{padding:7px 9px;border-radius:20px}
+.top-inner{gap:8px}
+.brand{height:36px;border-radius:11px;padding:3px 4px}
+.brand img{height:30px}
+.top-t h1{font-size:13.5px;line-height:1.35}
+.top-t p{font-size:10.5px;line-height:1.35}
+.iconbtn.sm{width:36px;height:36px;flex:0 0 36px;border-radius:12px;font-size:12px;font-weight:800}
+.iconbtn.pri{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;border-color:transparent;font-size:18px;font-weight:700;
+  box-shadow:0 8px 16px -8px var(--g-glow), inset 0 1px 0 rgba(255,255,255,.3)}
+.pline{display:flex;align-items:center;gap:8px;margin-top:6px}
+.pline .pbar{flex:1;margin:0;height:5px}
+.pline span{font-size:10px;color:var(--ink-dim);white-space:nowrap;line-height:1.4}
+.pline b{font-size:10.5px;color:var(--g-deep);min-width:28px;text-align:right;line-height:1.4}
+
+/* ផ្ទាំងបំពេញ */
+#sc-sec .qhead{padding:10px 12px;margin-top:10px}
+#sc-sec .qhead .t{gap:9px}
+#sc-sec .qhead h2{font-size:14.5px;line-height:1.4}
+.secscore{flex:0 0 auto;min-width:52px;padding:3px 9px;border-radius:12px;background:rgba(255,255,255,.78);border:1px solid var(--rim);
+  text-align:center;line-height:1.15;box-shadow:var(--inset)}
+.secscore b{display:block;font-size:16px;color:var(--g-deep)}
+.secscore small{font-size:9px;color:var(--ink-dim)}
+.pline.in{margin-top:8px}
+#sc-sec .qhead .note{margin-top:8px;padding:6px 10px;font-size:10.5px;line-height:1.6;border-radius:12px}
+.secinfo{margin-top:6px}
+.secinfo summary{font-size:10.5px;color:var(--ink-dim);cursor:pointer;list-style:none;display:inline-block;padding:2px 0}
+.secinfo summary::-webkit-details-marker{display:none}
+.secinfo .calc{margin-top:5px;font-size:10.5px;padding:7px 10px}
+.toolbar{position:sticky;top:calc(var(--hdrH,80px) - 2px);z-index:40;margin:6px -6px 0;padding:6px 6px 7px;border-radius:0 0 18px 18px;
+  background:linear-gradient(180deg,rgba(247,251,248,.97),rgba(247,251,248,.90));
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.toolbar .filters{margin:0;padding:1px 1px 2px}
+.toolbar .fchip{padding:5px 12px;font-size:11px}
+.trow{display:flex;gap:6px;align-items:center;margin-top:6px;overflow-x:auto;scrollbar-width:none}
+.trow::-webkit-scrollbar{display:none}
+.seg.sm{flex:0 0 auto}
+.seg.sm button{padding:4px 10px;font-size:11px}
+.chipbtn{flex:0 0 auto;padding:6px 12px;border-radius:99px;font-size:11px;font-weight:700;border:1px solid var(--rim);
+  background:rgba(255,255,255,.8);color:var(--g-deep);cursor:pointer;line-height:1.4;box-shadow:0 3px 8px -5px rgba(8,74,46,.45), var(--inset);transition:transform .12s}
+.chipbtn:active{transform:scale(.95)}
+.chipbtn.pri{background:linear-gradient(135deg,var(--g-bright),var(--g-mid));color:#fff;border-color:transparent}
+#sc-sec .qlist{gap:8px;margin-top:6px}
+#sc-sec .q{padding:10px 11px}
+#sc-sec .qt{font-size:13.5px;line-height:1.65}
+#sc-sec .qn{width:26px;height:26px;flex:0 0 26px;font-size:11px;border-radius:9px}
+#sc-sec .ans{margin-top:8px;padding:3px;gap:5px}
+#sc-sec .ab{min-height:42px;font-size:12px}
+#sc-sec .qtools{margin-top:6px}
+#sc-sec .tbtn{padding:4px 10px;font-size:10.5px}
+.cmtcard{padding:11px 12px !important;margin-top:10px !important}
+.cmtcard h2{font-size:13px !important;margin:0 0 6px !important}
+.cmtcard .qnote{min-height:46px;margin-top:0}
+.navrow{margin-top:10px !important}
+@media (max-width:640px){
+  table.xform{min-width:0;font-size:12px}
+  table.xform th,table.xform td{padding:5px 4px}
+  table.xform thead th{font-size:10.5px}
+  table.xform td.n{width:26px;font-size:11px}
+  table.xform td.d{min-width:0;line-height:1.55}
+  table.xform td.c{width:34px;padding:3px 2px}
+  .xbox{width:26px;height:26px;border-radius:8px;font-size:13px}
+  table.xform th:nth-child(6),table.xform td.p{display:none}
+  table.xform td.o{width:78px;padding:3px}
+  .xnote{font-size:11px;min-height:30px;padding:4px 5px;resize:none}
+  table.xform tfoot td{font-size:10.5px}
+  #scrollHint{display:none !important}
+}
+
+/* ទំព័រដើម */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.tile{position:relative;display:flex;flex-direction:column;align-items:center;gap:1px;padding:10px 4px 8px;border-radius:16px;
+  border:1px solid var(--rim);background:var(--glass-hi);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);
+  box-shadow:var(--shadow), var(--inset);color:var(--g-deep);font-size:11.5px;font-weight:700;cursor:pointer;line-height:1.4;transition:transform .15s}
+.tile i{font-style:normal;font-size:22px;line-height:1.25}
+.tile:active{transform:scale(.95)}
+.tile em{position:absolute;top:5px;right:7px;font-style:normal;font-size:9px;padding:0 6px;border-radius:99px;line-height:1.6;
+  background:var(--y-pale);color:var(--y-deep);border:1px solid rgba(242,179,31,.4)}
+#secList .snum.ring{border-radius:50%;padding:3px;border:0;box-shadow:0 6px 12px -8px rgba(8,74,46,.5);
+  background:conic-gradient(var(--g-bright) calc(var(--p)*1%), rgba(13,122,76,.13) 0)}
+#secList .snum.ring span{width:100%;height:100%;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:16px}
+#secList .sitem.done .snum.ring{background:conic-gradient(var(--g-bright) 100%, transparent 0)}
+#secList .sbody .meta{justify-content:space-between}
+.stag{padding:0 8px;border-radius:99px;background:rgba(11,43,30,.06);font-weight:700;line-height:1.7}
+.stag.go{background:var(--y-pale);color:var(--y-deep)}
+.stag.ok{background:var(--g-pale);color:var(--g-deep)}
+
+/* ការកំណត់ */
+#sc-info .card{padding:12px 13px;margin-top:10px}
+#sc-info .card h2{font-size:14px;margin-bottom:9px}
+#recCard h2 .chipbtn{margin-left:auto}
+#recList .empty{padding:10px 6px;font-size:12px}
+#sc-info .siglist{gap:8px;grid-template-columns:1fr}
+body.v-pc #sc-info .siglist{grid-template-columns:repeat(3,1fr)}
+#sc-info .sigslot{padding:9px;display:grid;gap:5px}
+#sc-info .sigslot label{font-size:11px;font-weight:700;color:var(--g-deep);line-height:1.4}
+.signame{width:100%;height:38px;padding:0 11px;border-radius:11px;border:1px solid rgba(13,122,76,.16);background:#fff;color:var(--ink);
+  font-size:14px;outline:none}
+.signame:focus{border-color:var(--g-bright);box-shadow:0 0 0 3px rgba(25,166,97,.15)}
+.sig-area{display:flex;gap:7px;align-items:center}
+#sc-info .sig-box{flex:1;height:62px;border-radius:12px}
+#sc-info .sig-ph{font-size:11px}
+#sc-info .sig-act{display:flex;flex-direction:row;gap:5px;margin:0}
+.ibtn{width:36px;height:36px;border-radius:11px;border:1px solid var(--rim);background:rgba(255,255,255,.85);font-size:15px;cursor:pointer;
+  box-shadow:0 3px 8px -5px rgba(8,74,46,.45);transition:transform .12s}
+.ibtn:active{transform:scale(.92)}
+.ibtn.danger{background:#fdeceb;border-color:#f3c0b8}
+#sc-info .two .field{margin:0}
+#sc-info .two textarea{min-height:44px;height:44px;resize:vertical}
+#sc-info .field input,#sc-info .field textarea{padding:10px 12px}
+.setlist{padding:8px 8px 6px !important}
+.setlist h2{padding:4px 5px 0}
+.srow{display:flex;align-items:center;gap:10px;width:100%;padding:9px 6px;border:0;border-top:1px solid var(--line);background:transparent;
+  text-align:left;color:var(--ink);font-size:13px;font-weight:700;line-height:1.4;border-radius:0;font-family:inherit}
+.setlist h2 + .srow{border-top:0}
+.srow .si{width:30px;height:30px;flex:0 0 30px;border-radius:10px;display:grid;place-items:center;font-size:15px;
+  background:linear-gradient(150deg,#fff,var(--g-pale));box-shadow:0 3px 8px -5px rgba(8,74,46,.45)}
+.srow .st{flex:1;min-width:0}
+.srow .sa{color:var(--ink-faint);font-size:19px;line-height:1}
+.srow.tap{cursor:pointer;border-radius:12px}
+.srow.tap:active{background:rgba(25,166,97,.08)}
+.srow.danger .st{color:#9b2c1c}
+.srow.danger .si{background:linear-gradient(150deg,#fff,#fde4e0)}
+.sbtns{display:flex;gap:6px}
+.about summary{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;color:var(--g-deep);cursor:pointer;list-style:none}
+.about summary::-webkit-details-marker{display:none}
+.about summary::after{content:'›';margin-left:auto;font-size:19px;color:var(--ink-faint);transform:rotate(90deg);transition:transform .2s}
+.about[open] summary::after{transform:rotate(-90deg)}
+.about .formula{margin-top:8px;font-size:11px;line-height:1.8}
+.about .chipbtn{margin-top:8px}
+
+/* របារខាងក្រោម / ប៊ូតុងឡើងលើ */
+nav.bot{padding-bottom:calc(8px + var(--safe-b))}
+.bot-inner{padding:4px;border-radius:22px;gap:4px}
+.nb{padding:4px 2px 3px;font-size:10px;border-radius:18px}
+.nb i{font-size:17px}
+.wrap{padding-bottom:calc(88px + var(--safe-b))}
+.fab{width:42px;height:42px;bottom:calc(80px + var(--safe-b));border-radius:14px;font-size:17px}
+
 /* ---------- របាយការណ៍ Print / PDF — ប្លង់ដូច Form Excel ដើម (A4 ទំព័រថេរ · វាស់ពី PDF ដើម ជាឯកតា pt) ----------
    ទំព័រ A4 = 595.2 × 841.68pt · ស៊ុម x 15.7→568.9pt · ជួរ 16.92pt · ទំព័រ ១ ៣២ ជួរក្រោយប្រអប់ព័ត៌មាន · ទំព័របន្ទាប់ ៤១ ជួរ */
 #report{display:none}
@@ -650,15 +790,10 @@ body.v-pc .grid2 .hero#heroCard{margin-top:12px;top:124px}
       <h1 id="topTitle" data-i18n="appTitle">ត្រួតពិនិត្យជីវៈសុវត្ថិភាព</h1>
       <p id="topSub">កសិដ្ឋាន M's PIG ACMC (Cambodia)</p>
     </div>
-    <div class="seg" id="segView" title="ប្តូររូបរាង">
-      <button data-v="phone">📱</button><button data-v="pc">💻</button>
-    </div>
-    <button class="iconbtn" id="btnLang" title="ភាសា / Language" style="font-size:11px;font-weight:700">EN</button>
-    <button class="iconbtn" id="btnClear" title="សម្អាតទិន្នន័យ / Clear data">🧹</button>
-    <button class="iconbtn" id="btnSave" title="Save PDF / Excel / CSV">⬇️</button>
+    <button class="iconbtn sm" id="btnLang" title="ភាសា / Language">EN</button>
+    <button class="iconbtn sm pri" id="btnSave" title="Save PDF / Excel / CSV">⬇</button>
   </div>
-  <div class="pbar"><i id="pbarFill"></i></div>
-  <div class="pbar-txt"><span id="pbarL">បំពេញ ០ / ១២១</span><span id="pbarR">០%</span></div>
+  <div class="pline"><div class="pbar"><i id="pbarFill"></i></div><span id="pbarL">០ / ១២១</span><b id="pbarR">០%</b></div>
 </div></header>
 
 <div id="iabBar"></div>
@@ -706,45 +841,40 @@ body.v-pc .grid2 .hero#heroCard{margin-top:12px;top:124px}
   </div>
   </div></div>
 
-  <div class="btnrow savebar">
-    <button class="btn pri" id="btnSaveRec" data-i18n="btnSaveRec">📚 រក្សាទុកជាកំណត់ត្រា</button>
-    <button class="btn sv-open" data-i18n="btnSaveExp">⬇️ Save PDF / Excel</button>
-    <button class="btn wide" id="btnGoRecs"><span data-i18n="btnViewRecs">📂 មើលកំណត់ត្រាចុងក្រោយ</span> <span class="badge recBadge">០</span></button>
+  <div class="tiles">
+    <button class="tile" id="btnSaveRec"><i>📚</i><span data-i18n="tileSaveRec">រក្សាទុក</span></button>
+    <button class="tile sv-open"><i>⬇️</i><span data-i18n="tileExport">PDF / Excel</span></button>
+    <button class="tile" id="btnGoRecs"><i>📂</i><span data-i18n="tileRecs">កំណត់ត្រា</span><em class="recBadge">០</em></button>
   </div>
 </section>
 
 <!-- ============ SCREEN 2 : SECTION ============ -->
 <section class="screen" id="sc-sec">
-  <div class="glass glass-green qhead">
+  <div class="glass qhead">
     <div class="t">
-      <button class="iconbtn" id="btnBack">←</button>
+      <button class="iconbtn sm" id="btnBack" aria-label="back">←</button>
       <h2 id="secTitle"></h2>
+      <span class="secscore" id="secBarR"></span>
     </div>
-    <div class="pbar" style="margin-top:11px"><i id="secBarFill"></i></div>
-    <div class="pbar-txt"><span id="secBarL"></span><span id="secBarR"></span></div>
-    <div class="calc" id="secCalc"></div>
+    <div class="pline in"><div class="pbar"><i id="secBarFill"></i></div><span id="secBarL"></span></div>
     <div class="note hide" id="secNote"></div>
+    <details class="secinfo"><summary data-i18n="howCalc">ℹ️ របៀបគិតពិន្ទុ</summary><div class="calc" id="secCalc"></div></details>
   </div>
 
-  <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px;flex-wrap:wrap">
-    <div class="seg" id="segStyle">
-      <button data-s="card" data-i18n="styleCard">🃏 កាត</button><button data-s="table" data-i18n="styleTable">📋 តារាង (ដូច Excel)</button>
+  <div class="toolbar">
+    <div class="filters">
+      <div class="fchip on" data-f="all" data-i18n="all">ទាំងអស់</div>
+      <div class="fchip" data-f="todo" data-i18n="todo">នៅសល់</div>
+      <div class="fchip" data-f="yes" data-i18n="fYes">✔ មាន</div>
+      <div class="fchip" data-f="no" data-i18n="fNo">✖ មិនមាន</div>
+      <div class="fchip" data-f="na" data-i18n="fNa">⊘ មិនពាក់ព័ន្ធ</div>
     </div>
-    <span style="font-size:10.5px;color:var(--ink-dim)" id="styleHint"></span>
-  </div>
-
-  <div class="filters">
-    <div class="fchip on" data-f="all" data-i18n="all">ទាំងអស់</div>
-    <div class="fchip" data-f="todo" data-i18n="todo">នៅសល់</div>
-    <div class="fchip" data-f="yes" data-i18n="fYes">✔ មាន</div>
-    <div class="fchip" data-f="no" data-i18n="fNo">✖ មិនមាន</div>
-    <div class="fchip" data-f="na" data-i18n="fNa">⊘ មិនពាក់ព័ន្ធ</div>
-  </div>
-
-  <div class="glass card" style="padding:12px 14px">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <button class="btn" id="btnAllYes" style="font-size:12px;padding:10px" data-i18n="allYes">✔ ដាក់ "មាន" ទាំងអស់</button>
-      <button class="btn" id="btnClearSec" style="font-size:12px;padding:10px" data-i18n="clearSec">↺ សម្អាតផ្នែកនេះ</button>
+    <div class="trow">
+      <div class="seg sm" id="segStyle">
+        <button data-s="card" data-i18n="styleCard">🃏 កាត</button><button data-s="table" data-i18n="styleTable">📋 តារាង</button>
+      </div>
+      <button class="chipbtn" id="btnAllYes" data-i18n="allYes">✔ មានទាំងអស់</button>
+      <button class="chipbtn" id="btnClearSec" data-i18n="clearSec">↺ សម្អាត</button>
     </div>
   </div>
 
@@ -752,102 +882,63 @@ body.v-pc .grid2 .hero#heroCard{margin-top:12px;top:124px}
   <div class="xwrap hide" id="xWrap"><table class="xform" id="xTable"></table></div>
   <div class="scrollhint hide" id="scrollHint" data-i18n="scrollHint">↔ អូសទៅឆ្វេង-ស្តាំ ដើម្បីមើលគ្រប់ជួរ</div>
 
-  <div class="glass card">
-    <h2><span class="chip-i">✍️</span> <span data-i18n="secComment">បរិយាយ÷</span></h2>
-    <textarea id="secComment" rows="3" class="qnote" style="min-height:74px"
-      data-i18n-ph="secCommentPh" placeholder="សរសេរបរិយាយសម្រាប់ផ្នែកនេះ..."></textarea>
+  <div class="glass card cmtcard">
+    <h2><span data-i18n="secComment">✍️ បរិយាយ÷</span></h2>
+    <textarea id="secComment" rows="2" class="qnote" data-i18n-ph="secCommentPh" placeholder="សរសេរបរិយាយសម្រាប់ផ្នែកនេះ..."></textarea>
   </div>
 
-  <div class="btnrow">
+  <div class="btnrow navrow">
     <button class="btn" id="btnPrevSec" data-i18n="prevSec">‹ ផ្នែកមុន</button>
     <button class="btn pri" id="btnNextSec" data-i18n="nextSec">ផ្នែកបន្ទាប់ ›</button>
-  </div>
-  <div class="btnrow savebar">
-    <button class="btn wide sv-open">⬇️ Save PDF / Excel / CSV</button>
   </div>
 </section>
 
 <!-- ============ SCREEN 3 : FARM INFO ============ -->
 <section class="screen" id="sc-info">
-  <div class="glass card" id="recCard">
-    <h2><span class="chip-i">📚</span> <span data-i18n="recTitle">កំណត់ត្រាចុងក្រោយ</span> <span class="badge" id="recCount">០ / ២០</span></h2>
-    <div class="btnrow" style="margin-top:0;margin-bottom:12px">
-      <button class="btn pri wide" id="btnSaveRec3" data-i18n="recSaveBtn">📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា</button>
-    </div>
-    <div id="recList"></div>
-    <p style="font-size:10.5px;color:var(--ink-dim);margin:11px 0 0;line-height:1.7" data-i18n-html="recNote">
-      រក្សាទុកបានត្រឹម <b>២០ កំណត់ត្រាចុងក្រោយ</b> — ពេលលើស ២០ កំណត់ត្រាចាស់បំផុតត្រូវលុបដោយស្វ័យប្រវត្តិ។
-      បើអង្គចងចាំពេញ រូបថតក្នុងកំណត់ត្រាចាស់នឹងត្រូវលុបជាមុនសិន។
-    </p>
-  </div>
-
-  <div class="glass card">
-    <h2><span class="chip-i">🏠</span> <span data-i18n="farmInfo">ព័ត៌មានកសិដ្ឋាន</span></h2>
-    <div class="field"><label data-i18n="farmName">ឈ្មោះកសិដ្ឋាន</label><input id="f_farm" data-i18n-ph="farmPh" placeholder="ឧ. កសិដ្ឋាន ស្វាយរៀង ០១"></div>
-    <div class="field"><label data-i18n="zone">តំបន់ / ខេត្ត</label><input id="f_zone" data-i18n-ph="zonePh" placeholder="ឧ. ខេត្តត្បូងឃ្មុំ"></div>
-    <div class="two">
-      <div class="field"><label data-i18n="date">កាលបរិច្ឆេទ</label><input id="f_date" type="date"><small class="fhint" id="dateFmt"></small></div>
-      <div class="field"><label data-i18n="head">ចំនួនជ្រូក (ក្បាល)</label><input id="f_head" type="number" inputmode="numeric" placeholder="0"></div>
-    </div>
-    <div class="field"><label data-i18n="auditor">ឈ្មោះអ្នកធ្វើរបាយការណ៍</label><input id="f_by" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ"></div>
-    <div class="field"><label data-i18n="owner">តំណាងម្ចាស់កសិដ្ឋាន</label><input id="f_owner" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ"></div>
-    <div class="field"><label data-i18n="comp">តំណាងក្រុមហ៊ុន</label><input id="f_comp" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ"></div>
-    <div class="field"><label data-i18n="genNote">កំណត់សម្គាល់ទូទៅ</label><textarea id="f_note" rows="3" data-i18n-ph="genNotePh" placeholder="សេចក្តីសង្ខេប ឬ អនុសាសន៍..."></textarea></div>
-  </div>
-
   <div class="glass card" id="sigCard">
-    <h2><span class="chip-i">✍️</span> <span data-i18n="sigTitle">ហត្ថលេខា</span></h2>
-    <p class="cardnote" data-i18n="sigNote">ដាក់រូបហត្ថលេខា (ថតពីក្រដាស) ឬ គូរផ្ទាល់លើអេក្រង់ — នឹងចេញក្នុង PDF និង Excel ជំនួសបន្ទាត់ខ្មៅ។</p>
-    <div class="siglist" id="sigList"></div>
-  </div>
-
-  <div class="glass card">
-    <h2><span class="chip-i">🧹</span> <span data-i18n="clearTitle">សម្អាតទិន្នន័យ</span></h2>
-    <div class="btnrow" style="margin-top:0">
-      <button class="btn wide" id="btnClear2" data-i18n="clearBtn">🧹 បើកជម្រើសសម្អាតទិន្នន័យ</button>
+    <h2><span class="chip-i">✍️</span> <span data-i18n="sigPeople">អ្នកចុះហត្ថលេខា</span></h2>
+    <div class="siglist" id="sigList">
+      <div class="sigslot" data-k="comp"><label for="f_comp" data-i18n="comp">តំណាងក្រុមហ៊ុន</label>
+        <input id="f_comp" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
+      <div class="sigslot" data-k="owner"><label for="f_owner" data-i18n="owner">តំណាងម្ចាស់កសិដ្ឋាន</label>
+        <input id="f_owner" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
+      <div class="sigslot" data-k="by"><label for="f_by" data-i18n="auditor">អ្នកធ្វើរបាយការណ៍</label>
+        <input id="f_by" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
     </div>
   </div>
 
   <div class="glass card">
-    <h2><span class="chip-i">⚙️</span> <span data-i18n="dataTitle">ទិន្នន័យ</span></h2>
-    <div class="btnrow" style="margin-top:0">
-      <button class="btn pri wide sv-open">⬇️ Save PDF / Excel / CSV</button>
-      <button class="btn" id="btnBackup" data-i18n="backup">💾 Backup (JSON)</button>
-      <button class="btn" id="btnRestore" data-i18n="restore">⬆️ ស្តារឡើងវិញ</button>
+    <h2><span class="chip-i">🐖</span> <span data-i18n="extraInfo">ព័ត៌មានបន្ថែម</span></h2>
+    <div class="two">
+      <div class="field"><label data-i18n="head">ចំនួនជ្រូក (ក្បាល)</label><input id="f_head" type="number" inputmode="numeric" placeholder="0"></div>
+      <div class="field"><label data-i18n="genNote">កំណត់សម្គាល់</label><textarea id="f_note" rows="1" data-i18n-ph="genNotePh" placeholder="អនុសាសន៍..."></textarea></div>
     </div>
-    <p style="font-size:11px;color:var(--ink-dim);margin:12px 0 0;line-height:1.7" data-i18n-html="dataNote">
-      ទិន្នន័យស្ថិតក្នុងទូរស័ព្ទ/កុំព្យូទ័ររបស់អ្នកតែប៉ុណ្ណោះ — មិនផ្ញើទៅណាទេ។
-      រៀងរាល់ពេលបញ្ចប់ការត្រួតពិនិត្យម្តងៗ សូមចុច <b>Save PDF / Excel / CSV</b> ដើម្បីទុកជាឯកសារ។
-    </p>
-  </div>
-  <div class="glass glass-yellow card">
-    <h2 style="color:var(--g-deep)"><span class="chip-i">🔗</span> <span data-i18n="shareTitle">របៀបចែករំលែកឱ្យអ្នកដទៃ</span></h2>
-    <div class="formula" data-i18n-html="shareHtml"></div>
   </div>
 
-  <div class="glass card">
-    <h2><span class="chip-i">🩺</span> <span data-i18n="diagTitle">ពិនិត្យស្ថានភាព App</span></h2>
+  <div class="glass card" id="recCard">
+    <h2><span class="chip-i">📚</span> <span data-i18n="recTitle">កំណត់ត្រា</span> <span class="badge" id="recCount">០ / ២០</span>
+      <button class="chipbtn pri" id="btnSaveRec3" data-i18n="recSaveBtn">＋ រក្សាទុក</button></h2>
+    <div id="recList"></div>
+  </div>
+
+  <div class="glass card setlist">
+    <h2><span class="chip-i">⚙️</span> <span data-i18n="setTitle">ការកំណត់</span></h2>
+    <div class="srow"><span class="si">📱</span><span class="st" data-i18n="viewMode">រូបរាង</span>
+      <div class="seg sm" id="segView"><button data-v="phone" data-i18n="vPhone">📱 ទូរស័ព្ទ</button><button data-v="pc" data-i18n="vPc">💻 កុំព្យូទ័រ</button></div></div>
+    <button class="srow tap sv-open"><span class="si">⬇️</span><span class="st">Save PDF / Excel / CSV</span><span class="sa">›</span></button>
+    <div class="srow"><span class="si">💾</span><span class="st" data-i18n="backupT">Backup</span>
+      <span class="sbtns"><button class="chipbtn" id="btnBackup" data-i18n="backup">ទាញយក</button><button class="chipbtn" id="btnRestore" data-i18n="restore">ស្តារ</button></span></div>
+    <div class="srow"><span class="si">🔗</span><span class="st" data-i18n="shareT">ចែករំលែក Link</span>
+      <button class="chipbtn" data-copy="https://mspig-biosecurity-checklist.vercel.app/" data-i18n="copyLink">📋 ចម្លង</button></div>
+    <button class="srow tap danger" id="btnClear"><span class="si">🧹</span><span class="st" data-i18n="clearT">សម្អាតទិន្នន័យ</span><span class="sa">›</span></button>
+  </div>
+
+  <details class="glass card about">
+    <summary><span class="chip-i">ℹ️</span> <span data-i18n="aboutApp">អំពី App</span></summary>
+    <div class="formula" data-i18n-html="installShort"></div>
     <div class="formula" id="diagBox"></div>
-    <div class="btnrow" style="margin-top:11px">
-      <button class="btn wide" id="btnDiag" data-i18n="diagBtn">🔄 ពិនិត្យឡើងវិញ</button>
-    </div>
-  </div>
-
-  <div class="glass card">
-    <h2><span class="chip-i">📲</span> <span data-i18n="installTitle">ដំឡើងលើទូរស័ព្ទ (ដូច App ពិត)</span></h2>
-    <div class="formula" data-i18n-html="installHtml">
-      <b>📱 iPhone / iPad (Safari)</b><br>
-      ១. បើកឯកសារនេះដោយ <b>Safari</b> (មិនមែន Chrome)<br>
-      ២. ចុចរូប <b>􀈂 Share</b> ខាងក្រោមអេក្រង់<br>
-      ៣. រំកិលចុះ ចុច <b>Add to Home Screen</b><br>
-      ៤. ចុច <b>Add</b> → រូប App នឹងលេចលើអេក្រង់ដើម<br>
-      <span style="opacity:.8">💡 បើផ្ញើតាម Telegram សូមចុច «Open in Safari» ជាមុនសិន</span><br><br>
-      <b>🤖 Android (Chrome)</b><br>
-      ១. បើកដោយ <b>Chrome</b> → ចុច <b>⋮</b> ខាងលើស្តាំ<br>
-      ២. ចុច <b>Add to Home screen</b> → <b>Add</b><br><br>
-      <b>💻 កុំព្យូទ័រ</b> — ចុចពីរដងលើឯកសារ ឬអូសដាក់ក្នុង Browser
-    </div>
-  </div>
+    <button class="chipbtn" id="btnDiag" data-i18n="diagBtn">🔄 ពិនិត្យឡើងវិញ</button>
+  </details>
 
   <input type="file" id="fileRestore" accept="application/json" class="hide">
 </section>
@@ -996,7 +1087,7 @@ body.v-pc .grid2 .hero#heroCard{margin-top:12px;top:124px}
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-10-27', ERRS=[];
+var APP_VER='2026-10-27b', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -1504,7 +1595,7 @@ function _renderTop(){
   const o=overall();
   const pct=Math.round(o.answered/o.total*100);
   $('#pbarFill').style.width=pct+'%';
-  $('#pbarL').textContent=T().filled+' '+kh(o.answered)+' / '+kh(o.total);
+  $('#pbarL').textContent=kh(o.answered)+' / '+kh(o.total);
   $('#pbarR').textContent=kh(pct)+'%';
 }
 function _renderHome(){
@@ -1527,11 +1618,12 @@ function _renderHome(){
 
   $('#secList').innerHTML = SECTIONS.map((sec,i)=>{
     const st=secStat(i);
+    const left=st.total-st.answered;
     return `<div class="sitem ${st.complete?'done':''}" data-i="${i}">
-      <div class="snum">${sec.icon}</div>
+      <div class="snum ring" style="--p:${st.pct}"><span>${sec.icon}</span></div>
       <div class="sbody">
         <b>${sec.rn}.${secName(sec)}</b>
-        <div class="meta"><div class="bar"><i style="width:${st.pct}%"></i></div>
+        <div class="meta"><small class="stag ${st.complete?'ok':(st.answered?'go':'')}">${st.complete?(S.lang==='en'?'✓ Done':'✓ រួចរាល់'):(st.answered?(S.lang==='en'?'Left ':'នៅសល់ ')+kh(left):(S.lang==='en'?'Not started':'មិនទាន់ចាប់ផ្តើម'))}</small>
           <small>${kh(st.answered)}/${kh(st.total)}</small></div>
       </div>
       <div class="sscore"><b>${st.score===null?'–':kh(Math.round(st.score))}</b><small>${S.lang==='en'?'/100':'/១០០'}</small></div>
@@ -1542,12 +1634,11 @@ function _renderHome(){
 
 function _renderSec(){
   const si=S.cur, sec=SECTIONS[si], st=secStat(si);
-  $('#secTitle').textContent = sec.rn+'.'+secName(sec)
-      + (viewMode()==='pc' ? '  ( '+(st.score===null?'____':fx(st.score))+' / 100 '+T().pts+' )' : '');
+  $('#secTitle').textContent = sec.rn+'.'+secName(sec);
   $('#topTitle').textContent = secName(sec);
   $('#secBarFill').style.width=st.pct+'%';
   $('#secBarL').textContent=T().filled+' '+kh(st.answered)+' / '+kh(st.total);
-  $('#secBarR').textContent = (st.score===null?'–':fx(st.score))+' / '+kh(100)+' '+T().pts;
+  $('#secBarR').innerHTML = '<b>'+(st.score===null?'–':fx(st.score))+'</b><small>/100</small>';
   var EN=(S.lang==='en');
   $('#secCalc').innerHTML = st.allNa
     ? (EN?'⊘ All questions in this section are N/A — no score, excluded from the overall average'
@@ -1579,10 +1670,8 @@ function _renderSec(){
       </div>
       <div class="qtools">
         <button class="tbtn tnote ${a.note?'has':''}">${D.note}${a.note?' ✓':''}</button>
-        <button class="tbtn tcam ${ph.length?'has':''}">${D.photo}${ph.length?' ('+kh(ph.length)+')':''}</button>
       </div>
       <textarea class="qnote ${a.note?'':'hide'}" placeholder="${D.notePh}">${(a.note||'').replace(/</g,'&lt;')}</textarea>
-      <div class="thumbs">${ph.map((p,pi)=>`<div class="thumb"><img src="${p}" alt=""><b data-p="${pi}">×</b></div>`).join('')}</div>
     </div>`;
   }).join('');
   const useTable = qStyle()==='table';
@@ -1617,7 +1706,7 @@ function _renderTable(si, st){
       <td class="c"><div class="xbox ${v==='na' ?'on':''}" data-v="na">✔</div></td>
       <td class="p">${pts}</td>
       <td class="o"><textarea class="xnote" rows="1" placeholder="${T().otherPh}">${(a.note||'').replace(/</g,'&lt;')}</textarea>
-        <button class="xcam ${ph?'has':''}">${T().photo}${ph?' ('+kh(ph)+')':''}</button></td>
+</td>
     </tr>`;
   });
   $('#xTable').innerHTML =
@@ -1635,7 +1724,6 @@ function _renderTable(si, st){
     });
     const ta=tr.querySelector('.xnote');
     ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; save(true); };
-    tr.querySelector('.xcam').onclick=()=>pickPhoto(key);
   });
 }
 
@@ -1650,7 +1738,6 @@ function _bindQ(){
     const ta=card.querySelector('.qnote');
     card.querySelector('.tnote').onclick=()=>{ ta.classList.toggle('hide'); if(!ta.classList.contains('hide')) ta.focus(); };
     ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; save(true); };
-    card.querySelector('.tcam').onclick=()=>pickPhoto(key);
     card.querySelectorAll('.thumb b').forEach(x=>x.onclick=()=>{
       const a=S.ans[key]; a.photos.splice(+x.dataset.p,1); save(); renderSec();
     });
@@ -1980,6 +2067,10 @@ function T(){ return LANG[S.lang] || LANG.km; }
 /* ================= វចនានុក្រម UI ================= */
 var LANG={
 km:{
+ howCalc:'ℹ️ របៀបគិតពិន្ទុ', sigPeople:'អ្នកចុះហត្ថលេខា', extraInfo:'ព័ត៌មានបន្ថែម', setTitle:'ការកំណត់', viewMode:'រូបរាង',
+ vPhone:'📱 ទូរស័ព្ទ', vPc:'💻 កុំព្យូទ័រ', backupT:'Backup (JSON)', shareT:'ចែករំលែក Link', copyLink:'📋 ចម្លង', clearT:'សម្អាតទិន្នន័យ',
+ aboutApp:'អំពី App', tileSaveRec:'រក្សាទុក', tileExport:'PDF / Excel', tileRecs:'កំណត់ត្រា',
+ installShort:'<b>📲 ដំឡើងជា App៖</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'ត្រួតពិនិត្យជីវៈសុវត្ថិភាព', appSub:"កសិដ្ឋាន M's PIG ACMC (Cambodia)",
  filled:'បំពេញ', of:'/', pts:'ពិន្ទុ', pts100:'ពិន្ទុ / ១០០', provPts:'បណ្តោះអាសន្ន / ១០០',
  liveBadge:'ពិន្ទុផ្ទាល់ · Real-Time', liveDesc:'ធ្វើបច្ចុប្បន្នភាពភ្លាមៗពេលឆ្លើយ (សំណួរមិនទាន់បំពេញ = ០ ពិន្ទុ)',
@@ -1992,22 +2083,22 @@ km:{
  sections7:'📋 ផ្នែកទាំង ៧', doneSec:'បញ្ចប់', secOf:'/៧ ផ្នែក',
  btnContinue:'▶️ បន្តបំពេញកន្លែងដែលនៅសល់', btnSaveRec:'📚 រក្សាទុកជាកំណត់ត្រា',
  btnSaveExp:'⬇️ Save PDF / Excel', btnViewRecs:'📂 មើលកំណត់ត្រាចុងក្រោយ',
- styleCard:'🃏 កាត', styleTable:'📋 តារាង (ដូច Excel)', hintTable:'ដូច Form ក្នុង Excel', hintCard:'ងាយចុចលើទូរស័ព្ទ',
- allYes:'✔ ដាក់ "មាន" ទាំងអស់', clearSec:'↺ សម្អាតផ្នែកនេះ',
+ styleCard:'🃏 កាត', styleTable:'📋 តារាង', hintTable:'ដូច Form ក្នុង Excel', hintCard:'ងាយចុចលើទូរស័ព្ទ',
+ allYes:'✔ មានទាំងអស់', clearSec:'↺ សម្អាត',
  thNo:'ល.រ', thDesc:'បរិយាយ', thPts:'ពិន្ទុ', thOther:'ផ្សេងៗ', thSecTotal:'សរុបផ្នែក · គិតពិន្ទុ',
  note:'📝 ចំណាំ', photo:'📷 រូបថត', notePh:'សរសេរចំណាំ ឬអនុសាសន៍...', otherPh:'ផ្សេងៗ...',
- secComment:'បរិយាយ÷', secCommentPh:'សរសេរបរិយាយសម្រាប់ផ្នែកនេះ...',
+ secComment:'✍️ បរិយាយ÷', secCommentPh:'សរសេរបរិយាយសម្រាប់ផ្នែកនេះ...',
  prevSec:'‹ ផ្នែកមុន', nextSec:'ផ្នែកបន្ទាប់ ›', noQ:'គ្មានសំណួរក្នុងតម្រងនេះទេ ✨',
  sumCalc:'ការគណនាពិន្ទុសរុប', sumBySec:'ពិន្ទុតាមផ្នែក', howScore:'របៀបគិតពិន្ទុ (ច្បាប់ផ្លូវការ)',
  toFix:'ចំណុចត្រូវកែតម្រូវ', noFix:'👏 គ្មានចំណុចត្រូវកែតម្រូវទេ',
  avg7:'មធ្យមភាគ ៧ ផ្នែក (ផ្លូវការ)', avgAns:'មធ្យមភាគតែផ្នែកដែលឆ្លើយហើយ', weighted:'ថ្លឹងតាមសំណួរ',
  counts:'មាន / មិនមាន / N/A / មិនទាន់', applicable:'គិត',
- farmInfo:'ព័ត៌មានកសិដ្ឋាន', head:'ចំនួនជ្រូក (ក្បាល)', auditor:'ឈ្មោះអ្នកធ្វើរបាយការណ៍',
- owner:'តំណាងម្ចាស់កសិដ្ឋាន', comp:'តំណាងក្រុមហ៊ុន', genNote:'កំណត់សម្គាល់ទូទៅ',
- recTitle:'កំណត់ត្រាចុងក្រោយ', recSaveBtn:'📚 រក្សាទុកការត្រួតពិនិត្យបច្ចុប្បន្នជាកំណត់ត្រា',
- recEmpty:'មិនទាន់មានកំណត់ត្រា — ចុច «រក្សាទុកជាកំណត់ត្រា» ពេលបញ្ចប់ការត្រួតពិនិត្យ',
+ farmInfo:'ព័ត៌មានកសិដ្ឋាន', head:'ចំនួនជ្រូក (ក្បាល)', auditor:'អ្នកធ្វើរបាយការណ៍',
+ owner:'តំណាងម្ចាស់កសិដ្ឋាន', comp:'តំណាងក្រុមហ៊ុន', genNote:'កំណត់សម្គាល់',
+ recTitle:'កំណត់ត្រា', recSaveBtn:'＋ រក្សាទុក',
+ recEmpty:'មិនទាន់មានកំណត់ត្រា',
  open:'📂 បើក', clearTitle:'សម្អាតទិន្នន័យ', clearBtn:'🧹 បើកជម្រើសសម្អាតទិន្នន័យ',
- dataTitle:'ទិន្នន័យ', backup:'💾 Backup (JSON)', restore:'⬆️ ស្តារឡើងវិញ',
+ dataTitle:'ទិន្នន័យ', backup:'ទាញយក', restore:'ស្តារ',
  shareTitle:'របៀបចែករំលែកឱ្យអ្នកដទៃ', diagTitle:'ពិនិត្យស្ថានភាព App', diagBtn:'🔄 ពិនិត្យឡើងវិញ',
  installTitle:'ដំឡើងលើទូរស័ព្ទ (ដូច App ពិត)',
  navHome:'ទំព័រដើម', navFill:'បំពេញ', navSum:'សង្ខេប', navInfo:'ព័ត៌មាន',
@@ -2035,6 +2126,10 @@ km:{
  installHtml:'<b>📱 iPhone / iPad (Safari)</b><br>       ១. បើកឯកសារនេះដោយ <b>Safari</b> (មិនមែន Chrome)<br>       ២. ចុចរូប <b>􀈂 Share</b> ខាងក្រោមអេក្រង់<br>       ៣. រំកិលចុះ ចុច <b>Add to Home Screen</b><br>       ៤. ចុច <b>Add</b> → រូប App នឹងលេចលើអេក្រង់ដើម<br>       <span style="opacity:.8">💡 បើផ្ញើតាម Telegram សូមចុច «Open in Safari» ជាមុនសិន</span><br><br>       <b>🤖 Android (Chrome)</b><br>       ១. បើកដោយ <b>Chrome</b> → ចុច <b>⋮</b> ខាងលើស្តាំ<br>       ២. ចុច <b>Add to Home screen</b> → <b>Add</b><br><br>       <b>💻 កុំព្យូទ័រ</b> — ចុចពីរដងលើឯកសារ ឬអូសដាក់ក្នុង Browser'
 },
 en:{
+ howCalc:'ℹ️ How the score works', sigPeople:'Signers', extraInfo:'More info', setTitle:'Settings', viewMode:'Layout',
+ vPhone:'📱 Phone', vPc:'💻 Desktop', backupT:'Backup (JSON)', shareT:'Share link', copyLink:'📋 Copy', clearT:'Clear data',
+ aboutApp:'About', tileSaveRec:'Save', tileExport:'PDF / Excel', tileRecs:'Records',
+ installShort:'<b>📲 Install as app:</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'Biosecurity Farm Audit', appSub:"M's PIG ACMC (Cambodia) Farm",
  filled:'Completed', of:'/', pts:'points', pts100:'points / 100', provPts:'provisional / 100',
  liveBadge:'Live · Real-Time', liveDesc:'Updates instantly as you answer (unanswered = 0 points)',
@@ -2047,22 +2142,22 @@ en:{
  sections7:'📋 All 7 sections', doneSec:'Completed', secOf:'/7 sections',
  btnContinue:'▶️ Continue where you left off', btnSaveRec:'📚 Save as record',
  btnSaveExp:'⬇️ Save PDF / Excel', btnViewRecs:'📂 View recent records',
- styleCard:'🃏 Cards', styleTable:'📋 Table (like Excel)', hintTable:'Same as the Excel form', hintCard:'Easier to tap on a phone',
- allYes:'✔ Set all to "Yes"', clearSec:'↺ Clear this section',
+ styleCard:'🃏 Cards', styleTable:'📋 Table', hintTable:'Same as the Excel form', hintCard:'Easier to tap on a phone',
+ allYes:'✔ All Yes', clearSec:'↺ Clear',
  thNo:'No.', thDesc:'Description', thPts:'Points', thOther:'Remark', thSecTotal:'Section total · applicable',
  note:'📝 Remark', photo:'📷 Photo', notePh:'Write a remark or recommendation...', otherPh:'Remark...',
- secComment:'Section comment', secCommentPh:'Write a comment for this section...',
+ secComment:'✍️ Section comment', secCommentPh:'Write a comment for this section...',
  prevSec:'‹ Previous', nextSec:'Next section ›', noQ:'No questions match this filter ✨',
  sumCalc:'How the total was calculated', sumBySec:'Score by section', howScore:'Scoring rules (official)',
  toFix:'Items to fix', noFix:'👏 Nothing to fix',
  avg7:'Average of 7 sections (official)', avgAns:'Average of answered sections only', weighted:'Weighted by questions',
  counts:'Yes / No / N/A / Not answered', applicable:'Appl.',
- farmInfo:'Farm information', head:'Number of pigs (head)', auditor:'Auditor name',
- owner:'Farm owner representative', comp:'Company representative', genNote:'General remarks',
- recTitle:'Recent records', recSaveBtn:'📚 Save the current audit as a record',
- recEmpty:'No records yet — tap "Save as record" when you finish an audit',
+ farmInfo:'Farm information', head:'Number of pigs (head)', auditor:'Auditor',
+ owner:'Farm owner representative', comp:'Company representative', genNote:'Remarks',
+ recTitle:'Records', recSaveBtn:'＋ Save',
+ recEmpty:'No records yet',
  open:'📂 Open', clearTitle:'Clear data', clearBtn:'🧹 Open clear-data options',
- dataTitle:'Data', backup:'💾 Backup (JSON)', restore:'⬆️ Restore',
+ dataTitle:'Data', backup:'Download', restore:'Restore',
  shareTitle:'How to share with others', diagTitle:'App health check', diagBtn:'🔄 Re-check',
  installTitle:'Install on your phone (like a real app)',
  navHome:'Home', navFill:'Audit', navSum:'Summary', navInfo:'Settings',
@@ -2873,24 +2968,19 @@ function bindSigPad(){
 }
 function _renderSigs(){
   var box=$('#sigList'); if(!box) return;
-  var D=T(), L=isTgt();
-  box.innerHTML = SIGKEYS.map(function(k){
-    var g=sigOf(k), nm=S.info[k]||'';
-    return '<div class="sigslot'+(g?' has':'')+'" data-k="'+k+'">'
-      + '<div class="sig-h"><b>'+esc0(sigLabel(k,L))+'</b><small>'+(nm?esc0(nm):D.sigNoName)+'</small></div>'
-      + '<button class="sig-box" data-a="draw" aria-label="'+esc0(D.sigDraw)+'">'
-      +   (g ? '<img src="'+g.d+'" alt="">' : '<span class="sig-ph">'+D.sigNone+'</span>')
-      + '</button>'
-      + '<div class="sig-act">'
-      +   '<button class="tbtn" data-a="up">'+D.sigUp+'</button>'
-      +   '<button class="tbtn" data-a="draw">'+D.sigDraw+'</button>'
-      +   (g ? '<button class="tbtn danger" data-a="del">'+D.sigDel+'</button>' : '')
-      + '</div></div>';
-  }).join('');
+  var D=T();
   box.querySelectorAll('.sigslot').forEach(function(el){
-    var k=el.dataset.k;
-    el.querySelectorAll('[data-a]').forEach(function(b){ b.onclick=function(){
-      var a=b.dataset.a;
+    var k=el.dataset.k, g=sigOf(k), area=el.querySelector('.sig-area');
+    el.classList.toggle('has', !!g);
+    area.innerHTML = '<button class="sig-box" data-a="draw" aria-label="'+esc0(D.sigDraw)+'">'
+      + (g ? '<img src="'+g.d+'" alt="">' : '<span class="sig-ph">'+D.sigNone+'</span>') + '</button>'
+      + '<div class="sig-act">'
+      +   '<button class="ibtn" data-a="up" title="'+esc0(D.sigUp)+'">📷</button>'
+      +   '<button class="ibtn" data-a="draw" title="'+esc0(D.sigDraw)+'">✍️</button>'
+      +   (g ? '<button class="ibtn danger" data-a="del" title="'+esc0(D.sigDel)+'">🗑️</button>' : '')
+      + '</div>';
+    area.querySelectorAll('[data-a]').forEach(function(btn){ btn.onclick=function(){
+      var a=btn.dataset.a;
       if(a==='up') sigUpload(k);
       else if(a==='draw') openSigPad(k);
       else if(a==='del'){ if(confirm(isTgt()?'Remove this signature?':'លុបហត្ថលេខានេះ?')){ setSig(k,null); toast(T().tSigDel); } }
@@ -3039,7 +3129,6 @@ $('#btnSave').onclick=()=>{ save(true); openSave(); };
 $$('.sv-open').forEach(b=>b.onclick=()=>{ save(true); openSave(); });
 $('#sheetBg').onclick=()=>{ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); };
 $('#btnClear').onclick=()=>{ save(true); openClear(); };
-$('#btnClear2').onclick=()=>{ save(true); openClear(); };
 $('#clClose').onclick=closeClear;
 $('#clForm').onclick =()=>{ closeClear(); setTimeout(clearForm,180); };
 $('#clRecs').onclick =()=>{ closeClear(); setTimeout(clearRecs,180); };
@@ -3071,6 +3160,8 @@ $('#btnContinue').onclick=()=>{
 };
 (function(){ var db=$('.homeinfo .datebox'), di=$('#h_date'); if(db&&di) db.addEventListener('click',function(e){
   if(e.target!==di && di.showPicker){ try{ di.showPicker(); }catch(_){ di.focus(); } } }); })();   /* ចុចប្រអប់កាលបរិច្ឆេទ → បើកប្រតិទិន */
+function setHdrH(){ var h=$('header.top'); if(h) document.documentElement.style.setProperty('--hdrH', h.offsetHeight+'px'); }
+window.addEventListener('resize', setHdrH); setTimeout(setHdrH,50); setTimeout(setHdrH,600);
 $('#btnBackup').onclick=backup;
 $('#btnRestore').onclick=()=>$('#fileRestore').click();
 $('#fileRestore').onchange=e=>{ if(e.target.files[0]) restore(e.target.files[0]); e.target.value=''; };
