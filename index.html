@@ -370,7 +370,7 @@ nav.bot{
   position:fixed;left:0;right:0;bottom:0;z-index:70;
   padding:0 12px calc(10px + var(--safe-b));pointer-events:none;
 }
-.bot-inner{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px;
+.bot-inner{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;
   border-radius:26px;pointer-events:auto;
   background:linear-gradient(150deg,rgba(255,255,255,.95),rgba(255,255,255,.84));
   -webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);
@@ -492,6 +492,57 @@ body.v-pc #sigSheet .btnrow,body.v-pc #iabBar .btnrow{grid-template-columns:1fr 
   background:#7a1f16;color:#fff;padding:10px 14px;font-size:12px;line-height:1.6;
   font-family:var(--font);border-bottom:2px solid #ffb4aa;
   max-height:45vh;overflow:auto}
+
+/* ---------- ទំព័រដើម៖ កាតតូច · បំពេញឈ្មោះកសិដ្ឋាន / តំបន់ / កាលបរិច្ឆេទ ផ្ទាល់ ---------- */
+.homeinfo{margin-top:16px;padding:11px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px 10px}
+.homeinfo .hf{min-width:0}
+.homeinfo .hf.full{grid-column:1/-1}
+.homeinfo label{display:block;font-size:10.5px;font-weight:700;color:var(--ink-dim);margin:0 0 3px 2px;line-height:1.4}
+.homeinfo input,.homeinfo .datebox{width:100%;height:40px;padding:0 11px;border-radius:12px;
+  border:1px solid rgba(13,122,76,.16);background:rgba(255,255,255,.82);color:var(--ink);
+  font-size:14px;font-weight:700;outline:none;box-shadow:inset 0 1px 2px rgba(8,74,46,.06);transition:border-color .2s,box-shadow .2s}
+.homeinfo input::placeholder{color:var(--ink-faint);font-weight:400}
+.homeinfo input:focus,.homeinfo .datebox:focus-within{border-color:var(--g-bright);background:#fff;box-shadow:0 0 0 3px rgba(25,166,97,.15)}
+.homeinfo .datebox{position:relative;display:flex;align-items:center;gap:6px;cursor:pointer}
+.homeinfo .datebox span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.homeinfo .datebox i{font-style:normal;font-size:14px;opacity:.8}
+.homeinfo .datebox input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;border:0;padding:0;margin:0;
+  background:transparent;box-shadow:none;font-size:16px;-webkit-appearance:none;appearance:none}
+.homeinfo .datebox input::-webkit-calendar-picker-indicator{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;opacity:0;cursor:pointer}
+@media (max-width:360px){ .homeinfo{grid-template-columns:1fr} }
+
+#heroCard{display:grid;grid-template-columns:96px 1fr;column-gap:13px;row-gap:5px;align-items:center;
+  text-align:left;padding:13px 13px 12px;margin-top:10px}
+#heroCard::before{left:48px;top:-70px;width:200px;height:200px}
+#heroCard .ring{width:96px;height:96px;margin:0;grid-row:1 / span 4;grid-column:1}
+#heroCard .ring svg{width:96px;height:96px;filter:drop-shadow(0 4px 8px rgba(25,166,97,.22))}
+#heroCard .ring .val b{font-size:28px}
+#heroCard .ring .val span{font-size:8.5px;margin-top:0}
+#heroCard .liveTag{grid-column:2;margin:0;justify-self:start;font-size:9px;padding:2px 9px;gap:5px}
+#heroCard .liveTag .dot{width:6px;height:6px}
+#heroCard .grade{grid-column:2;justify-self:start;font-size:12px;padding:4px 12px;line-height:1.45}
+#heroCard .hero-sub{grid-column:2;margin:0;font-size:10.5px;line-height:1.5}
+#heroCard .mini3{grid-column:2;margin:2px 0 0;gap:6px}
+#heroCard .mini3 div{padding:4px 2px;border-radius:12px;text-align:center}
+#heroCard .mini3 b{font-size:15px;line-height:1.3}
+#heroCard .mini3 span{font-size:9px}
+#heroCard .calc{grid-column:1 / -1;margin-top:6px;padding:6px 10px;font-size:10px;line-height:1.7;border-radius:12px}
+body.v-pc .grid2 .hero#heroCard{margin-top:12px;top:124px}
+
+#sc-home .sec-head{margin:16px 4px 8px}
+#secList{gap:8px}
+#secList .sitem{padding:8px 10px 8px 9px;gap:10px;border-radius:16px}
+#secList .sitem::after{font-size:17px}
+#secList .snum{width:36px;height:36px;flex:0 0 36px;border-radius:12px;font-size:16px}
+#secList .sbody b{font-size:13px;line-height:1.4}
+#secList .sbody .meta{margin-top:4px;gap:6px}
+#secList .sbody .bar{height:5px}
+#secList .sbody .meta small{font-size:9.5px}
+#secList .sscore{min-width:44px;padding:3px 6px;border-radius:12px}
+#secList .sscore b{font-size:15px}
+#secList .sscore small{font-size:8.5px}
+#sc-home .btnrow{gap:8px;margin-top:10px}
+#sc-home .btn{padding:10px 10px;font-size:12.5px;border-radius:14px}
 
 /* ---------- របាយការណ៍ Print / PDF — ប្លង់ដូច Form Excel ដើម (A4 ទំព័រថេរ · វាស់ពី PDF ដើម ជាឯកតា pt) ----------
    ទំព័រ A4 = 595.2 × 841.68pt · ស៊ុម x 15.7→568.9pt · ជួរ 16.92pt · ទំព័រ ១ ៣២ ជួរក្រោយប្រអប់ព័ត៌មាន · ទំព័របន្ទាប់ ៤១ ជួរ */
@@ -617,14 +668,13 @@ body.v-pc #sigSheet .btnrow,body.v-pc #iabBar .btnrow{grid-template-columns:1fr 
 <!-- ============ SCREEN 1 : HOME ============ -->
 <section class="screen on" id="sc-home">
 
-  <div class="xhead">
-    <div class="cell info">
-      <span class="k" data-i18n="farmName">ឈ្មោះកសិដ្ឋាន៖</span><b id="xhFarm">…………………………</b>
-      <div style="margin-top:7px"><span class="k" data-i18n="zone">តំបន់៖</span><b id="xhZone">…………………</b></div>
-      <div style="margin-top:7px"><span class="k" data-i18n="date">កាលបរិច្ឆេទ៖</span><b id="xhDate">…………………</b></div>
-    </div>
-    <div class="cell sc"><span class="k" data-i18n="score">ពិន្ទុ</span><b id="xhScore">–</b></div>
-    <div class="cell sc"><span class="k" data-i18n="grade">ចំណាប់ថ្នាក់</span><b id="xhGrade">–</b></div>
+  <div class="glass homeinfo">
+    <div class="hf full"><label for="h_farm" data-i18n="farmName">ឈ្មោះកសិដ្ឋាន៖</label>
+      <input id="h_farm" autocomplete="off" data-i18n-ph="farmPh" placeholder="ឧ. កសិដ្ឋាន ស្វាយរៀង ០១"></div>
+    <div class="hf"><label for="h_zone" data-i18n="zone">តំបន់៖</label>
+      <input id="h_zone" autocomplete="off" data-i18n-ph="zonePh" placeholder="ឧ. ខេត្តត្បូងឃ្មុំ"></div>
+    <div class="hf"><label for="h_date" data-i18n="date">កាលបរិច្ឆេទ៖</label>
+      <div class="datebox"><span id="h_dateTxt">…</span><i>📅</i><input id="h_date" type="date" aria-label="កាលបរិច្ឆេទ"></div></div>
   </div>
 
   <div class="grid2"><div>
@@ -915,7 +965,6 @@ body.v-pc #sigSheet .btnrow,body.v-pc #iabBar .btnrow{grid-template-columns:1fr 
 <nav class="bot"><div class="bot-inner">
   <button class="nb on" data-go="home"><i>🏠</i><span data-i18n="navHome">ទំព័រដើម</span></button>
   <button class="nb" data-go="sec"><i>📝</i><span data-i18n="navFill">បំពេញ</span></button>
-  <button class="nb" data-go="sum"><i>📊</i><span data-i18n="navSum">សង្ខេប</span></button>
   <button class="nb" data-go="info"><i>⚙️</i><span data-i18n="navInfo">ព័ត៌មាន</span></button>
 </div></nav>
 
@@ -947,7 +996,7 @@ body.v-pc #sigSheet .btnrow,body.v-pc #iabBar .btnrow{grid-template-columns:1fr 
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-10-06', ERRS=[];
+var APP_VER='2026-10-27', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -1250,15 +1299,18 @@ const TOTAL_Q = SECTIONS.reduce((a,s)=>a+s.items.length,0);
 /* ================= ឧបករណ៍ជំនួយ ================= */
 const KH='០១២៣៤៥៦៧៨៩';
 const kh = n => (S.lang==='en') ? String(n) : String(n).replace(/\d/g,d=>KH[+d]);
-/* ---- កាលបរិច្ឆេទ៖ ទុកជា ISO (2026-10-04) · បង្ហាញជា 04 Oct 2026 ---- */
+/* ---- កាលបរិច្ឆេទ៖ ទុកជា ISO (2026-10-27) · បង្ហាញជាខ្មែរ ២៧ តុលា ២០២៦ (ភាសាអង់គ្លេស៖ 27 Oct 2026) ---- */
 const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const MON_KM=['មករា','កុម្ភៈ','មីនា','មេសា','ឧសភា','មិថុនា','កក្កដា','សីហា','កញ្ញា','តុលា','វិច្ឆិកា','ធ្នូ'];
+function khDigits(v){ return String(v).replace(/\d/g,function(d){ return KH[+d]; }); }
 function pad2(n){ return (n<10?'0':'')+n; }
 function isoOf(d){ d=(d instanceof Date)?d:new Date(d); return d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate()); }
 function todayIso(){ return isoOf(new Date()); }   /* ម៉ោងក្នុងស្រុក (មិនមែន UTC) */
 function fmtDate(iso){
   var m=/^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(String(iso||''));
   if(!m || +m[2]<1 || +m[2]>12) return String(iso||'');
-  return pad2(+m[3])+' '+MON[+m[2]-1]+' '+m[1];
+  if(S.lang==='en') return pad2(+m[3])+' '+MON[+m[2]-1]+' '+m[1];
+  return khDigits(pad2(+m[3]))+' '+MON_KM[+m[2]-1]+' '+khDigits(m[1]);
 }
 const $  = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
@@ -1470,11 +1522,8 @@ function _renderHome(){
   $('#secDoneTxt').textContent=T().doneSec+' '+kh(o.doneSec)+T().secOf;
   $$('.recBadge').forEach(e=>e.textContent = kh(S.recs.length)+'/'+kh(MAXREC));
   $('#topSub').textContent = S.info.farm ? S.info.farm : T().appSub;
-  $('#xhFarm').textContent = S.info.farm || '…………………………';
-  $('#xhZone').textContent = S.info.zone || '…………………';
-  $('#xhDate').textContent = S.info.date ? fmtDate(S.info.date) : '…………………';
-  $('#xhScore').textContent = o.score===null?'–':fx(o.score);
-  $('#xhGrade').textContent = g.k||'–';
+  [['h_farm','farm'],['h_zone','zone'],['h_date','date']].forEach(function(x){ var e=$('#'+x[0]); if(e && document.activeElement!==e) e.value=S.info[x[1]]||''; });
+  showDateFmt();
 
   $('#secList').innerHTML = SECTIONS.map((sec,i)=>{
     const st=secStat(i);
@@ -1739,13 +1788,18 @@ function openSec(i){ S.cur=i; S.filter='all'; $$('.fchip').forEach(c=>c.classLis
 
 /* ================= ព័ត៌មានកសិដ្ឋាន ================= */
 const F=[['f_farm','farm'],['f_zone','zone'],['f_date','date'],['f_head','head'],
-         ['f_by','by'],['f_owner','owner'],['f_comp','comp'],['f_note','note']];
+         ['f_by','by'],['f_owner','owner'],['f_comp','comp'],['f_note','note'],
+         ['h_farm','farm'],['h_zone','zone'],['h_date','date']];   /* h_* = បំពេញផ្ទាល់នៅទំព័រដើម */
 function fillInfo(){ F.forEach(([id,k])=>{ const el=$('#'+id); if(el) el.value=S.info[k]||''; }); if(typeof showDateFmt==='function') showDateFmt(); if(typeof renderSigs==='function') renderSigs(); }
-function bindInfo(){ F.forEach(([id,k])=>{ const el=$('#'+id); if(el) el.oninput=()=>{ S.info[k]=el.value; save(true);
-  if(k==='farm') $('#topSub').textContent=el.value||T().appSub;
-  if(k==='date') showDateFmt();
-  if(SIGKEYS.indexOf(k)>=0) renderSigs(); }; }); }
-function showDateFmt(){ const e=$('#dateFmt'); if(e) e.textContent = S.info.date ? fmtDate(S.info.date) : ''; }
+function bindInfo(){ F.forEach(([id,k])=>{ const el=$('#'+id); if(!el) return;
+  el.oninput=el.onchange=()=>{ S.info[k]=el.value; save(true);
+    F.forEach(([id2,k2])=>{ if(k2===k && id2!==id){ const e2=$('#'+id2); if(e2) e2.value=el.value; } });   /* ឱ្យដូចគ្នាទាំងពីរកន្លែង */
+    if(k==='farm') $('#topSub').textContent=el.value||T().appSub;
+    if(k==='date') showDateFmt();
+    if(SIGKEYS.indexOf(k)>=0) renderSigs(); }; }); }
+function showDateFmt(){ const t=S.info.date ? fmtDate(S.info.date) : '';
+  const e=$('#dateFmt'); if(e) e.textContent=t;
+  const h=$('#h_dateTxt'); if(h) h.textContent=t||(S.lang==='en'?'Pick a date':'ជ្រើសរើសកាលបរិច្ឆេទ'); }
 
 /* ================= នាំចេញ CSV (Excel) ================= */
 function toCsv(){
@@ -2852,7 +2906,7 @@ function photoCount(ans){ var n=0; ans=ans||{}; for(var k in ans){ var a=ans[k];
 function recTitle(r){ return (r.farm||'(គ្មានឈ្មោះកសិដ្ឋាន)'); }
 function fmtWhen(ms){
   const d=new Date(ms);
-  return fmtDate(isoOf(d))+' '+pad2(d.getHours())+':'+pad2(d.getMinutes());
+  return fmtDate(isoOf(d))+' '+kh(pad2(d.getHours())+':'+pad2(d.getMinutes()));
 }
 function saveRecord(){
   const o=overall();
@@ -3003,7 +3057,7 @@ $('#svCsv').onclick =()=>{ closeSave(); toCsv(); };
 $('#svJson').onclick=()=>{ closeSave(); backup(); };
 window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); } });
 $('#btnPrevSec').onclick=()=>{ if(S.cur>0){S.cur--; renderSec(); window.scrollTo({top:0,behavior:'smooth'});} else toast('នេះជាផ្នែកដំបូង'); };
-$('#btnNextSec').onclick=()=>{ if(S.cur<SECTIONS.length-1){S.cur++; renderSec(); window.scrollTo({top:0,behavior:'smooth'});} else go('sum'); };
+$('#btnNextSec').onclick=()=>{ if(S.cur<SECTIONS.length-1){S.cur++; renderSec(); window.scrollTo({top:0,behavior:'smooth'});} else { go('home'); toast(S.lang==='en'?'✅ That was the last section':'✅ នេះជាផ្នែកចុងក្រោយហើយ'); } };
 $('#btnAllYes').onclick=()=>{ const sec=SECTIONS[S.cur];
   sec.items.forEach((_,i)=>{ const k=sec.id+'-'+(i+1); const a=S.ans[k]||(S.ans[k]={}); if(!a.v) a.v='yes'; });
   save(); renderSec(); renderTop(); toast('✔ បំពេញសំណួរទំនេរជា "មាន"'); };
@@ -3013,8 +3067,10 @@ $('#btnClearSec').onclick=()=>{ if(!confirm('លុបចម្លើយទា�
 $$('.fchip').forEach(c=>c.onclick=()=>{ $$('.fchip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); S.filter=c.dataset.f; renderSec(); });
 $('#btnContinue').onclick=()=>{
   for(let i=0;i<SECTIONS.length;i++){ const st=secStat(i); if(!st.complete){ openSec(i); return; } }
-  go('sum'); toast('🎉 បំពេញគ្រប់សំណួររួចរាល់');
+  go('home'); toast(S.lang==='en'?'🎉 All questions answered':'🎉 បំពេញគ្រប់សំណួររួចរាល់');
 };
+(function(){ var db=$('.homeinfo .datebox'), di=$('#h_date'); if(db&&di) db.addEventListener('click',function(e){
+  if(e.target!==di && di.showPicker){ try{ di.showPicker(); }catch(_){ di.focus(); } } }); })();   /* ចុចប្រអប់កាលបរិច្ឆេទ → បើកប្រតិទិន */
 $('#btnBackup').onclick=backup;
 $('#btnRestore').onclick=()=>$('#fileRestore').click();
 $('#fileRestore').onchange=e=>{ if(e.target.files[0]) restore(e.target.files[0]); e.target.value=''; };
