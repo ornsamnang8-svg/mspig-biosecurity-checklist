@@ -835,6 +835,180 @@ body.v-pc table.xform td.d{font-size:13.5px}
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
 }
 
+/* ================= Redesign (2026-11-17c): កាតសំណួរ · ទំព័រដើម · Sidebar · Admin ================= */
+.qi{position:relative;margin:0 0 10px;padding:12px;border-radius:20px;background:rgba(255,255,255,.9);
+  border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 20px -16px rgba(11,79,42,.45);
+  transition:border-color .3s var(--out),background-color .35s var(--out),box-shadow .3s var(--out)}
+.qi.cur{border:2px solid var(--g-bright);padding:11px;box-shadow:0 14px 30px -18px rgba(11,79,42,.55)}
+.qi.a-no{background:#fffcf0;border-color:rgba(242,179,31,.6)}
+.qi.a-na .qi-t{color:var(--ink-dim)}
+.qi.a-na .napill{display:inline-block;animation:riseIn .35s var(--spring)}
+.qi-top{display:flex;align-items:flex-start;gap:10px}
+.qi-n{flex:0 0 28px;min-height:28px;border-radius:9px;background:#eef3f0;color:var(--ink-dim);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-size:12.5px;font-weight:700;line-height:1.2;padding:3px 0}
+.qi-og{font-size:8.5px;font-weight:400;opacity:.75}
+.qi-t{flex:1;min-width:0;font-size:15px;line-height:1.7;padding-top:1px}
+.qi-t .qsub{font-size:12px;color:var(--ink-dim);line-height:1.6}
+.qi-nb{flex:0 0 40px;width:40px;height:40px;margin:-6px -4px 0 0;border-radius:12px;border:none;background:transparent;color:#9aaba2;display:grid;place-items:center;cursor:pointer}
+.qi-nb svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.qi-nb.has{color:#8a6100;background:var(--y-pale)}
+.qi-nb:focus-visible,.ansb:focus-visible,.secrow:focus-visible,.contcard:focus-visible,.nochip:focus-visible{outline:2px solid var(--g-deep);outline-offset:2px}
+.qi-ans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+.ansb{height:48px;border-radius:14px;border:1.5px solid #d5e2da;background:#fff;color:#2e4337;display:flex;align-items:center;justify-content:center;gap:6px;
+  font:700 15px/1 var(--font);cursor:pointer;transition:transform .42s var(--bounce),background .25s var(--out),border-color .25s,box-shadow .25s,color .2s}
+.ansb:active{transform:scale(.95);transition-duration:.1s}
+.ansb svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.ansb.y.on{background:linear-gradient(135deg,#18a35a,#0e7a3f);border-color:#0e7a3f;color:#fff;box-shadow:0 8px 18px -10px rgba(14,122,63,.9)}
+.ansb.n.on{background:linear-gradient(135deg,#ffd447,#fcc10f);border-color:#e0a800;color:#3d2b00;box-shadow:0 8px 18px -10px rgba(201,140,0,.9)}
+.ansb.pop{animation:tickPop .5s var(--bounce)}
+@media (hover:hover){ .ansb:not(.on):hover{border-color:#9cc9ad;background:#f6fbf8} .qi-nb:hover{background:#f1f5f2} }
+.qi-p{display:none}
+.qi-note{display:block;width:100%;box-sizing:border-box;margin-top:10px;min-height:42px;padding:9px 12px;border-radius:12px;border:1px solid rgba(242,179,31,.45);
+  background:#fffdf5;font:14px/1.6 var(--font);color:var(--ink);resize:none;outline:none}
+.qi-note:focus{border-color:var(--g-bright);box-shadow:0 0 0 3px rgba(25,166,97,.15)}
+.qi-note.hide{display:none}
+#qList .qi.flash{animation:rowFlash 2.2s ease-out}
+.qsum{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:2px 0 12px;padding:10px 14px;border-radius:16px;background:rgba(255,246,220,.85);
+  border:1px solid rgba(242,179,31,.3);font-size:12.5px;color:var(--g-deep);line-height:1.6}
+.qsum span{margin-right:auto;font-weight:700}
+.qsum b{padding:2px 10px;border-radius:99px;background:#fff;font-weight:700}
+.qsum .sn{color:#6b4c00}
+.qsum .ss{background:var(--g-deep);color:#fff}
+body.v-tab .qi-t{font-size:15.5px}
+body.v-tab .ansb{height:50px}
+/* PC + iPad ផ្តេក: មួយជួរ */
+body.v-pc .qi{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;padding:9px 14px;margin:0 0 8px}
+body.v-pc .qi.cur{padding:8px 13px}
+body.v-pc .qi-top{flex:1 1 320px;min-width:0;align-items:center}
+body.v-pc .qi-nb{margin:0}
+body.v-pc .qi-ans{margin-top:0;flex:0 0 240px}
+body.v-pc .ansb{height:44px;font-size:14px}
+body.v-pc .qi-p{display:block;flex:0 0 46px;text-align:right;font-weight:700;font-size:13px;color:var(--g-deep)}
+body.v-pc .qi-note{flex:1 1 100%;margin:8px 0 2px}
+
+/* របារប៊ូតុងខាងក្រោម ពេលបំពេញ (តំបន់មេដៃ) */
+nav.bot{transition:transform .45s var(--spring),opacity .3s var(--out)}
+body.in-sec nav.bot{transform:translateY(140%);opacity:0;pointer-events:none}
+body.in-sec #sc-sec .navrow{position:fixed;left:12px;right:12px;bottom:calc(10px + var(--safe-b));z-index:66;max-width:560px;margin:0 auto;padding:8px;
+  display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.6fr);gap:8px;border-radius:24px;background:rgba(255,255,255,.9);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);border:1px solid #fff;
+  box-shadow:0 18px 40px -20px rgba(11,79,42,.6);animation:riseIn .45s var(--spring)}
+body.in-sec #sc-sec .navrow .btn{min-height:52px;padding:0 10px;font-size:14.5px;display:flex;align-items:center;justify-content:center}
+body.v-pc.in-sec #sc-sec .navrow{max-width:520px}
+
+/* PC: បញ្ជីផ្នែកខាងឆ្វេង */
+.secside{display:none}
+.secmain{min-width:0}
+body.v-pc .seclay{display:grid;grid-template-columns:270px minmax(0,1fr);gap:18px;align-items:start}
+body.v-pc .secside{display:flex;flex-direction:column;gap:2px;padding:12px;position:sticky;top:calc(var(--hdrH,90px) + 6px);margin-top:12px}
+.ss-head{display:flex;align-items:center;gap:12px;padding:6px 8px 12px;margin-bottom:4px;border-bottom:1px solid rgba(13,122,76,.1)}
+.ss-head b{font-size:34px;color:var(--g-deep);line-height:1}
+.ss-head span{font-size:12px;color:var(--ink-dim);line-height:1.5}
+
+/* ជួរផ្នែក (ទំព័រដើម + Sidebar) */
+#secList.slist{padding:6px;display:flex;flex-direction:column;gap:0}
+.secrow{display:flex;align-items:center;gap:12px;width:100%;min-height:54px;padding:6px 10px;border:0;border-radius:16px;background:transparent;text-align:left;
+  font:inherit;color:var(--ink);cursor:pointer;transition:background-color .25s var(--out),transform .42s var(--bounce)}
+.secrow:active{transform:scale(.98);transition-duration:.1s}
+@media (hover:hover){ .secrow:hover{background:rgba(14,122,63,.06)} }
+.secrow.cur{background:#eaf4ee;box-shadow:inset 0 0 0 1.5px var(--g-bright)}
+.sbadge{flex:0 0 34px;height:34px;border-radius:11px;display:grid;place-items:center;font-size:12.5px;font-weight:700;background:#eef3f0;color:var(--ink-dim)}
+.secrow.done .sbadge{background:linear-gradient(135deg,#18a35a,#0e7a3f);color:#fff}
+.secrow.doing .sbadge{background:#fcc10f;color:#3d2b00}
+.sinfo{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.sname{font-size:14.5px;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sbar{height:4px;border-radius:99px;background:#e9f0eb;overflow:hidden}
+.sbar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#19a661,#0e7a3f);transition:width .7s var(--spring)}
+.secrow.doing .sbar i{background:linear-gradient(90deg,#19a661,#fcc10f)}
+.scount{font-size:11.5px;color:var(--ink-dim);white-space:nowrap}
+.sscore2{min-width:42px;text-align:right;font-weight:700;font-size:14px;color:var(--g-deep)}
+
+/* កាត «បន្តពីកន្លែងដែលនៅសល់» */
+.contcard{display:flex;align-items:center;gap:12px;width:100%;min-height:64px;margin:12px 0 4px;padding:10px 12px 10px 18px;border:0;border-radius:20px;
+  background:linear-gradient(135deg,#18a35a,#0b6b37);color:#fff;text-align:left;font:inherit;cursor:pointer;box-shadow:0 14px 28px -16px rgba(14,122,63,.9);
+  transition:transform .42s var(--bounce),box-shadow .3s}
+.contcard:active{transform:scale(.97);transition-duration:.1s}
+.cc-t{flex:1;min-width:0;display:flex;flex-direction:column}
+.cc-t small{font-size:12.5px;opacity:.92;line-height:1.6}
+.cc-t b{font-family:var(--font-h);font-weight:700;font-synthesis:none;font-size:15px;line-height:1.8}
+.cc-go{flex:0 0 40px;height:40px;border-radius:14px;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:22px;line-height:1}
+
+/* ស្លាក Sync */
+.subrow{display:flex;align-items:center;gap:6px;min-width:0}
+.subrow #topSub{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.syncchip{flex:0 0 auto;display:inline-flex;align-items:center;gap:3px;padding:0 7px 0 5px;border-radius:99px;font-size:10.5px;font-weight:700;line-height:1.7;
+  background:rgba(14,122,63,.1);color:var(--g-deep);white-space:nowrap}
+.syncchip svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.syncchip.s-off,.syncchip.s-err{background:var(--y-pale);color:#8a6100}
+.syncchip.s-busy svg{animation:syncPulse 1.2s ease-in-out infinite}
+@keyframes syncPulse{50%{opacity:.35}}
+.syncchip.hide{display:none}
+@media (max-width:370px){ .syncchip{font-size:0;gap:0;padding:2px 4px} }
+
+/* បញ្ជី «ចំណុចត្រូវកែ» */
+.nochips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.nochip{height:36px;padding:0 14px;border-radius:99px;border:1px solid rgba(242,179,31,.5);background:#fff;color:#4a3a10;font:700 13px/1 var(--font);cursor:pointer;
+  transition:background .25s,color .25s,transform .4s var(--bounce)}
+.nochip.on{background:#3d2b00;border-color:#3d2b00;color:#fff}
+#noList .noitem{align-items:center;margin:0 0 8px;border:1px solid rgba(242,179,31,.4);border-radius:16px;background:#fff}
+.ntag{flex:0 0 auto;padding:2px 9px;border-radius:9px;background:#fff1c2;color:#6b4c00;font-size:12px;font-weight:700;line-height:1.6;white-space:nowrap}
+.noitem .ngo{flex:0 0 auto;padding:8px 12px;border-radius:12px;background:#0e7a3f;color:#fff;font-size:12.5px;font-weight:700;line-height:1.2}
+.nofoot{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:8px;margin-top:6px;position:sticky;bottom:-20px;background:#fff;padding:8px 0}
+.nofoot .btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px}
+.nofoot svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+#noSheet h3{color:#6b4c00}
+
+/* សង្ខេបលើផ្ទាំង Save */
+.svsum{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding:14px 16px;border-radius:20px;
+  background:linear-gradient(140deg,#18a35a,#0b5e31);color:#fff;box-shadow:0 14px 30px -20px rgba(11,79,42,.9)}
+.svs-l{display:flex;flex-direction:column}
+.svs-l small{font-size:12px;opacity:.9;line-height:1.6}
+.svs-l b{font-size:34px;line-height:1.1}
+.svs-r{display:flex;flex-direction:column;align-items:flex-end;gap:3px;font-size:12px;opacity:.96;text-align:right;line-height:1.5}
+.svs-g{padding:3px 12px;border-radius:99px;background:#fcc10f;color:#3d2b00;font-weight:700;font-size:12.5px}
+
+/* Admin */
+.adm-sum{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.v-pc .adm-sum{grid-template-columns:repeat(4,minmax(0,1fr))}
+.adm-sum div{text-align:left;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.adm-sum div b{font-size:24px;line-height:1.3}
+.adm-sum div em{font-style:normal;font-size:13px;color:var(--ink-dim);font-weight:400}
+.adm-sum div.hi{background:linear-gradient(140deg,#18a35a,#0b5e31);border-color:transparent}
+.adm-sum div.hi b,.adm-sum div.hi small{color:#fff}
+.adm-sum div.warn{background:var(--y-pale);border-color:rgba(242,179,31,.45)}
+.adm-sum div.warn b{color:#6b4c00}
+.adm-table{border:1px solid var(--rim);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.78);margin:0 0 12px}
+.at-h,.at-r{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1.1fr) minmax(0,1.6fr) 54px auto;gap:10px;align-items:center;padding:8px 12px}
+.at-h{background:rgba(231,246,238,.9);font-size:11.5px;font-weight:700;color:var(--ink-dim)}
+.at-r{border-top:1px solid rgba(13,122,76,.08);font-size:12.5px;min-height:52px}
+.at-f{display:flex;flex-direction:column;min-width:0;line-height:1.45}
+.at-f b,.at-f small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.at-f small{font-size:10.5px;color:var(--ink-dim)}
+.at-d{display:flex;flex-direction:column;font-size:11.5px;color:var(--ink-dim);line-height:1.45}
+.at-s{display:flex;align-items:center;gap:8px}
+.at-s i{flex:1;height:7px;border-radius:99px;background:#edf3ef;overflow:hidden}
+.at-s u{display:block;height:100%;border-radius:inherit;background:#0e7a3f;text-decoration:none}
+.at-s u.lo{background:#e0a800}
+.at-s b{min-width:34px;text-align:right}
+.at-g em{font-style:normal;padding:2px 9px;border-radius:8px;font-weight:700;background:#ddf1e5;color:var(--g-deep)}
+.at-g em.g-A{background:#0e7a3f;color:#fff}
+.at-g em.g-C,.at-g em.g-D,.at-g em.g-F{background:#fff4cc;color:#6b4c00}
+.at-a{display:flex;gap:4px;justify-content:flex-end}
+@media (max-width:640px){
+  .at-h{display:none}
+  .at-r{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"f a" "d g" "s s";row-gap:6px}
+  .at-f{grid-area:f} .at-a{grid-area:a} .at-d{grid-area:d;flex-direction:row;gap:6px} .at-g{grid-area:g;justify-self:end} .at-s{grid-area:s}
+}
+.adm-top{margin:0 0 12px}
+.adm-top h4{margin:4px 0 6px;font-family:var(--font-h);font-weight:700;font-synthesis:none;font-size:13.5px;line-height:1.8;color:#6b4c00}
+.tn{display:grid;grid-template-columns:auto minmax(0,1fr) 90px 26px;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #f3eedc;font-size:12.5px}
+.tn .tt{line-height:1.55}
+.tn .tb{height:7px;border-radius:99px;background:#f6efd7;overflow:hidden}
+.tn .tb i{display:block;height:100%;background:#fcc10f;border-radius:inherit}
+.tn .tc{font-weight:700;color:#6b4c00;text-align:right}
+@media (max-width:640px){ .tn{grid-template-columns:auto minmax(0,1fr) 26px} .tn .tb{display:none} }
+.adm-users summary{cursor:pointer;font-weight:700;font-size:13px;padding:8px 2px;color:var(--g-deep)}
+
 /* ប៊ូតុងទាញយក (header) */
 .dlbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 12px 0 9px;border-radius:12px;cursor:pointer;
   border:1px solid rgba(255,255,255,.35);color:#fff;font:700 12px/1 inherit;font-family:inherit;white-space:nowrap;
@@ -1025,7 +1199,7 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     <div class="brand"><img src="" id="brandLogo" alt="M'S PIG ACMC"></div>
     <div class="top-t">
       <h1 id="topTitle" data-i18n="appTitle">ត្រួតពិនិត្យជីវៈសុវត្ថិភាព</h1>
-      <p id="topSub">កសិដ្ឋាន M's PIG ACMC (Cambodia)</p>
+      <div class="subrow"><p id="topSub">កសិដ្ឋាន M's PIG ACMC (Cambodia)</p><span class="syncchip hide" id="syncChip"></span></div>
     </div>
     <button class="iconbtn sm" id="btnLang" title="ភាសា / Language">EN</button>
     <button class="dlbtn" id="btnSave" title="ទាញយក PDF / Excel / រូបភាព" aria-label="Download PDF / Excel / images"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="dl-arrow" d="M12 3.5v10.2M7.6 9.6 12 14l4.4-4.4"/><path d="M4.5 14.5v3.2a2.3 2.3 0 0 0 2.3 2.3h10.4a2.3 2.3 0 0 0 2.3-2.3v-3.2"/></svg><span data-i18n="dlBtn">ទាញយក</span></button>
@@ -1068,20 +1242,20 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     </div>
     <div class="calc" id="heroCalc"></div>
   </div>
+  <button class="contcard" id="btnContinue" type="button"></button>
 
   </div><div>
   <div class="sec-head"><h3 data-i18n="sections7">📋 ផ្នែកទាំង ៧</h3><span id="secDoneTxt"></span></div>
-  <div class="slist" id="secList"></div>
-
-  <div class="btnrow">
-    <button class="btn pri wide" id="btnContinue" data-i18n="btnContinue">▶️ បន្តបំពេញកន្លែងដែលនៅសល់</button>
-  </div>
+  <div class="slist glass" id="secList"></div>
   </div></div>
 
 </section>
 
 <!-- ============ SCREEN 2 : SECTION ============ -->
 <section class="screen" id="sc-sec">
+ <div class="seclay">
+  <aside class="glass secside" id="secSide" aria-label="Sections"></aside>
+  <div class="secmain">
   <div class="glass qhead">
     <div class="t">
       <button class="iconbtn sm" id="btnBack" aria-label="back">←</button>
@@ -1109,6 +1283,8 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
   </div>
 
   </div>
+  </div>
+ </div>
 
   <div class="btnrow navrow">
     <button class="btn" id="btnPrevSec" data-i18n="prevSec">‹ ផ្នែកមុន</button>
@@ -1136,7 +1312,9 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
       <input id="admQ" type="search" autocomplete="off" data-i18n-ph="admSearchPh" placeholder="ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…">
       <button class="chipbtn" id="btnAdmCsv">⬇ CSV</button>
     </div>
-    <div id="admList"></div>
+    <div class="adm-table" id="admTable"></div>
+    <div class="adm-top" id="admTop"></div>
+    <details class="adm-users"><summary><span data-i18n="admByUser">👥 តាមអ្នកប្រើ</span></summary><div id="admList"></div></details>
   </div>
   <div class="glass card" id="sigCard">
     <h2><span class="chip-i">✍️</span> <span data-i18n="sigPeople">អ្នកចុះហត្ថលេខា</span></h2>
@@ -1259,6 +1437,7 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
   <div class="grab"></div>
   <h3 data-i18n="saveSheet">⬇️ Save / នាំចេញ</h3>
   <p class="sub" id="sheetSub"></p>
+  <div class="svsum" id="svSum"></div>
   <div class="sv-hint" id="svHint" style="display:none"></div>
   <button class="sv pri" id="svPdf"><i>📕</i><span><b data-i18n="savePdf">Save PDF</b><small data-i18n="svPdfSub">ឯកសារ PDF ពិតប្រាកដ ដូច Form ដើម · រក្សាទុក ឬ ផ្ញើតាម Telegram បាន</small></span></button>
   <button class="sv" id="svSharePdf"><i>📤</i><span><b data-i18n="sharePdf">ចែករំលែក PDF</b><small data-i18n="svSharePdfSub">ផ្ញើឯកសារ PDF ទៅ Telegram · Messenger · Gmail · Drive …</small></span></button>
@@ -1298,9 +1477,13 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
   <div class="grab"></div>
   <h3 id="noTitle">✖ ចំណុច «មិនមាន»</h3>
   <p class="sub" id="noSub"></p>
+  <div class="nochips" id="noChips"></div>
   <div id="noList"></div>
-  <button class="sv" id="noShare"><i>📤</i><span><b id="noShareT">ចែករំលែកបញ្ជីនេះ</b><small>Telegram · Messenger · Copy</small></span></button>
-  <button class="sv" id="noClose" style="justify-content:center;margin-bottom:0"><span><b data-i18n="close">បិទ</b></span></button>
+  <div class="nofoot">
+    <button class="btn pri" id="noShare" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 3 10.5l7 2.5 2.5 7z"/><path d="M10 13l5-5"/></svg><span id="noShareT">ផ្ញើតាម Telegram</span></button>
+    <button class="btn" id="noCopy" type="button">ចម្លង</button>
+  </div>
+  <button class="sv" id="noClose" style="justify-content:center;margin:8px 0 0"><span><b data-i18n="close">បិទ</b></span></button>
 </div>
 
 <div id="pdfBusy"><div class="spin"></div><div id="pdfBusyT">⏳ កំពុងបង្កើត PDF…</div></div>
@@ -1365,7 +1548,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-11-17b', ERRS=[];
+var APP_VER='2026-11-17c', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -1898,20 +2081,24 @@ function _renderHome(){
   [['h_farm','farm'],['h_zone','zone'],['h_date','date']].forEach(function(x){ var e=$('#'+x[0]); if(e && document.activeElement!==e) e.value=S.info[x[1]]||''; });
   showDateFmt();
 
+  var EN=(S.lang==='en'), nextI=-1;
+  for(var k=0;k<SECTIONS.length;k++){ if(!secStat(k).complete){ nextI=k; break; } }
+  var cc=$('#btnContinue');
+  if(cc){
+    if(nextI<0) cc.innerHTML='<span class="cc-t"><small>'+(EN?'All 121 questions answered':'បំពេញគ្រប់ ១២១ សំណួររួចរាល់')+'</small><b>'+(EN?'Finish &amp; share report':'បញ្ចប់ និងចែករំលែករបាយការណ៍')+'</b></span><span class="cc-go">›</span>';
+    else { var ns=secStat(nextI), sc=SECTIONS[nextI];
+      cc.innerHTML='<span class="cc-t"><small>'+(o.answered?(EN?'Continue where you left off':'បន្តពីកន្លែងដែលនៅសល់'):(EN?'Start the audit':'ចាប់ផ្តើមត្រួតពិនិត្យ'))+'</small><b>'+sc.rn+'. '+secName(sc)+' · '+kh(ns.answered)+' / '+kh(ns.total)+'</b></span><span class="cc-go">›</span>'; }
+  }
   $('#secList').innerHTML = SECTIONS.map((sec,i)=>{
-    const st=secStat(i);
-    const left=st.total-st.answered;
-    return `<div class="sitem ${st.complete?'done':''}" data-i="${i}">
-      <div class="snum ring" style="--p:${st.pct}"><span>${sec.icon}</span></div>
-      <div class="sbody">
-        <b>${sec.rn}.${secName(sec)}</b>
-        <div class="meta"><small class="stag ${st.complete?'ok':(st.answered?'go':'')}">${st.complete?(S.lang==='en'?'✓ Done':'✓ រួចរាល់'):(st.answered?(S.lang==='en'?'Left ':'នៅសល់ ')+kh(left):(S.lang==='en'?'Not started':'មិនទាន់ចាប់ផ្តើម'))}</small>
-          <small>${kh(st.answered)}/${kh(st.total)}</small></div>
-      </div>
-      <div class="sscore"><b>${st.score===null?'–':kh(Math.round(st.score))}</b><small>${S.lang==='en'?'/100':'/១០០'}</small></div>
-    </div>`;
+    const st=secStat(i), state = st.complete?'done':(st.answered?'doing':'');
+    return `<button type="button" class="secrow ${state}" data-i="${i}">
+      <span class="sbadge">${sec.rn}</span>
+      <span class="sinfo"><span class="sname">${secName(sec)}</span><span class="sbar"><i style="width:${st.pct}%"></i></span></span>
+      <span class="scount">${kh(st.answered)}/${kh(st.total)}</span>
+      <span class="sscore2">${st.score===null?'–':fx(st.score)}</span>
+    </button>`;
   }).join('');
-  $$('#secList .sitem').forEach(el=>el.onclick=()=>openSec(+el.dataset.i));
+  $$('#secList .secrow').forEach(el=>el.onclick=()=>openSec(+el.dataset.i));
 }
 
 function _renderSec(){
@@ -1958,10 +2145,9 @@ function _renderSec(){
     </div>`;
   }).join('');
   const useTable = qStyle()==='table';
-  $('#qList').classList.toggle('hide', useTable);
-  $('#xWrap').classList.toggle('hide', !useTable);
-  $('#scrollHint').classList.toggle('hide', !(useTable && viewMode()!=='pc'));
-  if(useTable){ if(PATCH_ONLY && $('#xTable tbody tr[data-k]')) patchTable(si, st); else renderTable(si, st); } else {
+  $('#qList').classList.remove('hide'); $('#xWrap').classList.add('hide'); $('#scrollHint').classList.add('hide');
+  renderSide(si);
+  if(useTable){ if(PATCH_ONLY && $('#qList .qi[data-k]')) patchTable(si, st); else renderTable(si, st); } else {
     $('#qList').innerHTML = html || '<div class="empty">'+T().noQ+'</div>';
     bindQ();
   }
@@ -1972,64 +2158,84 @@ function _renderSec(){
 
 /* ---- ធីកក្នុងតារាង៖ កែតែជួរ (មិនគូរតារាងឡើងវិញ) → Animation រលូន ---- */
 var PATCH_ONLY=false;
-function tableFoot(st){
-  return '<tr><td colspan="2" style="text-align:right">'+T().thSecTotal+' '+kh(st.applicable)+' × '+st.per.toFixed(2)
-    +(st.na?' <small class="nafoot">(N/A '+kh(st.na)+')</small>':'')+'</td>'
-    +'<td class="c">'+kh(st.yes)+'</td><td class="c">'+kh(st.no)+'</td>'
-    +'<td class="p">'+(st.scoreFinal===null?'–':fx(st.scoreFinal))+'</td><td class="o">/ 100 '+T().pts+'</td></tr>';
+function tableFoot(st){ return ''; }
+function sumLine(st){
+  var EN=(S.lang==='en');
+  return '<span>'+(EN?'Section total':'សរុបផ្នែក')+'</span>'
+    +'<b class="sy">'+kh(st.yes)+' '+T().yes+'</b><b class="sn">'+kh(st.no)+' '+T().no+'</b>'
+    +(st.na?'<b class="sa">N/A '+kh(st.na)+'</b>':'')
+    +'<b class="ss">'+(st.scoreFinal===null?'–':fx(st.scoreFinal))+' / 100</b>';
+}
+function markCurrent(){
+  var first=null;
+  $$('#qList .qi[data-k]').forEach(function(c){ c.classList.remove('cur'); if(!first && !c.classList.contains('a-yes') && !c.classList.contains('a-no') && !c.classList.contains('a-na')) first=c; });
+  if(first) first.classList.add('cur');
 }
 function patchTable(si, st){
-  $$('#xTable tbody tr[data-k]').forEach(function(tr){
-    var a=S.ans[tr.dataset.k]||{}, v=a.v||'';
-    tr.classList.toggle('a-yes',v==='yes'); tr.classList.toggle('a-no',v==='no'); tr.classList.toggle('a-na',v==='na');
-    tr.querySelectorAll('.xbox').forEach(function(bx){ var on=(bx.dataset.v===v); bx.classList.toggle('on',on); bx.setAttribute('aria-checked',on); });
-    var p=tr.querySelector('td.p'); if(p) p.textContent = v==='yes' ? st.per.toFixed(2) : (v==='na' ? '—' : (v==='no' ? '0.00' : ''));
+  $$('#qList .qi[data-k]').forEach(function(c){
+    var a=S.ans[c.dataset.k]||{}, v=a.v||'';
+    c.classList.toggle('a-yes',v==='yes'); c.classList.toggle('a-no',v==='no'); c.classList.toggle('a-na',v==='na');
+    c.querySelectorAll('.ansb').forEach(function(bx){ var on=(bx.dataset.v===v); bx.classList.toggle('on',on); bx.setAttribute('aria-pressed',on); });
+    var p=c.querySelector('.qi-p'); if(p) p.textContent = v==='yes' ? st.per.toFixed(2) : (v==='na' ? '—' : (v==='no' ? '0.00' : ''));
   });
-  var tf=$('#xTable tfoot'); if(tf) tf.innerHTML=tableFoot(st);
+  var q=$('#qSum'); if(q) q.innerHTML=sumLine(st);
+  markCurrent();
 }
 function haptic(){ try{ if(navigator.vibrate && ENV.mobile) navigator.vibrate(8); }catch(e){} }
 
+function renderSide(si){
+  var el=$('#secSide'); if(!el) return;
+  if(viewMode()!=='pc'){ el.innerHTML=''; return; }
+  var o=overall(), EN=(S.lang==='en');
+  el.innerHTML='<div class="ss-head"><b>'+(o.score===null?'–':kh(Math.round(o.score)))+'</b><span>'+(EN?'score now / 100':'ពិន្ទុពេលនេះ / ១០០')+'<br><small>'+kh(o.answered)+' / '+kh(o.total)+'</small></span></div>'
+    +SECTIONS.map(function(sec,i){ var st=secStat(i), state=st.complete?'done':(st.answered?'doing':'');
+      return '<button type="button" class="secrow '+state+(i===si?' cur':'')+'" data-i="'+i+'"><span class="sbadge">'+sec.rn+'</span>'
+        +'<span class="sinfo"><span class="sname">'+secName(sec)+'</span><span class="scount">'+kh(st.answered)+' / '+kh(st.total)+'</span></span>'
+        +'<span class="sscore2">'+(st.score===null?'–':fx(st.score))+'</span></button>'; }).join('');
+  $$('#secSide .secrow').forEach(function(b){ b.onclick=function(){ goSec(+b.dataset.i); }; });
+}
+
 /* ---------- តារាងបែប Excel ---------- */
 function _renderTable(si, st){
-  const sec=SECTIONS[si], f=S.filter;
-  let rows='';
+  const sec=SECTIONS[si], EN=(S.lang==='en');
+  let h='';
   sec.items.forEach((txt,idx)=>{
     const n=idx+1, key=sec.id+'-'+n, a=S.ans[key]||{}, v=a.v||'';
-    if(f==='todo'&&v) return;
-    if((f==='yes'||f==='no'||f==='na') && v!==f) return;
-    const ph=(a.photos||[]).length;
-    const og = sec.orig && sec.orig[idx]!==n ? '<small>'+(S.lang==='en'?'orig ':'ដើម ')+sec.orig[idx]+'</small>' : '';
-    const pts = v==='yes' ? st.per.toFixed(2) : (v==='na' ? '—' : (v==='no' ? '0.00' : ''));
-    rows+=`<tr class="${v?'a-'+v:''}" data-k="${key}">
-      <td class="n">${kh(n)}${og}</td>
-      <td class="d">${itemText(sec,idx)}${(S.lang==='en'&&sec.itemsEn&&sec.itemsEn[idx])?'<div class="qsub">'+txt+'</div>':''}<button type="button" class="napill" title="N/A">⊘ N/A <b>✕</b></button></td>
-      <td class="c"><div class="xbox ${v==='yes'?'on':''}" data-v="yes" role="checkbox" tabindex="0" aria-checked="${v==='yes'}">✔</div></td>
-      <td class="c"><div class="xbox ${v==='no' ?'on':''}" data-v="no" role="checkbox" tabindex="0" aria-checked="${v==='no'}">✔</div></td>
-      <td class="p">${pts}</td>
-      <td class="o"><textarea class="xnote" rows="1" placeholder="${T().otherPh}">${(a.note||'').replace(/</g,'&lt;')}</textarea>
-</td>
-    </tr>`;
+    const og = sec.orig && sec.orig[idx]!==n ? '<small class="qi-og">'+(EN?'orig ':'ដើម ')+sec.orig[idx]+'</small>' : '';
+    const note=(a.note||'');
+    h+=`<div class="qi ${v?'a-'+v:''}" data-k="${key}">
+      <div class="qi-top">
+        <span class="qi-n">${kh(n)}${og}</span>
+        <div class="qi-t">${itemText(sec,idx)}${(EN&&sec.itemsEn&&sec.itemsEn[idx])?'<div class="qsub">'+txt+'</div>':''}<button type="button" class="napill" title="N/A">⊘ N/A <b>✕</b></button></div>
+        <button type="button" class="qi-nb ${note?'has':''}" aria-label="${EN?'Remark':'ចំណាំ'}" title="${EN?'Remark':'ចំណាំ / ផ្សេងៗ'}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg></button>
+      </div>
+      <div class="qi-ans">
+        <button type="button" class="ansb y ${v==='yes'?'on':''}" data-v="yes" aria-pressed="${v==='yes'}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>${T().yes}</span></button>
+        <button type="button" class="ansb n ${v==='no'?'on':''}" data-v="no" aria-pressed="${v==='no'}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg><span>${T().no}</span></button>
+      </div>
+      <span class="qi-p">${v==='yes'?st.per.toFixed(2):(v==='no'?'0.00':(v==='na'?'—':''))}</span>
+      <textarea class="qi-note ${note?'':'hide'}" rows="1" placeholder="${T().otherPh}">${note.replace(/</g,'&lt;')}</textarea>
+    </div>`;
   });
-  $('#xTable').innerHTML =
-    `<thead><tr><th>${T().thNo}</th><th>${T().thDesc}</th><th>${T().yes}</th><th>${T().no}</th><th>${T().thPts}</th><th>${T().thOther}</th></tr></thead>
-     <tbody>${rows||'<tr><td class="d" colspan="6" style="text-align:center;padding:22px">'+T().noQ+'</td></tr>'}</tbody>
-     <tfoot>${tableFoot(st)}</tfoot>`;
-  $$('#xTable tbody tr[data-k]').forEach(tr=>{
-    const key=tr.dataset.k;
+  $('#qList').innerHTML = (h || '<div class="empty">'+T().noQ+'</div>') + '<div class="qsum" id="qSum">'+sumLine(st)+'</div>';
+  markCurrent();
+  $$('#qList .qi[data-k]').forEach(card=>{
+    const key=card.dataset.k;
     const tick=(v)=>{
       const a=S.ans[key]||(S.ans[key]={});
       a.v = (a.v===v) ? '' : v;
       save(); renderTop(); PATCH_ONLY=true; try{ renderSec(); } finally { PATCH_ONLY=false; }
-      const bx=tr.querySelector('.xbox[data-v="'+v+'"]');
+      const bx=card.querySelector('.ansb[data-v="'+v+'"]');
       if(bx && a.v===v){ bx.classList.remove('pop'); void bx.offsetWidth; bx.classList.add('pop'); haptic(); }
     };
-    tr.querySelectorAll('.xbox').forEach(bx=>{
-      bx.onclick=()=>tick(bx.dataset.v);
-      bx.onkeydown=(e)=>{ if(e.key===' '||e.key==='Enter'){ e.preventDefault(); tick(bx.dataset.v); } };
-    });
-    tr.querySelector('.napill').onclick=()=>tick('na');
-    const ta=tr.querySelector('.xnote');
-    ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; save(true); };
+    card.querySelectorAll('.ansb').forEach(bx=>{ bx.onclick=()=>tick(bx.dataset.v); });
+    card.querySelector('.napill').onclick=()=>tick('na');
+    const ta=card.querySelector('.qi-note'), nb=card.querySelector('.qi-nb');
+    const grow=()=>{ ta.style.height='auto'; ta.style.height=Math.min(160,ta.scrollHeight+2)+'px'; };
+    nb.onclick=()=>{ const hid=ta.classList.toggle('hide'); if(!hid){ grow(); ta.focus(); } };
+    ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; nb.classList.toggle('has',!!ta.value); grow(); save(true); };
+    ta.onblur=()=>{ if(!ta.value) ta.classList.add('hide'); };
+    if(!ta.classList.contains('hide')) requestAnimationFrame(grow);
   });
 }
 
@@ -2152,7 +2358,7 @@ function healCheck(){
     if(!sc || sc.className.indexOf('on')<0) return;
     var si=S.cur, want=SECTIONS[si].items.length;
     var got = document.querySelectorAll('#qList .q').length
-            + document.querySelectorAll('#xTable tbody tr[data-k]').length;
+            + document.querySelectorAll('#qList .qi[data-k]').length;
     if(got===0 && want>0 && S.filter==='all'){
       showErr('បញ្ជីសំណួរទទេ — កំពុងជួសជុលដោយស្វ័យប្រវត្តិ');
       fallbackList(si);
@@ -2172,8 +2378,9 @@ function go(name){
   var dir=(SCR_ORDER[name]||0)>=(SCR_ORDER[CUR_SCR]||0)?'fwd':'back', same=(name===CUR_SCR); CUR_SCR=name;
   $$('.screen').forEach(s=>s.classList.remove('on','in-fwd','in-back'));
   var el=$('#sc-'+name); el.classList.add('on'); if(!same){ void el.offsetWidth; el.classList.add('in-'+dir); }
+  document.body.classList.toggle('in-sec', name==='sec');
   $$('.nb').forEach(b=>b.classList.toggle('on', b.dataset.go===(name==='sec'?'home':name)));   /* ផ្ទាំងបំពេញចូលពីទំព័រដើម */
-  if(name==='home'){ renderHome(); $('#topTitle').textContent=T().appTitle; if(!same) staggerIn('#secList .sitem'); }
+  if(name==='home'){ renderHome(); $('#topTitle').textContent=T().appTitle; if(!same) staggerIn('#secList .secrow'); }
   if(name==='sec') renderSec();
   if(name==='sum'){ renderSum(); $('#topTitle').textContent=T().topSum; }
   if(name==='info'){ fillInfo(); renderRecs(); runDiag(); renderAcc(); if(ME&&ME.is_admin&&!ADM.users.length) loadAdmin(); $('#topTitle').textContent=T().topInfo; }
@@ -2379,7 +2586,7 @@ var LANG={
 km:{
  howCalc:'ℹ️ របៀបគិតពិន្ទុ', sigPeople:'អ្នកចុះហត្ថលេខា', extraInfo:'ព័ត៌មានបន្ថែម', setTitle:'ការកំណត់', viewMode:'រូបរាង',
  vAuto:'✨ ស្វ័យប្រវត្តិ', vPhone:'📱 ទូរស័ព្ទ', vPc:'💻 កុំព្យូទ័រ', backupT:'Backup (JSON)', shareT:'ចែករំលែក Link', copyLink:'📋 ចម្លង', clearT:'សម្អាតទិន្នន័យ',
- aboutApp:'អំពី App', tileSaveRec:'រក្សាទុក', dlBtn:'ទាញយក', sharePdf:'ចែករំលែក PDF', svSharePdfSub:'ផ្ញើឯកសារ PDF ទៅ Telegram · Messenger · Gmail · Drive …', svShareImgSub:'មួយទំព័រ = មួយរូប · គុណភាព 8K ច្បាស់ពេញភ្នែក · ផ្ញើ Telegram បានភ្លាម', svRecSub:'ទុកលើពពក ដើម្បីបើកមើលវិញ (អតិបរមា ៨ ចុងក្រោយ)', noReview:'មើល ›', signOut:'↪ ចាកចេញ', adminT:'Admin · ទិន្នន័យគ្រប់កសិដ្ឋាន', admSearchPh:'ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…', tileExport:'PDF / Excel', tileRecs:'កំណត់ត្រា',
+ aboutApp:'អំពី App', tileSaveRec:'រក្សាទុក', dlBtn:'ទាញយក', admByUser:'👥 តាមអ្នកប្រើ', sharePdf:'ចែករំលែក PDF', svSharePdfSub:'ផ្ញើឯកសារ PDF ទៅ Telegram · Messenger · Gmail · Drive …', svShareImgSub:'មួយទំព័រ = មួយរូប · គុណភាព 8K ច្បាស់ពេញភ្នែក · ផ្ញើ Telegram បានភ្លាម', svRecSub:'ទុកលើពពក ដើម្បីបើកមើលវិញ (អតិបរមា ៨ ចុងក្រោយ)', noReview:'មើល ›', signOut:'↪ ចាកចេញ', adminT:'Admin · ទិន្នន័យគ្រប់កសិដ្ឋាន', admSearchPh:'ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…', tileExport:'PDF / Excel', tileRecs:'កំណត់ត្រា',
  installShort:'<b>📲 ដំឡើងជា App៖</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'ត្រួតពិនិត្យជីវៈសុវត្ថិភាព', appSub:"កសិដ្ឋាន M's PIG ACMC (Cambodia)",
  filled:'បំពេញ', of:'/', pts:'ពិន្ទុ', pts100:'ពិន្ទុ / ១០០', provPts:'បណ្តោះអាសន្ន / ១០០',
@@ -2438,7 +2645,7 @@ km:{
 en:{
  howCalc:'ℹ️ How the score works', sigPeople:'Signers', extraInfo:'More info', setTitle:'Settings', viewMode:'Layout',
  vAuto:'✨ Auto', vPhone:'📱 Phone', vPc:'💻 Desktop', backupT:'Backup (JSON)', shareT:'Share link', copyLink:'📋 Copy', clearT:'Clear data',
- aboutApp:'About', tileSaveRec:'Save', dlBtn:'Download', sharePdf:'Share PDF', svSharePdfSub:'Send the PDF to Telegram · Messenger · Gmail · Drive …', svShareImgSub:'One page = one image · sharp 8K quality · ready for Telegram', svRecSub:'Saved to the cloud to reopen later (latest 8)', noReview:'View ›', signOut:'↪ Sign out', adminT:'Admin · All farms', admSearchPh:'Search email or farm…', tileExport:'PDF / Excel', tileRecs:'Records',
+ aboutApp:'About', tileSaveRec:'Save', dlBtn:'Download', admByUser:'👥 By user', sharePdf:'Share PDF', svSharePdfSub:'Send the PDF to Telegram · Messenger · Gmail · Drive …', svShareImgSub:'One page = one image · sharp 8K quality · ready for Telegram', svRecSub:'Saved to the cloud to reopen later (latest 8)', noReview:'View ›', signOut:'↪ Sign out', adminT:'Admin · All farms', admSearchPh:'Search email or farm…', tileExport:'PDF / Excel', tileRecs:'Records',
  installShort:'<b>📲 Install as app:</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'Biosecurity Farm Audit', appSub:"M's PIG ACMC (Cambodia) Farm",
  filled:'Completed', of:'/', pts:'points', pts100:'points / 100', provPts:'provisional / 100',
@@ -2923,6 +3130,9 @@ function openSave(){
       : '📱 Browser ក្នុង <b>'+ENV.app+'</b>៖ ឯកសារនឹងបើកផ្ទាំង <b>Share</b> → ជ្រើស <b>Save to Files</b> ឬ ផ្ញើតាម Telegram។ បើគ្មានអ្វីកើតឡើង សូមបើកក្នុង <b>'+(ENV.ios?'Safari':'Chrome')+'</b> (⋯ → Open in browser)។';
   } else hint.style.display='none';
   setShareImgLabel();
+  var g=gradeOf(o.score,o.complete), ss=$('#svSum');
+  if(ss) ss.innerHTML='<div class="svs-l"><small>'+(o.complete?(en?'Official score':'ពិន្ទុផ្លូវការ'):(en?'Score now':'ពិន្ទុពេលនេះ'))+'</small><b>'+(o.score===null?'–':fx(o.score))+'</b></div>'
+    +'<div class="svs-r"><span class="svs-g">'+esc(g.t)+'</span><span>'+kh(o.yes)+' '+T().yes+' · '+kh(o.no)+' '+T().no+(o.na?' · N/A '+kh(o.na):'')+'</span><span>'+kh(o.answered)+' / '+kh(o.total)+'</span></div>';
   $('#sheetBg').classList.add('on'); $('#sheet').classList.add('on');
 }
 function closeSave(){ $('#sheetBg').classList.remove('on'); $('#sheet').classList.remove('on'); }
@@ -3450,6 +3660,8 @@ function renderSteps(si, st){
   rail.querySelectorAll('.stp').forEach(function(b){ b.onclick=function(){ goSec(+b.dataset.i); }; });
   var last=(si===SECTIONS.length-1);
   $('#stPrev').disabled=(si===0);
+  $('#btnPrevSec').textContent = EN?'‹ Back':'‹ មុន';
+  $('#btnNextSec').textContent = last ? (EN?'Finish ✓':'រួចរាល់ ✓') : (EN?'Next · ':'ផ្នែកបន្ទាប់ · ')+SECTIONS[si+1].rn+' ›';
   $('#stNextT').textContent = last ? (EN?'Finish':'រួចរាល់') : (EN?'Next':'បន្ទាប់');
   var nx=$('#stNext'); nx.classList.toggle('ready', st.complete);
   var key=SECTIONS[si].id;
@@ -3583,30 +3795,40 @@ function noItems(){
   }); });
   return out;
 }
+var NOF='all';
 function openNoReview(){
   var E=isTgt(), L=noItems();
   if(!L.length){ toast(E?'🎉 No “No” answers':'🎉 គ្មានចំណុច «មិនមាន» ទេ'); return; }
-  $('#noTitle').textContent=(E?'✖ “No” items (':'✖ ចំណុច «មិនមាន» (')+kh(L.length)+')';
-  $('#noSub').textContent=E?'Tap an item to go and fix it':'ចុចលើចំណុចណាមួយ ដើម្បីទៅកែតម្រូវ';
-  var h='', last=-1;
-  L.forEach(function(x){
-    if(x.si!==last){ if(last>=0) h+='</div>'; last=x.si;
-      var cnt=L.filter(function(y){return y.si===x.si;}).length;
-      h+='<div class="nogrp"><div class="nosec"><span>'+esc(x.sec.rn+'. '+secName(x.sec))+'</span><em>'+kh(cnt)+'</em></div>'; }
-    h+='<button class="noitem" data-k="'+x.key+'" data-si="'+x.si+'"><span class="nn">'+kh(x.n)+'</span><span class="nt">'+x.t
-      +(x.note?'<small>📝 '+esc(x.note)+'</small>':'')+'</span><span class="ng">›</span></button>';
+  if(NOF!=='all' && !L.some(function(x){ return x.sec.rn===NOF; })) NOF='all';
+  $('#noTitle').textContent=(E?'Items to fix (':'ចំណុចត្រូវកែ (')+kh(L.length)+')';
+  $('#noSub').textContent=E?'Every “No” answer · tap an item to fix it':'ចម្លើយ «មិនមាន» ទាំងអស់ · ចុចលើចំណុច ដើម្បីទៅកែ';
+  var secs=[]; L.forEach(function(x){ if(secs.indexOf(x.sec.rn)<0) secs.push(x.sec.rn); });
+  $('#noChips').innerHTML=['all'].concat(secs).map(function(k){
+    var n=k==='all'?L.length:L.filter(function(x){return x.sec.rn===k;}).length;
+    return '<button type="button" class="nochip'+(NOF===k?' on':'')+'" data-f="'+k+'" aria-pressed="'+(NOF===k)+'">'+(k==='all'?(E?'All':'ទាំងអស់'):k)+' · '+kh(n)+'</button>';
+  }).join('');
+  $$('#noChips .nochip').forEach(function(b){ b.onclick=function(){ NOF=b.dataset.f; openNoReview(); }; });
+  var h='';
+  L.filter(function(x){ return NOF==='all' || x.sec.rn===NOF; }).forEach(function(x){
+    h+='<button class="noitem" data-k="'+x.key+'" data-si="'+x.si+'"><span class="ntag">'+esc(x.sec.rn)+' · '+kh(x.n)+'</span><span class="nt">'+x.t
+      +(x.note?'<small>'+(E?'Note: ':'ចំណាំ៖ ')+esc(x.note)+'</small>':'')+'</span><span class="ngo">'+(E?'Fix ›':'កែ ›')+'</span></button>';
   });
-  h+='</div>';
   $('#noList').innerHTML=h;
   $$('#noList .noitem').forEach(function(b){ b.onclick=function(){ closeNoReview(); gotoItem(+b.dataset.si, b.dataset.k); }; });
-  $('#noShareT').textContent=E?'📤 Share this list':'📤 ចែករំលែកបញ្ជីនេះ';
+  $('#noShareT').textContent=E?'Send via Telegram':'ផ្ញើតាម Telegram';
+  $('#noCopy').textContent=E?'Copy':'ចម្លង';
   $('#sheetBg').classList.add('on'); $('#noSheet').classList.add('on');
+}
+function copyNoList(){
+  var t=noListText(), E=isTgt();
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function(){ toast(E?'📋 List copied':'📋 ចម្លងបញ្ជីរួច'); }, function(){ prompt('',t); });
+  else prompt('',t);
 }
 function closeNoReview(){ $('#noSheet').classList.remove('on'); $('#sheetBg').classList.remove('on'); }
 function gotoItem(si,key){
   openSec(si);
   setTimeout(function(){
-    var tr=document.querySelector('#xTable tr[data-k="'+key+'"]')||document.querySelector('#qList .q[data-k="'+key+'"]');
+    var tr=document.querySelector('#qList .qi[data-k="'+key+'"]')||document.querySelector('#qList .q[data-k="'+key+'"]');
     if(!tr) return;
     var top=tr.getBoundingClientRect().top+window.scrollY-(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdrH'))||80)-70;
     window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
@@ -3700,6 +3922,7 @@ $('#svClose').onclick=closeSave;
 $('#btnNoReview').onclick=openNoReview;
 $('#noClose').onclick=closeNoReview;
 $('#noShare').onclick=shareNoList;
+$('#noCopy').onclick=copyNoList;
 $('#svPdf').onclick =()=>{ closeSave(); makePdf(); };
 $('#svSharePdf').onclick=()=>{ closeSave(); makePdf('share'); };
 $('#svShareImg').onclick=()=>{ closeSave(); makeImages(); };
@@ -3712,6 +3935,7 @@ $('#btnNextSec').onclick=()=>goSec(S.cur+1);
 $('#stNext').onclick=()=>goSec(S.cur+1);
 $('#btnContinue').onclick=()=>{
   for(let i=0;i<SECTIONS.length;i++){ const st=secStat(i); if(!st.complete){ openSec(i); return; } }
+  openSave(); return;
   go('home'); toast(S.lang==='en'?'🎉 All questions answered':'🎉 បំពេញគ្រប់សំណួររួចរាល់');
 };
 (function(){ var db=$('.homeinfo .datebox'), di=$('#h_date'); if(db&&di) db.addEventListener('click',function(e){
@@ -3961,7 +4185,21 @@ function avatarHtml(name,email,url){
   return url ? '<img src="'+esc(url)+'" alt="" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(\''+esc(ini)+'\'))">' : esc(ini);
 }
 function niceErr(m){ m=String(m||''); return /Failed to fetch|NetworkError|Load failed|network/i.test(m) ? L('មិនអាចភ្ជាប់ Server — នឹងព្យាយាមម្តងទៀតពេលមានអ៊ីនធឺណិត','Cannot reach the server — will retry when online') : m; }
+function renderSyncChip(){
+  var c=$('#syncChip'); if(!c) return;
+  if(!ME){ c.classList.add('hide'); return; }
+  var EN=(S.lang==='en'), pend=S.recs.filter(function(r){return r.pending;}).length, st, t;
+  if(!navigator.onLine || CLOUD.offline){ st='off'; t=EN?'Offline':'គ្មានអ៊ីនធឺណិត'; }
+  else if(CLOUD.syncing){ st='busy'; t=EN?'Syncing':'កំពុង Sync'; }
+  else if(CLOUD.err){ st='err'; t=EN?'Sync issue':'Sync មានបញ្ហា'; }
+  else if(pend){ st='busy'; t=(EN?'Waiting ':'រង់ចាំ ')+kh(pend); }
+  else { st='ok'; t=EN?'Synced':'Sync រួច'; }
+  c.className='syncchip s-'+st;
+  c.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6 9.5 4.25 4.25 0 0 0 7 18z"/>'+(st==='ok'?'<path d="M9.5 13.5l2 2 3.5-3.5"/>':'')+'</svg>'+t;
+  c.title=t;
+}
 function renderAcc(){
+  renderSyncChip();
   var c=$('#accCard'); if(!c) return;
   if(!ME){ c.classList.add('hide'); $('#adminCard').classList.add('hide'); return; }
   c.classList.remove('hide');
@@ -3986,18 +4224,43 @@ function loadAdmin(){
   $('#admList').innerHTML='<div class="g-wait"><span class="spin"></span><span>'+L('កំពុងផ្ទុក…','Loading…')+'</span></div>';
   Promise.all([
     sb.from('profiles').select('id,email,full_name,avatar_url,is_admin,created_at,last_seen').order('created_at',{ascending:true}),
-    sb.from('audit_records').select('id,user_id,farm,zone,audit_date,auditor,score,grade,complete,answered,total,created_at').order('created_at',{ascending:false})
+    sb.from('audit_records').select('id,user_id,farm,zone,audit_date,auditor,score,grade,complete,answered,total,created_at,ans:data->ans').order('created_at',{ascending:false})
   ]).then(function(rs){
     if(rs[0].error||rs[1].error){ $('#admList').innerHTML='<div class="g-err">⚠️ '+esc(niceErr((rs[0].error||rs[1].error).message))+'</div>'; return; }
     ADM.users=rs[0].data||[]; ADM.recs=rs[1].data||[]; renderAdmin();
   }, function(e){ $('#admList').innerHTML='<div class="g-err">⚠️ '+esc(e&&e.message||e)+'</div>'; });
 }
 function renderAdmin(){
-  var q=ADM.q.trim().toLowerCase(), act=0, wk=Date.now()-7*864e5;
+  var q=ADM.q.trim().toLowerCase(), act=0, wk=Date.now()-7*864e5, E=(S.lang==='en');
   ADM.users.forEach(function(u){ if(u.last_seen && Date.parse(u.last_seen)>wk) act++; });
-  $('#admSum').innerHTML='<div><b>'+kh(ADM.users.length)+'<small>/'+kh(100)+'</small></b><small>'+L('អ្នកប្រើ','users')+'</small></div>'
-    +'<div><b>'+kh(ADM.recs.length)+'</b><small>'+L('កំណត់ត្រា','records')+'</small></div>'
-    +'<div><b>'+kh(act)+'</b><small>'+L('សកម្ម ៧ ថ្ងៃ','active 7 days')+'</small></div>';
+  var scored=ADM.recs.filter(function(r){ return r.score!==null && r.score!==undefined; });
+  var avg=scored.length? scored.reduce(function(a,r){ return a+(+r.score); },0)/scored.length : null;
+  var low=scored.filter(function(r){ return +r.score<80; }).length;
+  $('#admSum').innerHTML='<div><small>'+L('អ្នកប្រើ','Users')+'</small><b>'+kh(ADM.users.length)+'<em>/'+kh(100)+'</em></b><small>'+L('សកម្ម ៧ ថ្ងៃ ','active 7 days ')+kh(act)+'</small></div>'
+    +'<div><small>'+L('កំណត់ត្រា','Records')+'</small><b>'+kh(ADM.recs.length)+'</b><small>'+L('បញ្ចប់ ','complete ')+kh(ADM.recs.filter(function(r){return r.complete;}).length)+'</small></div>'
+    +'<div class="hi"><small>'+L('ពិន្ទុមធ្យម','Average score')+'</small><b>'+(avg===null?'–':fx(avg))+'</b><small>'+L('ពីកំណត់ត្រា ','from ')+kh(scored.length)+'</small></div>'
+    +'<div class="warn"><small>'+L('ក្រោម ៨០ ពិន្ទុ','Below 80')+'</small><b>'+kh(low)+'</b><small>'+L('ត្រូវតាមដាន','need follow-up')+'</small></div>';
+  var uById={}; ADM.users.forEach(function(u){ uById[u.id]=u; });
+  var rows=ADM.recs.filter(function(r){ var u=uById[r.user_id]||{};
+      return !q || (r.farm||'').toLowerCase().indexOf(q)>=0 || (r.zone||'').toLowerCase().indexOf(q)>=0 || (u.email||'').indexOf(q)>=0 || (u.full_name||'').toLowerCase().indexOf(q)>=0; }).slice(0,20);
+  var tb=$('#admTable');
+  if(tb) tb.innerHTML = rows.length ? '<div class="at-h"><span>'+L('កសិដ្ឋាន','Farm')+'</span><span>'+L('កាលបរិច្ឆេទ','Date')+'</span><span>'+L('ពិន្ទុ','Score')+'</span><span>'+L('ថ្នាក់','Grade')+'</span><span></span></div>'
+    + rows.map(function(r){ var u=uById[r.user_id]||{}, sc=(r.score===null||r.score===undefined)?null:+r.score;
+        return '<div class="at-r"><span class="at-f"><b>'+esc(r.farm||L('(គ្មានឈ្មោះ)','(no name)'))+'</b><small>'+esc(u.email||'')+(r.zone?' · '+esc(r.zone):'')+'</small></span>'
+          +'<span class="at-d">'+fmtWhen(Date.parse(r.created_at))+(r.complete?'':'<small>⏳ '+kh(r.answered||0)+'/'+kh(r.total||0)+'</small>')+'</span>'
+          +'<span class="at-s"><i><u style="width:'+(sc===null?0:Math.max(2,Math.min(100,sc)))+'%" class="'+(sc!==null&&sc<80?'lo':'')+'"></u></i><b>'+(sc===null?'–':fx(sc))+'</b></span>'
+          +'<span class="at-g"><em class="g-'+esc((r.grade||'-').charAt(0))+'">'+esc(r.grade||'-')+'</em></span>'
+          +'<span class="at-a"><button class="tbtn" data-aopen="'+r.id+'">'+T().open+'</button><button class="tbtn" data-adel="'+r.id+'" aria-label="delete">🗑️</button></span></div>';
+      }).join('') : '<div class="adm-empty">'+L('មិនទាន់មានកំណត់ត្រា','No records yet')+'</div>';
+  var cnt={}, haveAns=false;
+  ADM.recs.forEach(function(r){ if(!r.ans) return; haveAns=true; Object.keys(r.ans).forEach(function(k){ var a=r.ans[k]; if(a && a.v==='no') cnt[k]=(cnt[k]||0)+1; }); });
+  var top=Object.keys(cnt).sort(function(a,b){ return cnt[b]-cnt[a]; }).slice(0,5), mx=top.length?cnt[top[0]]:1, tn=$('#admTop');
+  if(tn) tn.innerHTML = !haveAns ? '' : (top.length ? '<h4>'+L('ចំណុច «មិនមាន» ញឹកញាប់បំផុត','Most frequent “No” items')+'</h4>'+top.map(function(k){
+      var p=k.split('-'), si=SECTIONS.findIndex(function(x){ return x.id===p[0]; }), sec=SECTIONS[si], idx=(+p[1])-1;
+      var txt=sec&&sec.items[idx]!==undefined ? String(itemText(sec,idx)).replace(/<[^>]+>/g,' ') : k;
+      return '<div class="tn"><span class="ntag">'+(sec?sec.rn:'')+' · '+kh(+p[1])+'</span><span class="tt">'+esc(txt)+'</span><span class="tb"><i style="width:'+Math.round(cnt[k]/mx*100)+'%"></i></span><span class="tc">'+kh(cnt[k])+'</span></div>';
+    }).join('') : '');
+
   var h=ADM.users.map(function(u){
     var rs=ADM.recs.filter(function(r){ return r.user_id===u.id; });
     var hit=!q || (u.email||'').indexOf(q)>=0 || (u.full_name||'').toLowerCase().indexOf(q)>=0
@@ -4016,8 +4279,8 @@ function renderAdmin(){
       +'<span class="uc">'+kh(rs.length)+'/'+kh(MAXREC)+'</span></summary>'+rows+'</details>';
   }).join('');
   $('#admList').innerHTML = h || '<div class="empty">'+L('រកមិនឃើញ','No match')+'</div>';
-  $$('#admList [data-aopen]').forEach(function(b){ b.onclick=function(){ adminOpen(b.dataset.aopen); }; });
-  $$('#admList [data-adel]').forEach(function(b){ b.onclick=function(){ adminDel(b.dataset.adel); }; });
+  $$('#adminCard [data-aopen]').forEach(function(b){ b.onclick=function(){ adminOpen(b.dataset.aopen); }; });
+  $$('#adminCard [data-adel]').forEach(function(b){ b.onclick=function(){ adminDel(b.dataset.adel); }; });
 }
 function adminOpen(id){
   var meta=ADM.recs.find(function(r){return r.id===id;}); if(!meta) return;
