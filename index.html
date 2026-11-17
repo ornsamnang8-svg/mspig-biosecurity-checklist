@@ -610,7 +610,7 @@ header.top{padding-top:calc(6px + var(--safe-t))}
   table.xform td.d{min-width:0;line-height:1.55}
   table.xform td.c{width:34px;padding:3px 2px}
   .xbox{width:26px;height:26px;border-radius:8px;font-size:13px}
-  table.xform th:nth-child(6),table.xform td.p{display:none}
+  table.xform th:nth-child(5),table.xform td.p{display:none}
   table.xform td.o{width:78px;padding:3px}
   .xnote{font-size:11px;min-height:30px;padding:4px 5px;resize:none}
   table.xform tfoot td{font-size:10.5px}
@@ -760,6 +760,80 @@ body.gated{overflow:hidden}
 .noitem .ng{flex:0 0 auto;color:#c08a00;font-size:18px;line-height:1.2}
 @keyframes rowFlash{0%,30%{background:rgba(255,214,102,.75)}100%{background:transparent}}
 #xTable tr.flash td,#qList .q.flash{animation:rowFlash 2.2s ease-out}
+
+/* ================= ចលនា + ឧបករណ៍គ្រប់ប្រភេទ (2026-11-17b) ================= */
+:root{--spring:cubic-bezier(.32,.72,0,1);--bounce:cubic-bezier(.34,1.56,.64,1);--out:cubic-bezier(.22,1,.36,1)}
+html{-webkit-text-size-adjust:100%}
+button,.xbox,.sitem,.nb,.stp,a{touch-action:manipulation}
+/* ប្តូរផ្ទាំង: ចូលពីស្តាំ (ទៅមុខ) · ពីឆ្វេង (ថយក្រោយ) */
+.screen{animation:none}
+.screen.in-fwd{animation:scrFwd .46s var(--spring) both}
+.screen.in-back{animation:scrBack .46s var(--spring) both}
+@keyframes scrFwd{from{opacity:0;transform:translate3d(28px,0,0)}to{opacity:1;transform:none}}
+@keyframes scrBack{from{opacity:0;transform:translate3d(-28px,0,0)}to{opacity:1;transform:none}}
+.rise{animation:riseIn .5s var(--spring) both}
+@keyframes riseIn{from{opacity:0;transform:translate3d(0,10px,0) scale(.985)}to{opacity:1;transform:none}}
+/* ប៊ូតុង: ចុច = រួញ · លែង = លោតត្រឡប់ (spring) */
+.btn,.chipbtn,.sv,.nb,.stp,.stepnav,.iconbtn,.dlbtn,.sitem,.noitem,.g-google,.mini3 button,.tbtn,.seg button{
+  transition:transform .42s var(--bounce),box-shadow .3s var(--out),background-color .3s var(--out),color .25s,opacity .25s,border-color .25s}
+.btn:active,.chipbtn:active,.sv:active,.nb:active,.stepnav:active,.iconbtn:active,.dlbtn:active,.sitem:active,.g-google:active,.mini3 button:active,.tbtn:active,.seg button:active{transition-duration:.12s}
+@media (hover:hover){
+  .sv:hover,.sitem:hover{transform:translateY(-1px)}
+  .btn:hover,.stepnav:hover{filter:brightness(1.03)}
+}
+/* ធីក: ប្រអប់លោតតិច ៗ · ជួរប្តូរពណ៌រលូន */
+table.xform tbody tr{transition:background-color .35s var(--out)}
+table.xform td.p{transition:color .3s}
+.xbox{transition:transform .4s var(--bounce),background .25s var(--out),border-color .25s,box-shadow .25s,color .2s}
+.xbox:active{transition-duration:.1s}
+.xbox.pop{animation:tickPop .5s var(--bounce)}
+@keyframes tickPop{0%{transform:scale(.72)}55%{transform:scale(1.14)}100%{transform:scale(1)}}
+.xbox:focus-visible{outline:2px solid var(--g-deep);outline-offset:2px}
+/* N/A: មិនបង្ហាញជាជួរឈរទៀតទេ · បង្ហាញជាស្លាកតូចតែពេលធ្លាប់ដាក់ N/A (ចុចដើម្បីលុប) */
+.napill{display:none;margin:4px 0 0;padding:1px 8px;border-radius:99px;border:1px solid rgba(11,43,30,.18);background:#eef2f0;
+  color:var(--ink-dim);font:700 10.5px/1.6 var(--font);cursor:pointer}
+.napill b{font-weight:700;margin-left:2px;opacity:.7}
+tr.a-na .napill{display:inline-block;animation:riseIn .35s var(--spring)}
+.nafoot{font-weight:400;opacity:.75}
+/* Toast ដូច iOS */
+#toast{transform:translate(-50%,18px) scale(.94);transition:transform .5s var(--spring),opacity .28s var(--out)}
+#toast.on{transform:translate(-50%,0) scale(1)}
+/* ផ្ទាំងខាងក្រោម (Bottom sheet) — ខ្សែកោង iOS */
+#sheetBg{transition:opacity .4s var(--out)}
+#sheet,#clearSheet,#fileSheet,#sigSheet,#noSheet{transition:transform .52s var(--spring);will-change:transform;overscroll-behavior:contain}
+#pdfBusy{transition:opacity .3s var(--out)}
+.pbar i{transition:width .7s var(--spring)}
+.ring .fg{transition:stroke-dasharray .9s var(--spring)}
+#secSteps .stp.done{animation:none}
+
+/* ---- Tablet (iPad បញ្ឈរ / Android tablet) ---- */
+body.v-tab .wrap{max-width:780px;padding-left:20px;padding-right:20px}
+body.v-tab header.top,body.v-tab .top-inner{max-width:780px}
+body.v-tab .pbar,body.v-tab .pbar-txt{max-width:780px}
+body.v-tab .bot-inner{max-width:520px}
+body.v-tab .two{grid-template-columns:repeat(2,1fr)}
+body.v-tab #sheet,body.v-tab #clearSheet,body.v-tab #fileSheet,body.v-tab #sigSheet,body.v-tab #noSheet{max-width:640px}
+body.v-tab .xbox{width:36px;height:36px}
+body.v-tab table.xform{font-size:13.5px}
+
+/* ---- កុំព្យូទ័រ + iPad ផ្តេក: ផ្ទាំងលោតកណ្តាល ដូច macOS ---- */
+body.v-pc #sheet,body.v-pc #clearSheet,body.v-pc #fileSheet,body.v-pc #sigSheet,body.v-pc #noSheet{
+  left:50%;right:auto;bottom:auto;top:50%;width:min(560px,92vw);max-width:none;margin:0;max-height:86vh;
+  border-radius:24px;border-bottom:1px solid var(--rim);padding-bottom:20px;
+  box-shadow:0 30px 80px -20px rgba(7,60,40,.45),0 0 0 .5px rgba(7,60,40,.08);
+  transform:translate(-50%,-47%) scale(.95);opacity:0;visibility:hidden;pointer-events:none;
+  transition:transform .42s var(--spring),opacity .22s var(--out),visibility 0s linear .42s}
+body.v-pc #sheet.on,body.v-pc #clearSheet.on,body.v-pc #fileSheet.on,body.v-pc #sigSheet.on,body.v-pc #noSheet.on{
+  transform:translate(-50%,-50%) scale(1);opacity:1;visibility:visible;pointer-events:auto;
+  transition:transform .42s var(--spring),opacity .22s var(--out),visibility 0s}
+body.v-pc #sheet .grab,body.v-pc #clearSheet .grab,body.v-pc #fileSheet .grab,body.v-pc #sigSheet .grab,body.v-pc #noSheet .grab{display:none}
+body.v-pc #sigSheet{width:min(640px,92vw)}
+body.v-pc .bot-inner{max-width:420px}
+body.v-pc table.xform td.d{font-size:13.5px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
 
 /* ប៊ូតុងទាញយក (header) */
 .dlbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 12px 0 9px;border-radius:12px;cursor:pointer;
@@ -1093,7 +1167,7 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
   <div class="glass card setlist">
     <h2><span class="chip-i">⚙️</span> <span data-i18n="setTitle">ការកំណត់</span></h2>
     <div class="srow"><span class="si">📱</span><span class="st" data-i18n="viewMode">រូបរាង</span>
-      <div class="seg sm" id="segView"><button data-v="phone" data-i18n="vPhone">📱 ទូរស័ព្ទ</button><button data-v="pc" data-i18n="vPc">💻 កុំព្យូទ័រ</button></div></div>
+      <div class="seg sm" id="segView"><button data-v="auto" data-i18n="vAuto">✨ ស្វ័យប្រវត្តិ</button><button data-v="phone" data-i18n="vPhone">📱 ទូរស័ព្ទ</button><button data-v="pc" data-i18n="vPc">💻 កុំព្យូទ័រ</button></div></div>
     <button class="srow tap sv-open"><span class="si">⬇️</span><span class="st">Save PDF / Excel / រូបភាព</span><span class="sa">›</span></button>
     <div class="srow"><span class="si">💾</span><span class="st" data-i18n="backupT">Backup</span>
       <span class="sbtns"><button class="chipbtn" id="btnBackup" data-i18n="backup">ទាញយក</button><button class="chipbtn" id="btnRestore" data-i18n="restore">ស្តារ</button></span></div>
@@ -1291,7 +1365,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-11-17', ERRS=[];
+var APP_VER='2026-11-17b', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -1782,13 +1856,14 @@ function gradeOf(sc, complete){
 
 /* ================= រូបរាង (ទូរស័ព្ទ / កុំព្យូទ័រ · កាត / តារាង) ================= */
 const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints>0;
-function viewMode(){ return S.view || (window.innerWidth>=900 && !isTouch ? 'pc' : 'phone'); }
+function viewMode(){ return S.view || (window.innerWidth>=900 ? 'pc' : 'phone'); }   /* iPad ផ្តេក / កុំព្យូទ័រ = pc · ទូរស័ព្ទ / iPad បញ្ឈរ = phone */
 function qStyle(){ return 'table'; }   /* កាតត្រូវបានដកចេញ — ប្រើតារាងតែមួយ */
 function _applyView(){
   const v=viewMode(), st=qStyle();
   document.body.classList.toggle('v-pc', v==='pc');
   document.body.classList.toggle('v-phone', v!=='pc');
-  $$('#segView button').forEach(b=>b.classList.toggle('on', b.dataset.v===v));
+  $$('#segView button').forEach(b=>b.classList.toggle('on', b.dataset.v===(S.view||'auto')));
+  document.body.classList.toggle('v-tab', v!=='pc' && window.innerWidth>=640);
   $$('#segStyle button').forEach(b=>b.classList.toggle('on', b.dataset.s===st));
   const hint=$('#styleHint');
   if(hint) hint.textContent = st==='table' ? T().hintTable : T().hintCard;
@@ -1807,7 +1882,7 @@ function _renderTop(){
 function _renderHome(){
   const o=overall(), g=gradeOf(o.score, o.complete);
   var nb=document.getElementById('btnNoReview'); if(nb) nb.classList.toggle('zero', !o.no);
-  $('#heroScore').textContent = o.score===null?'–':kh(Math.round(o.score));
+  countTo($('#heroScore'), o.score===null?null:Math.round(o.score));
   ringSet($('#ringFg'), o.score||0);
   $('#heroLbl').textContent = T().pts100;
   const hl=$('#heroLive'); if(hl) hl.title = T().liveDesc;
@@ -1816,7 +1891,7 @@ function _renderHome(){
   $('#heroCalc').innerHTML = o.scoreFinal===null ? ''
     : ((S.lang==='en'?'If finished now (unanswered = 0) ➜ <b>':'បើបញ្ចប់ត្រឹមឥឡូវ (សំណួរមិនទាន់បំពេញ = ០) ➜ <b>')+fx(o.scoreFinal)+'</b> '+T().pts
       +'<br>'+T().weighted+' ('+kh(o.yes)+' ÷ '+kh(o.secs.reduce((a,x)=>a+x.applicable,0))+') ➜ <b>'+fx(o.scoreWeighted)+'</b> '+T().pts);
-  $('#cYes').textContent=kh(o.yes); $('#cNo').textContent=kh(o.no); $('#cNa').textContent=kh(o.na);
+  countTo($('#cYes'),o.yes); countTo($('#cNo'),o.no); countTo($('#cNa'),o.na);
   $('#secDoneTxt').textContent=T().doneSec+' '+kh(o.doneSec)+T().secOf;
   $$('.recBadge').forEach(e=>e.textContent = kh(S.recs.length)+'/'+kh(MAXREC));
   $('#topSub').textContent = S.info.farm ? S.info.farm : T().appSub;
@@ -1886,7 +1961,7 @@ function _renderSec(){
   $('#qList').classList.toggle('hide', useTable);
   $('#xWrap').classList.toggle('hide', !useTable);
   $('#scrollHint').classList.toggle('hide', !(useTable && viewMode()!=='pc'));
-  if(useTable){ renderTable(si, st); } else {
+  if(useTable){ if(PATCH_ONLY && $('#xTable tbody tr[data-k]')) patchTable(si, st); else renderTable(si, st); } else {
     $('#qList').innerHTML = html || '<div class="empty">'+T().noQ+'</div>';
     bindQ();
   }
@@ -1894,6 +1969,25 @@ function _renderSec(){
   ta.oninput=()=>{ S.cmt[sec.id]=ta.value; save(true); };
   applyView();
 }
+
+/* ---- ធីកក្នុងតារាង៖ កែតែជួរ (មិនគូរតារាងឡើងវិញ) → Animation រលូន ---- */
+var PATCH_ONLY=false;
+function tableFoot(st){
+  return '<tr><td colspan="2" style="text-align:right">'+T().thSecTotal+' '+kh(st.applicable)+' × '+st.per.toFixed(2)
+    +(st.na?' <small class="nafoot">(N/A '+kh(st.na)+')</small>':'')+'</td>'
+    +'<td class="c">'+kh(st.yes)+'</td><td class="c">'+kh(st.no)+'</td>'
+    +'<td class="p">'+(st.scoreFinal===null?'–':fx(st.scoreFinal))+'</td><td class="o">/ 100 '+T().pts+'</td></tr>';
+}
+function patchTable(si, st){
+  $$('#xTable tbody tr[data-k]').forEach(function(tr){
+    var a=S.ans[tr.dataset.k]||{}, v=a.v||'';
+    tr.classList.toggle('a-yes',v==='yes'); tr.classList.toggle('a-no',v==='no'); tr.classList.toggle('a-na',v==='na');
+    tr.querySelectorAll('.xbox').forEach(function(bx){ var on=(bx.dataset.v===v); bx.classList.toggle('on',on); bx.setAttribute('aria-checked',on); });
+    var p=tr.querySelector('td.p'); if(p) p.textContent = v==='yes' ? st.per.toFixed(2) : (v==='na' ? '—' : (v==='no' ? '0.00' : ''));
+  });
+  var tf=$('#xTable tfoot'); if(tf) tf.innerHTML=tableFoot(st);
+}
+function haptic(){ try{ if(navigator.vibrate && ENV.mobile) navigator.vibrate(8); }catch(e){} }
 
 /* ---------- តារាងបែប Excel ---------- */
 function _renderTable(si, st){
@@ -1908,28 +2002,32 @@ function _renderTable(si, st){
     const pts = v==='yes' ? st.per.toFixed(2) : (v==='na' ? '—' : (v==='no' ? '0.00' : ''));
     rows+=`<tr class="${v?'a-'+v:''}" data-k="${key}">
       <td class="n">${kh(n)}${og}</td>
-      <td class="d">${itemText(sec,idx)}${(S.lang==='en'&&sec.itemsEn&&sec.itemsEn[idx])?'<div class="qsub">'+txt+'</div>':''}</td>
-      <td class="c"><div class="xbox ${v==='yes'?'on':''}" data-v="yes">✔</div></td>
-      <td class="c"><div class="xbox ${v==='no' ?'on':''}" data-v="no">✔</div></td>
-      <td class="c"><div class="xbox ${v==='na' ?'on':''}" data-v="na">✔</div></td>
+      <td class="d">${itemText(sec,idx)}${(S.lang==='en'&&sec.itemsEn&&sec.itemsEn[idx])?'<div class="qsub">'+txt+'</div>':''}<button type="button" class="napill" title="N/A">⊘ N/A <b>✕</b></button></td>
+      <td class="c"><div class="xbox ${v==='yes'?'on':''}" data-v="yes" role="checkbox" tabindex="0" aria-checked="${v==='yes'}">✔</div></td>
+      <td class="c"><div class="xbox ${v==='no' ?'on':''}" data-v="no" role="checkbox" tabindex="0" aria-checked="${v==='no'}">✔</div></td>
       <td class="p">${pts}</td>
       <td class="o"><textarea class="xnote" rows="1" placeholder="${T().otherPh}">${(a.note||'').replace(/</g,'&lt;')}</textarea>
 </td>
     </tr>`;
   });
   $('#xTable').innerHTML =
-    `<thead><tr><th>${T().thNo}</th><th>${T().thDesc}</th><th>${T().yes}</th><th>${T().no}</th><th>N/A</th><th>${T().thPts}</th><th>${T().thOther}</th></tr></thead>
-     <tbody>${rows||'<tr><td class="d" colspan="7" style="text-align:center;padding:22px">'+T().noQ+'</td></tr>'}</tbody>
-     <tfoot><tr><td colspan="2" style="text-align:right">${T().thSecTotal} ${kh(st.applicable)} × ${st.per.toFixed(2)}</td>
-       <td class="c">${kh(st.yes)}</td><td class="c">${kh(st.no)}</td><td class="c">${kh(st.na)}</td>
-       <td class="p">${st.scoreFinal===null?'–':fx(st.scoreFinal)}</td><td class="o">/ 100 ${T().pts}</td></tr></tfoot>`;
+    `<thead><tr><th>${T().thNo}</th><th>${T().thDesc}</th><th>${T().yes}</th><th>${T().no}</th><th>${T().thPts}</th><th>${T().thOther}</th></tr></thead>
+     <tbody>${rows||'<tr><td class="d" colspan="6" style="text-align:center;padding:22px">'+T().noQ+'</td></tr>'}</tbody>
+     <tfoot>${tableFoot(st)}</tfoot>`;
   $$('#xTable tbody tr[data-k]').forEach(tr=>{
     const key=tr.dataset.k;
-    tr.querySelectorAll('.xbox').forEach(bx=>bx.onclick=()=>{
+    const tick=(v)=>{
       const a=S.ans[key]||(S.ans[key]={});
-      a.v = (a.v===bx.dataset.v) ? '' : bx.dataset.v;
-      save(); renderTop(); renderSec();
+      a.v = (a.v===v) ? '' : v;
+      save(); renderTop(); PATCH_ONLY=true; try{ renderSec(); } finally { PATCH_ONLY=false; }
+      const bx=tr.querySelector('.xbox[data-v="'+v+'"]');
+      if(bx && a.v===v){ bx.classList.remove('pop'); void bx.offsetWidth; bx.classList.add('pop'); haptic(); }
+    };
+    tr.querySelectorAll('.xbox').forEach(bx=>{
+      bx.onclick=()=>tick(bx.dataset.v);
+      bx.onkeydown=(e)=>{ if(e.key===' '||e.key==='Enter'){ e.preventDefault(); tick(bx.dataset.v); } };
     });
+    tr.querySelector('.napill').onclick=()=>tick('na');
     const ta=tr.querySelector('.xnote');
     ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; save(true); };
   });
@@ -2069,11 +2167,13 @@ var renderTop=safe('renderTop',_renderTop), renderHome=safe('renderHome',_render
     applyView=safe('applyView',_applyView), bindQ=safe('bindQ',_bindQ);
 
 /* ================= ការផ្លាស់ទំព័រ ================= */
+var SCR_ORDER={home:0,sec:1,sum:1,info:2}, CUR_SCR='home';
 function go(name){
-  $$('.screen').forEach(s=>s.classList.remove('on'));
-  $('#sc-'+name).classList.add('on');
+  var dir=(SCR_ORDER[name]||0)>=(SCR_ORDER[CUR_SCR]||0)?'fwd':'back', same=(name===CUR_SCR); CUR_SCR=name;
+  $$('.screen').forEach(s=>s.classList.remove('on','in-fwd','in-back'));
+  var el=$('#sc-'+name); el.classList.add('on'); if(!same){ void el.offsetWidth; el.classList.add('in-'+dir); }
   $$('.nb').forEach(b=>b.classList.toggle('on', b.dataset.go===(name==='sec'?'home':name)));   /* ផ្ទាំងបំពេញចូលពីទំព័រដើម */
-  if(name==='home'){ renderHome(); $('#topTitle').textContent=T().appTitle; }
+  if(name==='home'){ renderHome(); $('#topTitle').textContent=T().appTitle; if(!same) staggerIn('#secList .sitem'); }
   if(name==='sec') renderSec();
   if(name==='sum'){ renderSum(); $('#topTitle').textContent=T().topSum; }
   if(name==='info'){ fillInfo(); renderRecs(); runDiag(); renderAcc(); if(ME&&ME.is_admin&&!ADM.users.length) loadAdmin(); $('#topTitle').textContent=T().topInfo; }
@@ -2278,7 +2378,7 @@ function T(){ return LANG[S.lang] || LANG.km; }
 var LANG={
 km:{
  howCalc:'ℹ️ របៀបគិតពិន្ទុ', sigPeople:'អ្នកចុះហត្ថលេខា', extraInfo:'ព័ត៌មានបន្ថែម', setTitle:'ការកំណត់', viewMode:'រូបរាង',
- vPhone:'📱 ទូរស័ព្ទ', vPc:'💻 កុំព្យូទ័រ', backupT:'Backup (JSON)', shareT:'ចែករំលែក Link', copyLink:'📋 ចម្លង', clearT:'សម្អាតទិន្នន័យ',
+ vAuto:'✨ ស្វ័យប្រវត្តិ', vPhone:'📱 ទូរស័ព្ទ', vPc:'💻 កុំព្យូទ័រ', backupT:'Backup (JSON)', shareT:'ចែករំលែក Link', copyLink:'📋 ចម្លង', clearT:'សម្អាតទិន្នន័យ',
  aboutApp:'អំពី App', tileSaveRec:'រក្សាទុក', dlBtn:'ទាញយក', sharePdf:'ចែករំលែក PDF', svSharePdfSub:'ផ្ញើឯកសារ PDF ទៅ Telegram · Messenger · Gmail · Drive …', svShareImgSub:'មួយទំព័រ = មួយរូប · គុណភាព 8K ច្បាស់ពេញភ្នែក · ផ្ញើ Telegram បានភ្លាម', svRecSub:'ទុកលើពពក ដើម្បីបើកមើលវិញ (អតិបរមា ៨ ចុងក្រោយ)', noReview:'មើល ›', signOut:'↪ ចាកចេញ', adminT:'Admin · ទិន្នន័យគ្រប់កសិដ្ឋាន', admSearchPh:'ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…', tileExport:'PDF / Excel', tileRecs:'កំណត់ត្រា',
  installShort:'<b>📲 ដំឡើងជា App៖</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'ត្រួតពិនិត្យជីវៈសុវត្ថិភាព', appSub:"កសិដ្ឋាន M's PIG ACMC (Cambodia)",
@@ -2337,7 +2437,7 @@ km:{
 },
 en:{
  howCalc:'ℹ️ How the score works', sigPeople:'Signers', extraInfo:'More info', setTitle:'Settings', viewMode:'Layout',
- vPhone:'📱 Phone', vPc:'💻 Desktop', backupT:'Backup (JSON)', shareT:'Share link', copyLink:'📋 Copy', clearT:'Clear data',
+ vAuto:'✨ Auto', vPhone:'📱 Phone', vPc:'💻 Desktop', backupT:'Backup (JSON)', shareT:'Share link', copyLink:'📋 Copy', clearT:'Clear data',
  aboutApp:'About', tileSaveRec:'Save', dlBtn:'Download', sharePdf:'Share PDF', svSharePdfSub:'Send the PDF to Telegram · Messenger · Gmail · Drive …', svShareImgSub:'One page = one image · sharp 8K quality · ready for Telegram', svRecSub:'Saved to the cloud to reopen later (latest 8)', noReview:'View ›', signOut:'↪ Sign out', adminT:'Admin · All farms', admSearchPh:'Search email or farm…', tileExport:'PDF / Excel', tileRecs:'Records',
  installShort:'<b>📲 Install as app:</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'Biosecurity Farm Audit', appSub:"M's PIG ACMC (Cambodia) Farm",
@@ -3368,7 +3468,7 @@ function goSec(i){
   var top=$('#sc-sec .qhead').getBoundingClientRect().top + window.scrollY - (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdrH'))||80) - 8;
   if(still || !body.animate){ S.cur=i; renderSec(); window.scrollTo({top:Math.max(0,top)}); return; }
   _sliding=true;
-  var ease='cubic-bezier(.2,.8,.2,1)';
+  var ease='cubic-bezier(.32,.72,0,1)';
   ttl.animate([{opacity:1,transform:'none'},{opacity:0,transform:'translateX('+(-dir*18)+'px)'}],{duration:140,easing:'ease-in',fill:'forwards'});
   body.animate([{opacity:1,transform:'none'},{opacity:0,transform:'translateX('+(-dir*48)+'px)'}],{duration:170,easing:'ease-in',fill:'forwards'})
     .onfinish=function(){
@@ -3532,10 +3632,56 @@ function shareNoList(){
   }
 }
 
+/* ================= ចលនា (Motion) — រលូនដូច macOS / iOS ================= */
+var REDUCED = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+function countTo(el, val){
+  if(!el) return;
+  if(val===null){ el.textContent='–'; el._v=null; return; }
+  var from=(typeof el._v==='number')?el._v:val, t0=performance.now(), d=620;
+  if(el._raf) cancelAnimationFrame(el._raf);
+  el._v=val;
+  if(REDUCED || from===val || document.hidden){ el.textContent=kh(val); return; }
+  (function step(t){ var p=Math.min(1,(t-t0)/d), e=1-Math.pow(1-p,3);
+    el.textContent=kh(Math.round(from+(val-from)*e)); if(p<1) el._raf=requestAnimationFrame(step); })(t0);
+}
+function staggerIn(sel){
+  if(REDUCED) return;
+  $$(sel).forEach(function(e,i){ e.style.animationDelay=(i*32)+'ms'; e.classList.remove('rise'); void e.offsetWidth; e.classList.add('rise'); });
+}
+/* អូសផ្ទាំងចុះក្រោម ដើម្បីបិទ (ដូច iOS) */
+function bindSheetDrag(){
+  var map={sheet:'closeSave',clearSheet:'closeClear',fileSheet:'closeFileSheet',sigSheet:'closeSigPad',noSheet:'closeNoReview'};
+  Object.keys(map).forEach(function(id){
+    var el=document.getElementById(id); if(!el) return;
+    var y0=0, dy=0, t0=0, drag=false, armed=false;
+    el.addEventListener('touchstart',function(e){
+      if(document.body.classList.contains('v-pc') || e.touches.length!==1) return;
+      if(e.target.closest && e.target.closest('.sigpad,textarea,input')) return;
+      armed = el.scrollTop<=0; drag=false; y0=e.touches[0].clientY; dy=0; t0=performance.now();
+    },{passive:true});
+    el.addEventListener('touchmove',function(e){
+      if(!armed) return;
+      dy=e.touches[0].clientY-y0;
+      if(!drag){ if(dy>6) { drag=true; el.style.transition='none'; } else if(dy<-4){ armed=false; return; } else return; }
+      e.preventDefault();
+      var d=Math.max(0,dy); el.style.transform='translateY('+(d<0?0:d)+'px)';
+      var bg=$('#sheetBg'); if(bg) bg.style.opacity=String(Math.max(0,1-d/420));
+    },{passive:false});
+    var end=function(){
+      if(!drag){ armed=false; return; }
+      var v=dy/Math.max(1,performance.now()-t0), bg=$('#sheetBg');
+      el.style.transition=''; el.style.transform=''; if(bg) bg.style.opacity='';
+      if(dy>110 || v>0.6){ var f=window[map[id]]; if(typeof f==='function') f(); }
+      drag=false; armed=false;
+    };
+    el.addEventListener('touchend',end); el.addEventListener('touchcancel',end);
+  });
+}
+
 /* ================= ភ្ជាប់ព្រឹត្តិការណ៍ ================= */
-$$('#segView button').forEach(b=>b.onclick=()=>{ S.view=b.dataset.v; S.style=null; save(true); applyView(); renderSec&&renderSec(); renderHome();
-  toast(b.dataset.v==='pc'?'💻 រូបរាងកុំព្យូទ័រ':'📱 រូបរាងទូរស័ព្ទ'); });
-window.addEventListener('resize',()=>{ if(!S.view) applyView(); });
+$$('#segView button').forEach(b=>b.onclick=()=>{ S.view=(b.dataset.v==='auto'?null:b.dataset.v); S.style=null; save(true); applyView(); renderSec&&renderSec(); renderHome();
+  toast(b.dataset.v==='auto'?'✨ '+(S.lang==='en'?'Auto layout':'រូបរាងស្វ័យប្រវត្តិ'):(b.dataset.v==='pc'?'💻 រូបរាងកុំព្យូទ័រ':'📱 រូបរាងទូរស័ព្ទ')); });
+var _rzT; window.addEventListener('resize',()=>{ clearTimeout(_rzT); _rzT=setTimeout(()=>{ applyView(); if(typeof setHdrH==='function') setHdrH(); },120); });
 $$('.nb').forEach(b=>b.onclick=()=>go(b.dataset.go));
 $('#btnBack').onclick=()=>go('home');
 $('#btnSave').onclick=()=>{ save(true); openSave(); };
@@ -3911,7 +4057,7 @@ function bindCloudUI(){
 }
 
 /* ================= ចាប់ផ្តើម ================= */
-applyLang(); applyView(); bindInfo(); bindSigPad(); bindCloudUI(); fillInfo(); renderRecs(); renderIab(); go('home');
+applyLang(); applyView(); bindInfo(); bindSigPad(); bindCloudUI(); bindSheetDrag(); fillInfo(); renderRecs(); renderIab(); go('home');
 cloudInit();   /* ត្រូវចូលដោយ Google មុនប្រើ */
 setTimeout(loadReportFonts, 400);
 if(purgedOld) setTimeout(()=>toast('🧹 ទិន្នន័យជំនាន់ចាស់ត្រូវបានសម្អាត — ចាប់ផ្តើមថ្មី'), 900);
