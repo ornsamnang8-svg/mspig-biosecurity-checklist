@@ -728,6 +728,39 @@ body.gated{overflow:hidden}
 .adm-r .rb small{font-size:10.5px;color:var(--ink-dim)}
 .adm-empty{padding:10px 12px;font-size:11.5px;color:var(--ink-dim);border-top:1px solid rgba(13,122,76,.08)}
 
+/* ---- ប៊ូតុង «មិនមាន» → ពិនិត្យ (2026-11-17) ---- */
+.mini3 button{font:inherit;color:inherit;cursor:pointer;width:100%;position:relative}
+.mini3 button{padding:10px 4px;border-radius:16px;box-shadow:var(--inset)}
+#heroCard .mini3 button{padding:4px 2px;border-radius:12px;text-align:center}
+.mini3 button.no{border:1px solid rgba(242,179,31,.55);transition:transform .12s, box-shadow .15s}
+.mini3 button.no:hover{box-shadow:0 6px 14px -8px rgba(201,140,0,.55), var(--inset)}
+.mini3 button.no:active{transform:scale(.95)}
+.mini3 button.no:focus-visible{outline:2px solid var(--y-deep);outline-offset:2px}
+.mini3 .nohint{display:block;font-style:normal;font-size:9px;font-weight:700;color:var(--y-deep);line-height:1.3;opacity:.9}
+.mini3 button.no.zero{cursor:default;border-color:rgba(255,255,255,.9)}
+.mini3 button.no.zero .nohint{visibility:hidden}
+#noSheet{position:fixed;left:0;right:0;bottom:0;z-index:160;max-width:580px;margin:0 auto;padding:14px 16px calc(20px + var(--safe-b));
+  border-radius:30px 30px 0 0;max-height:88vh;overflow-y:auto;background:#fff;
+  box-shadow:0 -18px 40px -20px rgba(8,74,46,.35);transform:translateY(105%);transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+#noSheet.on{transform:translateY(0)}
+#noSheet .grab{width:46px;height:5px;border-radius:99px;background:rgba(13,122,76,.22);margin:0 auto 14px}
+#noSheet h3{margin:0 0 3px;font-size:16px;text-align:center;color:#9a6a00;line-height:1.8}
+#noSheet .sub{margin:0 0 12px;font-size:11.5px;color:var(--ink-dim);text-align:center}
+.nogrp{margin-bottom:12px;border-radius:16px;border:1px solid rgba(242,179,31,.35);overflow:hidden;background:linear-gradient(160deg,#fffaf0,#fff)}
+.nosec{display:flex;align-items:center;gap:8px;padding:8px 12px;font-weight:700;font-size:12.5px;color:var(--g-deep);background:rgba(255,246,220,.75)}
+.nosec span{flex:1;min-width:0}
+.nosec em{font-style:normal;font-size:11px;padding:1px 8px;border-radius:99px;background:#fff;color:#9a6a00;border:1px solid rgba(242,179,31,.5)}
+.noitem{display:flex;align-items:flex-start;gap:10px;width:100%;text-align:left;padding:9px 12px;border:0;border-top:1px solid rgba(242,179,31,.18);
+  background:transparent;cursor:pointer;font:inherit;color:var(--ink);line-height:1.6}
+.noitem:hover{background:rgba(255,246,220,.5)}
+.noitem:active{background:rgba(255,236,190,.6)}
+.noitem .nn{flex:0 0 26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;color:#fff;background:#d99a00}
+.noitem .nt{flex:1;min-width:0;font-size:12.5px}
+.noitem .nt small{display:block;margin-top:3px;font-size:11px;color:var(--ink-dim)}
+.noitem .ng{flex:0 0 auto;color:#c08a00;font-size:18px;line-height:1.2}
+@keyframes rowFlash{0%,30%{background:rgba(255,214,102,.75)}100%{background:transparent}}
+#xTable tr.flash td,#qList .q.flash{animation:rowFlash 2.2s ease-out}
+
 /* ប៊ូតុងទាញយក (header) */
 .dlbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 12px 0 9px;border-radius:12px;cursor:pointer;
   border:1px solid rgba(255,255,255,.35);color:#fff;font:700 12px/1 inherit;font-family:inherit;white-space:nowrap;
@@ -921,7 +954,7 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
       <p id="topSub">កសិដ្ឋាន M's PIG ACMC (Cambodia)</p>
     </div>
     <button class="iconbtn sm" id="btnLang" title="ភាសា / Language">EN</button>
-    <button class="dlbtn" id="btnSave" title="ទាញយក PDF / Excel / CSV" aria-label="Download PDF / Excel / CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="dl-arrow" d="M12 3.5v10.2M7.6 9.6 12 14l4.4-4.4"/><path d="M4.5 14.5v3.2a2.3 2.3 0 0 0 2.3 2.3h10.4a2.3 2.3 0 0 0 2.3-2.3v-3.2"/></svg><span data-i18n="dlBtn">ទាញយក</span></button>
+    <button class="dlbtn" id="btnSave" title="ទាញយក PDF / Excel / រូបភាព" aria-label="Download PDF / Excel / images"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="dl-arrow" d="M12 3.5v10.2M7.6 9.6 12 14l4.4-4.4"/><path d="M4.5 14.5v3.2a2.3 2.3 0 0 0 2.3 2.3h10.4a2.3 2.3 0 0 0 2.3-2.3v-3.2"/></svg><span data-i18n="dlBtn">ទាញយក</span></button>
   </div>
   <div class="pline"><div class="pbar"><i id="pbarFill"></i></div><span id="pbarL">០ / ១២១</span><b id="pbarR">០%</b></div>
 </div></header>
@@ -956,7 +989,7 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     <div class="hero-sub" id="heroSub">សូមចាប់ផ្តើមបំពេញផ្នែកទី ១</div>
     <div class="mini3">
       <div class="ok"><b id="cYes">0</b><span data-i18n="yes">មាន</span></div>
-      <div class="no"><b id="cNo">0</b><span data-i18n="no">មិនមាន</span></div>
+      <button class="no" id="btnNoReview" type="button" aria-label="Review No items"><b id="cNo">0</b><span data-i18n="no">មិនមាន</span><em class="nohint" data-i18n="noReview">មើល ›</em></button>
       <div class="na"><b id="cNa">0</b><span data-i18n="na">មិនពាក់ព័ន្ធ</span></div>
     </div>
     <div class="calc" id="heroCalc"></div>
@@ -1061,7 +1094,7 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     <h2><span class="chip-i">⚙️</span> <span data-i18n="setTitle">ការកំណត់</span></h2>
     <div class="srow"><span class="si">📱</span><span class="st" data-i18n="viewMode">រូបរាង</span>
       <div class="seg sm" id="segView"><button data-v="phone" data-i18n="vPhone">📱 ទូរស័ព្ទ</button><button data-v="pc" data-i18n="vPc">💻 កុំព្យូទ័រ</button></div></div>
-    <button class="srow tap sv-open"><span class="si">⬇️</span><span class="st">Save PDF / Excel / CSV</span><span class="sa">›</span></button>
+    <button class="srow tap sv-open"><span class="si">⬇️</span><span class="st">Save PDF / Excel / រូបភាព</span><span class="sa">›</span></button>
     <div class="srow"><span class="si">💾</span><span class="st" data-i18n="backupT">Backup</span>
       <span class="sbtns"><button class="chipbtn" id="btnBackup" data-i18n="backup">ទាញយក</button><button class="chipbtn" id="btnRestore" data-i18n="restore">ស្តារ</button></span></div>
     <div class="srow"><span class="si">🔗</span><span class="st" data-i18n="shareT">ចែករំលែក Link</span>
@@ -1127,7 +1160,7 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
   </div>
 
   <div class="btnrow savebar">
-    <button class="btn pri sv-open">⬇️ Save PDF / Excel / CSV</button>
+    <button class="btn pri sv-open">⬇️ Save PDF / Excel / រូបភាព</button>
     <button class="btn" id="btnSaveRec2" data-i18n="saveRecBtn2">📚 រក្សាទុកជាកំណត់ត្រា</button>
   </div>
 </section>
@@ -1154,10 +1187,10 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
   <p class="sub" id="sheetSub"></p>
   <div class="sv-hint" id="svHint" style="display:none"></div>
   <button class="sv pri" id="svPdf"><i>📕</i><span><b data-i18n="savePdf">Save PDF</b><small data-i18n="svPdfSub">ឯកសារ PDF ពិតប្រាកដ ដូច Form ដើម · រក្សាទុក ឬ ផ្ញើតាម Telegram បាន</small></span></button>
-  <button class="sv" id="svPrint"><i>🖨️</i><span><b data-i18n="savePrint">Print / បោះពុម្ព</b><small data-i18n="svPrintSub">បើកផ្ទាំង Print របស់ Browser · ជ្រើស “Save as PDF” ក៏បាន</small></span></button>
+  <button class="sv" id="svSharePdf"><i>📤</i><span><b data-i18n="sharePdf">ចែករំលែក PDF</b><small data-i18n="svSharePdfSub">ផ្ញើឯកសារ PDF ទៅ Telegram · Messenger · Gmail · Drive …</small></span></button>
+  <button class="sv" id="svShareImg"><i>🖼️</i><span><b data-i18n="shareImg">ចែករំលែកជារូបភាព ៤ សន្លឹក</b><small data-i18n="svShareImgSub">មួយទំព័រ = មួយរូប · គុណភាព 8K ច្បាស់ពេញភ្នែក · ផ្ញើ Telegram បានភ្លាម</small></span></button>
   <button class="sv" id="svXls"><i>📊</i><span><b data-i18n="saveXls">Save Excel (.xlsx)</b><small data-i18n="svXlsSub">ឯកសារ Excel ពិតប្រាកដ ដូច Form ដើម (មាន Logo) · បើកបានគ្រប់ Excel / Google Sheets</small></span></button>
-  <button class="sv" id="svCsv"><i>📄</i><span><b data-i18n="saveCsv">Save CSV (.csv)</b><small data-i18n="svCsvSub">UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets</small></span></button>
-  <button class="sv" id="svRec"><i>📚</i><span><b data-i18n="saveRecOpt">រក្សាទុកជាកំណត់ត្រា</b><small data-i18n="svRecSub">ទុកក្នុង App ដើម្បីមើលវិញ (អតិបរមា ២០ ចុងក្រោយ)</small></span></button>
+  <button class="sv" id="svRec"><i>📚</i><span><b data-i18n="saveRecOpt">រក្សាទុកជាកំណត់ត្រា</b><small data-i18n="svRecSub">ទុកលើពពក ដើម្បីបើកមើលវិញ (អតិបរមា ៨ ចុងក្រោយ)</small></span></button>
   <button class="sv" id="svJson"><i>💾</i><span><b data-i18n="saveJson">Backup (.json)</b><small data-i18n="svJsonSub">ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ</small></span></button>
   <button class="sv" id="svClose" style="justify-content:center;margin-bottom:0"><span><b data-i18n="close">បិទ</b></span></button>
 </div>
@@ -1185,6 +1218,15 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     <button class="btn pri" id="sigPadSave" data-i18n="sigSave">✔ រក្សាទុក</button>
     <button class="btn wide" id="sigPadClose" data-i18n="close">បិទ</button>
   </div>
+</div>
+
+<div id="noSheet">
+  <div class="grab"></div>
+  <h3 id="noTitle">✖ ចំណុច «មិនមាន»</h3>
+  <p class="sub" id="noSub"></p>
+  <div id="noList"></div>
+  <button class="sv" id="noShare"><i>📤</i><span><b id="noShareT">ចែករំលែកបញ្ជីនេះ</b><small>Telegram · Messenger · Copy</small></span></button>
+  <button class="sv" id="noClose" style="justify-content:center;margin-bottom:0"><span><b data-i18n="close">បិទ</b></span></button>
 </div>
 
 <div id="pdfBusy"><div class="spin"></div><div id="pdfBusyT">⏳ កំពុងបង្កើត PDF…</div></div>
@@ -1249,7 +1291,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-10-29d', ERRS=[];
+var APP_VER='2026-11-17', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -1764,6 +1806,7 @@ function _renderTop(){
 }
 function _renderHome(){
   const o=overall(), g=gradeOf(o.score, o.complete);
+  var nb=document.getElementById('btnNoReview'); if(nb) nb.classList.toggle('zero', !o.no);
   $('#heroScore').textContent = o.score===null?'–':kh(Math.round(o.score));
   ringSet($('#ringFg'), o.score||0);
   $('#heroLbl').textContent = T().pts100;
@@ -2159,9 +2202,9 @@ function chromeIntent(){
 }
 function openFileSheet(afterFail){
   var E=isTgt(), f=LASTFILE; if(!f) return;
-  var kb=Math.max(1,Math.round(f.blob.size/1024));
+  var kb=Math.max(1,Math.round((f.size||f.blob.size)/1024));
   $('#fsTitle').textContent=(E?'📂 File ready: ':'📂 ឯកសាររួចរាល់៖ ')+f.name;
-  $('#fsSub').textContent=kb+' KB';
+  $('#fsSub').textContent=(kb>2048?(Math.round(kb/102.4)/10)+' MB':kb+' KB')+(f.files&&f.files.length>1?' · '+kh(f.files.length)+(E?' files':' ឯកសារ'):'');
   var hint=$('#fsHint');
   if(ENV.inApp){
     hint.style.display='block';
@@ -2179,7 +2222,7 @@ function openFileSheet(afterFail){
   $('#fsOpenS').textContent=E?'Leave the in-app browser':'ចេញពី browser ក្នុង App';
   $('#fsCopyT').textContent=E?'Copy app link':'ចម្លង Link App';
   $('#fsCopyS').textContent=E?'Then paste it in Safari / Chrome':'រួចបិទភ្ជាប់ក្នុង Safari / Chrome';
-  $('#fsShare').style.display = (navigator.share && f.file) ? '' : 'none';
+  $('#fsShare').style.display = (navigator.share && (f.file || (f.files&&f.files.length))) ? '' : 'none';
   $('#fsOpen').style.display  = (ENV.android && ENV.inApp && /^https?:/.test(location.protocol)) ? '' : 'none';
   $('#fsCopy').style.display  = (/^https?:/.test(location.protocol)) ? '' : 'none';
   $('#sheetBg').classList.add('on'); $('#fileSheet').classList.add('on');
@@ -2196,10 +2239,12 @@ function copyText(t){
 $('#fsClose').onclick=closeFileSheet;
 $('#fsShare').onclick=function(){
   var f=LASTFILE; if(!f||!navigator.share) return;
-  var p = canShareFile(f.file) ? navigator.share({files:[f.file],title:f.name}) : navigator.share({title:f.name,text:f.name});
+  var fl=(f.files&&f.files.length)?f.files:(f.file?[f.file]:[]), okF=false;
+  try{ okF=!!(fl.length && navigator.canShare && navigator.canShare({files:fl})); }catch(e){}
+  var p = okF ? navigator.share({files:fl,title:f.name}) : navigator.share({title:f.name,text:f.name});
   p.then(function(){ closeFileSheet(); toast(f.msg||'✅'); }).catch(function(e){ if(e&&e.name!=='AbortError') toast(isTgt()?'⚠️ Share not available — try Download':'⚠️ Share មិនដំណើរការ — សូមសាកល្បង ទាញយក'); });
 };
-$('#fsDl').onclick=function(){ var f=LASTFILE; if(!f) return; dlBlob(f.blob,f.name); toast(isTgt()?'⬇️ Download started':'⬇️ កំពុងទាញយក…'); };
+$('#fsDl').onclick=function(){ var f=LASTFILE; if(!f) return; if(f.blobs){ dlMany(f.blobs,f.names); } else dlBlob(f.blob,f.name); toast(isTgt()?'⬇️ Download started':'⬇️ កំពុងទាញយក…'); };
 $('#fsOpen').onclick=function(){ location.href=chromeIntent(); };
 $('#fsCopy').onclick=function(){ copyText(location.href); };
 
@@ -2234,7 +2279,7 @@ var LANG={
 km:{
  howCalc:'ℹ️ របៀបគិតពិន្ទុ', sigPeople:'អ្នកចុះហត្ថលេខា', extraInfo:'ព័ត៌មានបន្ថែម', setTitle:'ការកំណត់', viewMode:'រូបរាង',
  vPhone:'📱 ទូរស័ព្ទ', vPc:'💻 កុំព្យូទ័រ', backupT:'Backup (JSON)', shareT:'ចែករំលែក Link', copyLink:'📋 ចម្លង', clearT:'សម្អាតទិន្នន័យ',
- aboutApp:'អំពី App', tileSaveRec:'រក្សាទុក', dlBtn:'ទាញយក', signOut:'↪ ចាកចេញ', adminT:'Admin · ទិន្នន័យគ្រប់កសិដ្ឋាន', admSearchPh:'ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…', tileExport:'PDF / Excel', tileRecs:'កំណត់ត្រា',
+ aboutApp:'អំពី App', tileSaveRec:'រក្សាទុក', dlBtn:'ទាញយក', sharePdf:'ចែករំលែក PDF', svSharePdfSub:'ផ្ញើឯកសារ PDF ទៅ Telegram · Messenger · Gmail · Drive …', svShareImgSub:'មួយទំព័រ = មួយរូប · គុណភាព 8K ច្បាស់ពេញភ្នែក · ផ្ញើ Telegram បានភ្លាម', svRecSub:'ទុកលើពពក ដើម្បីបើកមើលវិញ (អតិបរមា ៨ ចុងក្រោយ)', noReview:'មើល ›', signOut:'↪ ចាកចេញ', adminT:'Admin · ទិន្នន័យគ្រប់កសិដ្ឋាន', admSearchPh:'ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…', tileExport:'PDF / Excel', tileRecs:'កំណត់ត្រា',
  installShort:'<b>📲 ដំឡើងជា App៖</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'ត្រួតពិនិត្យជីវៈសុវត្ថិភាព', appSub:"កសិដ្ឋាន M's PIG ACMC (Cambodia)",
  filled:'បំពេញ', of:'/', pts:'ពិន្ទុ', pts100:'ពិន្ទុ / ១០០', provPts:'បណ្តោះអាសន្ន / ១០០',
@@ -2272,9 +2317,9 @@ km:{
  clFormSub:'លុប ចម្លើយ · ចំណាំ · រូបថត · បរិយាយ÷ &nbsp;|&nbsp; រក្សា ព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា',
  clRecsSub:'លុបតែបញ្ជីកំណត់ត្រា ២០ · ទម្រង់បច្ចុប្បន្នមិនប៉ះពាល់', clAllSub:'លុបគ្រប់យ៉ាង រួមទាំងព័ត៌មានកសិដ្ឋាន និងកំណត់ត្រា',
  svPdfSub:'ឯកសារ PDF ពិតប្រាកដ ដូច Form ដើម · រក្សាទុក ឬ ផ្ញើតាម Telegram បាន', svXlsSub:'ឯកសារ Excel ពិតប្រាកដ ដូច Form ដើម (មាន Logo) · បើកបានគ្រប់ Excel / Google Sheets',
- svCsvSub:'UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets', svRecSub:'ទុកក្នុង App ដើម្បីមើលវិញ (អតិបរមា ២០ ចុងក្រោយ)', svJsonSub:'ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ',
+ svCsvSub:'UTF-8 អក្សរខ្មែរអានបាន · សម្រាប់ Google Sheets', svRecSub:'ទុកលើពពក ដើម្បីបើកមើលវិញ (អតិបរមា ៨ ចុងក្រោយ)', svJsonSub:'ថតចម្លងទិន្នន័យ សម្រាប់ស្តារឡើងវិញ',
  recNote:'រក្សាទុកបានត្រឹម <b>២០ កំណត់ត្រាចុងក្រោយ</b> — ពេលលើស ២០ កំណត់ត្រាចាស់បំផុតត្រូវលុបដោយស្វ័យប្រវត្តិ។ បើអង្គចងចាំពេញ រូបថតក្នុងកំណត់ត្រាចាស់នឹងត្រូវលុបជាមុនសិន។',
- dataNote:'ទិន្នន័យស្ថិតក្នុងទូរស័ព្ទ/កុំព្យូទ័ររបស់អ្នកតែប៉ុណ្ណោះ — មិនផ្ញើទៅណាទេ។ រៀងរាល់ពេលបញ្ចប់ការត្រួតពិនិត្យម្តងៗ សូមចុច <b>Save PDF / Excel / CSV</b> ដើម្បីទុកជាឯកសារ។',
+ dataNote:'ទិន្នន័យស្ថិតក្នុងទូរស័ព្ទ/កុំព្យូទ័ររបស់អ្នកតែប៉ុណ្ណោះ — មិនផ្ញើទៅណាទេ។ រៀងរាល់ពេលបញ្ចប់ការត្រួតពិនិត្យម្តងៗ សូមចុច <b>Save PDF / Excel</b> ដើម្បីទុកជាឯកសារ។',
  sumNote:'«គិត» = ចំនួនសំណួរដែលគិតពិន្ទុ (សំណួរសរុប − N/A)។ ពិន្ទុផ្នែក = មាន ÷ គិត × ១០០។',
  topSum:'សង្ខេប និងពិន្ទុ', topInfo:'ព័ត៌មានកសិដ្ឋាន', farmPh:'ឧ. កសិដ្ឋាន ស្វាយរៀង ០១', zonePh:'ឧ. ខេត្តត្បូងឃ្មុំ', fullNamePh:'ឈ្មោះពេញ', genNotePh:'សេចក្តីសង្ខេប ឬ អនុសាសន៍...', qnotePh:'ចំណាំ...',
  saveRecOpt:'រក្សាទុកជាកំណត់ត្រា', saveJson:'Backup (.json)', close:'បិទ',
@@ -2287,13 +2332,13 @@ km:{
  tPdf:'📕 PDF រួចរាល់', tXls:'📊 Save Excel (.xlsx) រួចរាល់', tCsv:'📄 Save CSV រួចរាល់', tJson:'💾 Backup រួចរាល់',
  tPhoto:'📷 បានបញ្ចូលរូបភាព', tLangEn:'🌐 ប្តូរជាភាសាអង់គ្លេស',
  rulesHtml:'<b>១.</b> ផ្នែកនីមួយៗ = <b>១០០ ពិន្ទុ</b> ដាច់ដោយឡែក (តាម Form ដើម)<br>       <b>២.</b> សំណួរគិតពិន្ទុ = <code>សំណួរសរុប − N/A</code><br>       <b>៣.</b> ១ សំណួរ = <code>១០០ ÷ សំណួរគិតពិន្ទុ</code> (បូកគ្នាវិញ = ១០០ គត់)<br>       <b>៤.</b> មាន = ពេញពិន្ទុ · មិនមាន = ០ · <b>មិនទាន់បំពេញ = ០</b><br>       <b>៥.</b> ពិន្ទុផ្នែក = <code>មាន ÷ សំណួរគិតពិន្ទុ × ១០០</code><br>       <b>៦.</b> ផ្នែកដែល N/A ទាំងអស់ → គ្មានពិន្ទុ ហើយ<b>ដកចេញ</b>ពីមធ្យមភាគ (ផ្នែក<b>មិនទាន់ចាប់ផ្តើម</b> គិតជា <b>០ ពិន្ទុ</b>)<br>       <b>៧.</b> ពិន្ទុសរុប = <code>មធ្យមភាគនៃពិន្ទុផ្នែក</code> (៧ ផ្នែកមានទម្ងន់ស្មើគ្នា)<br>       <b>៨.</b> ចំណាប់ថ្នាក់ចេញផ្លូវការ<b>លុះត្រាតែ</b>បំពេញគ្រប់ ១២១ សំណួរ',
- shareHtml:'<b>✅ ចែករំលែកតាម Link ផ្លូវការ</b> (ចុច «ចម្លង» រួចផ្ញើតាម Telegram / Email)<div class="linkbox"><code>https://mspig-biosecurity-checklist.vercel.app</code><button data-copy="https://mspig-biosecurity-checklist.vercel.app/">📋 ចម្លង</button></div><div class="linkbox"><code>https://ornsamnang8-svg.github.io/mspig-biosecurity-checklist/</code><button data-copy="https://ornsamnang8-svg.github.io/mspig-biosecurity-checklist/">📋 ចម្លង</button></div>អ្នកទទួលបើក link → ប្រើបានភ្លាម · Save PDF / Excel / CSV បានគ្រប់មុខងារ · ទិន្នន័យរបស់គេនៅក្នុងទូរស័ព្ទគេ (មិនចែកគ្នាទេ)។<br><br><b>📱 បើ link បើកក្នុង Telegram / Facebook</b> — browser ក្នុង App ទាំងនោះ<b>រក្សាទុកឯកសារមិនសូវបាន</b>។ App នឹងប្រើផ្ទាំង <b>Share</b> ជំនួស ឬសូមចុច <b>⋯ → Open in Safari / Chrome</b> រួចធ្វើ Save ម្តងទៀត។<br><br><b>📄 ផ្ញើឯកសារផ្ទាល់</b> (ដើរ offline ១០០%) — ផ្ញើ <code>index.html</code> តាម Telegram/Email → អ្នកទទួល <b>Download</b> → ចុចពីរដងបើក។<br><br><b>❌ កុំប្រើ Google Drive link</b> — Drive បង្ហាញត្រឹមទំព័រ preview ដែលធ្វើឱ្យ App ដំណើរការមិនពេញលេញ ហើយរក្សាទុកស្វ័យប្រវត្តិក៏មិនដើរ។',
+ shareHtml:'<b>✅ ចែករំលែកតាម Link ផ្លូវការ</b> (ចុច «ចម្លង» រួចផ្ញើតាម Telegram / Email)<div class="linkbox"><code>https://mspig-biosecurity-checklist.vercel.app</code><button data-copy="https://mspig-biosecurity-checklist.vercel.app/">📋 ចម្លង</button></div><div class="linkbox"><code>https://ornsamnang8-svg.github.io/mspig-biosecurity-checklist/</code><button data-copy="https://ornsamnang8-svg.github.io/mspig-biosecurity-checklist/">📋 ចម្លង</button></div>អ្នកទទួលបើក link → ប្រើបានភ្លាម · Save PDF / Excel / រូបភាព បានគ្រប់មុខងារ · ទិន្នន័យរបស់គេនៅក្នុងទូរស័ព្ទគេ (មិនចែកគ្នាទេ)។<br><br><b>📱 បើ link បើកក្នុង Telegram / Facebook</b> — browser ក្នុង App ទាំងនោះ<b>រក្សាទុកឯកសារមិនសូវបាន</b>។ App នឹងប្រើផ្ទាំង <b>Share</b> ជំនួស ឬសូមចុច <b>⋯ → Open in Safari / Chrome</b> រួចធ្វើ Save ម្តងទៀត។<br><br><b>📄 ផ្ញើឯកសារផ្ទាល់</b> (ដើរ offline ១០០%) — ផ្ញើ <code>index.html</code> តាម Telegram/Email → អ្នកទទួល <b>Download</b> → ចុចពីរដងបើក។<br><br><b>❌ កុំប្រើ Google Drive link</b> — Drive បង្ហាញត្រឹមទំព័រ preview ដែលធ្វើឱ្យ App ដំណើរការមិនពេញលេញ ហើយរក្សាទុកស្វ័យប្រវត្តិក៏មិនដើរ។',
  installHtml:'<b>📱 iPhone / iPad (Safari)</b><br>       ១. បើកឯកសារនេះដោយ <b>Safari</b> (មិនមែន Chrome)<br>       ២. ចុចរូប <b>􀈂 Share</b> ខាងក្រោមអេក្រង់<br>       ៣. រំកិលចុះ ចុច <b>Add to Home Screen</b><br>       ៤. ចុច <b>Add</b> → រូប App នឹងលេចលើអេក្រង់ដើម<br>       <span style="opacity:.8">💡 បើផ្ញើតាម Telegram សូមចុច «Open in Safari» ជាមុនសិន</span><br><br>       <b>🤖 Android (Chrome)</b><br>       ១. បើកដោយ <b>Chrome</b> → ចុច <b>⋮</b> ខាងលើស្តាំ<br>       ២. ចុច <b>Add to Home screen</b> → <b>Add</b><br><br>       <b>💻 កុំព្យូទ័រ</b> — ចុចពីរដងលើឯកសារ ឬអូសដាក់ក្នុង Browser'
 },
 en:{
  howCalc:'ℹ️ How the score works', sigPeople:'Signers', extraInfo:'More info', setTitle:'Settings', viewMode:'Layout',
  vPhone:'📱 Phone', vPc:'💻 Desktop', backupT:'Backup (JSON)', shareT:'Share link', copyLink:'📋 Copy', clearT:'Clear data',
- aboutApp:'About', tileSaveRec:'Save', dlBtn:'Download', signOut:'↪ Sign out', adminT:'Admin · All farms', admSearchPh:'Search email or farm…', tileExport:'PDF / Excel', tileRecs:'Records',
+ aboutApp:'About', tileSaveRec:'Save', dlBtn:'Download', sharePdf:'Share PDF', svSharePdfSub:'Send the PDF to Telegram · Messenger · Gmail · Drive …', svShareImgSub:'One page = one image · sharp 8K quality · ready for Telegram', svRecSub:'Saved to the cloud to reopen later (latest 8)', noReview:'View ›', signOut:'↪ Sign out', adminT:'Admin · All farms', admSearchPh:'Search email or farm…', tileExport:'PDF / Excel', tileRecs:'Records',
  installShort:'<b>📲 Install as app:</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'Biosecurity Farm Audit', appSub:"M's PIG ACMC (Cambodia) Farm",
  filled:'Completed', of:'/', pts:'points', pts100:'points / 100', provPts:'provisional / 100',
@@ -2331,9 +2376,9 @@ en:{
  clFormSub:'Clears answers · notes · photos · comments &nbsp;|&nbsp; keeps farm info and records',
  clRecsSub:'Deletes only the 20 saved records · the current form is not affected', clAllSub:'Deletes everything, including farm info and records',
  svPdfSub:'Real PDF file, same layout as the original form · save it or send it by Telegram', svXlsSub:'Real Excel file, same layout as the form (with logo) · opens in any Excel / Google Sheets',
- svCsvSub:'UTF-8 (Khmer text readable) · for Google Sheets', svRecSub:'Kept inside the app for later review (last 20 max)', svJsonSub:'Copy of all data, for restoring later',
+ svCsvSub:'UTF-8 (Khmer text readable) · for Google Sheets', svRecSub:'Saved to the cloud to reopen later (latest 8)', svJsonSub:'Copy of all data, for restoring later',
  recNote:'Only the <b>last 20 records</b> are kept — when there are more than 20, the oldest is deleted automatically. If storage is full, photos in older records are removed first.',
- dataNote:'Data stays only on your phone/computer — nothing is sent anywhere. After each audit, tap <b>Save PDF / Excel / CSV</b> to keep a file copy.',
+ dataNote:'Data stays only on your phone/computer — nothing is sent anywhere. After each audit, tap <b>Save PDF / Excel</b> to keep a file copy.',
  sumNote:'“Appl.” = number of scored (applicable) questions (total − N/A). Section score = Yes ÷ Appl. × 100.',
  topSum:'Summary & score', topInfo:'Farm information', farmPh:'e.g. Svay Rieng Farm 01', zonePh:'e.g. Tbong Khmum province', fullNamePh:'Full name', genNotePh:'Summary or recommendations...', qnotePh:'Note...',
  saveRecOpt:'Save as record', saveJson:'Backup (.json)', close:'Close',
@@ -2777,7 +2822,7 @@ function openSave(){
       ? '📱 In-app browser (<b>'+ENV.app+'</b>): files are handed to the <b>Share</b> sheet → choose <b>Save to Files</b> or send by Telegram. If nothing happens, open in <b>'+(ENV.ios?'Safari':'Chrome')+'</b> (⋯ → Open in browser).'
       : '📱 Browser ក្នុង <b>'+ENV.app+'</b>៖ ឯកសារនឹងបើកផ្ទាំង <b>Share</b> → ជ្រើស <b>Save to Files</b> ឬ ផ្ញើតាម Telegram។ បើគ្មានអ្វីកើតឡើង សូមបើកក្នុង <b>'+(ENV.ios?'Safari':'Chrome')+'</b> (⋯ → Open in browser)។';
   } else hint.style.display='none';
-  $('#svPrint').style.display = ENV.inApp ? 'none' : '';
+  setShareImgLabel();
   $('#sheetBg').classList.add('on'); $('#sheet').classList.add('on');
 }
 function closeSave(){ $('#sheetBg').classList.remove('on'); $('#sheet').classList.remove('on'); }
@@ -2946,8 +2991,9 @@ function buildPdf(imgs, title){
   return out;
 }
 var PDF_BUSY=false;
-function makePdf(){
+function makePdf(mode){
   if(PDF_BUSY) return;
+  var SHARE=(mode==='share');
   var E=isTgt();
   if(typeof html2canvas!=='function'){ toast(E?'⚠️ PDF engine missing — using Print':'⚠️ គ្មានម៉ាស៊ីន PDF — ប្រើ Print ជំនួស'); printReport(); return; }
   PDF_BUSY=true;
@@ -2983,6 +3029,7 @@ function makePdf(){
     restore();
     var blob=new Blob([bytes],{type:'application/pdf'});
     var ok=E?'📕 PDF saved ('+kh(npages)+' pages)':'📕 PDF រួចរាល់ ('+kh(npages)+' ទំព័រ)';
+    if(SHARE){ shareFiles([blob],[fname('pdf')],ok); return; }
     if(ENV.mobile){ LASTFILE={blob:blob,name:fname('pdf'),file:null,msg:ok}; try{ LASTFILE.file=new File([blob],fname('pdf'),{type:'application/pdf'}); }catch(e){}
       openFileSheet(false); }   /* ត្រូវការចុចម្តងទៀត ដើម្បីបើកផ្ទាំង Share (ច្បាប់ Safari) */
     else deliver(blob,fname('pdf'),ok);
@@ -3333,6 +3380,158 @@ function goSec(i){
     };
 }
 
+/* ================= ចែករំលែក (Telegram …) · រូបភាព 8K ================= */
+function dlMany(blobs,names){ blobs.forEach(function(b,i){ setTimeout(function(){ dlBlob(b,names[i]); }, i*450); }); }
+/* ប្រគល់ឯកសារមួយ ឬច្រើន ទៅផ្ទាំង Share របស់ប្រព័ន្ធ (Telegram, Messenger, Gmail …) */
+function shareFiles(blobs,names,okMsg){
+  var E=isTgt(), files=[], total=0;
+  blobs.forEach(function(b,i){ total+=b.size; try{ files.push(new File([b],names[i],{type:b.type})); }catch(e){} });
+  var label = blobs.length>1 ? (names[0].replace(/_p\d+\.\w+$/,'')+' ('+kh(blobs.length)+(E?' images)':' រូប)')) : names[0];
+  LASTFILE={blob:blobs[0], blobs:blobs, names:names, name:label, file:files[0]||null, files:files, size:total, msg:okMsg};
+  var can=false; try{ can=!!(files.length===blobs.length && navigator.share && navigator.canShare && navigator.canShare({files:files})); }catch(e){}
+  if(can){
+    navigator.share({files:files, title:label}).then(function(){ toast(okMsg); }).catch(function(e){
+      if(e && e.name==='AbortError') return;                     /* អ្នកប្រើបិទផ្ទាំង Share ខ្លួនឯង */
+      openFileSheet(false);                                       /* ត្រូវការចុចម្តងទៀត (ការអនុញ្ញាត browser ផុតពេល) */
+    });
+    return;
+  }
+  /* Browser មិនអាច Share ឯកសារ (កុំព្យូទ័រភាគច្រើន) → ទាញយក ហើយប្រាប់របៀបផ្ញើ */
+  if(blobs.length>1) dlMany(blobs,names); else dlBlob(blobs[0],names[0]);
+  if(ENV.inApp) setTimeout(function(){ openFileSheet(true); },600);
+  else toast(E ? '⬇️ Downloaded — this browser cannot open the Share sheet. Drag the file(s) into Telegram to send.'
+               : '⬇️ បានទាញយក — Browser នេះបើកផ្ទាំង Share មិនបាន។ សូមអូសឯកសារចូល Telegram ដើម្បីផ្ញើ។');
+}
+function reportPageCount(){
+  try{ var M=formModel(), U=rpUnits(M), H=rpMeasure(U,M); return rpPaginate(U,H).length; }catch(e){ return 4; }
+}
+function setShareImgLabel(){
+  var n=reportPageCount(), E=isTgt(), b=document.querySelector('#svShareImg b');
+  if(b) b.textContent = E ? 'Share as '+n+' images' : 'ចែករំលែកជារូបភាព '+kh(n)+' សន្លឹក';
+}
+/* iPhone/iPad មានដែនកំណត់ canvas ១៦.៧ លានភីកសែល → គណនាទំហំធំបំផុតដែលអាចធ្វើបាន */
+function imgQ(L){ return L>=7680?'8K':(L>=5760?'6K':(L>=4600?'5K':(L>=4096?'4K':'3K'))); }
+var IMG_LONG=7680;                     /* 8K = ជ្រុងវែង ៧៦៨០ ភីកសែល */
+var IOS_MAX_AREA=16777216;
+function canvasToBlob(cv,q){
+  return new Promise(function(res,rej){
+    try{ cv.toBlob(function(b){ b?res(b):rej(new Error('toBlob')); },'image/jpeg',q); }
+    catch(e){ rej(e); }
+  });
+}
+function makeImages(){
+  if(PDF_BUSY) return;
+  var E=isTgt();
+  if(typeof html2canvas!=='function'){ toast(E?'⚠️ Image engine missing':'⚠️ គ្មានម៉ាស៊ីនបង្កើតរូបភាព'); return; }
+  PDF_BUSY=true;
+  var busyT=$('#pdfBusyT');
+  busyT.textContent=E?'⏳ Preparing 8K images…':'⏳ កំពុងរៀបចំរូបភាព 8K…';
+  $('#pdfBusy').classList.add('on');
+  var rep=$('#report'), host=document.createElement('div'), blobs=[], names=[], usedLong=0;
+  var restore=function(){
+    try{ document.body.appendChild(rep); }catch(e){}
+    try{ host.remove(); }catch(e){}
+    $('#pdfBusy').classList.remove('on'); PDF_BUSY=false;
+  };
+  var base=fname('pdf').replace(/\.pdf$/,'');
+  loadReportFonts().then(function(){
+    buildReport();
+    host.id='pdfHost'; host.appendChild(rep); document.body.appendChild(host);
+    return new Promise(function(r){ setTimeout(r,80); });
+  }).then(function(){
+    var pages=[].slice.call(rep.querySelectorAll('.rpage')), chain=Promise.resolve(), n=pages.length;
+    pages.forEach(function(pg,pi){
+      chain=chain.then(function(){
+        var r=pg.getBoundingClientRect(), W=Math.round(r.width), H=Math.round(r.height);
+        var ladder=[IMG_LONG,5760,4096,3072];
+        if(ENV.ios){ var Lmax=Math.floor(Math.sqrt(IOS_MAX_AREA*0.97*H/W));   /* iPhone ≈ 5K */
+          ladder=[Lmax].concat(ladder.filter(function(L){ return L<Lmax; })); }
+        if(usedLong) ladder=ladder.filter(function(L){ return L<=usedLong; });
+        var tryAt=function(k){
+          var L=ladder[k], sc=L/Math.max(W,H);
+          busyT.textContent=(E?'⏳ Image ':'⏳ រូបភាព ')+kh(pi+1)+' / '+kh(n)+' · '+imgQ(L)+'…';
+          return html2canvas(pg,{scale:sc,backgroundColor:'#ffffff',useCORS:true,logging:false,
+              scrollX:-window.scrollX, scrollY:-window.scrollY, windowWidth:Math.max(820,document.documentElement.clientWidth),
+              width:W, height:H})
+            .then(function(cv){ return canvasToBlob(cv,0.92).then(function(b){
+              cv.width=1; cv.height=1;                                   /* បញ្ចេញអង្គចងចាំភ្លាម */
+              if(b.size<60000) throw new Error('blank');               /* canvas ធំពេក → ទទេ */
+              return b; }); })
+            .then(function(b){ usedLong=L; return b; })
+            .catch(function(e){ if(k+1<ladder.length) return tryAt(k+1); throw e; });
+        };
+        return tryAt(0);
+      }).then(function(b){ blobs.push(b); names.push(base+'_p'+(pi+1)+'.jpg'); });
+    });
+    return chain;
+  }).then(function(){
+    restore();
+    var q=imgQ(usedLong);
+    var ok=E ? '🖼️ '+blobs.length+' images ready ('+q+')' : '🖼️ រូបភាព '+kh(blobs.length)+' សន្លឹករួចរាល់ ('+q+')';
+    if(usedLong && usedLong<7680) toast(E?'ℹ️ This device allows up to '+q+' — images made at the highest possible quality'
+                                          :'ℹ️ ឧបករណ៍នេះអនុញ្ញាតត្រឹម '+q+' — បានបង្កើតរូបភាពគុណភាពខ្ពស់បំផុតដែលអាចធ្វើបាន');
+    setTimeout(function(){ shareFiles(blobs,names,ok); }, usedLong<7680?1200:0);
+  }).catch(function(e){ restore(); showErr('Images: '+(e&&e.message||e)); toast(E?'⚠️ Could not create images':'⚠️ បង្កើតរូបភាពមិនបាន'); });
+}
+
+/* ================= ពិនិត្យចំណុច «មិនមាន» ================= */
+function noItems(){
+  var out=[];
+  SECTIONS.forEach(function(sec,si){ sec.items.forEach(function(t,idx){
+    var key=sec.id+'-'+(idx+1), a=S.ans[key];
+    if(a && a.v==='no') out.push({si:si, sec:sec, n:idx+1, key:key, t:itemText(sec,idx), note:a.note||''});
+  }); });
+  return out;
+}
+function openNoReview(){
+  var E=isTgt(), L=noItems();
+  if(!L.length){ toast(E?'🎉 No “No” answers':'🎉 គ្មានចំណុច «មិនមាន» ទេ'); return; }
+  $('#noTitle').textContent=(E?'✖ “No” items (':'✖ ចំណុច «មិនមាន» (')+kh(L.length)+')';
+  $('#noSub').textContent=E?'Tap an item to go and fix it':'ចុចលើចំណុចណាមួយ ដើម្បីទៅកែតម្រូវ';
+  var h='', last=-1;
+  L.forEach(function(x){
+    if(x.si!==last){ if(last>=0) h+='</div>'; last=x.si;
+      var cnt=L.filter(function(y){return y.si===x.si;}).length;
+      h+='<div class="nogrp"><div class="nosec"><span>'+esc(x.sec.rn+'. '+secName(x.sec))+'</span><em>'+kh(cnt)+'</em></div>'; }
+    h+='<button class="noitem" data-k="'+x.key+'" data-si="'+x.si+'"><span class="nn">'+kh(x.n)+'</span><span class="nt">'+x.t
+      +(x.note?'<small>📝 '+esc(x.note)+'</small>':'')+'</span><span class="ng">›</span></button>';
+  });
+  h+='</div>';
+  $('#noList').innerHTML=h;
+  $$('#noList .noitem').forEach(function(b){ b.onclick=function(){ closeNoReview(); gotoItem(+b.dataset.si, b.dataset.k); }; });
+  $('#noShareT').textContent=E?'📤 Share this list':'📤 ចែករំលែកបញ្ជីនេះ';
+  $('#sheetBg').classList.add('on'); $('#noSheet').classList.add('on');
+}
+function closeNoReview(){ $('#noSheet').classList.remove('on'); $('#sheetBg').classList.remove('on'); }
+function gotoItem(si,key){
+  openSec(si);
+  setTimeout(function(){
+    var tr=document.querySelector('#xTable tr[data-k="'+key+'"]')||document.querySelector('#qList .q[data-k="'+key+'"]');
+    if(!tr) return;
+    var top=tr.getBoundingClientRect().top+window.scrollY-(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdrH'))||80)-70;
+    window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+    tr.classList.remove('flash'); void tr.offsetWidth; tr.classList.add('flash');
+  },380);
+}
+function noListText(){
+  var E=isTgt(), L=noItems(), t=(E?'Biosecurity audit — “No” items':'ការត្រួតពិនិត្យជីវៈសុវត្ថិភាព — ចំណុច «មិនមាន»')
+    +'\n'+(S.info.farm||'')+(S.info.date?' · '+fmtDate(S.info.date):'')+'\n', last=-1;
+  L.forEach(function(x){
+    if(x.si!==last){ last=x.si; t+='\n'+x.sec.rn+'. '+secName(x.sec)+'\n'; }
+    t+='  '+x.n+'. '+String(x.t).replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim()+(x.note?' — 📝 '+x.note:'')+'\n';
+  });
+  return t;
+}
+function shareNoList(){
+  var t=noListText(), E=isTgt();
+  if(navigator.share){ navigator.share({text:t}).catch(function(e){ if(e&&e.name!=='AbortError') copyPlain(t); }); }
+  else copyPlain(t);
+  function copyPlain(x){
+    if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(x).then(function(){ toast(E?'📋 List copied':'📋 ចម្លងបញ្ជីរួច'); }, function(){ prompt('',x); });
+    else prompt('',x);
+  }
+}
+
 /* ================= ភ្ជាប់ព្រឹត្តិការណ៍ ================= */
 $$('#segView button').forEach(b=>b.onclick=()=>{ S.view=b.dataset.v; S.style=null; save(true); applyView(); renderSec&&renderSec(); renderHome();
   toast(b.dataset.v==='pc'?'💻 រូបរាងកុំព្យូទ័រ':'📱 រូបរាងទូរស័ព្ទ'); });
@@ -3341,7 +3540,7 @@ $$('.nb').forEach(b=>b.onclick=()=>go(b.dataset.go));
 $('#btnBack').onclick=()=>go('home');
 $('#btnSave').onclick=()=>{ save(true); openSave(); };
 $$('.sv-open').forEach(b=>b.onclick=()=>{ save(true); openSave(); });
-$('#sheetBg').onclick=()=>{ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); };
+$('#sheetBg').onclick=()=>{ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); closeNoReview(); };
 $('#btnClear').onclick=()=>{ save(true); openClear(); };
 $('#clClose').onclick=closeClear;
 $('#clForm').onclick =()=>{ closeClear(); setTimeout(clearForm,180); };
@@ -3352,12 +3551,15 @@ $('#svRec').onclick  =()=>{ closeSave();  saveRecord(); };
 $('#btnDiag').onclick=runDiag;
 $('#btnLang').onclick=()=>setLang(S.lang==='km'?'en':'km');
 $('#svClose').onclick=closeSave;
+$('#btnNoReview').onclick=openNoReview;
+$('#noClose').onclick=closeNoReview;
+$('#noShare').onclick=shareNoList;
 $('#svPdf').onclick =()=>{ closeSave(); makePdf(); };
-$('#svPrint').onclick=()=>{ closeSave(); printReport(); };
+$('#svSharePdf').onclick=()=>{ closeSave(); makePdf('share'); };
+$('#svShareImg').onclick=()=>{ closeSave(); makeImages(); };
 $('#svXls').onclick =()=>{ closeSave(); toXlsx(); };
-$('#svCsv').onclick =()=>{ closeSave(); toCsv(); };
 $('#svJson').onclick=()=>{ closeSave(); backup(); };
-window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); } });
+window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); closeNoReview(); } });
 $('#btnPrevSec').onclick=()=>{ if(S.cur>0) goSec(S.cur-1); else toast(S.lang==='en'?'This is the first section':'នេះជាផ្នែកដំបូង'); };
 $('#stPrev').onclick=()=>goSec(S.cur-1);
 $('#btnNextSec').onclick=()=>goSec(S.cur+1);
@@ -3713,7 +3915,7 @@ applyLang(); applyView(); bindInfo(); bindSigPad(); bindCloudUI(); fillInfo(); r
 cloudInit();   /* ត្រូវចូលដោយ Google មុនប្រើ */
 setTimeout(loadReportFonts, 400);
 if(purgedOld) setTimeout(()=>toast('🧹 ទិន្នន័យជំនាន់ចាស់ត្រូវបានសម្អាត — ចាប់ផ្តើមថ្មី'), 900);
-if(!Store.ok) toast('ℹ️ រក្សាទុកស្វ័យប្រវត្តិមិនដំណើរការ — សូម Save PDF / Excel / CSV រាល់ពេលបញ្ចប់');
+if(!Store.ok) toast('ℹ️ រក្សាទុកស្វ័យប្រវត្តិមិនដំណើរការ — សូម Save PDF / Excel រាល់ពេលបញ្ចប់');
 console.log('ផ្នែក:',SECTIONS.length,'| សំណួរសរុប:',TOTAL_Q);
 </script>
 </body>
