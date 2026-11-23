@@ -877,14 +877,33 @@ body.v-pc table.xform td.d{font-size:13.5px}
 body.v-tab .qi-t{font-size:15.5px}
 body.v-tab .ansb{height:50px}
 /* PC + iPad ផ្តេក: មួយជួរ */
-body.v-pc .qi{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;padding:9px 14px;margin:0 0 8px}
-body.v-pc .qi.cur{padding:8px 13px}
-body.v-pc .qi-top{flex:1 1 320px;min-width:0;align-items:center}
-body.v-pc .qi-nb{margin:0}
-body.v-pc .qi-ans{margin-top:0;flex:0 0 240px}
-body.v-pc .ansb{height:44px;font-size:14px}
-body.v-pc .qi-p{display:block;flex:0 0 46px;text-align:right;font-weight:700;font-size:13px;color:var(--g-deep)}
-body.v-pc .qi-note{flex:1 1 100%;margin:8px 0 2px}
+/* សំណួរមួយ = មួយជួរ (គ្រប់ឧបករណ៍: ទូរស័ព្ទ · Tablet · កុំព្យូទ័រ) */
+.qi{display:flex;flex-wrap:nowrap;align-items:center;gap:0 14px;padding:9px 14px;margin:0 0 8px}
+.qi.cur{padding:8px 13px}
+.qi-top{flex:1 1 auto;min-width:0;align-items:center}
+.qi-nb{margin:0}
+.qi-ans{margin-top:0;flex:0 0 240px}
+.ansb{height:44px;font-size:14px}
+.qi-p{display:block;flex:0 0 46px;text-align:right;font-weight:700;font-size:13px;color:var(--g-deep)}
+.qi.has-open{flex-wrap:wrap}
+.qi-note{flex:1 1 100%;margin:8px 0 2px}
+body.v-tab .ansb{height:46px}
+body.v-tab .qi-ans{flex-basis:220px}
+/* ទូរស័ព្ទ: ប៊ូតុងតូច (មានតែរូប ✓ / ✕) ដើម្បីទុកកន្លែងឱ្យអត្ថបទ */
+@media (max-width:640px){
+  .qi{gap:0 8px;padding:8px 8px 8px 10px;margin:0 0 6px;border-radius:16px}
+  .qi.cur{padding:7px 7px 7px 9px}
+  .qi-top{gap:8px}
+  .qi-n{flex-basis:24px;min-height:24px;font-size:11.5px;border-radius:8px}
+  .qi-t{font-size:14px;line-height:1.6}
+  .qi-nb{flex:0 0 32px;width:32px;height:36px;border-radius:10px}
+  .qi-nb svg{width:16px;height:16px}
+  .qi-ans{flex:0 0 96px;gap:6px}
+  .ansb{height:44px;border-radius:12px;padding:0}
+  .ansb span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .ansb svg{width:20px;height:20px}
+  .qi-p{display:none}
+}
 
 /* របារប៊ូតុងខាងក្រោម ពេលបំពេញ (តំបន់មេដៃ) */
 nav.bot{transition:transform .45s var(--spring),opacity .3s var(--out)}
@@ -1548,7 +1567,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-11-17c', ERRS=[];
+var APP_VER='2026-11-24', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -2232,10 +2251,10 @@ function _renderTable(si, st){
     card.querySelector('.napill').onclick=()=>tick('na');
     const ta=card.querySelector('.qi-note'), nb=card.querySelector('.qi-nb');
     const grow=()=>{ ta.style.height='auto'; ta.style.height=Math.min(160,ta.scrollHeight+2)+'px'; };
-    nb.onclick=()=>{ const hid=ta.classList.toggle('hide'); if(!hid){ grow(); ta.focus(); } };
+    nb.onclick=()=>{ const hid=ta.classList.toggle('hide'); card.classList.toggle('has-open',!hid); if(!hid){ grow(); ta.focus(); } };
     ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; nb.classList.toggle('has',!!ta.value); grow(); save(true); };
-    ta.onblur=()=>{ if(!ta.value) ta.classList.add('hide'); };
-    if(!ta.classList.contains('hide')) requestAnimationFrame(grow);
+    ta.onblur=()=>{ if(!ta.value){ ta.classList.add('hide'); card.classList.remove('has-open'); } };
+    if(!ta.classList.contains('hide')){ card.classList.add('has-open'); requestAnimationFrame(grow); }
   });
 }
 
