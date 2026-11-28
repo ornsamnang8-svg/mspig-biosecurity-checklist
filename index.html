@@ -1629,7 +1629,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-11-28b', ERRS=[];
+var APP_VER='2026-11-28c', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -3982,6 +3982,17 @@ function bindSheetDrag(){
 }
 
 /* ================= ការងារថ្មី ពេលបើក App + ព័ត៌មានសង្ខេប (2026-11-28) ================= */
+var FRESH_AT=0;
+function freshStart(){
+  /* រក្សាទុកការងារចាស់ជាកំណត់ត្រា (បើមានចម្លើយ) រួចសម្អាតទម្រង់ទាំងស្រុង៖ ឈ្មោះកសិដ្ឋាន តំបន់ អ្នកចុះហត្ថលេខា ហត្ថលេខា ចម្លើយ ចំណាំ */
+  try{ FRESH_AT=(JSON.parse(Store.get(KEY)||'{}').at)||1; }catch(e){ FRESH_AT=1; }
+  var saved=false;
+  if(overall().answered && !sameAsLastRecord()){ saveRecord(); saved=true; }
+  S.info={date:todayIso()}; S.ans={}; S.cmt={}; S.cur=0; S.filter='all';
+  saveNow();
+  return saved;
+}
+
 var START_SHOWN=false;
 function sameAsLastRecord(){
   var r=S.recs[0]; if(!r||!r.data) return false;
@@ -4014,7 +4025,7 @@ function maybeShowStart(force){
   $('#stNew').innerHTML='<span class="cc-t"><small>'+fmtDate(todayIso())+'</small><b>'+(E?'＋ Start a new audit':'＋ ចាប់ផ្តើមការត្រួតពិនិត្យថ្មី')+'</b></span><span class="cc-go">›</span>';
   $('#stNote').textContent = (o.answered && !sameAsLastRecord())
     ? (E?'Your current work is saved as a record first (latest 8 are kept).':'ការងារចាស់នឹងត្រូវរក្សាទុកជាកំណត់ត្រាជាមុនសិន (ទុក ៨ ចុងក្រោយ)។')
-    : (E?'Farm name, zone and signer names are kept.':'ឈ្មោះកសិដ្ឋាន តំបន់ និងឈ្មោះអ្នកចុះហត្ថលេខា នៅដដែល។');
+    : (E?'The form will be completely empty.':'ទម្រង់នឹងស្អាតទាំងស្រុង។');
   $('#stContT').textContent=E?'▶ Continue current work':'▶ បន្តការងារចាស់';
   $('#sheetBg').classList.add('on'); $('#startSheet').classList.add('on');
 }
@@ -4023,8 +4034,7 @@ function startNewTask(auto){
   var o=overall(), E=(S.lang==='en'), saved=false;
   if(o.answered && !sameAsLastRecord()){ saveRecord(); saved=true; }
   S.ans={}; S.cmt={}; S.filter='all'; S.cur=0;
-  if(S.info.sig) delete S.info.sig;
-  S.info.note=''; S.info.head=''; S.info.date=todayIso(); delete S.info.editAt;
+  S.info={date:todayIso()};
   saveNow(); fillInfo(); renderTop(); closeStart(); go('home');
   setTimeout(function(){ toast((E?'✨ New audit — '+fmtDate(todayIso()):'✨ ការងារថ្មី — '+fmtDate(todayIso()))+(saved?(E?' · previous work kept in Records':' · ការងារចាស់ទុកក្នុង «កំណត់ត្រា»'):'')); }, o.answered?1400:0);
 }
@@ -4224,13 +4234,14 @@ function enterApp(user, offline){
       saveNow();
     }
   }
-  if(!S.info.date) S.info.date=todayIso();
   S.recs=(S.recs||[]).slice(0,MAXREC);
+  var FRESH_SAVED=freshStart();   /* រាល់ពេលបើក App៖ ទម្រង់ថ្មីស្អាត (គ្មានឈ្មោះ គ្មានទិន្នន័យ) */
   try{ if(/[?&](code|state)=/.test(location.search)) history.replaceState(null,'',location.pathname+location.hash.replace(/^#?access_token.*$/,'')); }catch(e){}
   lsSet(LANG_KEY,S.lang);
   applyLang(); applyView(); fillInfo(); renderRecs(); renderIab(); go('home');
   gateHide(); renderAcc();
-  if(!offline) cloudAfterLogin(); else setTimeout(maybeShowStart, 600);
+  if(!offline) cloudAfterLogin();
+  setTimeout(function(){ var E=(S.lang==='en'); toast((E?'✨ New audit — ':'✨ ការងារថ្មី — ')+fmtDate(todayIso())+(FRESH_SAVED?(E?' · previous work kept in Records':' · ការងារចាស់ទុកក្នុង «កំណត់ត្រា»'):'')); }, FRESH_SAVED?1500:300);
 }
 function leaveApp(){
   clearTimeout(CLOUD.draftT); ME=null;
@@ -4256,8 +4267,7 @@ function cloudAfterLogin(){
     lsSet(LASTUSER_KEY, JSON.stringify(ME)); renderAcc();
     if(ME.is_admin) loadAdmin();
   });
-  var _st=setTimeout(function(){ maybeShowStart(); }, 4500);
-  pullDraft().then(function(){ clearTimeout(_st); maybeShowStart(); return syncRecs(); });
+  pullDraft().then(syncRecs);
 }
 function pullDraft(){
   return sb.from('drafts').select('data,updated_at').eq('user_id',ME.id).maybeSingle().then(function(r){
@@ -4265,6 +4275,16 @@ function pullDraft(){
     var cloudAt=Date.parse(r.data.updated_at)||0, localAt=0;
     try{ localAt=(JSON.parse(Store.get(KEY)||'{}').at)||0; }catch(e){}
     var d=r.data.data||{};
+    if(FRESH_AT){
+      /* ពេលបើកថ្មី៖ ការងារលើពពកដែលថ្មីជាងទូរស័ព្ទនេះ (ពីឧបករណ៍ផ្សេង) → រក្សាទុកជាកំណត់ត្រា មិនដាក់ចូលទម្រង់ */
+      if(cloudAt>FRESH_AT+2000 && d.ans && Object.keys(d.ans).length){
+        var keep={info:S.info,ans:S.ans,cmt:S.cmt};
+        S.info=d.info||{}; S.ans=d.ans||{}; S.cmt=d.cmt||{};
+        if(overall().answered && !sameAsLastRecord()) saveRecord();
+        S.info=keep.info; S.ans=keep.ans; S.cmt=keep.cmt;
+      }
+      FRESH_AT=0; saveNow(); renderHome(); return;
+    }
     if(cloudAt>localAt+2000 && (d.ans||d.info)){
       S.info=d.info||{}; S.ans=d.ans||{}; S.cmt=d.cmt||{}; if(!S.info.date) S.info.date=todayIso();
       saveNow(); fillInfo(); renderTop(); renderHome();
