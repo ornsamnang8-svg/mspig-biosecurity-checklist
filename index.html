@@ -1028,6 +1028,52 @@ body.v-pc .adm-sum{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:640px){ .tn{grid-template-columns:auto minmax(0,1fr) 26px} .tn .tb{display:none} }
 .adm-users summary{cursor:pointer;font-weight:700;font-size:13px;padding:8px 2px;color:var(--g-deep)}
 
+/* ================= ផ្ទាំងព័ត៌មានសង្ខេប + ការងារថ្មី (2026-11-28) ================= */
+.fold{padding-top:4px;padding-bottom:4px}
+.fold > summary,.fold-in > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:48px}
+.fold > summary::-webkit-details-marker,.fold-in > summary::-webkit-details-marker{display:none}
+.fold-t{font-family:var(--font-h);font-weight:700;font-synthesis:none;font-size:14px;line-height:1.8;color:var(--g-deep)}
+.fold-s{margin-left:auto;min-width:0;display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.fold-s small{font-size:11.5px;color:var(--ink-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46vw}
+.fold-s em{font-style:normal;flex:0 0 auto;padding:2px 9px;border-radius:99px;background:var(--y-pale);color:#6b4c00;font-size:11.5px;font-weight:700}
+.fold-s em.ok{background:rgba(14,122,63,.12);color:var(--g-deep)}
+.fold-c{flex:0 0 18px;width:18px;height:18px;fill:none;stroke:var(--ink-dim);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s var(--spring)}
+.fold-in > summary .fold-c{margin-left:4px}
+details[open] > summary .fold-c{transform:rotate(90deg)}
+.fold[open] > summary{margin-bottom:8px;border-bottom:1px solid rgba(13,122,76,.08)}
+details.fold > *:not(summary){animation:riseIn .35s var(--spring)}
+.fold-in{margin-top:6px}
+.fold-in > summary{min-height:44px;justify-content:center;font-size:13px;font-weight:700;color:var(--g-deep);border-radius:14px;background:rgba(14,122,63,.06)}
+.fold-in[open] > summary{margin-bottom:10px}
+.setmore > summary{justify-content:flex-start;padding:0 12px;margin-top:4px}
+#accCard{padding-top:10px;padding-bottom:10px}
+.acc-sync:not(.warn){display:none}
+.acc-sync.warn{margin:8px 0 0}
+#recList:not(.all) .rec:nth-child(n+4){display:none}
+.morebtn{display:block;width:100%;min-height:44px;margin-top:8px;border:0;border-radius:14px;background:rgba(14,122,63,.06);color:var(--g-deep);font:700 13px/1 var(--font);cursor:pointer}
+.morebtn.hide{display:none}
+/* ផ្ទាំងចាប់ផ្តើមការងារថ្មី */
+#startSheet{position:fixed;left:0;right:0;bottom:0;z-index:160;max-width:580px;margin:0 auto;padding:14px 16px calc(20px + var(--safe-b));
+  border-radius:30px 30px 0 0;max-height:88vh;overflow-y:auto;background:#fff;box-shadow:0 -18px 40px -20px rgba(8,74,46,.35);
+  transform:translateY(105%);transition:transform .52s var(--spring);overscroll-behavior:contain}
+#startSheet.on{transform:translateY(0)}
+#startSheet .grab{width:46px;height:5px;border-radius:99px;background:rgba(13,122,76,.22);margin:0 auto 14px}
+#startSheet h3{margin:0 0 3px;font-size:16px;text-align:center;color:var(--g-deep);line-height:1.8}
+#startSheet .sub{margin:0 0 14px;font-size:12px;color:var(--ink-dim);text-align:center}
+.stold{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;background:#f4f8f5;border:1px solid var(--rim);margin-bottom:10px}
+.st-l{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.55}
+.st-l b{font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st-l small{font-size:11.5px;color:var(--ink-dim)}
+.st-s{font-size:24px;font-weight:700;color:var(--g-deep);display:flex;align-items:baseline;gap:2px}
+.st-s small{font-size:11px;color:var(--ink-dim);font-weight:400}
+#startSheet .contcard{margin:0}
+.stnote{margin:8px 4px 4px;font-size:11.5px;line-height:1.6;color:var(--ink-dim);text-align:center}
+body.v-pc #startSheet{left:50%;right:auto;bottom:auto;top:50%;width:min(520px,92vw);max-width:none;margin:0;border-radius:24px;padding-bottom:20px;
+  transform:translate(-50%,-47%) scale(.95);opacity:0;visibility:hidden;pointer-events:none;
+  transition:transform .42s var(--spring),opacity .22s var(--out),visibility 0s linear .42s}
+body.v-pc #startSheet.on{transform:translate(-50%,-50%) scale(1);opacity:1;visibility:visible;pointer-events:auto;transition:transform .42s var(--spring),opacity .22s var(--out),visibility 0s}
+body.v-pc #startSheet .grab{display:none}
+
 /* ប៊ូតុងទាញយក (header) */
 .dlbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 12px 0 9px;border-radius:12px;cursor:pointer;
   border:1px solid rgba(255,255,255,.35);color:#fff;font:700 12px/1 inherit;font-family:inherit;white-space:nowrap;
@@ -1320,13 +1366,13 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
       <span class="acc-role" id="accRole">User</span>
     </div>
     <div class="acc-sync" id="accSync"></div>
-    <button class="chipbtn" id="btnSignOut" data-i18n="signOut">↪ ចាកចេញ</button>
   </div>
 
   <div class="glass card hide" id="adminCard">
     <h2><span class="chip-i">👑</span> <span data-i18n="adminT">Admin · ទិន្នន័យគ្រប់កសិដ្ឋាន</span>
       <button class="chipbtn" id="btnAdmRefresh">🔄</button></h2>
     <div class="adm-sum" id="admSum"></div>
+    <details class="fold-in" id="admMore"><summary><span data-i18n="moreDetail">មើលលម្អិត</span><svg class="fold-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary>
     <div class="adm-tools">
       <input id="admQ" type="search" autocomplete="off" data-i18n-ph="admSearchPh" placeholder="ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…">
       <button class="chipbtn" id="btnAdmCsv">⬇ CSV</button>
@@ -1334,9 +1380,10 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     <div class="adm-table" id="admTable"></div>
     <div class="adm-top" id="admTop"></div>
     <details class="adm-users"><summary><span data-i18n="admByUser">👥 តាមអ្នកប្រើ</span></summary><div id="admList"></div></details>
+    </details>
   </div>
-  <div class="glass card" id="sigCard">
-    <h2><span class="chip-i">✍️</span> <span data-i18n="sigPeople">អ្នកចុះហត្ថលេខា</span></h2>
+  <details class="glass card fold" id="sigCard">
+    <summary><span class="chip-i">✍️</span><span class="fold-t" data-i18n="sigPeople">អ្នកចុះហត្ថលេខា</span><span class="fold-s" id="sigSum"></span><svg class="fold-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary>
     <div class="siglist" id="sigList">
       <div class="sigslot" data-k="comp"><label for="f_comp" data-i18n="comp">តំណាងក្រុមហ៊ុន</label>
         <input id="f_comp" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
@@ -1345,32 +1392,37 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
       <div class="sigslot" data-k="by"><label for="f_by" data-i18n="auditor">អ្នកធ្វើរបាយការណ៍</label>
         <input id="f_by" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
     </div>
-  </div>
+  </details>
 
-  <div class="glass card">
-    <h2><span class="chip-i">🐖</span> <span data-i18n="extraInfo">ព័ត៌មានបន្ថែម</span></h2>
+  <details class="glass card fold" id="extraCard">
+    <summary><span class="chip-i">🐖</span><span class="fold-t" data-i18n="extraInfo">ព័ត៌មានបន្ថែម</span><span class="fold-s" id="extraSum"></span><svg class="fold-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary>
     <div class="two">
       <div class="field"><label data-i18n="head">ចំនួនជ្រូក (ក្បាល)</label><input id="f_head" type="number" inputmode="numeric" placeholder="0"></div>
       <div class="field"><label data-i18n="genNote">កំណត់សម្គាល់</label><textarea id="f_note" rows="1" data-i18n-ph="genNotePh" placeholder="អនុសាសន៍..."></textarea></div>
     </div>
-  </div>
+  </details>
 
   <div class="glass card" id="recCard">
     <h2><span class="chip-i">📚</span> <span data-i18n="recTitle">កំណត់ត្រា</span> <span class="badge" id="recCount">០ / ២០</span>
       <button class="chipbtn pri" id="btnSaveRec3" data-i18n="recSaveBtn">＋ រក្សាទុក</button></h2>
     <div id="recList"></div>
+    <button class="morebtn hide" id="recMore" type="button"></button>
   </div>
 
   <div class="glass card setlist">
     <h2><span class="chip-i">⚙️</span> <span data-i18n="setTitle">ការកំណត់</span></h2>
+    <button class="srow tap" id="btnNewTask"><span class="si">✨</span><span class="st" data-i18n="newTaskRow">ចាប់ផ្តើមការងារថ្មី</span><span class="sa">›</span></button>
     <div class="srow"><span class="si">📱</span><span class="st" data-i18n="viewMode">រូបរាង</span>
       <div class="seg sm" id="segView"><button data-v="auto" data-i18n="vAuto">✨ ស្វ័យប្រវត្តិ</button><button data-v="phone" data-i18n="vPhone">📱 ទូរស័ព្ទ</button><button data-v="pc" data-i18n="vPc">💻 កុំព្យូទ័រ</button></div></div>
     <button class="srow tap sv-open"><span class="si">⬇️</span><span class="st">Save PDF / Excel / រូបភាព</span><span class="sa">›</span></button>
+    <details class="fold-in setmore"><summary><span data-i18n="moreSet">ច្រើនទៀត</span><svg class="fold-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary>
     <div class="srow"><span class="si">💾</span><span class="st" data-i18n="backupT">Backup</span>
       <span class="sbtns"><button class="chipbtn" id="btnBackup" data-i18n="backup">ទាញយក</button><button class="chipbtn" id="btnRestore" data-i18n="restore">ស្តារ</button></span></div>
     <div class="srow"><span class="si">🔗</span><span class="st" data-i18n="shareT">ចែករំលែក Link</span>
       <button class="chipbtn" data-copy="https://mspig-biosecurity-checklist.vercel.app/" data-i18n="copyLink">📋 ចម្លង</button></div>
     <button class="srow tap danger" id="btnClear"><span class="si">🧹</span><span class="st" data-i18n="clearT">សម្អាតទិន្នន័យ</span><span class="sa">›</span></button>
+    <button class="srow tap" id="btnSignOut"><span class="si">↪</span><span class="st" data-i18n="signOutRow">ចាកចេញពីគណនី</span><span class="sa">›</span></button>
+    </details>
   </div>
 
   <details class="glass card about">
@@ -1505,6 +1557,16 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
   <button class="sv" id="noClose" style="justify-content:center;margin:8px 0 0"><span><b data-i18n="close">បិទ</b></span></button>
 </div>
 
+<div id="startSheet" role="dialog" aria-labelledby="stTitle">
+  <div class="grab"></div>
+  <h3 id="stTitle">ការងារថ្មី</h3>
+  <p class="sub" id="stSub"></p>
+  <div class="stold" id="stOld"></div>
+  <button class="contcard" id="stNew" type="button"></button>
+  <p class="stnote" id="stNote"></p>
+  <button class="sv" id="stCont" style="justify-content:center;margin:6px 0 0"><span><b id="stContT">បន្តការងារចាស់</b></span></button>
+</div>
+
 <div id="pdfBusy"><div class="spin"></div><div id="pdfBusyT">⏳ កំពុងបង្កើត PDF…</div></div>
 
 <!-- ============ ចូលប្រើ (Sign in with Google) ============ -->
@@ -1567,7 +1629,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-11-24', ERRS=[];
+var APP_VER='2026-11-28', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -2402,7 +2464,7 @@ function go(name){
   if(name==='home'){ renderHome(); $('#topTitle').textContent=T().appTitle; if(!same) staggerIn('#secList .secrow'); }
   if(name==='sec') renderSec();
   if(name==='sum'){ renderSum(); $('#topTitle').textContent=T().topSum; }
-  if(name==='info'){ fillInfo(); renderRecs(); runDiag(); renderAcc(); if(ME&&ME.is_admin&&!ADM.users.length) loadAdmin(); $('#topTitle').textContent=T().topInfo; }
+  if(name==='info'){ fillInfo(); renderRecs(); runDiag(); renderAcc(); renderInfoSum(); var am=$('#admMore'); if(am && viewMode()==='pc') am.open=true; if(ME&&ME.is_admin&&!ADM.users.length) loadAdmin(); $('#topTitle').textContent=T().topInfo; }
   renderTop(); window.scrollTo({top:0,behavior:'smooth'});
 }
 function openSec(i){ _doneSeen={}; S.cur=i; S.filter='all'; $$('.fchip').forEach(c=>c.classList.toggle('on',c.dataset.f==='all')); go('sec'); }
@@ -2605,7 +2667,7 @@ var LANG={
 km:{
  howCalc:'ℹ️ របៀបគិតពិន្ទុ', sigPeople:'អ្នកចុះហត្ថលេខា', extraInfo:'ព័ត៌មានបន្ថែម', setTitle:'ការកំណត់', viewMode:'រូបរាង',
  vAuto:'✨ ស្វ័យប្រវត្តិ', vPhone:'📱 ទូរស័ព្ទ', vPc:'💻 កុំព្យូទ័រ', backupT:'Backup (JSON)', shareT:'ចែករំលែក Link', copyLink:'📋 ចម្លង', clearT:'សម្អាតទិន្នន័យ',
- aboutApp:'អំពី App', tileSaveRec:'រក្សាទុក', dlBtn:'ទាញយក', admByUser:'👥 តាមអ្នកប្រើ', sharePdf:'ចែករំលែក PDF', svSharePdfSub:'ផ្ញើឯកសារ PDF ទៅ Telegram · Messenger · Gmail · Drive …', svShareImgSub:'មួយទំព័រ = មួយរូប · គុណភាព 8K ច្បាស់ពេញភ្នែក · ផ្ញើ Telegram បានភ្លាម', svRecSub:'ទុកលើពពក ដើម្បីបើកមើលវិញ (អតិបរមា ៨ ចុងក្រោយ)', noReview:'មើល ›', signOut:'↪ ចាកចេញ', adminT:'Admin · ទិន្នន័យគ្រប់កសិដ្ឋាន', admSearchPh:'ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…', tileExport:'PDF / Excel', tileRecs:'កំណត់ត្រា',
+ aboutApp:'អំពី App', tileSaveRec:'រក្សាទុក', dlBtn:'ទាញយក', moreDetail:'មើលលម្អិត', moreSet:'ច្រើនទៀត', newTaskRow:'ចាប់ផ្តើមការងារថ្មី', signOutRow:'ចាកចេញពីគណនី', admByUser:'👥 តាមអ្នកប្រើ', sharePdf:'ចែករំលែក PDF', svSharePdfSub:'ផ្ញើឯកសារ PDF ទៅ Telegram · Messenger · Gmail · Drive …', svShareImgSub:'មួយទំព័រ = មួយរូប · គុណភាព 8K ច្បាស់ពេញភ្នែក · ផ្ញើ Telegram បានភ្លាម', svRecSub:'ទុកលើពពក ដើម្បីបើកមើលវិញ (អតិបរមា ៨ ចុងក្រោយ)', noReview:'មើល ›', signOut:'↪ ចាកចេញ', adminT:'Admin · ទិន្នន័យគ្រប់កសិដ្ឋាន', admSearchPh:'ស្វែងរក អ៊ីមែល ឬ កសិដ្ឋាន…', tileExport:'PDF / Excel', tileRecs:'កំណត់ត្រា',
  installShort:'<b>📲 ដំឡើងជា App៖</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'ត្រួតពិនិត្យជីវៈសុវត្ថិភាព', appSub:"កសិដ្ឋាន M's PIG ACMC (Cambodia)",
  filled:'បំពេញ', of:'/', pts:'ពិន្ទុ', pts100:'ពិន្ទុ / ១០០', provPts:'បណ្តោះអាសន្ន / ១០០',
@@ -2664,7 +2726,7 @@ km:{
 en:{
  howCalc:'ℹ️ How the score works', sigPeople:'Signers', extraInfo:'More info', setTitle:'Settings', viewMode:'Layout',
  vAuto:'✨ Auto', vPhone:'📱 Phone', vPc:'💻 Desktop', backupT:'Backup (JSON)', shareT:'Share link', copyLink:'📋 Copy', clearT:'Clear data',
- aboutApp:'About', tileSaveRec:'Save', dlBtn:'Download', admByUser:'👥 By user', sharePdf:'Share PDF', svSharePdfSub:'Send the PDF to Telegram · Messenger · Gmail · Drive …', svShareImgSub:'One page = one image · sharp 8K quality · ready for Telegram', svRecSub:'Saved to the cloud to reopen later (latest 8)', noReview:'View ›', signOut:'↪ Sign out', adminT:'Admin · All farms', admSearchPh:'Search email or farm…', tileExport:'PDF / Excel', tileRecs:'Records',
+ aboutApp:'About', tileSaveRec:'Save', dlBtn:'Download', moreDetail:'Show details', moreSet:'More', newTaskRow:'Start a new audit', signOutRow:'Sign out', admByUser:'👥 By user', sharePdf:'Share PDF', svSharePdfSub:'Send the PDF to Telegram · Messenger · Gmail · Drive …', svShareImgSub:'One page = one image · sharp 8K quality · ready for Telegram', svRecSub:'Saved to the cloud to reopen later (latest 8)', noReview:'View ›', signOut:'↪ Sign out', adminT:'Admin · All farms', admSearchPh:'Search email or farm…', tileExport:'PDF / Excel', tileRecs:'Records',
  installShort:'<b>📲 Install as app:</b> iPhone → Safari → Share → <b>Add to Home Screen</b> · Android → Chrome → ⋮ → <b>Add to Home screen</b>',
  appTitle:'Biosecurity Farm Audit', appSub:"M's PIG ACMC (Cambodia) Farm",
  filled:'Completed', of:'/', pts:'points', pts100:'points / 100', provPts:'provisional / 100',
@@ -3891,7 +3953,7 @@ function staggerIn(sel){
 }
 /* អូសផ្ទាំងចុះក្រោម ដើម្បីបិទ (ដូច iOS) */
 function bindSheetDrag(){
-  var map={sheet:'closeSave',clearSheet:'closeClear',fileSheet:'closeFileSheet',sigSheet:'closeSigPad',noSheet:'closeNoReview'};
+  var map={sheet:'closeSave',clearSheet:'closeClear',fileSheet:'closeFileSheet',sigSheet:'closeSigPad',noSheet:'closeNoReview',startSheet:'closeStart'};
   Object.keys(map).forEach(function(id){
     var el=document.getElementById(id); if(!el) return;
     var y0=0, dy=0, t0=0, drag=false, armed=false;
@@ -3919,6 +3981,62 @@ function bindSheetDrag(){
   });
 }
 
+/* ================= ការងារថ្មី ពេលបើក App + ព័ត៌មានសង្ខេប (2026-11-28) ================= */
+var START_SHOWN=false;
+function sameAsLastRecord(){
+  var r=S.recs[0]; if(!r||!r.data) return false;
+  try{ return JSON.stringify(r.data.ans||{})===JSON.stringify(S.ans||{}) && JSON.stringify(r.data.cmt||{})===JSON.stringify(S.cmt||{}); }catch(e){ return false; }
+}
+function maybeShowStart(force){
+  if(!ME) return;
+  if(START_SHOWN && !force) return; START_SHOWN=true;
+  var o=overall(), E=(S.lang==='en');
+  if(!o.answered){
+    if(S.info.date!==todayIso()){ S.info.date=todayIso(); saveNow(); fillInfo(); renderHome(); }
+    if(!force) return;
+  }
+  $('#stTitle').textContent=E?'New audit':'ការងារថ្មី';
+  $('#stSub').textContent=E?'Start today’s audit, or continue the one you were doing':'ចាប់ផ្តើមការត្រួតពិនិត្យថ្ងៃនេះ ឬបន្តការងារដែលកំពុងធ្វើ';
+  var old=$('#stOld'), cont=$('#stCont');
+  if(o.answered){
+    old.style.display='';
+    old.innerHTML='<span class="st-l"><small>'+(E?'Current work':'ការងារកំពុងធ្វើ')+'</small><b>'+esc(S.info.farm||(E?'(no farm name)':'(គ្មានឈ្មោះកសិដ្ឋាន)'))+'</b>'
+      +'<small>'+(S.info.date?fmtDate(S.info.date)+' · ':'')+(E?'answered ':'បំពេញ ')+kh(o.answered)+' / '+kh(o.total)+'</small></span>'
+      +'<span class="st-s">'+(o.score===null?'–':fx(o.score))+'<small>/100</small></span>';
+    cont.style.display='';
+  } else { old.style.display='none'; old.innerHTML=''; cont.style.display='none'; }
+  $('#stNew').innerHTML='<span class="cc-t"><small>'+fmtDate(todayIso())+'</small><b>'+(E?'＋ Start a new audit':'＋ ចាប់ផ្តើមការត្រួតពិនិត្យថ្មី')+'</b></span><span class="cc-go">›</span>';
+  $('#stNote').textContent = (o.answered && !sameAsLastRecord())
+    ? (E?'Your current work is saved as a record first (latest 8 are kept).':'ការងារចាស់នឹងត្រូវរក្សាទុកជាកំណត់ត្រាជាមុនសិន (ទុក ៨ ចុងក្រោយ)។')
+    : (E?'Farm name, zone and signer names are kept.':'ឈ្មោះកសិដ្ឋាន តំបន់ និងឈ្មោះអ្នកចុះហត្ថលេខា នៅដដែល។');
+  $('#stContT').textContent=E?'▶ Continue current work':'▶ បន្តការងារចាស់';
+  $('#sheetBg').classList.add('on'); $('#startSheet').classList.add('on');
+}
+function closeStart(){ var e=$('#startSheet'); if(e && e.classList.contains('on')){ e.classList.remove('on'); $('#sheetBg').classList.remove('on'); } }
+function startNewTask(){
+  var o=overall(), E=(S.lang==='en');
+  if(o.answered && !sameAsLastRecord()) saveRecord();
+  S.ans={}; S.cmt={}; S.filter='all'; S.cur=0;
+  if(S.info.sig) delete S.info.sig;
+  S.info.note=''; S.info.head=''; S.info.date=todayIso();
+  saveNow(); fillInfo(); renderTop(); closeStart(); go('home');
+  setTimeout(function(){ toast(E?'✨ New audit started — '+fmtDate(todayIso()):'✨ ចាប់ផ្តើមការងារថ្មី — '+fmtDate(todayIso())); }, o.answered?1400:0);
+}
+function renderInfoSum(){
+  var E=(S.lang==='en'), sig=(S.info.sig||{}), names=[], n=0;
+  ['comp','owner','by'].forEach(function(k){ if(sig[k]&&sig[k].d) n++; if(S.info[k]) names.push(S.info[k]); });
+  var a=$('#sigSum'); if(a) a.innerHTML='<em class="'+(n===3?'ok':'')+'">'+kh(n)+' / ៣</em>'+(names.length?'<small>'+esc(names.join(' · '))+'</small>':'');
+  var b=$('#extraSum'); if(b) b.innerHTML = S.info.head ? '<em>'+kh(S.info.head)+(E?' pigs':' ក្បាល')+'</em>' : (S.info.note?'<em>'+(E?'note':'មានកំណត់សម្គាល់')+'</em>':'');
+  var m=$('#recMore'), l=$('#recList');
+  if(m && l){ var more=S.recs.length>3, all=l.classList.contains('all');
+    m.classList.toggle('hide',!more);
+    m.textContent = all ? (E?'Show less':'បង្ហាញតិចវិញ') : (E?'Show all ('+S.recs.length+')':'មើលទាំងអស់ ('+kh(S.recs.length)+')'); }
+}
+(function(){
+  var _rs=renderSigs; renderSigs=function(){ var r=_rs.apply(this,arguments); try{ renderInfoSum(); }catch(e){} return r; };
+  var _rr=renderRecs; renderRecs=function(){ var r=_rr.apply(this,arguments); try{ renderInfoSum(); }catch(e){} return r; };
+})();
+
 /* ================= ភ្ជាប់ព្រឹត្តិការណ៍ ================= */
 $$('#segView button').forEach(b=>b.onclick=()=>{ S.view=(b.dataset.v==='auto'?null:b.dataset.v); S.style=null; save(true); applyView(); renderSec&&renderSec(); renderHome();
   toast(b.dataset.v==='auto'?'✨ '+(S.lang==='en'?'Auto layout':'រូបរាងស្វ័យប្រវត្តិ'):(b.dataset.v==='pc'?'💻 រូបរាងកុំព្យូទ័រ':'📱 រូបរាងទូរស័ព្ទ')); });
@@ -3927,7 +4045,7 @@ $$('.nb').forEach(b=>b.onclick=()=>go(b.dataset.go));
 $('#btnBack').onclick=()=>go('home');
 $('#btnSave').onclick=()=>{ save(true); openSave(); };
 $$('.sv-open').forEach(b=>b.onclick=()=>{ save(true); openSave(); });
-$('#sheetBg').onclick=()=>{ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); closeNoReview(); };
+$('#sheetBg').onclick=()=>{ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); closeNoReview(); closeStart(); };
 $('#btnClear').onclick=()=>{ save(true); openClear(); };
 $('#clClose').onclick=closeClear;
 $('#clForm').onclick =()=>{ closeClear(); setTimeout(clearForm,180); };
@@ -3939,6 +4057,11 @@ $('#btnDiag').onclick=runDiag;
 $('#btnLang').onclick=()=>setLang(S.lang==='km'?'en':'km');
 $('#svClose').onclick=closeSave;
 $('#btnNoReview').onclick=openNoReview;
+$('#stNew').onclick=startNewTask;
+$('#stCont').onclick=closeStart;
+$('#btnNewTask').onclick=function(){ maybeShowStart(true); };
+$('#recMore').onclick=function(){ $('#recList').classList.toggle('all'); renderInfoSum(); };
+['#f_head','#f_note'].forEach(function(id){ var e=$(id); if(e) e.addEventListener('input', renderInfoSum); });
 $('#noClose').onclick=closeNoReview;
 $('#noShare').onclick=shareNoList;
 $('#noCopy').onclick=copyNoList;
@@ -3947,7 +4070,7 @@ $('#svSharePdf').onclick=()=>{ closeSave(); makePdf('share'); };
 $('#svShareImg').onclick=()=>{ closeSave(); makeImages(); };
 $('#svXls').onclick =()=>{ closeSave(); toXlsx(); };
 $('#svJson').onclick=()=>{ closeSave(); backup(); };
-window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); closeNoReview(); } });
+window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); closeNoReview(); closeStart(); } });
 $('#btnPrevSec').onclick=()=>{ if(S.cur>0) goSec(S.cur-1); else toast(S.lang==='en'?'This is the first section':'នេះជាផ្នែកដំបូង'); };
 $('#stPrev').onclick=()=>goSec(S.cur-1);
 $('#btnNextSec').onclick=()=>goSec(S.cur+1);
@@ -4101,7 +4224,7 @@ function enterApp(user, offline){
   lsSet(LANG_KEY,S.lang);
   applyLang(); applyView(); fillInfo(); renderRecs(); renderIab(); go('home');
   gateHide(); renderAcc();
-  if(!offline) cloudAfterLogin();
+  if(!offline) cloudAfterLogin(); else setTimeout(maybeShowStart, 600);
 }
 function leaveApp(){
   clearTimeout(CLOUD.draftT); ME=null;
@@ -4127,7 +4250,8 @@ function cloudAfterLogin(){
     lsSet(LASTUSER_KEY, JSON.stringify(ME)); renderAcc();
     if(ME.is_admin) loadAdmin();
   });
-  pullDraft().then(syncRecs);
+  var _st=setTimeout(function(){ maybeShowStart(); }, 4500);
+  pullDraft().then(function(){ clearTimeout(_st); maybeShowStart(); return syncRecs(); });
 }
 function pullDraft(){
   return sb.from('drafts').select('data,updated_at').eq('user_id',ME.id).maybeSingle().then(function(r){
