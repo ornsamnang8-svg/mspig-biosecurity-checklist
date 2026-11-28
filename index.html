@@ -1089,6 +1089,22 @@ body.in-sec #sc-sign .navrow .btn{min-height:52px;padding:0 10px;font-size:14.5p
 .secrow .sbadge.sg{font-size:15px}
 @media (max-width:479px){ #stNext #stNextT{display:none} #stNext{padding:0 11px} #secSteps .stp{width:25px;height:25px} #secSteps .stp b{font-size:9px} #secSteps .stp.sig b{font-size:11px} }
 
+/* ================= 2026-11-28e: ជំហានដំបូង ព័ត៌មានកសិដ្ឋាន ================= */
+.farmhead .t h2{font-family:var(--font-h);font-weight:700;font-synthesis:none}
+#sc-farm .homeinfo.farmstep{margin-top:12px;padding:16px;gap:12px 12px}
+#sc-farm .homeinfo label{font-size:12.5px;margin-bottom:5px}
+#sc-farm .homeinfo input,#sc-farm .homeinfo .datebox{height:50px;font-size:16px;border-radius:14px}
+#sc-farm .homeinfo .hf.need input{border-color:#E0A800;box-shadow:0 0 0 3px rgba(252,193,15,.25)}
+body.in-sec #sc-farm .navrow{position:fixed;left:12px;right:12px;bottom:calc(10px + var(--safe-b));z-index:66;max-width:560px;margin:0 auto;padding:8px;
+  display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.6fr);gap:8px;border-radius:24px;background:rgba(255,255,255,.9);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);border:1px solid #fff;
+  box-shadow:0 18px 40px -20px rgba(11,79,42,.6);animation:riseIn .45s var(--spring)}
+body.in-sec #sc-farm .navrow .btn{min-height:52px;padding:0 10px;font-size:14.5px;display:flex;align-items:center;justify-content:center}
+.stp.farm b{font-size:11px}
+.secrow .sbadge.fm{font-size:15px}
+.secrow .sname small{font-family:var(--font);font-weight:400}
+@media (max-width:479px){ #secSteps .stp.farm b{font-size:10px} #secSteps .ln{min-width:2px} }
+
 /* ប៊ូតុងទាញយក (header) */
 .dlbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 12px 0 9px;border-radius:12px;cursor:pointer;
   border:1px solid rgba(255,255,255,.35);color:#fff;font:700 12px/1 inherit;font-family:inherit;white-space:nowrap;
@@ -1291,10 +1307,17 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
 
 <div class="wrap">
 
-<!-- ============ SCREEN 1 : HOME ============ -->
-<section class="screen on" id="sc-home">
-
-  <div class="glass homeinfo">
+<!-- ============ SCREEN 0 : ព័ត៌មានកសិដ្ឋាន (ជំហានដំបូង — មុនផ្នែកទាំង ៧) ============ -->
+<section class="screen" id="sc-farm">
+  <div class="glass qhead farmhead">
+    <div class="t">
+      <button class="iconbtn sm" id="btnFarmBack" aria-label="back">←</button>
+      <h2 id="farmTitle">ព័ត៌មានកសិដ្ឋាន</h2>
+      <span class="secscore" id="farmCount"></span>
+    </div>
+    <p class="signnote" id="farmNote"></p>
+  </div>
+  <div class="glass homeinfo farmstep">
     <div class="hf full"><label for="h_farm" data-i18n="farmName">ឈ្មោះកសិដ្ឋាន៖</label>
       <input id="h_farm" autocomplete="off" data-i18n-ph="farmPh" placeholder="ឧ. កសិដ្ឋាន ស្វាយរៀង ០១"></div>
     <div class="hf"><label for="h_zone" data-i18n="zone">តំបន់៖</label>
@@ -1302,6 +1325,15 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     <div class="hf"><label for="h_date" data-i18n="date">កាលបរិច្ឆេទ៖</label>
       <div class="datebox"><span id="h_dateTxt">…</span><i>📅</i><input id="h_date" type="date" aria-label="កាលបរិច្ឆេទ"></div></div>
   </div>
+  <div class="btnrow navrow">
+    <button class="btn" id="btnFarmHome">‹ ទំព័រដើម</button>
+    <button class="btn pri" id="btnFarmGo">ចាប់ផ្តើម · I ›</button>
+  </div>
+</section>
+
+<!-- ============ SCREEN 1 : HOME ============ -->
+<section class="screen on" id="sc-home">
+
 
   <div class="grid2"><div>
   <div class="glass hero" id="heroCard">
@@ -1660,7 +1692,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-11-28d', ERRS=[];
+var APP_VER='2026-11-28e', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -2197,7 +2229,8 @@ function _renderHome(){
   for(var k=0;k<SECTIONS.length;k++){ if(!secStat(k).complete){ nextI=k; break; } }
   var cc=$('#btnContinue');
   if(cc){
-    if(nextI<0 && sigCount()<3) cc.innerHTML='<span class="cc-t"><small>'+(EN?'All 7 sections done — last step':'ផ្នែកទាំង ៧ រួចរាល់ — ជំហានចុងក្រោយ')+'</small><b>'+(EN?'VIII. Signatures · ':'VIII. ចុះហត្ថលេខា · ')+kh(sigCount())+' / ៣</b></span><span class="cc-go">›</span>';
+    if(!farmDone()) cc.innerHTML='<span class="cc-t"><small>'+(EN?'Step 1 — before the 7 sections':'ជំហានដំបូង — មុនផ្នែកទាំង ៧')+'</small><b>'+(EN?'Farm name · zone · date':'ព័ត៌មានកសិដ្ឋាន · តំបន់ · កាលបរិច្ឆេទ')+'</b></span><span class="cc-go">›</span>';
+    else if(nextI<0 && sigCount()<3) cc.innerHTML='<span class="cc-t"><small>'+(EN?'All 7 sections done — last step':'ផ្នែកទាំង ៧ រួចរាល់ — ជំហានចុងក្រោយ')+'</small><b>'+(EN?'VIII. Signatures · ':'VIII. ចុះហត្ថលេខា · ')+kh(sigCount())+' / ៣</b></span><span class="cc-go">›</span>';
     else if(nextI<0) cc.innerHTML='<span class="cc-t"><small>'+(EN?'All 121 questions answered':'បំពេញគ្រប់ ១២១ សំណួររួចរាល់')+'</small><b>'+(EN?'Finish &amp; share report':'បញ្ចប់ និងចែករំលែករបាយការណ៍')+'</b></span><span class="cc-go">›</span>';
     else { var ns=secStat(nextI), sc=SECTIONS[nextI];
       cc.innerHTML='<span class="cc-t"><small>'+(o.answered?(EN?'Continue where you left off':'បន្តពីកន្លែងដែលនៅសល់'):(EN?'Start the audit':'ចាប់ផ្តើមត្រួតពិនិត្យ'))+'</small><b>'+sc.rn+'. '+secName(sc)+' · '+kh(ns.answered)+' / '+kh(ns.total)+'</b></span><span class="cc-go">›</span>'; }
@@ -2214,7 +2247,8 @@ function _renderHome(){
       return '<button type="button" class="secrow '+(n===3?'done':(n?'doing':''))+'" data-sig="1"><span class="sbadge sg">✍</span>'
         +'<span class="sinfo"><span class="sname">'+(EN?'Signatures':'ចុះហត្ថលេខា')+(all7?'':' <small style="color:var(--ink-dim)">· '+(EN?'after the 7 sections':'បន្ទាប់ពីផ្នែកទាំង ៧')+'</small>')+'</span><span class="sbar"><i style="width:'+Math.round(n/3*100)+'%"></i></span></span>'
         +'<span class="scount">'+kh(n)+'/៣</span><span class="sscore2"></span></button>'; })();
-  $$('#secList .secrow').forEach(el=>el.onclick=()=>{ if(el.dataset.sig) go('sign'); else openSec(+el.dataset.i); });
+  $('#secList').insertAdjacentHTML('afterbegin', farmRowHtml(EN));
+  $$('#secList .secrow').forEach(el=>el.onclick=()=>{ if(el.dataset.sig) go('sign'); else if(el.dataset.farm) go('farm'); else openSec(+el.dataset.i); });
 }
 
 function _renderSec(){
@@ -2310,7 +2344,8 @@ function renderSide(si){
         +'<span class="sscore2">'+(st.score===null?'–':fx(st.score))+'</span></button>'; }).join('')
     +(function(){ var n=sigCount(); return '<button type="button" class="secrow '+(n===3?'done':(n?'doing':''))+'" data-sig="1"><span class="sbadge sg">✍</span>'
         +'<span class="sinfo"><span class="sname">'+(EN?'Signatures':'ចុះហត្ថលេខា')+'</span><span class="scount">'+kh(n)+' / ៣</span></span><span class="sscore2"></span></button>'; })();
-  $$('#secSide .secrow').forEach(function(b){ b.onclick=function(){ if(b.dataset.sig) go('sign'); else goSec(+b.dataset.i); }; });
+  el.querySelector('.ss-head').insertAdjacentHTML('afterend', farmRowHtml(EN));
+  $$('#secSide .secrow').forEach(function(b){ b.onclick=function(){ if(b.dataset.sig) go('sign'); else if(b.dataset.farm) go('farm'); else goSec(+b.dataset.i); }; });
 }
 
 /* ---------- តារាងបែប Excel ---------- */
@@ -2491,15 +2526,16 @@ var renderTop=safe('renderTop',_renderTop), renderHome=safe('renderHome',_render
     applyView=safe('applyView',_applyView), bindQ=safe('bindQ',_bindQ);
 
 /* ================= ការផ្លាស់ទំព័រ ================= */
-var SCR_ORDER={home:0,sec:1,sign:1.5,sum:1,info:2}, CUR_SCR='home';
+var SCR_ORDER={home:0,farm:0.5,sec:1,sign:1.5,sum:1,info:2}, CUR_SCR='home';
 function go(name){
   var dir=(SCR_ORDER[name]||0)>=(SCR_ORDER[CUR_SCR]||0)?'fwd':'back', same=(name===CUR_SCR); CUR_SCR=name;
   $$('.screen').forEach(s=>s.classList.remove('on','in-fwd','in-back'));
   var el=$('#sc-'+name); el.classList.add('on'); if(!same){ void el.offsetWidth; el.classList.add('in-'+dir); }
-  document.body.classList.toggle('in-sec', name==='sec' || name==='sign');
-  $$('.nb').forEach(b=>b.classList.toggle('on', b.dataset.go===((name==='sec'||name==='sign')?'home':name)));   /* ផ្ទាំងបំពេញចូលពីទំព័រដើម */
+  document.body.classList.toggle('in-sec', name==='sec' || name==='sign' || name==='farm');
+  $$('.nb').forEach(b=>b.classList.toggle('on', b.dataset.go===((name==='sec'||name==='sign'||name==='farm')?'home':name)));   /* ផ្ទាំងបំពេញចូលពីទំព័រដើម */
   if(name==='home'){ renderHome(); $('#topTitle').textContent=T().appTitle; if(!same) staggerIn('#secList .secrow'); }
   if(name==='sec') renderSec();
+  if(name==='farm'){ renderHome(); renderFarmHead(); $('#topTitle').textContent=(S.lang==='en'?'Farm info':'ព័ត៌មានកសិដ្ឋាន'); }
   if(name==='sign'){ renderSigs(); renderSignHead(); $('#topTitle').textContent=(S.lang==='en'?'Signatures':'ហត្ថលេខា'); }
   if(name==='sum'){ renderSum(); $('#topTitle').textContent=T().topSum; }
   if(name==='info'){ fillInfo(); renderRecs(); runDiag(); renderAcc(); renderInfoSum(); var am=$('#admMore'); if(am && viewMode()==='pc') am.open=true; $('#topTitle').textContent=T().topInfo; }
@@ -3777,10 +3813,11 @@ function renderSteps(si, st){
   });
   var sn=sigCount(), all7=SECTIONS.every(function(x,i){ return secStat(i).complete; });
   h+='<i class="ln'+(all7?' ok':'')+'"></i><button class="stp sig'+(sn===3?' done':'')+(all7?'':' lock')+'" style="--p:'+Math.round(sn/3*100)+'" data-sig="1" title="'+(EN?'Signatures':'ហត្ថលេខា')+' — '+kh(sn)+'/៣"><b>✍</b></button>';
+  var fd=farmDone(); h='<button class="stp farm'+(fd?' done':'')+'" style="--p:'+(fd?100:0)+'" data-farm="1" title="'+(EN?'Farm info':'ព័ត៌មានកសិដ្ឋាន')+'"><b>🏡</b></button><i class="ln'+(fd?' ok':'')+'"></i>'+h;
   var rail=$('#secSteps'); rail.innerHTML=h;
-  rail.querySelectorAll('.stp').forEach(function(b){ b.onclick=function(){ if(b.dataset.sig) go('sign'); else goSec(+b.dataset.i); }; });
+  rail.querySelectorAll('.stp').forEach(function(b){ b.onclick=function(){ if(b.dataset.sig) go('sign'); else if(b.dataset.farm) go('farm'); else goSec(+b.dataset.i); }; });
   var last=(si===SECTIONS.length-1);
-  $('#stPrev').disabled=(si===0);
+  $('#stPrev').disabled=false;
   $('#btnPrevSec').textContent = EN?'‹ Back':'‹ មុន';
   $('#btnNextSec').textContent = last ? (EN?'Next · Signatures ›':'បន្ទាប់ · ហត្ថលេខា ›') : (EN?'Next · ':'ផ្នែកបន្ទាប់ · ')+SECTIONS[si+1].rn+' ›';
   $('#stNextT').textContent = last ? (EN?'Sign':'ហត្ថលេខា') : (EN?'Next':'បន្ទាប់');
@@ -3794,7 +3831,8 @@ function renderSteps(si, st){
 }
 var _sliding=false;
 function goSec(i){
-  if(_sliding || i===S.cur || i<0) return;
+  if(i<0){ go('farm'); return; }   /* មុនផ្នែក I → ជំហានដំបូង ព័ត៌មានកសិដ្ឋាន */
+  if(_sliding || i===S.cur) return;
   if(i>=SECTIONS.length){ go('sign'); return; }   /* បន្ទាប់ពីផ្នែក VII → ជំហានទី ៨ ហត្ថលេខា */
   var dir=i>S.cur?1:-1, body=$('#secBody'), ttl=$('#secTitle');
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -4111,6 +4149,23 @@ function renderSignHead(){
 }
 (function(){ var _rs2=renderSigs; renderSigs=function(){ var r=_rs2.apply(this,arguments); try{ renderSignHead(); }catch(e){} return r; }; })();
 
+/* ================= ជំហានដំបូង — ព័ត៌មានកសិដ្ឋាន ================= */
+function farmDone(){ return !!(S.info.farm && String(S.info.farm).trim()); }
+function farmRowHtml(EN){ var f=farmDone(), n=(S.info.farm?1:0)+(S.info.zone?1:0)+(S.info.date?1:0);
+  return '<button type="button" class="secrow '+(f?'done':(n?'doing':''))+'" data-farm="1"><span class="sbadge fm">🏡</span>'
+    +'<span class="sinfo"><span class="sname">'+(EN?'Farm info':'ព័ត៌មានកសិដ្ឋាន')+(f?' <small style="color:var(--ink-dim)">· '+esc(S.info.farm)+'</small>':'')+'</span><span class="sbar"><i style="width:'+Math.round(n/3*100)+'%"></i></span></span>'
+    +'<span class="scount">'+kh(n)+'/៣</span><span class="sscore2"></span></button>'; }
+function renderFarmHead(){
+  var E=(S.lang==='en'), n=(S.info.farm?1:0)+(S.info.zone?1:0)+(S.info.date?1:0);
+  var t=$('#farmTitle'); if(!t) return;
+  t.textContent=E?'Farm info':'ព័ត៌មានកសិដ្ឋាន';
+  $('#farmCount').innerHTML='<b>'+kh(n)+'</b><small>/៣</small>';
+  $('#farmNote').textContent=E?'First step, before the 7 sections: write the farm name, zone and date.':'ជំហានដំបូង មុនផ្នែកទាំង ៧៖ សរសេរឈ្មោះកសិដ្ឋាន តំបន់ និងកាលបរិច្ឆេទ។';
+  $('#btnFarmHome').textContent=E?'‹ Home':'‹ ទំព័រដើម';
+  $('#btnFarmGo').textContent=E?'Start · I ›':'ចាប់ផ្តើម · I ›';
+  var hf=$('#h_farm'); if(hf) hf.closest('.hf').classList.remove('need');
+}
+
 /* ================= ភ្ជាប់ព្រឹត្តិការណ៍ ================= */
 $$('#segView button').forEach(b=>b.onclick=()=>{ S.view=(b.dataset.v==='auto'?null:b.dataset.v); S.style=null; save(true); applyView(); renderSec&&renderSec(); renderHome();
   toast(b.dataset.v==='auto'?'✨ '+(S.lang==='en'?'Auto layout':'រូបរាងស្វ័យប្រវត្តិ'):(b.dataset.v==='pc'?'💻 រូបរាងកុំព្យូទ័រ':'📱 រូបរាងទូរស័ព្ទ')); });
@@ -4132,6 +4187,15 @@ $('#btnLang').onclick=()=>setLang(S.lang==='km'?'en':'km');
 $('#svClose').onclick=closeSave;
 $('#btnNoReview').onclick=openNoReview;
 $('#btnSignBack').onclick=function(){ go('home'); };
+$('#btnFarmBack').onclick=function(){ go('home'); };
+$('#btnFarmHome').onclick=function(){ go('home'); };
+$('#btnFarmGo').onclick=function(){
+  var hf=$('#h_farm');
+  if(!farmDone()){ if(hf){ hf.closest('.hf').classList.add('need'); hf.focus(); } toast(S.lang==='en'?'Please write the farm name first':'សូមសរសេរឈ្មោះកសិដ្ឋានជាមុនសិន'); return; }
+  for(var i=0;i<SECTIONS.length;i++){ if(!secStat(i).complete){ openSec(i); return; } }
+  openSec(0);
+};
+['h_farm','h_zone','h_date'].forEach(function(id){ var e=$('#'+id); if(e) ['input','change'].forEach(function(ev){ e.addEventListener(ev,function(){ setTimeout(function(){ try{ renderFarmHead(); }catch(_){} },0); }); }); });
 $('#btnSignPrev').onclick=function(){ S.cur=SECTIONS.length-1; go('sec'); };
 $('#btnSignDone').onclick=function(){ openSave(); };
 $('#stNew').onclick=startNewTask;
@@ -4148,11 +4212,12 @@ $('#svShareImg').onclick=()=>{ closeSave(); makeImages(); };
 $('#svXls').onclick =()=>{ closeSave(); toXlsx(); };
 $('#svJson').onclick=()=>{ closeSave(); backup(); };
 window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeSave(); closeClear(); closeFileSheet(); closeSigPad(); closeNoReview(); closeStart(); } });
-$('#btnPrevSec').onclick=()=>{ if(S.cur>0) goSec(S.cur-1); else toast(S.lang==='en'?'This is the first section':'នេះជាផ្នែកដំបូង'); };
+$('#btnPrevSec').onclick=()=>{ if(S.cur>0) goSec(S.cur-1); else go('farm'); };
 $('#stPrev').onclick=()=>goSec(S.cur-1);
 $('#btnNextSec').onclick=()=>goSec(S.cur+1);
 $('#stNext').onclick=()=>goSec(S.cur+1);
 $('#btnContinue').onclick=()=>{
+  if(!farmDone()){ go('farm'); return; }
   for(let i=0;i<SECTIONS.length;i++){ const st=secStat(i); if(!st.complete){ openSec(i); return; } }
   if(sigCount()<3){ go('sign'); return; }
   openSave(); return;
