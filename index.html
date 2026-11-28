@@ -1382,7 +1382,7 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     <details class="adm-users"><summary><span data-i18n="admByUser">👥 តាមអ្នកប្រើ</span></summary><div id="admList"></div></details>
     </details>
   </div>
-  <details class="glass card fold" id="sigCard">
+  <details class="glass card fold" id="sigCard" open>
     <summary><span class="chip-i">✍️</span><span class="fold-t" data-i18n="sigPeople">អ្នកចុះហត្ថលេខា</span><span class="fold-s" id="sigSum"></span><svg class="fold-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary>
     <div class="siglist" id="sigList">
       <div class="sigslot" data-k="comp"><label for="f_comp" data-i18n="comp">តំណាងក្រុមហ៊ុន</label>
@@ -1629,7 +1629,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-11-28', ERRS=[];
+var APP_VER='2026-11-28b', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -2233,7 +2233,7 @@ function _renderSec(){
     bindQ();
   }
   const ta=$('#secComment'); ta.value = S.cmt[sec.id]||'';
-  ta.oninput=()=>{ S.cmt[sec.id]=ta.value; save(true); };
+  ta.oninput=()=>{ S.cmt[sec.id]=ta.value; S.info.editAt=Date.now(); save(true); };
   applyView();
 }
 
@@ -2304,7 +2304,7 @@ function _renderTable(si, st){
     const key=card.dataset.k;
     const tick=(v)=>{
       const a=S.ans[key]||(S.ans[key]={});
-      a.v = (a.v===v) ? '' : v;
+      a.v = (a.v===v) ? '' : v; S.info.editAt=Date.now();
       save(); renderTop(); PATCH_ONLY=true; try{ renderSec(); } finally { PATCH_ONLY=false; }
       const bx=card.querySelector('.ansb[data-v="'+v+'"]');
       if(bx && a.v===v){ bx.classList.remove('pop'); void bx.offsetWidth; bx.classList.add('pop'); haptic(); }
@@ -2314,7 +2314,7 @@ function _renderTable(si, st){
     const ta=card.querySelector('.qi-note'), nb=card.querySelector('.qi-nb');
     const grow=()=>{ ta.style.height='auto'; ta.style.height=Math.min(160,ta.scrollHeight+2)+'px'; };
     nb.onclick=()=>{ const hid=ta.classList.toggle('hide'); card.classList.toggle('has-open',!hid); if(!hid){ grow(); ta.focus(); } };
-    ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; nb.classList.toggle('has',!!ta.value); grow(); save(true); };
+    ta.oninput=()=>{ const a=S.ans[key]||(S.ans[key]={}); a.note=ta.value; S.info.editAt=Date.now(); nb.classList.toggle('has',!!ta.value); grow(); save(true); };
     ta.onblur=()=>{ if(!ta.value){ ta.classList.add('hide'); card.classList.remove('has-open'); } };
     if(!ta.classList.contains('hide')){ card.classList.add('has-open'); requestAnimationFrame(grow); }
   });
@@ -3996,6 +3996,11 @@ function maybeShowStart(force){
     if(S.info.date!==todayIso()){ S.info.date=todayIso(); saveNow(); fillInfo(); renderHome(); }
     if(!force) return;
   }
+  if(!force){
+    /* បើកថ្មីភ្លាម មិនសួរ — លើកលែងតែបានកែក្នុង ៣០ នាទីចុងក្រោយ (ទូរស័ព្ទ reload ពាក់កណ្តាលការងារ) */
+    if(S.info.editAt && Date.now()-S.info.editAt < 30*60*1000) return;
+    startNewTask(true); return;
+  }
   $('#stTitle').textContent=E?'New audit':'ការងារថ្មី';
   $('#stSub').textContent=E?'Start today’s audit, or continue the one you were doing':'ចាប់ផ្តើមការត្រួតពិនិត្យថ្ងៃនេះ ឬបន្តការងារដែលកំពុងធ្វើ';
   var old=$('#stOld'), cont=$('#stCont');
@@ -4014,14 +4019,14 @@ function maybeShowStart(force){
   $('#sheetBg').classList.add('on'); $('#startSheet').classList.add('on');
 }
 function closeStart(){ var e=$('#startSheet'); if(e && e.classList.contains('on')){ e.classList.remove('on'); $('#sheetBg').classList.remove('on'); } }
-function startNewTask(){
-  var o=overall(), E=(S.lang==='en');
-  if(o.answered && !sameAsLastRecord()) saveRecord();
+function startNewTask(auto){
+  var o=overall(), E=(S.lang==='en'), saved=false;
+  if(o.answered && !sameAsLastRecord()){ saveRecord(); saved=true; }
   S.ans={}; S.cmt={}; S.filter='all'; S.cur=0;
   if(S.info.sig) delete S.info.sig;
-  S.info.note=''; S.info.head=''; S.info.date=todayIso();
+  S.info.note=''; S.info.head=''; S.info.date=todayIso(); delete S.info.editAt;
   saveNow(); fillInfo(); renderTop(); closeStart(); go('home');
-  setTimeout(function(){ toast(E?'✨ New audit started — '+fmtDate(todayIso()):'✨ ចាប់ផ្តើមការងារថ្មី — '+fmtDate(todayIso())); }, o.answered?1400:0);
+  setTimeout(function(){ toast((E?'✨ New audit — '+fmtDate(todayIso()):'✨ ការងារថ្មី — '+fmtDate(todayIso()))+(saved?(E?' · previous work kept in Records':' · ការងារចាស់ទុកក្នុង «កំណត់ត្រា»'):'')); }, o.answered?1400:0);
 }
 function renderInfoSum(){
   var E=(S.lang==='en'), sig=(S.info.sig||{}), names=[], n=0;
