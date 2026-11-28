@@ -767,8 +767,8 @@ html{-webkit-text-size-adjust:100%}
 button,.xbox,.sitem,.nb,.stp,a{touch-action:manipulation}
 /* ប្តូរផ្ទាំង: ចូលពីស្តាំ (ទៅមុខ) · ពីឆ្វេង (ថយក្រោយ) */
 .screen{animation:none}
-.screen.in-fwd{animation:scrFwd .46s var(--spring) both}
-.screen.in-back{animation:scrBack .46s var(--spring) both}
+.screen.in-fwd{animation:scrFwd .46s var(--spring) backwards}
+.screen.in-back{animation:scrBack .46s var(--spring) backwards}
 @keyframes scrFwd{from{opacity:0;transform:translate3d(28px,0,0)}to{opacity:1;transform:none}}
 @keyframes scrBack{from{opacity:0;transform:translate3d(-28px,0,0)}to{opacity:1;transform:none}}
 .rise{animation:riseIn .5s var(--spring) both}
@@ -1074,6 +1074,21 @@ body.v-pc #startSheet{left:50%;right:auto;bottom:auto;top:50%;width:min(520px,92
 body.v-pc #startSheet.on{transform:translate(-50%,-50%) scale(1);opacity:1;visibility:visible;pointer-events:auto;transition:transform .42s var(--spring),opacity .22s var(--out),visibility 0s}
 body.v-pc #startSheet .grab{display:none}
 
+/* ================= 2026-11-28d: លាក់កាតគណនី + Admin · ជំហានទី ៨ ហត្ថលេខា ================= */
+#accCard,#adminCard{display:none !important}
+.signhead .t h2{font-family:var(--font-h);font-weight:700;font-synthesis:none}
+.signnote{margin:8px 2px 0;font-size:12.5px;line-height:1.65;color:var(--ink-dim)}
+#sc-sign #sigCard{margin-top:12px}
+body.in-sec #sc-sign .navrow{position:fixed;left:12px;right:12px;bottom:calc(10px + var(--safe-b));z-index:66;max-width:560px;margin:0 auto;padding:8px;
+  display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.6fr);gap:8px;border-radius:24px;background:rgba(255,255,255,.9);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);border:1px solid #fff;
+  box-shadow:0 18px 40px -20px rgba(11,79,42,.6);animation:riseIn .45s var(--spring)}
+body.in-sec #sc-sign .navrow .btn{min-height:52px;padding:0 10px;font-size:14.5px;display:flex;align-items:center;justify-content:center}
+.stp.sig b{font-size:12px}
+.stp.sig.lock{opacity:.55}
+.secrow .sbadge.sg{font-size:15px}
+@media (max-width:479px){ #stNext #stNextT{display:none} #stNext{padding:0 11px} #secSteps .stp{width:25px;height:25px} #secSteps .stp b{font-size:9px} #secSteps .stp.sig b{font-size:11px} }
+
 /* ប៊ូតុងទាញយក (header) */
 .dlbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 12px 0 9px;border-radius:12px;cursor:pointer;
   border:1px solid rgba(255,255,255,.35);color:#fff;font:700 12px/1 inherit;font-family:inherit;white-space:nowrap;
@@ -1357,6 +1372,33 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
   </div>
 </section>
 
+<!-- ============ SCREEN 2b : ហត្ថលេខា (ជំហានទី ៨ — បន្ទាប់ពីផ្នែកទាំង ៧) ============ -->
+<section class="screen" id="sc-sign">
+  <div class="glass qhead signhead">
+    <div class="t">
+      <button class="iconbtn sm" id="btnSignBack" aria-label="back">←</button>
+      <h2 id="signTitle">VIII. ចុះហត្ថលេខា</h2>
+      <span class="secscore" id="signCount"></span>
+    </div>
+    <div class="pline in"><div class="pbar"><i id="signBarFill"></i></div><span id="signBarL"></span></div>
+    <p class="signnote" id="signNote"></p>
+  </div>
+  <div class="glass card" id="sigCard">
+    <div class="siglist" id="sigList">
+      <div class="sigslot" data-k="comp"><label for="f_comp" data-i18n="comp">តំណាងក្រុមហ៊ុន</label>
+        <input id="f_comp" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
+      <div class="sigslot" data-k="owner"><label for="f_owner" data-i18n="owner">តំណាងម្ចាស់កសិដ្ឋាន</label>
+        <input id="f_owner" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
+      <div class="sigslot" data-k="by"><label for="f_by" data-i18n="auditor">អ្នកធ្វើរបាយការណ៍</label>
+        <input id="f_by" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
+    </div>
+  </div>
+  <div class="btnrow navrow">
+    <button class="btn" id="btnSignPrev">‹ VII</button>
+    <button class="btn pri" id="btnSignDone">រួចរាល់ · នាំចេញ ›</button>
+  </div>
+</section>
+
 <!-- ============ SCREEN 3 : FARM INFO ============ -->
 <section class="screen" id="sc-info">
   <div class="glass card" id="accCard">
@@ -1382,17 +1424,6 @@ nav.bot{padding-bottom:calc(8px + var(--safe-b))}
     <details class="adm-users"><summary><span data-i18n="admByUser">👥 តាមអ្នកប្រើ</span></summary><div id="admList"></div></details>
     </details>
   </div>
-  <details class="glass card fold" id="sigCard" open>
-    <summary><span class="chip-i">✍️</span><span class="fold-t" data-i18n="sigPeople">អ្នកចុះហត្ថលេខា</span><span class="fold-s" id="sigSum"></span><svg class="fold-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary>
-    <div class="siglist" id="sigList">
-      <div class="sigslot" data-k="comp"><label for="f_comp" data-i18n="comp">តំណាងក្រុមហ៊ុន</label>
-        <input id="f_comp" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
-      <div class="sigslot" data-k="owner"><label for="f_owner" data-i18n="owner">តំណាងម្ចាស់កសិដ្ឋាន</label>
-        <input id="f_owner" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
-      <div class="sigslot" data-k="by"><label for="f_by" data-i18n="auditor">អ្នកធ្វើរបាយការណ៍</label>
-        <input id="f_by" class="signame" data-i18n-ph="fullNamePh" placeholder="ឈ្មោះពេញ" autocomplete="off"><div class="sig-area"></div></div>
-    </div>
-  </details>
 
   <details class="glass card fold" id="extraCard">
     <summary><span class="chip-i">🐖</span><span class="fold-t" data-i18n="extraInfo">ព័ត៌មានបន្ថែម</span><span class="fold-s" id="extraSum"></span><svg class="fold-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary>
@@ -1629,7 +1660,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 </script>
 <script>
 /* ============ ចាប់កំហុស និងបង្ហាញឱ្យឃើញ (ជំនួសការស្ងាត់ស្ងៀម) ============ */
-var APP_VER='2026-11-28c', ERRS=[];
+var APP_VER='2026-11-28d', ERRS=[];
 function showErr(msg){
   ERRS.push(msg);
   var el=document.getElementById('errBar'); if(!el) return;
@@ -2166,7 +2197,8 @@ function _renderHome(){
   for(var k=0;k<SECTIONS.length;k++){ if(!secStat(k).complete){ nextI=k; break; } }
   var cc=$('#btnContinue');
   if(cc){
-    if(nextI<0) cc.innerHTML='<span class="cc-t"><small>'+(EN?'All 121 questions answered':'បំពេញគ្រប់ ១២១ សំណួររួចរាល់')+'</small><b>'+(EN?'Finish &amp; share report':'បញ្ចប់ និងចែករំលែករបាយការណ៍')+'</b></span><span class="cc-go">›</span>';
+    if(nextI<0 && sigCount()<3) cc.innerHTML='<span class="cc-t"><small>'+(EN?'All 7 sections done — last step':'ផ្នែកទាំង ៧ រួចរាល់ — ជំហានចុងក្រោយ')+'</small><b>'+(EN?'VIII. Signatures · ':'VIII. ចុះហត្ថលេខា · ')+kh(sigCount())+' / ៣</b></span><span class="cc-go">›</span>';
+    else if(nextI<0) cc.innerHTML='<span class="cc-t"><small>'+(EN?'All 121 questions answered':'បំពេញគ្រប់ ១២១ សំណួររួចរាល់')+'</small><b>'+(EN?'Finish &amp; share report':'បញ្ចប់ និងចែករំលែករបាយការណ៍')+'</b></span><span class="cc-go">›</span>';
     else { var ns=secStat(nextI), sc=SECTIONS[nextI];
       cc.innerHTML='<span class="cc-t"><small>'+(o.answered?(EN?'Continue where you left off':'បន្តពីកន្លែងដែលនៅសល់'):(EN?'Start the audit':'ចាប់ផ្តើមត្រួតពិនិត្យ'))+'</small><b>'+sc.rn+'. '+secName(sc)+' · '+kh(ns.answered)+' / '+kh(ns.total)+'</b></span><span class="cc-go">›</span>'; }
   }
@@ -2178,8 +2210,11 @@ function _renderHome(){
       <span class="scount">${kh(st.answered)}/${kh(st.total)}</span>
       <span class="sscore2">${st.score===null?'–':fx(st.score)}</span>
     </button>`;
-  }).join('');
-  $$('#secList .secrow').forEach(el=>el.onclick=()=>openSec(+el.dataset.i));
+  }).join('') + (function(){ var n=sigCount(), all7=(nextI<0);
+      return '<button type="button" class="secrow '+(n===3?'done':(n?'doing':''))+'" data-sig="1"><span class="sbadge sg">✍</span>'
+        +'<span class="sinfo"><span class="sname">'+(EN?'Signatures':'ចុះហត្ថលេខា')+(all7?'':' <small style="color:var(--ink-dim)">· '+(EN?'after the 7 sections':'បន្ទាប់ពីផ្នែកទាំង ៧')+'</small>')+'</span><span class="sbar"><i style="width:'+Math.round(n/3*100)+'%"></i></span></span>'
+        +'<span class="scount">'+kh(n)+'/៣</span><span class="sscore2"></span></button>'; })();
+  $$('#secList .secrow').forEach(el=>el.onclick=()=>{ if(el.dataset.sig) go('sign'); else openSec(+el.dataset.i); });
 }
 
 function _renderSec(){
@@ -2272,8 +2307,10 @@ function renderSide(si){
     +SECTIONS.map(function(sec,i){ var st=secStat(i), state=st.complete?'done':(st.answered?'doing':'');
       return '<button type="button" class="secrow '+state+(i===si?' cur':'')+'" data-i="'+i+'"><span class="sbadge">'+sec.rn+'</span>'
         +'<span class="sinfo"><span class="sname">'+secName(sec)+'</span><span class="scount">'+kh(st.answered)+' / '+kh(st.total)+'</span></span>'
-        +'<span class="sscore2">'+(st.score===null?'–':fx(st.score))+'</span></button>'; }).join('');
-  $$('#secSide .secrow').forEach(function(b){ b.onclick=function(){ goSec(+b.dataset.i); }; });
+        +'<span class="sscore2">'+(st.score===null?'–':fx(st.score))+'</span></button>'; }).join('')
+    +(function(){ var n=sigCount(); return '<button type="button" class="secrow '+(n===3?'done':(n?'doing':''))+'" data-sig="1"><span class="sbadge sg">✍</span>'
+        +'<span class="sinfo"><span class="sname">'+(EN?'Signatures':'ចុះហត្ថលេខា')+'</span><span class="scount">'+kh(n)+' / ៣</span></span><span class="sscore2"></span></button>'; })();
+  $$('#secSide .secrow').forEach(function(b){ b.onclick=function(){ if(b.dataset.sig) go('sign'); else goSec(+b.dataset.i); }; });
 }
 
 /* ---------- តារាងបែប Excel ---------- */
@@ -2454,17 +2491,18 @@ var renderTop=safe('renderTop',_renderTop), renderHome=safe('renderHome',_render
     applyView=safe('applyView',_applyView), bindQ=safe('bindQ',_bindQ);
 
 /* ================= ការផ្លាស់ទំព័រ ================= */
-var SCR_ORDER={home:0,sec:1,sum:1,info:2}, CUR_SCR='home';
+var SCR_ORDER={home:0,sec:1,sign:1.5,sum:1,info:2}, CUR_SCR='home';
 function go(name){
   var dir=(SCR_ORDER[name]||0)>=(SCR_ORDER[CUR_SCR]||0)?'fwd':'back', same=(name===CUR_SCR); CUR_SCR=name;
   $$('.screen').forEach(s=>s.classList.remove('on','in-fwd','in-back'));
   var el=$('#sc-'+name); el.classList.add('on'); if(!same){ void el.offsetWidth; el.classList.add('in-'+dir); }
-  document.body.classList.toggle('in-sec', name==='sec');
-  $$('.nb').forEach(b=>b.classList.toggle('on', b.dataset.go===(name==='sec'?'home':name)));   /* ផ្ទាំងបំពេញចូលពីទំព័រដើម */
+  document.body.classList.toggle('in-sec', name==='sec' || name==='sign');
+  $$('.nb').forEach(b=>b.classList.toggle('on', b.dataset.go===((name==='sec'||name==='sign')?'home':name)));   /* ផ្ទាំងបំពេញចូលពីទំព័រដើម */
   if(name==='home'){ renderHome(); $('#topTitle').textContent=T().appTitle; if(!same) staggerIn('#secList .secrow'); }
   if(name==='sec') renderSec();
+  if(name==='sign'){ renderSigs(); renderSignHead(); $('#topTitle').textContent=(S.lang==='en'?'Signatures':'ហត្ថលេខា'); }
   if(name==='sum'){ renderSum(); $('#topTitle').textContent=T().topSum; }
-  if(name==='info'){ fillInfo(); renderRecs(); runDiag(); renderAcc(); renderInfoSum(); var am=$('#admMore'); if(am && viewMode()==='pc') am.open=true; if(ME&&ME.is_admin&&!ADM.users.length) loadAdmin(); $('#topTitle').textContent=T().topInfo; }
+  if(name==='info'){ fillInfo(); renderRecs(); runDiag(); renderAcc(); renderInfoSum(); var am=$('#admMore'); if(am && viewMode()==='pc') am.open=true; $('#topTitle').textContent=T().topInfo; }
   renderTop(); window.scrollTo({top:0,behavior:'smooth'});
 }
 function openSec(i){ _doneSeen={}; S.cur=i; S.filter='all'; $$('.fchip').forEach(c=>c.classList.toggle('on',c.dataset.f==='all')); go('sec'); }
@@ -3737,13 +3775,15 @@ function renderSteps(si, st){
     h+='<button class="'+cls+'" style="--p:'+t.pct+'" data-i="'+i+'" role="tab" aria-selected="'+(i===si)+'"'
       +' title="'+sec.rn+'. '+secName(sec)+' — '+kh(t.answered)+'/'+kh(t.total)+'"><b>'+sec.rn+'</b></button>';
   });
+  var sn=sigCount(), all7=SECTIONS.every(function(x,i){ return secStat(i).complete; });
+  h+='<i class="ln'+(all7?' ok':'')+'"></i><button class="stp sig'+(sn===3?' done':'')+(all7?'':' lock')+'" style="--p:'+Math.round(sn/3*100)+'" data-sig="1" title="'+(EN?'Signatures':'ហត្ថលេខា')+' — '+kh(sn)+'/៣"><b>✍</b></button>';
   var rail=$('#secSteps'); rail.innerHTML=h;
-  rail.querySelectorAll('.stp').forEach(function(b){ b.onclick=function(){ goSec(+b.dataset.i); }; });
+  rail.querySelectorAll('.stp').forEach(function(b){ b.onclick=function(){ if(b.dataset.sig) go('sign'); else goSec(+b.dataset.i); }; });
   var last=(si===SECTIONS.length-1);
   $('#stPrev').disabled=(si===0);
   $('#btnPrevSec').textContent = EN?'‹ Back':'‹ មុន';
-  $('#btnNextSec').textContent = last ? (EN?'Finish ✓':'រួចរាល់ ✓') : (EN?'Next · ':'ផ្នែកបន្ទាប់ · ')+SECTIONS[si+1].rn+' ›';
-  $('#stNextT').textContent = last ? (EN?'Finish':'រួចរាល់') : (EN?'Next':'បន្ទាប់');
+  $('#btnNextSec').textContent = last ? (EN?'Next · Signatures ›':'បន្ទាប់ · ហត្ថលេខា ›') : (EN?'Next · ':'ផ្នែកបន្ទាប់ · ')+SECTIONS[si+1].rn+' ›';
+  $('#stNextT').textContent = last ? (EN?'Sign':'ហត្ថលេខា') : (EN?'Next':'បន្ទាប់');
   var nx=$('#stNext'); nx.classList.toggle('ready', st.complete);
   var key=SECTIONS[si].id;
   if(st.complete && _doneSeen[key]===false){
@@ -3755,7 +3795,7 @@ function renderSteps(si, st){
 var _sliding=false;
 function goSec(i){
   if(_sliding || i===S.cur || i<0) return;
-  if(i>=SECTIONS.length){ go('home'); toast(S.lang==='en'?'✅ That was the last section':'✅ នេះជាផ្នែកចុងក្រោយហើយ'); return; }
+  if(i>=SECTIONS.length){ go('sign'); return; }   /* បន្ទាប់ពីផ្នែក VII → ជំហានទី ៨ ហត្ថលេខា */
   var dir=i>S.cur?1:-1, body=$('#secBody'), ttl=$('#secTitle');
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var top=$('#sc-sec .qhead').getBoundingClientRect().top + window.scrollY - (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdrH'))||80) - 8;
@@ -4053,6 +4093,24 @@ function renderInfoSum(){
   var _rr=renderRecs; renderRecs=function(){ var r=_rr.apply(this,arguments); try{ renderInfoSum(); }catch(e){} return r; };
 })();
 
+/* ================= ជំហានទី ៨ — ហត្ថលេខា ================= */
+function sigCount(){ var g=S.info.sig||{}, n=0; ['comp','owner','by'].forEach(function(k){ if(g[k]&&g[k].d) n++; }); return n; }
+function renderSignHead(){
+  var E=(S.lang==='en'), n=sigCount(), all7=SECTIONS.every(function(x,i){ return secStat(i).complete; });
+  var t=$('#signTitle'); if(!t) return;
+  t.textContent=E?'VIII. Signatures':'VIII. ចុះហត្ថលេខា';
+  $('#signCount').innerHTML='<b>'+kh(n)+'</b><small>/៣</small>';
+  $('#signBarFill').style.width=Math.round(n/3*100)+'%';
+  $('#signBarL').textContent=(E?'Signed ':'បានចុះ ')+kh(n)+' / ៣';
+  $('#signNote').textContent = all7
+    ? (E?'Last step after the 7 sections: each person writes their name and signs.':'ជំហានចុងក្រោយ បន្ទាប់ពីផ្នែកទាំង ៧៖ អ្នកម្នាក់ៗសរសេរឈ្មោះ ហើយចុះហត្ថលេខា។')
+    : (E?'Tip: finish the 7 sections first, then sign here.':'គន្លឹះ៖ បំពេញផ្នែកទាំង ៧ ឱ្យរួចសិន រួចចុះហត្ថលេខានៅទីនេះ។');
+  $('#btnSignPrev').textContent=E?'‹ VII':'‹ VII';
+  $('#btnSignDone').textContent = n===3 ? (E?'Done · Export ›':'រួចរាល់ · នាំចេញ ›') : (E?'Export ›':'នាំចេញ ›');
+  $('#btnSignDone').classList.toggle('ready', n===3);
+}
+(function(){ var _rs2=renderSigs; renderSigs=function(){ var r=_rs2.apply(this,arguments); try{ renderSignHead(); }catch(e){} return r; }; })();
+
 /* ================= ភ្ជាប់ព្រឹត្តិការណ៍ ================= */
 $$('#segView button').forEach(b=>b.onclick=()=>{ S.view=(b.dataset.v==='auto'?null:b.dataset.v); S.style=null; save(true); applyView(); renderSec&&renderSec(); renderHome();
   toast(b.dataset.v==='auto'?'✨ '+(S.lang==='en'?'Auto layout':'រូបរាងស្វ័យប្រវត្តិ'):(b.dataset.v==='pc'?'💻 រូបរាងកុំព្យូទ័រ':'📱 រូបរាងទូរស័ព្ទ')); });
@@ -4073,6 +4131,9 @@ $('#btnDiag').onclick=runDiag;
 $('#btnLang').onclick=()=>setLang(S.lang==='km'?'en':'km');
 $('#svClose').onclick=closeSave;
 $('#btnNoReview').onclick=openNoReview;
+$('#btnSignBack').onclick=function(){ go('home'); };
+$('#btnSignPrev').onclick=function(){ S.cur=SECTIONS.length-1; go('sec'); };
+$('#btnSignDone').onclick=function(){ openSave(); };
 $('#stNew').onclick=startNewTask;
 $('#stCont').onclick=closeStart;
 $('#btnNewTask').onclick=function(){ maybeShowStart(true); };
@@ -4093,6 +4154,7 @@ $('#btnNextSec').onclick=()=>goSec(S.cur+1);
 $('#stNext').onclick=()=>goSec(S.cur+1);
 $('#btnContinue').onclick=()=>{
   for(let i=0;i<SECTIONS.length;i++){ const st=secStat(i); if(!st.complete){ openSec(i); return; } }
+  if(sigCount()<3){ go('sign'); return; }
   openSave(); return;
   go('home'); toast(S.lang==='en'?'🎉 All questions answered':'🎉 បំពេញគ្រប់សំណួររួចរាល់');
 };
