@@ -3990,6 +3990,7 @@ function sameAsLastRecord(){
 function maybeShowStart(force){
   if(!ME) return;
   if(START_SHOWN && !force) return; START_SHOWN=true;
+  if(!force && (CUR_SCR!=='home' || document.querySelector('#sheet.on,#clearSheet.on,#fileSheet.on,#sigSheet.on,#noSheet.on,#authGate.on'))) return;   /* អ្នកប្រើកំពុងធ្វើការរួចហើយ → កុំរំខាន */
   var o=overall(), E=(S.lang==='en');
   if(!o.answered){
     if(S.info.date!==todayIso()){ S.info.date=todayIso(); saveNow(); fillInfo(); renderHome(); }
